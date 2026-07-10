@@ -5,129 +5,149 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Modern Website</title>
     <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 <body>
 
+<header>
 
+    <div class="logo">MyWebsite</div>
 
-    <header>
-    <div class="logo">MyLogo</div>
-
-    <div class="menu-btn" onclick="toggleMenu()">
-        ☰
+    <div class="menu-btn">
+        <i class="fas fa-bars"></i>
     </div>
 
-    <nav id="navbar">
+    <nav>
         <ul>
             <li><a href="#">Home</a></li>
-            <li><a href="#">Services</a></li>
             <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
             <li><a href="#">Portfolio</a></li>
             <li><a href="#">Contact</a></li>
         </ul>
     </nav>
 
     <button class="btn">Login</button>
+
 </header>
 
-    
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Build Amazing Websites</h1>
-            <p>
-                Create beautiful, responsive, and modern web applications
-                with clean HTML and CSS.
-            </p>
+<!-- Hero -->
 
-            <button>Get Started</button>
-        </div>
-    </section>
+<section class="hero">
+    <div class="hero-content">
+        <h1>Build Amazing Websites</h1>
 
-    <!-- Main Content -->
-    <main>
+        <p>
+            Create beautiful, responsive, and modern web applications
+            with clean HTML and CSS.
+        </p>
 
-        <section class="cards">
+        <button>Get Started</button>
 
-            <div class="card">
-                <h2>Fast</h2>
-                <p>
-                    Optimized layouts that load quickly and provide an
-                    excellent user experience.
-                </p>
-            </div>
+    </div>
+</section>
 
-            <div class="card">
-                <h2>Responsive</h2>
-                <p>
-                    Looks perfect on desktops, tablets, and mobile devices.
-                </p>
-            </div>
+<!-- Cards -->
 
-            <div class="card">
-                <h2>Modern Design</h2>
-                <p>
-                    Clean UI with gradients, shadows, and attractive colors.
-                </p>
-            </div>
+<main>
 
-        </section>
+<section class="cards">
 
-        <section class="about">
-            <h2>About Our Company</h2>
+<div class="card">
+<h2>Fast</h2>
+<p>
+Optimized layouts that load quickly and provide an
+excellent user experience.
+</p>
+</div>
 
-            <p>
-                We specialize in creating elegant web applications using
-                modern technologies and user-friendly designs. Our goal is
-                to deliver quality solutions that help businesses grow.
-            </p>
-        </section>
+<div class="card">
+<h2>Responsive</h2>
+<p>
+Looks perfect on desktops, tablets, and mobile devices.
+</p>
+</div>
 
-    </main>
+<div class="card">
+<h2>Modern Design</h2>
+<p>
+Clean UI with gradients, shadows, and attractive colors.
+</p>
+</div>
 
-    <!-- Footer -->
-    <footer>
+</section>
 
-        <div class="footer-container">
+<section class="about">
 
-            <div>
-                <h3>MyWebsite</h3>
-                <p>Your trusted web development partner.</p>
-            </div>
+<h2>About Our Company</h2>
 
-            <div>
-                <h3>Quick Links</h3>
+<p>
+We specialize in creating elegant web applications using
+modern technologies and user-friendly designs.
+</p>
 
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">About</a></li>
-                </ul>
+</section>
 
-            </div>
+</main>
 
-            <div>
-                <h3>Contact</h3>
+<footer>
 
-                <p>Email: info@example.com</p>
-                <p>Phone: +91 9876543210</p>
+<div class="footer-container">
 
-            </div>
+<div>
+<h3>MyWebsite</h3>
+<p>Your trusted web development partner.</p>
+</div>
 
-        </div>
+<div>
+<h3>Quick Links</h3>
 
-        <div class="copyright">
-            © 2026 MyWebsite. All Rights Reserved.
-        </div>
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#">Services</a></li>
+<li><a href="#">About</a></li>
+</ul>
 
-    </footer>
-<script src="script.js"></script>
+</div>
+
+<div>
+<h3>Contact</h3>
+
+<p>Email: info@example.com</p>
+<p>Phone: +91 9876543210</p>
+
+</div>
+
+</div>
+
+<div class="copyright">
+© 2026 MyWebsite. All Rights Reserved.
+</div>
+
+</footer>
+
+<script>
+
+const menuBtn=document.querySelector(".menu-btn");
+const nav=document.querySelector("nav");
+
+menuBtn.onclick=()=>{
+
+nav.classList.toggle("active");
+
+if(nav.classList.contains("active")){
+menuBtn.innerHTML='<i class="fas fa-times"></i>';
+}
+else{
+menuBtn.innerHTML='<i class="fas fa-bars"></i>';
+}
+
+}
+
+</script>
 
 </body>
 </html>
-
-
-
-
-
-
