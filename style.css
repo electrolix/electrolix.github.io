@@ -76,7 +76,7 @@ nav ul li a:hover{
     justify-content:center;
     align-items:center;
     text-align:center;
-    color:#fff;
+    color:white;
 }
 
 .hero h1{
@@ -93,7 +93,7 @@ nav ul li a:hover{
     padding:14px 30px;
     border:none;
     border-radius:30px;
-    background:#fff;
+    background:white;
     color:#2563eb;
     font-weight:bold;
     cursor:pointer;
@@ -109,7 +109,7 @@ nav ul li a:hover{
 }
 
 .card{
-    background:#fff;
+    background:white;
     padding:30px;
     border-radius:12px;
     box-shadow:0 8px 20px rgba(0,0,0,.1);
@@ -147,7 +147,7 @@ nav ul li a:hover{
 
 footer{
     background:#0f172a;
-    color:#fff;
+    color:white;
     margin-top:50px;
 }
 
@@ -186,15 +186,19 @@ footer{
     color:#ccc;
 }
 
-/* ==========================
+/* Mobile */
+
+
+/* ===========================
    Mobile Responsive
-========================== */
+=========================== */
 
 @media (max-width:768px){
 
     .menu-btn{
         display:block;
         font-size:28px;
+        cursor:pointer;
     }
 
     .btn{
@@ -205,6 +209,8 @@ footer{
         padding:15px 5%;
     }
 
+    /* Navigation */
+
     nav{
         position:absolute;
         top:100%;
@@ -212,7 +218,6 @@ footer{
         width:100%;
         background:#0f172a;
         display:none;
-        border-top:1px solid rgba(255,255,255,.1);
     }
 
     nav.active{
@@ -222,21 +227,23 @@ footer{
     nav ul{
         display:flex;
         flex-direction:column;
-        align-items:flex-start;
+        align-items:flex-start;   /* Left align */
         padding:20px;
     }
 
     nav ul li{
-        width:100%;
         margin:0;
+        width:100%;
     }
 
     nav ul li a{
         display:block;
         width:100%;
         padding:14px 0;
-        border-bottom:1px solid rgba(255,255,255,.08);
+        text-align:left;          /* Left align text */
     }
+
+    /* Hero */
 
     .hero{
         height:auto;
@@ -251,10 +258,14 @@ footer{
         width:100%;
     }
 
+    /* Cards */
+
     .cards{
         grid-template-columns:1fr;
         padding:50px 5%;
     }
+
+    /* About */
 
     .about{
         padding:50px 5%;
@@ -264,23 +275,39 @@ footer{
         width:100%;
     }
 
+    /* Footer */
+
     .footer-container{
+        display:grid;
         grid-template-columns:1fr;
-        text-align:left;
+        gap:30px;
         padding:40px 5%;
     }
 
-    .footer-container div{
-        margin-bottom:20px;
+    .footer-container > div{
+        text-align:left;      /* Left align each column */
+    }
+
+    .footer-container h3{
+        text-align:left;
+    }
+
+    .footer-container p{
+        text-align:left;
     }
 
     .footer-container ul{
         padding:0;
+        margin:0;
     }
 
-    .copyright{
-        text-align:center;
-        padding:15px;
+    .footer-container ul li{
+        text-align:left;
+    }
+
+    .footer-container ul li a{
+        display:inline-block;
+        text-align:left;
     }
 
 }
