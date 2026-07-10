@@ -1,15 +1,31 @@
-const menuBtn = document.querySelector(".menu-btn");
-const nav = document.querySelector("nav");
+// Load Header
+fetch("header.html")
+.then(response => response.text())
+.then(data => {
+    document.getElementById("header").innerHTML = data;
 
-menuBtn.onclick = () => {
+    // Your existing menu JS
+    const menuBtn = document.querySelector(".menu-btn");
+    const nav = document.querySelector("nav");
 
-    nav.classList.toggle("active");
+    menuBtn.onclick = () => {
 
-    if(nav.classList.contains("active")){
-        menuBtn.innerHTML='<i class="fas fa-times"></i>';
+        nav.classList.toggle("active");
+
+        if(nav.classList.contains("active")){
+            menuBtn.innerHTML='<i class="fas fa-times"></i>';
+        }
+        else{
+            menuBtn.innerHTML='<i class="fas fa-bars"></i>';
+        }
+
     }
-    else{
-        menuBtn.innerHTML='<i class="fas fa-bars"></i>';
-    }
+});
 
-}
+
+// Load Footer
+fetch("footer.html")
+.then(response => response.text())
+.then(data => {
+    document.getElementById("footer").innerHTML = data;
+});
