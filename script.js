@@ -5,22 +5,18 @@ fetch("header.html")
     document.getElementById("header").innerHTML = data;
 
     // Your existing menu JS
-    const menuBtn = document.querySelector(".menu-btn");
-    const nav = document.querySelector("nav");
 
-    menuBtn.onclick = () => {
 
-        nav.classList.toggle("active");
+const menuBtn = document.getElementById("menuBtn");
 
-        if(nav.classList.contains("active")){
-            menuBtn.innerHTML='<i class="fas fa-times"></i>';
-        }
-        else{
-            menuBtn.innerHTML='<i class="fas fa-bars"></i>';
-        }
+const nav = document.getElementById("nav");
 
-    }
+menuBtn.addEventListener("click",()=>{
+
+    nav.classList.toggle("active");
+
 });
+
 
 
 // Load Footer
