@@ -361,7 +361,8 @@ footer ul li:hover{
         RESPONSIVE
 ==========================================*/
 
-.menu-btn{
+
+   .menu-btn{
     display:none;
     background:none;
     border:none;
@@ -371,75 +372,51 @@ footer ul li:hover{
 }
 
 
-/* HEADER + FOOTER RESPONSIVE */
-
 @media(max-width:992px){
 
-    header{
+header{
 
-        padding:18px 5%;
+    padding:18px 5%;
 
-    }
-
-    .footer-container{
-
-        grid-template-columns:1fr;
-
-    }
+}
 
 }
 
 
 @media(max-width:768px){
 
-    .menu-btn{
+.menu-btn{
+    display:block;
+}
 
-        display:block;
+.header-btn{
+    display:none;
+}
 
-    }
+nav{
+    position:absolute;
+    top:80px;
+    left:0;
+    width:100%;
+    background:#fff;
+    display:none;
+    flex-direction:column;
+    align-items:flex-start;
+    padding:25px 0 25px 35px;
+    gap:20px;
+    box-shadow:0 10px 20px rgba(0,0,0,.1);
+}
 
-    .header-btn{
+nav.active{
+    display:flex;
+}
 
-        display:none;
+section{
 
-    }
-
-    nav{
-
-        position:absolute;
-        top:80px;
-        left:0;
-        width:100%;
-        background:#fff;
-        display:none;
-        flex-direction:column;
-        align-items:flex-start;
-        padding:25px 0 25px 35px;
-        gap:20px;
-        box-shadow:0 10px 20px rgba(0,0,0,.1);
-
-    }
-
-    nav.active{
-
-        display:flex;
-
-    }
-
-
-    .footer-container{
-
-        grid-template-columns:1fr;
-
-    }
+    padding:80px 5%;
 
 }
 
-      main{
-    display:block;
-    margin-top:150px;
-    color:black;
-    background:white;
 }
       
 </style>
