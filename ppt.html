@@ -362,17 +362,51 @@ footer ul li:hover{
 ==========================================*/
 
 
+.menu-btn{
+    display:none;
+    background:none;
+    border:none;
+    font-size:30px;
+    cursor:pointer;
+    color:#1e293b;
+}
+
+
+/* HEADER + FOOTER RESPONSIVE */
+
+@media(max-width:992px){
+
+    header{
+
+        padding:18px 5%;
+
+    }
+
+    .footer-container{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+
 @media(max-width:768px){
 
     .menu-btn{
+
         display:block;
+
     }
 
     .header-btn{
+
         display:none;
+
     }
 
     nav{
+
         position:absolute;
         top:80px;
         left:0;
@@ -384,18 +418,23 @@ footer ul li:hover{
         padding:25px 0 25px 35px;
         gap:20px;
         box-shadow:0 10px 20px rgba(0,0,0,.1);
+
     }
 
     nav.active{
+
         display:flex;
+
+    }
+
+
+    .footer-container{
+
+        grid-template-columns:1fr;
+
     }
 
 }
-
-main{
-    padding:150px 8% 80px;
-}
-
 </style>
 
 
