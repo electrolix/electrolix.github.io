@@ -242,3 +242,199 @@ solution for your next project.
 </section>
 
 </main>
+
+
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#f5f7fb;
+    color:#333;
+}
+
+
+/* Hero */
+
+.hero{
+    height:70vh;
+    background:linear-gradient(135deg,#2563eb,#7c3aed);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+}
+
+.hero h1{
+    font-size:52px;
+}
+
+.hero p{
+    width:70%;
+    margin:20px auto;
+    line-height:1.8;
+}
+
+.hero button{
+    padding:14px 30px;
+    border:none;
+    border-radius:30px;
+    background:white;
+    color:#2563eb;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+/* Cards */
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+    padding:70px 8%;
+}
+
+.card{
+    background:white;
+    padding:30px;
+    border-radius:12px;
+    box-shadow:0 8px 20px rgba(0,0,0,.1);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.card h2{
+    color:#2563eb;
+    margin-bottom:15px;
+}
+
+/* About */
+
+.about{
+    padding:60px 8%;
+    text-align:center;
+}
+
+.about h2{
+    color:#2563eb;
+    margin-bottom:20px;
+}
+
+.about p{
+    width:70%;
+    margin:auto;
+    line-height:1.8;
+}
+
+
+/* Mobile */
+
+
+/* ===========================
+   Mobile Responsive
+=========================== */
+
+@media (max-width:768px){
+
+    .menu-btn{
+        display:block;
+        font-size:28px;
+        cursor:pointer;
+    }
+
+    .btn{
+        display:none;
+    }
+
+    header{
+        padding:15px 5%;
+    }
+
+    /* Navigation */
+
+    nav{
+        position:absolute;
+        top:100%;
+        left:0;
+        width:100%;
+        background:#0f172a;
+        display:none;
+    }
+
+    nav.active{
+        display:block;
+    }
+
+    nav ul{
+        display:flex;
+        flex-direction:column;
+        align-items:flex-start;   /* Left align */
+        padding:20px;
+    }
+
+    nav ul li{
+        margin:0;
+        width:100%;
+    }
+
+    nav ul li a{
+        display:block;
+        width:100%;
+        padding:14px 0;
+        text-align:left;          /* Left align text */
+    }
+
+    /* Hero */
+
+    .hero{
+        height:auto;
+        padding:80px 20px;
+    }
+
+    .hero h1{
+        font-size:36px;
+    }
+
+    .hero p{
+        width:100%;
+    }
+
+    /* Cards */
+
+    .cards{
+        grid-template-columns:1fr;
+        padding:50px 5%;
+    }
+
+    /* About */
+
+    .about{
+        padding:50px 5%;
+    }
+
+    .about p{
+        width:100%;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
