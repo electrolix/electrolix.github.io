@@ -362,7 +362,7 @@ footer ul li:hover{
 ==========================================*/
 
 
-   .menu-btn{
+         .menu-btn{
     display:none;
     background:none;
     border:none;
@@ -371,21 +371,98 @@ footer ul li:hover{
     color:#1e293b;
 }
 
-
+      
 @media(max-width:992px){
 
+    
 header{
 
     padding:18px 5%;
 
 }
 
+.hero,
+.about-section,
+.platform,
+.shopping-section,
+.final-cta{
+
+    grid-template-columns:1fr;
+    text-align:center;
+
 }
 
+.hero{
+
+    padding-top:140px;
+
+}
+
+.hero h1{
+
+    font-size:48px;
+
+}
+
+.hero-buttons,
+.about-buttons,
+.shopping-buttons{
+
+    justify-content:center;
+
+}
+
+.hero-stats,
+.shopping-features{
+
+    justify-content:center;
+
+}
+
+.trust,
+.why-grid,
+.category-grid,
+.numbers,
+.brand-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+.footer-container{
+
+    grid-template-columns:1fr;
+
+}
+
+.cta-left h2{
+
+    font-size:40px;
+
+}
+
+.section-heading h2,
+.about-content h2,
+.platform-content h2,
+.shopping-content h2{
+
+    font-size:40px;
+
+}
+
+.card-one,
+.card-two{
+
+    position:static;
+    margin:15px auto;
+
+}
+
+}
 
 @media(max-width:768px){
 
-.menu-btn{
+    .menu-btn{
     display:block;
 }
 
@@ -410,17 +487,79 @@ nav{
 nav.active{
     display:flex;
 }
-
+    
 section{
 
     padding:80px 5%;
 
 }
 
+.hero h1{
+
+    font-size:38px;
+
 }
 
+.hero p{
 
-      
+    font-size:16px;
+
+}
+
+.hero-stats{
+
+    flex-direction:column;
+
+}
+
+.hero-stats div{
+
+    width:100%;
+
+}
+
+.trust,
+.why-grid,
+.category-grid,
+.numbers,
+.brand-grid,
+.shopping-features{
+
+    grid-template-columns:1fr;
+
+}
+
+.final-cta{
+
+    margin:80px 5%;
+    padding:50px 30px;
+
+}
+
+.cta-left h2{
+
+    font-size:34px;
+
+}
+
+.section-heading h2,
+.about-content h2,
+.platform-content h2,
+.shopping-content h2{
+
+    font-size:32px;
+
+}
+
+.shopping-image img,
+.about-image img,
+.platform-image img{
+
+    border-radius:20px;
+
+}
+
+}
       
 </style>
 
@@ -441,6 +580,4 @@ menuBtn.addEventListener("click",()=>{
 
 </script>
 
-    </body>
 
-</html>
