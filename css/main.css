@@ -664,7 +664,8 @@ nav a:hover{
 
 .why-card img{
 
-    width:270px;
+    width:100%;
+    max-width:270px;
     margin:auto;
     margin-bottom:25px;
     border-radius: 20px; /* Adjust the value as needed */
