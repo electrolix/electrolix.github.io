@@ -804,11 +804,16 @@ nav a:hover{
 
 }
 
-.category-card img{
+.category-card img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
 
-    height:500px;
-    object-fit:cover;
-
+@media (max-width: 768px) {
+    .category-card img {
+        height: auto;
+    }
 }
 
 .category-content{
