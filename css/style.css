@@ -282,8 +282,8 @@ main{
     z-index: 1;
 
     padding-top: 150px;
-    padding-left: 4%;
-    padding-right: 4%;
+    padding-left: 0%;
+    padding-right: 8%;
     padding-bottom: 80px;
 
     max-width: 1400px;
