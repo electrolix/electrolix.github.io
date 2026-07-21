@@ -1,19 +1,53 @@
-<main>
-...
-</main>
-
-<!-- Back to Top Button -->
-<a href="#" id="backToTop" aria-label="Back to Top">
-    ↑
-</a>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Back To Top Demo</title>
 
 <style>
-/* Your Back to Top CSS here */
 
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
-  /*==========================================
-        BACK TO TOP
-==========================================*/
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial,sans-serif;
+    background:#f7f9fc;
+    color:#1e293b;
+}
+
+header{
+    background:linear-gradient(135deg,#2563eb,#4f46e5);
+    color:#fff;
+    text-align:center;
+    padding:80px 20px;
+}
+
+main{
+    max-width:900px;
+    margin:auto;
+    padding:50px 20px;
+}
+
+h2{
+    margin-bottom:20px;
+}
+
+p{
+    margin-bottom:20px;
+    line-height:1.8;
+}
+
+/*==============================
+BACK TO TOP
+==============================*/
 
 #backToTop{
 
@@ -23,15 +57,9 @@
 
     bottom:30px;
 
-    width:58px;
+    width:60px;
 
-    height:58px;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
+    height:60px;
 
     border-radius:50%;
 
@@ -39,11 +67,19 @@
 
     color:#fff;
 
-    font-size:24px;
+    display:flex;
 
-    font-weight:700;
+    align-items:center;
 
-    box-shadow:0 18px 40px rgba(37,99,235,.35);
+    justify-content:center;
+
+    text-decoration:none;
+
+    font-size:26px;
+
+    font-weight:bold;
+
+    box-shadow:0 15px 35px rgba(37,99,235,.35);
 
     opacity:0;
 
@@ -51,17 +87,9 @@
 
     transform:translateY(20px);
 
-    transition:.35s ease;
+    transition:.35s;
 
-    z-index:999;
-
-}
-
-#backToTop:hover{
-
-    transform:translateY(-6px);
-
-    box-shadow:0 24px 50px rgba(37,99,235,.45);
+    z-index:9999;
 
 }
 
@@ -75,31 +103,101 @@
 
 }
 
-@media(max-width:768px){
+#backToTop:hover{
 
-#backToTop{
-
-    width:50px;
-
-    height:50px;
-
-    right:20px;
-
-    bottom:20px;
-
-    font-size:20px;
+    transform:translateY(-5px);
 
 }
 
-}
 </style>
 
+</head>
+
+<body>
+
+<header>
+
+<h1>Back To Top Button Demo</h1>
+
+<p>Scroll down to see the button appear.</p>
+
+</header>
+
+<main>
+
+<h2>Demo Content</h2>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+</main>
+
+<a href="#" id="backToTop">&#8679;</a>
+
 <script>
-const backToTop = document.getElementById("backToTop");
 
-window.addEventListener("scroll", () => {
+const backToTop=document.getElementById("backToTop");
 
-    if(window.scrollY > 400){
+window.addEventListener("scroll",function(){
+
+    if(window.scrollY>300){
 
         backToTop.classList.add("show");
 
@@ -111,7 +209,7 @@ window.addEventListener("scroll", () => {
 
 });
 
-backToTop.addEventListener("click", function(e){
+backToTop.addEventListener("click",function(e){
 
     e.preventDefault();
 
@@ -124,6 +222,7 @@ backToTop.addEventListener("click", function(e){
     });
 
 });
+
 </script>
 
 </body>
