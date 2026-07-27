@@ -1,30 +1,248 @@
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>16 Amp Switch Buying Guide | Uses, Types & Best Brands | Electrolix</title>
+<title>Explore Our Resources | Eleczo</title>
 
 <meta name="description"
-content="Learn everything about 16 Amp switches including applications, advantages, installation tips, safety considerations and the best brands before purchasing.">
+content="Explore our collection of helpful resources, buying guides and service pages. Find the right information quickly and visit the dedicated Eleczo landing pages.">
 
-<meta name="keywords"
-content="16 Amp Switch, Modular Switch, Electrical Switch, Legrand Switch, Anchor Switch, Schneider Switch, Goldmedal Switch, Havells Switch">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-<link rel="canonical"
-href="https://electrolix.github.io/guides/16-amp-switch.html">
+<style>
 
-<link rel="stylesheet" href="../css/main.css">
-<link rel="stylesheet" href="../css/back-to-top.css">
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
+body{
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
-rel="stylesheet">
+font-family:'Inter',sans-serif;
+background:#f6f8fb;
+color:#222;
+line-height:1.6;
+
+}
+
+a{
+text-decoration:none;
+color:inherit;
+}
+
+.container{
+
+width:min(1280px,92%);
+margin:auto;
+
+}
+
+/***************************
+HEADER
+****************************/
+
+header{
+
+background:white;
+padding:70px 0;
+text-align:center;
+border-bottom:1px solid #ececec;
+
+}
+
+header h1{
+
+font-size:48px;
+font-weight:800;
+margin-bottom:15px;
+
+}
+
+header p{
+
+max-width:760px;
+margin:auto;
+font-size:18px;
+color:#666;
+
+}
+
+/***************************
+SEARCH
+****************************/
+
+.search-area{
+
+margin-top:40px;
+display:flex;
+justify-content:center;
+gap:15px;
+flex-wrap:wrap;
+
+}
+
+.search-box{
+
+width:480px;
+max-width:100%;
+padding:16px 22px;
+font-size:16px;
+border-radius:12px;
+border:1px solid #ddd;
+outline:none;
+transition:.3s;
+
+}
+
+.search-box:focus{
+
+border-color:#0057ff;
+box-shadow:0 0 0 4px rgba(0,87,255,.1);
+
+}
+
+select{
+
+padding:16px;
+border-radius:12px;
+border:1px solid #ddd;
+font-size:16px;
+cursor:pointer;
+
+}
+
+/***************************
+GRID
+****************************/
+
+.grid{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:30px;
+padding:70px 0;
+
+}
+
+/***************************
+CARD
+****************************/
+
+.card{
+
+background:white;
+border-radius:18px;
+padding:28px;
+transition:.35s;
+position:relative;
+overflow:hidden;
+border:1px solid #eee;
+
+}
+
+.card:hover{
+
+transform:translateY(-8px);
+box-shadow:0 20px 50px rgba(0,0,0,.08);
+
+}
+
+.icon{
+
+width:64px;
+height:64px;
+border-radius:14px;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:28px;
+background:#eef4ff;
+margin-bottom:20px;
+
+}
+
+.badge{
+
+display:inline-block;
+padding:7px 14px;
+background:#f2f5fa;
+border-radius:50px;
+font-size:13px;
+font-weight:600;
+color:#0057ff;
+margin-bottom:18px;
+
+}
+
+.card h3{
+
+font-size:22px;
+margin-bottom:12px;
+
+}
+
+.card p{
+
+font-size:15px;
+color:#666;
+margin-bottom:20px;
+
+}
+
+.url{
+
+font-size:13px;
+color:#999;
+margin-bottom:25px;
+word-break:break-all;
+
+}
+
+.btn{
+
+display:inline-flex;
+align-items:center;
+justify-content:center;
+padding:14px 22px;
+background:#0057ff;
+color:white;
+border-radius:10px;
+font-weight:600;
+transition:.3s;
+
+}
+
+.btn:hover{
+
+background:#003fc0;
+
+}
+
+footer{
+
+padding:60px 0;
+text-align:center;
+color:#777;
+border-top:1px solid #eee;
+background:white;
+
+}
+
+@media(max-width:768px){
+
+header h1{
+
+font-size:34px;
+
+}
+
+}
+
+</style>
 
 </head>
 
@@ -32,320 +250,279 @@ rel="stylesheet">
 
 <header>
 
-<div class="logo">
-<img src="../images/logo.svg" alt="Electrolix">
+<div class="container">
+
+<h1>Explore Our Resource Library</h1>
+
+<p>
+
+Browse our curated collection of buying guides, services, product resources and helpful pages.
+Find exactly what you're looking for and visit the dedicated Eleczo page.
+
+</p>
+
+<div class="search-area">
+
+<input
+type="text"
+id="search"
+class="search-box"
+placeholder="Search landing pages...">
+
+<select id="filter">
+
+<option value="all">All Categories</option>
+<option>Electrical</option>
+<option>Industrial</option>
+<option>Automation</option>
+<option>Cables</option>
+<option>Lighting</option>
+
+</select>
+
 </div>
 
-<button id="menuBtn" class="menu-btn">
-☰
-</button>
-
-<nav id="nav">
-
-<a href="../index.html">Home</a>
-
-<a href="../articles.html">Articles</a>
-
-<a href="../categories.html">Categories</a>
-
-<a href="../brands.html">Brands</a>
-
-<a href="../contact.html">Contact</a>
-
-</nav>
-
-<a href="https://www.eleczo.com/16-amp-switch.html"
-class="header-btn"
-target="_blank">
-
-Explore on Eleczo
-
-</a>
+</div>
 
 </header>
 
-<section class="guide-hero">
 
-<div class="guide-left">
+<section class="container">
 
-<div class="guide-badge">
+<div class="grid" id="cards">
 
-BUYING GUIDE
 
-</div>
 
-<h1>
 
-16 Amp Switch Buying Guide
 
-</h1>
 
-<p>
 
-Discover how a 16 Amp switch works, where it is used,
-how to choose the correct model and which brands
-offer reliable performance for residential,
-commercial and industrial applications.
 
-</p>
 
-<div class="hero-buttons">
 
-<a href="#guide" class="primary-btn">
 
-Start Reading
 
-</a>
 
-<a href="https://www.eleczo.com/16-amp-switch.html"
 
-target="_blank"
 
-class="secondary-btn">
 
-Explore Products →
+  <div class="card" data-category="Electrical">
 
-</a>
+<div class="icon">⚡</div>
+
+<div class="badge">Electrical</div>
+
+<h3>Electrical Switches</h3>
+
+<p>Browse premium electrical switches suitable for homes, offices and industrial applications.</p>
+
+<div class="url">/landing/electrical-switches</div>
+
+<a class="btn" href="#">Visit Landing Page →</a>
 
 </div>
 
+
+<div class="card" data-category="Electrical">
+
+<div class="icon">🔌</div>
+
+<div class="badge">Electrical</div>
+
+<h3>Power Sockets</h3>
+
+<p>Explore reliable power sockets designed for residential and commercial installations.</p>
+
+<div class="url">/landing/power-sockets</div>
+
+<a class="btn" href="#">Visit Landing Page →</a>
+
 </div>
 
-<div class="guide-image">
 
-<img src="../images/16-amp-switch.webp"
+<div class="card" data-category="Industrial">
 
-alt="16 Amp Switch">
+<div class="icon">🏭</div>
+
+<div class="badge">Industrial</div>
+
+<h3>Industrial Connectors</h3>
+
+<p>Discover heavy-duty connectors engineered for demanding industrial environments.</p>
+
+<div class="url">/landing/industrial-connectors</div>
+
+<a class="btn" href="#">Visit Landing Page →</a>
 
 </div>
+
+
+<div class="card" data-category="Automation">
+
+<div class="icon">🤖</div>
+
+<div class="badge">Automation</div>
+
+<h3>PLC Systems</h3>
+
+<p>Find programmable logic controller solutions for factory automation and process control.</p>
+
+<div class="url">/landing/plc-systems</div>
+
+<a class="btn" href="#">Visit Landing Page →</a>
+
+</div>
+
+
+<div class="card" data-category="Lighting">
+
+<div class="icon">💡</div>
+
+<div class="badge">Lighting</div>
+
+<h3>LED Lighting</h3>
+
+<p>Energy-efficient LED lighting products for commercial, residential and industrial projects.</p>
+
+<div class="url">/landing/led-lighting</div>
+
+<a class="btn" href="#">Visit Landing Page →</a>
+
+</div>
+
+
+<div class="card" data-category="Cables">
+
+<div class="icon">🧵</div>
+
+<div class="badge">Cables</div>
+
+<h3>Control Cables</h3>
+
+<p>Browse durable control cables designed for industrial automation and electrical systems.</p>
+
+<div class="url">/landing/control-cables</div>
+
+<a class="btn" href="#">Visit Landing Page →</a>
+
+</div>
+
+
+<div class="card" data-category="Electrical">
+
+<div class="icon">🔋</div>
+
+<div class="badge">Electrical</div>
+
+<h3>Circuit Breakers</h3>
+
+<p>Protect your electrical systems with dependable circuit breakers from leading brands.</p>
+
+<div class="url">/landing/circuit-breakers</div>
+
+<a class="btn" href="#">Visit Landing Page →</a>
+
+</div>
+
+
+<div class="card" data-category="Automation">
+
+<div class="icon">⚙️</div>
+
+<div class="badge">Automation</div>
+
+<h3>Control Panels</h3>
+
+<p>Professional electrical control panel solutions for industrial automation applications.</p>
+
+<div class="url">/landing/control-panels</div>
+
+<a class="btn" href="#">Visit Landing Page →</a>
+
+</div>
+
+
+<div class="card" data-category="Industrial">
+
+<div class="icon">🛠️</div>
+
+<div class="badge">Industrial</div>
+
+<h3>Industrial Tools</h3>
+
+<p>Professional-grade industrial tools designed for electrical and maintenance work.</p>
+
+<div class="url">/landing/industrial-tools</div>
+
+<a class="btn" href="#">Visit Landing Page →</a>
+
+</div>
+
+
+<div class="card" data-category="Lighting">
+
+<div class="icon">✨</div>
+
+<div class="badge">Lighting</div>
+
+<h3>Commercial Lighting</h3>
+
+<p>Modern commercial lighting solutions that combine performance with energy efficiency.</p>
+
+<div class="url">/landing/commercial-lighting</div>
+
+<a class="btn" href="#">Visit Landing Page →</a>
+
+</div>
+
+
+  </div>
 
 </section>
 
-  <section class="breadcrumb">
+<footer>
 
-<a href="../index.html">Home</a>
+<div class="container">
 
-<span>›</span>
-
-<a href="../categories/switches.html">
-
-Switches
-
-</a>
-
-<span>›</span>
-
-16 Amp Switch
-
-</section>
-
-  <section class="toc">
-
-<h2>
-
-Table of Contents
-
-</h2>
-
-<ul>
-
-<li><a href="#guide">What is a 16 Amp Switch?</a></li>
-
-<li><a href="#applications">Applications</a></li>
-
-<li><a href="#advantages">Advantages</a></li>
-
-<li><a href="#types">Types</a></li>
-
-<li><a href="#brands">Best Brands</a></li>
-
-<li><a href="#buying">Buying Guide</a></li>
-
-<li><a href="#faq">FAQs</a></li>
-
-</ul>
-
-</section>
-
-  <section class="article" id="guide">
-
-<h2>
-
-What is a 16 Amp Switch?
-
-</h2>
-
-<p>
-
-A 16 Amp switch is a heavy-duty electrical switch designed
-to control appliances that draw higher current than
-standard lighting circuits. It is commonly used for
-air conditioners, water heaters, microwave ovens,
-induction cooktops and other high-power equipment.
-
-Unlike a standard 6 Amp switch, a 16 Amp switch is
-built using stronger contacts and durable materials
-that safely handle higher electrical loads.
-
-Choosing the correct switch improves electrical safety,
-reduces overheating and ensures reliable long-term
-performance.
-
-</p>
-
-</section>
-
-  <section class="article" id="applications">
-
-<h2>
-
-Common Applications
-
-</h2>
-
-<div class="feature-grid">
-
-<div>
-
-<h3>Air Conditioners</h3>
-
-<p>
-
-Suitable for split and window AC units.
-
-</p>
+© 2026 Eleczo. All Rights Reserved.
 
 </div>
 
-<div>
+</footer>
 
-<h3>Water Heaters</h3>
+<script>
 
-<p>
+const search=document.getElementById('search');
+const filter=document.getElementById('filter');
+const cards=document.querySelectorAll('.card');
 
-Handles higher current safely.
+function update(){
 
-</p>
+const keyword=search.value.toLowerCase();
+const category=filter.value;
 
-</div>
+cards.forEach(card=>{
 
-<div>
+const text=card.innerText.toLowerCase();
 
-<h3>Kitchen Appliances</h3>
+const cat=card.dataset.category;
 
-<p>
+const matchText=text.includes(keyword);
 
-Ideal for microwave ovens and induction cooktops.
+const matchCat=category==="all" || category===cat;
 
-</p>
+card.style.display=(matchText && matchCat)?"block":"none";
 
-</div>
+});
 
-<div>
+}
 
-<h3>Commercial Equipment</h3>
+search.addEventListener("keyup",update);
 
-<p>
+filter.addEventListener("change",update);
 
-Used in offices and industrial installations.
+</script>
 
-</p>
+</body>
 
-</div>
-
-</div>
-
-</section>
-
-
-  <section class="related-guides">
-
-<h2>
-
-Related Guides
-
-</h2>
-
-<div class="category-grid">
-
-<div class="category-card">
-
-<div class="category-content">
-
-<h3>
-
-16 Amp Socket
-
-</h3>
-
-<p>
-
-Complete buying guide.
-
-</p>
-
-<a href="16-amp-socket.html">
-
-Read Guide →
-
-</a>
-
-</div>
-
-</div>
-
-<div class="category-card">
-
-<div class="category-content">
-
-<h3>
-
-2 Way Switch
-
-</h3>
-
-<p>
-
-Applications and installation.
-
-</p>
-
-<a href="2-way-switch.html">
-
-Read Guide →
-
-</a>
-
-</div>
-
-</div>
-
-<div class="category-card">
-
-<div class="category-content">
-
-<h3>
-
-Modular Switches
-
-</h3>
-
-<p>
-
-Types and comparison.
-
-</p>
-
-<a href="modular-switch.html">
-
-Read Guide →
-
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
+</html>
