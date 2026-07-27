@@ -3,14 +3,17 @@
 <head>
 
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Explore Our Resources | Eleczo</title>
+<title>Electrical Products & Buying Guides | Eleczo Resources</title>
 
 <meta name="description"
-content="Explore our collection of helpful resources, buying guides and service pages. Find the right information quickly and visit the dedicated Eleczo landing pages.">
+content="Browse electrical products, buying guides and categories. Find cables, switches, sockets, fans and more, then visit the corresponding Eleczo landing page.">
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
 
@@ -21,12 +24,9 @@ box-sizing:border-box;
 }
 
 body{
-
 font-family:'Inter',sans-serif;
-background:#f6f8fb;
-color:#222;
-line-height:1.6;
-
+background:#f7f9fc;
+color:#1e293b;
 }
 
 a{
@@ -35,209 +35,132 @@ color:inherit;
 }
 
 .container{
-
 width:min(1280px,92%);
 margin:auto;
-
 }
 
-/***************************
-HEADER
-****************************/
-
 header{
-
-background:white;
-padding:70px 0;
+background:linear-gradient(135deg,#0f172a,#1d4ed8);
+padding:90px 0;
+color:#fff;
 text-align:center;
-border-bottom:1px solid #ececec;
-
 }
 
 header h1{
-
-font-size:48px;
+font-size:46px;
 font-weight:800;
-margin-bottom:15px;
-
+margin-bottom:18px;
 }
 
 header p{
-
 max-width:760px;
 margin:auto;
-font-size:18px;
-color:#666;
-
-}
-
-/***************************
-SEARCH
-****************************/
-
-.search-area{
-
-margin-top:40px;
-display:flex;
-justify-content:center;
-gap:15px;
-flex-wrap:wrap;
-
+line-height:1.7;
+opacity:.9;
 }
 
 .search-box{
+margin-top:35px;
+}
 
-width:480px;
-max-width:100%;
-padding:16px 22px;
+.search-box input{
+width:min(650px,95%);
+padding:18px 22px;
+border:none;
+border-radius:50px;
 font-size:16px;
-border-radius:12px;
-border:1px solid #ddd;
 outline:none;
-transition:.3s;
-
 }
 
-.search-box:focus{
-
-border-color:#0057ff;
-box-shadow:0 0 0 4px rgba(0,87,255,.1);
-
+section{
+padding:60px 0;
 }
-
-select{
-
-padding:16px;
-border-radius:12px;
-border:1px solid #ddd;
-font-size:16px;
-cursor:pointer;
-
-}
-
-/***************************
-GRID
-****************************/
 
 .grid{
-
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-gap:30px;
-padding:70px 0;
-
+grid-template-columns:repeat(auto-fill,minmax(300px,1fr));
+gap:28px;
 }
 
-/***************************
-CARD
-****************************/
-
 .card{
-
-background:white;
+background:#fff;
 border-radius:18px;
 padding:28px;
 transition:.35s;
-position:relative;
-overflow:hidden;
-border:1px solid #eee;
-
+box-shadow:0 10px 30px rgba(0,0,0,.06);
+border:1px solid #edf2f7;
+display:flex;
+flex-direction:column;
 }
 
 .card:hover{
-
 transform:translateY(-8px);
-box-shadow:0 20px 50px rgba(0,0,0,.08);
-
+box-shadow:0 18px 40px rgba(37,99,235,.15);
 }
 
 .icon{
-
-width:64px;
-height:64px;
+width:58px;
+height:58px;
+background:#eff6ff;
 border-radius:14px;
 display:flex;
 align-items:center;
 justify-content:center;
 font-size:28px;
-background:#eef4ff;
 margin-bottom:20px;
-
 }
 
 .badge{
-
 display:inline-block;
+background:#dbeafe;
+color:#1d4ed8;
 padding:7px 14px;
-background:#f2f5fa;
-border-radius:50px;
+border-radius:30px;
 font-size:13px;
 font-weight:600;
-color:#0057ff;
-margin-bottom:18px;
-
+margin-bottom:16px;
 }
 
 .card h3{
-
 font-size:22px;
 margin-bottom:12px;
-
 }
 
 .card p{
-
-font-size:15px;
-color:#666;
-margin-bottom:20px;
-
-}
-
-.url{
-
-font-size:13px;
-color:#999;
-margin-bottom:25px;
-word-break:break-all;
-
+color:#64748b;
+line-height:1.7;
+margin-bottom:22px;
+flex:1;
 }
 
 .btn{
-
-display:inline-flex;
-align-items:center;
-justify-content:center;
-padding:14px 22px;
-background:#0057ff;
-color:white;
+display:inline-block;
+background:#2563eb;
+color:#fff;
+padding:13px 22px;
 border-radius:10px;
 font-weight:600;
 transition:.3s;
-
 }
 
 .btn:hover{
-
-background:#003fc0;
-
+background:#1d4ed8;
 }
 
 footer{
-
-padding:60px 0;
+padding:40px;
 text-align:center;
-color:#777;
-border-top:1px solid #eee;
-background:white;
-
+color:#64748b;
 }
 
 @media(max-width:768px){
 
+header{
+padding:70px 0;
+}
+
 header h1{
-
 font-size:34px;
-
 }
 
 }
@@ -252,33 +175,19 @@ font-size:34px;
 
 <div class="container">
 
-<h1>Explore Our Resource Library</h1>
+<h1>Electrical Products & Buying Resources</h1>
 
 <p>
-
-Browse our curated collection of buying guides, services, product resources and helpful pages.
-Find exactly what you're looking for and visit the dedicated Eleczo page.
-
+Discover electrical products, guides and categories in one organised place.
+Search quickly and visit the corresponding Eleczo landing page.
 </p>
 
-<div class="search-area">
+<div class="search-box">
 
 <input
 type="text"
 id="search"
-class="search-box"
-placeholder="Search landing pages...">
-
-<select id="filter">
-
-<option value="all">All Categories</option>
-<option>Electrical</option>
-<option>Industrial</option>
-<option>Automation</option>
-<option>Cables</option>
-<option>Lighting</option>
-
-</select>
+placeholder="Search cables, switches, sockets, fans...">
 
 </div>
 
@@ -286,291 +195,41 @@ placeholder="Search landing pages...">
 
 </header>
 
+<section>
 
-<section class="container">
+<div class="container">
 
 <div class="grid" id="cards">
 
-
-
-
-<!-- Card 1 -->
-<div class="card" data-category="Accessories">
-    <div class="icon">📦</div>
-    <span class="badge">Accessories</span>
-    <h3>4 Module Cover Plate</h3>
-    <p>Browse premium 4 Module Cover Plate products from leading electrical brands for residential and commercial installations.</p>
-    <a class="btn" href="https://www.eleczo.com/4-module-cover-plate.html" target="_blank" rel="noopener">Visit Landing Page →</a>
+    </div>
 </div>
-
-<!-- Card 2 -->
-<div class="card" data-category="Cables">
-    <div class="icon">🧵</div>
-    <span class="badge">Cable</span>
-    <h3>10 Sq MM Cable</h3>
-    <p>Find high-quality 10 Sq MM electrical cables suitable for industrial, commercial and residential applications.</p>
-    <a class="btn" href="https://www.eleczo.com/10-sq-mm-cable.html" target="_blank" rel="noopener">Visit Landing Page →</a>
-</div>
-
-<!-- Card 3 -->
-<div class="card" data-category="Accessories">
-    <div class="icon">📦</div>
-    <span class="badge">Module Box</span>
-    <h3>12 Module Box</h3>
-    <p>Explore durable 12 Module Boxes designed for safe and organised electrical installations.</p>
-    <a class="btn" href="https://www.eleczo.com/12-module-box.html" target="_blank" rel="noopener">Visit Landing Page →</a>
-</div>
-
-<!-- Card 4 -->
-<div class="card" data-category="Accessories">
-    <div class="icon">📦</div>
-    <span class="badge">Cover Plate</span>
-    <h3>12 Module Cover Plate</h3>
-    <p>Premium 12 Module Cover Plates offering an elegant finish for modular switch installations.</p>
-    <a class="btn" href="https://www.eleczo.com/12-module-cover-plate.html" target="_blank" rel="noopener">Visit Landing Page →</a>
-</div>
-
-<!-- Card 5 -->
-<div class="card" data-category="Accessories">
-    <div class="icon">🛠️</div>
-    <span class="badge">Metal Box</span>
-    <h3>12 Module Metal Box</h3>
-    <p>Heavy-duty 12 Module Metal Boxes built for reliable electrical wiring and switch mounting.</p>
-    <a class="btn" href="https://www.eleczo.com/12-module-metal-box.html" target="_blank" rel="noopener">Visit Landing Page →</a>
-</div>
-
-<!-- Card 6 -->
-<div class="card" data-category="Cables">
-    <div class="icon">🧵</div>
-    <span class="badge">Cable</span>
-    <h3>1.5 Sq MM Cable</h3>
-    <p>Shop reliable 1.5 Sq MM electrical cables for domestic and commercial wiring projects.</p>
-    <a class="btn" href="https://www.eleczo.com/1-5-sq-mm-cable.html" target="_blank" rel="noopener">Visit Landing Page →</a>
-</div>
-
-<!-- Card 7 -->
-<div class="card" data-category="Wires">
-    <div class="icon">🔌</div>
-    <span class="badge">Wire</span>
-    <h3>1.5 Sq MM Wire</h3>
-    <p>Discover premium 1.5 Sq MM wires engineered for safety, flexibility and long-lasting performance.</p>
-    <a class="btn" href="https://www.eleczo.com/1-5-sq-mm-wire.html" target="_blank" rel="noopener">Visit Landing Page →</a>
-</div>
-
-<!-- Card 8 -->
-<div class="card" data-category="Switches & Sockets">
-    <div class="icon">🔌</div>
-    <span class="badge">Socket</span>
-    <h3>16 Amp Socket</h3>
-    <p>Browse durable 16 Amp sockets suitable for high-load electrical appliances and installations.</p>
-    <a class="btn" href="https://www.eleczo.com/16-amp-socket.html" target="_blank" rel="noopener">Visit Landing Page →</a>
-</div>
-
-<!-- Card 9 -->
-<div class="card" data-category="Switches">
-    <div class="icon">⚡</div>
-    <span class="badge">Switch</span>
-    <h3>16 Amp Switch</h3>
-    <p>Premium 16 Amp switches from trusted brands designed for safe electrical control.</p>
-    <a class="btn" href="https://www.eleczo.com/16-amp-switch.html" target="_blank" rel="noopener">Visit Landing Page →</a>
-</div>
-
-<!-- Card 10 -->
-<div class="card" data-category="Cables">
-    <div class="icon">🧵</div>
-    <span class="badge">Cable</span>
-    <h3>16 Sq MM Cable</h3>
-    <p>High-performance 16 Sq MM electrical cables suitable for industrial power distribution.</p>
-    <a class="btn" href="https://www.eleczo.com/16-sq-mm-cable.html" target="_blank" rel="noopener">Visit Landing Page →</a>
-</div>
-
-<!-- Card 11 -->
-<div class="card" data-category="Cables">
-    <div class="icon">🧵</div>
-    <span class="badge">Cable</span>
-    <h3>1 Sq MM Cable</h3>
-    <p>Reliable 1 Sq MM electrical cables for everyday wiring and electrical installations.</p>
-    <a class="btn" href="https://www.eleczo.com/1-sq-mm-cable.html" target="_blank" rel="noopener">Visit Landing Page →</a>
-</div>
-
-<!-- Card 12 -->
-<div class="card" data-category="Wires">
-    <div class="icon">🔌</div>
-    <span class="badge">Wire</span>
-    <h3>1 Sq MM Wire</h3>
-    <p>Explore premium 1 Sq MM wires for residential and commercial electrical projects.</p>
-    <a class="btn" href="https://www.eleczo.com/1-sq-mm-wire.html" target="_blank" rel="noopener">Visit Landing Page →</a>
-</div>
-
-<!-- Card 13 -->
-<div class="card" data-category="Switches">
-    <div class="icon">⚡</div>
-    <span class="badge">Switch</span>
-    <h3>20/25 Amp Switch</h3>
-    <p>Browse dependable 20/25 Amp switches for heavy-duty electrical applications.</p>
-    <a class="btn" href="https://www.eleczo.com/20-25-amp-switch.html" target="_blank" rel="noopener">Visit Landing Page →</a>
-</div>
-
-<!-- Card 14 -->
-<div class="card" data-category="Cables">
-    <div class="icon">🧵</div>
-    <span class="badge">Cable</span>
-    <h3>25 Sq MM Cable</h3>
-    <p>Heavy-duty 25 Sq MM electrical cables for industrial power systems and infrastructure.</p>
-    <a class="btn" href="https://www.eleczo.com/25-sq-mm-cable.html" target="_blank" rel="noopener">Visit Landing Page →</a>
-</div>
-
-<!-- Card 15 -->
-<div class="card" data-category="Wires">
-    <div class="icon">🔌</div>
-    <span class="badge">Wire</span>
-    <h3>2.5 Sq MM Wire</h3>
-    <p>Premium 2.5 Sq MM wires offering excellent conductivity and long service life.</p>
-    <a class="btn" href="https://www.eleczo.com/2-5-sq-mm-wire.html" target="_blank" rel="noopener">Visit Landing Page →</a>
-</div>
-
-<!-- Card 16 -->
-<div class="card" data-category="Switches">
-    <div class="icon">⚡</div>
-    <span class="badge">Switch</span>
-    <h3>2 Way Switch</h3>
-    <p>Explore stylish and reliable 2 Way switches for modern homes and commercial buildings.</p>
-    <a class="btn" href="https://www.eleczo.com/2-way-switch.html" target="_blank" rel="noopener">Visit Landing Page →</a>
-</div>
-
-<!-- Card 17 -->
-<div class="card" data-category="Fans">
-    <div class="icon">🌀</div>
-    <span class="badge">Ceiling Fan</span>
-    <h3>36 Inch Ceiling Fan</h3>
-    <p>Compact and energy-efficient 36 Inch ceiling fans for homes, offices and apartments.</p>
-    <a class="btn" href="https://www.eleczo.com/36-inch-ceiling-fan.html" target="_blank" rel="noopener">Visit Landing Page →</a>
-</div>
-
-<!-- Card 18 -->
-<div class="card" data-category="Fans">
-    <div class="icon">🌀</div>
-    <span class="badge">Ceiling Fan</span>
-    <h3>48 Inch Ceiling Fan</h3>
-    <p>Discover premium 48 Inch ceiling fans with modern designs and powerful airflow.</p>
-    <a class="btn" href="https://www.eleczo.com/48-inch-ceiling-fan.html" target="_blank" rel="noopener">Visit Landing Page →</a>
-</div>
-
-<!-- Card 19 -->
-<div class="card" data-category="Fans">
-    <div class="icon">🌀</div>
-    <span class="badge">Ceiling Fan</span>
-    <h3>4 Blade Ceiling Fan</h3>
-    <p>Browse stylish 4 Blade ceiling fans delivering superior air circulation and elegant aesthetics.</p>
-    <a class="btn" href="https://www.eleczo.com/4-blade-ceiling-fan.html" target="_blank" rel="noopener">Visit Landing Page →</a>
-</div>
-
-<!-- Card 20 -->
-<div class="card" data-category="Cables">
-    <div class="icon">🧵</div>
-    <span class="badge">Cable</span>
-    <h3>4 Sq MM Cable</h3>
-    <p>High-quality 4 Sq MM electrical cables suitable for residential and industrial wiring.</p>
-    <a class="btn" href="https://www.eleczo.com/4-sq-mm-cable.html" target="_blank" rel="noopener">Visit Landing Page →</a>
-</div>
-
-<!-- Card 21 -->
-<div class="card" data-category="Wires">
-    <div class="icon">🔌</div>
-    <span class="badge">Wire</span>
-    <h3>4 Sq MM Wire</h3>
-    <p>Reliable 4 Sq MM electrical wires designed for efficient power transmission and safety.</p>
-    <a class="btn" href="https://www.eleczo.com/4-sq-mm-wire.html" target="_blank" rel="noopener">Visit Landing Page →</a>
-</div>
-
-<!-- Card 22 -->
-<div class="card" data-category="Switches">
-    <div class="icon">⚡</div>
-    <span class="badge">Switch</span>
-    <h3>6/10 Amp Switch</h3>
-    <p>Premium 6/10 Amp switches suitable for residential and commercial electrical systems.</p>
-    <a class="btn" href="https://www.eleczo.com/6-10-amp-switch.html" target="_blank" rel="noopener">Visit Landing Page →</a>
-</div>
-
-<!-- Card 23 -->
-<div class="card" data-category="Accessories">
-    <div class="icon">📦</div>
-    <span class="badge">Module Box</span>
-    <h3>6 Module Box</h3>
-    <p>Strong and durable 6 Module Boxes for organised and secure switch installations.</p>
-    <a class="btn" href="https://www.eleczo.com/6-module-box.html" target="_blank" rel="noopener">Visit Landing Page →</a>
-</div>
-
-<!-- Card 24 -->
-<div class="card" data-category="Accessories">
-    <div class="icon">📦</div>
-    <span class="badge">Cover Plate</span>
-    <h3>6 Module Cover Plate</h3>
-    <p>Elegant 6 Module Cover Plates that complement modern modular switch systems.</p>
-    <a class="btn" href="https://www.eleczo.com/6-module-cover-plate.html" target="_blank" rel="noopener">Visit Landing Page →</a>
-</div>
-
-  _________
-
-
-
-
-
-
-
-
-
-
-  
-
-
-  </div>
-
 </section>
 
 <footer>
 
-<div class="container">
-
-© 2026 Eleczo. All Rights Reserved.
-
-</div>
+© 2026 Eleczo Resources. All rights reserved.
 
 </footer>
 
 <script>
 
-const search=document.getElementById('search');
-const filter=document.getElementById('filter');
-const cards=document.querySelectorAll('.card');
+const search=document.getElementById("search");
 
-function update(){
+search.addEventListener("keyup",function(){
 
-const keyword=search.value.toLowerCase();
-const category=filter.value;
+let value=this.value.toLowerCase();
 
-cards.forEach(card=>{
+document.querySelectorAll(".card").forEach(card=>{
 
-const text=card.innerText.toLowerCase();
-
-const cat=card.dataset.category;
-
-const matchText=text.includes(keyword);
-
-const matchCat=category==="all" || category===cat;
-
-card.style.display=(matchText && matchCat)?"block":"none";
+card.style.display=card.innerText.toLowerCase().includes(value)
+? "flex"
+: "none";
 
 });
 
-}
-
-search.addEventListener("keyup",update);
-
-filter.addEventListener("change",update);
+});
 
 </script>
 
 </body>
-
 </html>
