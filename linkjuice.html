@@ -1,18 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Eleczo Resource Library | Browse All Landing Pages</title>
+<title>Eleczo Resource Library | Explore Electrical Products & Buying Guides</title>
 
 <meta name="description"
-content="Explore all Eleczo landing pages including switches, sockets, wires, cables, lighting, fans, electrical accessories, industrial products and leading electrical brands.">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+content="Browse Eleczo's complete resource library featuring electrical wires, cables, switches, sockets, fans, lighting, industrial products, testing instruments and more.">
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
@@ -24,17 +20,11 @@ padding:0;
 box-sizing:border-box;
 }
 
-html{
-scroll-behavior:smooth;
-}
-
 body{
-
 font-family:'Inter',sans-serif;
-background:#f5f7fb;
+background:#f6f8fb;
 color:#222;
 line-height:1.6;
-
 }
 
 a{
@@ -42,255 +32,137 @@ text-decoration:none;
 color:inherit;
 }
 
-img{
-max-width:100%;
-display:block;
-}
-
 .container{
-
-width:min(1320px,92%);
+width:min(1280px,92%);
 margin:auto;
-
 }
 
-/* =======================
-Hero
-======================= */
+/***************************
+HEADER
+****************************/
 
 header{
-
 background:#fff;
-padding:80px 0 70px;
+padding:70px 0;
+text-align:center;
 border-bottom:1px solid #ececec;
-
 }
 
 header h1{
-
-font-size:52px;
+font-size:48px;
 font-weight:800;
-text-align:center;
-margin-bottom:18px;
-
+margin-bottom:15px;
 }
 
 header p{
-
-max-width:820px;
+max-width:760px;
 margin:auto;
-text-align:center;
 font-size:18px;
 color:#666;
-
 }
 
-/* =======================
-Search
-======================= */
-
 .search-area{
-
-margin-top:45px;
+margin-top:40px;
 display:flex;
 justify-content:center;
-gap:18px;
+gap:15px;
 flex-wrap:wrap;
-
 }
 
 .search-box{
-
-width:520px;
+width:480px;
 max-width:100%;
-padding:18px 22px;
-border:1px solid #ddd;
-border-radius:12px;
+padding:16px 22px;
 font-size:16px;
+border-radius:12px;
+border:1px solid #ddd;
 outline:none;
 transition:.3s;
-
 }
 
 .search-box:focus{
-
 border-color:#0057ff;
-box-shadow:0 0 0 4px rgba(0,87,255,.12);
-
+box-shadow:0 0 0 4px rgba(0,87,255,.1);
 }
 
-#filter{
-
-padding:18px;
+select{
+padding:16px;
 border-radius:12px;
 border:1px solid #ddd;
 font-size:16px;
 cursor:pointer;
-
 }
 
-/* =======================
-Quick Navigation
-======================= */
-
-.quick-nav{
-
-padding:30px 0;
-background:white;
-border-bottom:1px solid #eee;
-
-}
-
-.quick-nav .links{
-
-display:flex;
-gap:12px;
-flex-wrap:wrap;
-justify-content:center;
-
-}
-
-.quick-nav a{
-
-padding:10px 18px;
-background:#eef4ff;
-border-radius:50px;
-font-size:14px;
-font-weight:600;
-transition:.3s;
-
-}
-
-.quick-nav a:hover{
-
-background:#0057ff;
-color:#fff;
-
-}
-
-/* =======================
-Category
-======================= */
-
-.category{
-
-padding:70px 0;
-
-}
-
-.category-title{
-
-display:flex;
-align-items:center;
-justify-content:space-between;
-margin-bottom:30px;
-
-}
-
-.category-title h2{
-
-font-size:34px;
-font-weight:800;
-
-}
-
-.category-title span{
-
-background:#0057ff;
-color:#fff;
-padding:8px 18px;
-border-radius:50px;
-font-size:14px;
-font-weight:600;
-
-}
-
-/* =======================
-Grid
-======================= */
+/***************************
+GRID
+****************************/
 
 .grid{
-
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(310px,1fr));
-gap:28px;
-
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:30px;
+padding:70px 0;
 }
 
-/* =======================
-Card
-======================= */
+/***************************
+CARD
+****************************/
 
 .card{
-
-background:white;
-border:1px solid #ececec;
+background:#fff;
 border-radius:18px;
-padding:24px;
+padding:28px;
 transition:.35s;
-
+border:1px solid #eee;
 }
 
 .card:hover{
-
 transform:translateY(-8px);
-box-shadow:0 20px 45px rgba(0,0,0,.08);
-
+box-shadow:0 20px 50px rgba(0,0,0,.08);
 }
 
 .icon{
-
-width:80px;
-height:80px;
+width:72px;
+height:72px;
 border-radius:14px;
 overflow:hidden;
-background:#f7f9fc;
+background:#eef4ff;
 display:flex;
 align-items:center;
 justify-content:center;
 margin-bottom:20px;
-
 }
 
 .icon img{
-
 width:100%;
 height:100%;
 object-fit:contain;
 padding:8px;
-
 }
 
 .badge{
-
 display:inline-block;
-background:#eef4ff;
-color:#0057ff;
-padding:7px 15px;
-border-radius:30px;
+padding:7px 14px;
+background:#f2f5fa;
+border-radius:50px;
 font-size:13px;
-font-weight:700;
-margin-bottom:16px;
-
+font-weight:600;
+color:#0057ff;
+margin-bottom:18px;
 }
 
 .card h3{
-
 font-size:22px;
 margin-bottom:12px;
-
 }
 
 .card p{
-
-color:#666;
 font-size:15px;
+color:#666;
 margin-bottom:22px;
-
 }
 
 .btn{
-
 display:inline-flex;
 align-items:center;
 justify-content:center;
@@ -300,48 +172,24 @@ color:#fff;
 border-radius:10px;
 font-weight:600;
 transition:.3s;
-
 }
 
 .btn:hover{
-
 background:#003fc0;
-
 }
-
-/* =======================
-Footer
-======================= */
 
 footer{
-
-margin-top:70px;
-padding:50px 0;
-background:white;
-border-top:1px solid #ececec;
+padding:60px 0;
 text-align:center;
-color:#666;
-
+background:#fff;
+border-top:1px solid #eee;
+color:#777;
 }
-
-/* =======================
-Responsive
-======================= */
 
 @media(max-width:768px){
 
 header h1{
-
-font-size:36px;
-
-}
-
-.category-title{
-
-flex-direction:column;
-align-items:flex-start;
-gap:12px;
-
+font-size:34px;
 }
 
 }
@@ -356,13 +204,12 @@ gap:12px;
 
 <div class="container">
 
-<h1>Explore Eleczo Resource Library</h1>
+<h1>Explore Our Resource Library</h1>
 
 <p>
 
-Browse every Eleczo landing page organised by category.
-Find electrical products, buying guides, switches, sockets, wires, cables,
-industrial products, lighting, fans and top electrical brands.
+Browse electrical products, buying guides, brand collections, wiring devices,
+industrial solutions and much more from Eleczo.
 
 </p>
 
@@ -372,21 +219,26 @@ industrial products, lighting, fans and top electrical brands.
 type="text"
 id="search"
 class="search-box"
-placeholder="Search any landing page...">
+placeholder="Search products, brands or categories...">
 
 <select id="filter">
 
 <option value="all">All Categories</option>
 
-<option value="Accessories">Accessories</option>
-<option value="Switches">Switches</option>
-<option value="Sockets">Sockets</option>
-<option value="Wires">Wires</option>
-<option value="Cables">Cables</option>
-<option value="Fans">Fans</option>
-<option value="Lighting">Lighting</option>
-<option value="Testing">Testing</option>
-<option value="Brands">Brands</option>
+<option>Electrical Wires</option>
+<option>Electrical Cables</option>
+<option>Network Cables</option>
+<option>Switches</option>
+<option>Sockets</option>
+<option>Cover Plates</option>
+<option>Module Boxes</option>
+<option>Metal Boxes</option>
+<option>Fans</option>
+<option>Lighting</option>
+<option>Brand Collections</option>
+<option>Testing Instruments</option>
+<option>Wire Accessories</option>
+<option>Wiring Devices</option>
 
 </select>
 
@@ -396,363 +248,261 @@ placeholder="Search any landing page...">
 
 </header>
 
-<section class="quick-nav">
+<section class="container">
 
-<div class="container">
+<div class="grid" id="cards">
 
-<div class="links">
+<!-- ============================= -->
+<!-- COVER PLATES -->
+<!-- ============================= -->
 
-<a href="#accessories">Accessories</a>
-
-<a href="#switches">Switches</a>
-
-<a href="#wires">Wires</a>
-
-<a href="#fans">Fans</a>
-
-<a href="#lighting">Lighting</a>
-
-<a href="#testing">Testing</a>
-
-<a href="#brands">Brands</a>
-
-</div>
-
-</div>
-
-</section>
-
-<div class="container">
-
-<!-- ===================================================== -->
-
-<section class="category" id="accessories">
-
-<div class="category-title">
-
-<h2>Electrical Accessories</h2>
-
-<span>Accessories</span>
-
-</div>
-
-<div class="grid">
-
-<!-- Cards start here -->
-
-  <!-- 4 Module Cover Plate -->
-
-<div class="card" data-category="Accessories">
+<div class="card" data-category="Cover Plates">
 
 <div class="icon">
-<img src="images/4-module-cover-plate.webp" alt="4 Module Cover Plate" loading="lazy">
+<img src="images/4-module-cover-plate.webp"
+alt="4 Module Cover Plate">
 </div>
 
-<span class="badge">Cover Plate</span>
+<span class="badge">Cover Plates</span>
 
 <h3>4 Module Cover Plate</h3>
 
-<p>Browse premium 4 Module Cover Plates from leading electrical brands for residential and commercial installations.</p>
+<p>
+Browse premium 4 Module Cover Plates designed for modular switchboards with
+excellent durability and elegant finishing.
+</p>
 
-<a class="btn" href="https://www.eleczo.com/4-module-cover-plate.html" target="_blank">
+<a class="btn"
+href="https://www.eleczo.com/4-module-cover-plate.html"
+target="_blank">
 Visit Landing Page →
 </a>
 
 </div>
 
-<!-- 6 Module Box -->
-
-<div class="card" data-category="Accessories">
+<div class="card" data-category="Cover Plates">
 
 <div class="icon">
-<img src="images/6-module-box.webp" alt="6 Module Box" loading="lazy">
+<img src="images/12-module-cover-plate.webp"
+alt="12 Module Cover Plate">
 </div>
 
-<span class="badge">Module Box</span>
-
-<h3>6 Module Box</h3>
-
-<p>Explore durable 6 Module Boxes designed for safe and organised modular switch installations.</p>
-
-<a class="btn" href="https://www.eleczo.com/6-module-box.html" target="_blank">
-Visit Landing Page →
-</a>
-
-</div>
-
-<!-- 6 Module Cover Plate -->
-
-<div class="card" data-category="Accessories">
-
-<div class="icon">
-<img src="images/6-module-cover-plate.webp" alt="6 Module Cover Plate" loading="lazy">
-</div>
-
-<span class="badge">Cover Plate</span>
-
-<h3>6 Module Cover Plate</h3>
-
-<p>Premium 6 Module Cover Plates offering a clean and elegant finish for modular wiring systems.</p>
-
-<a class="btn" href="https://www.eleczo.com/6-module-cover-plate.html" target="_blank">
-Visit Landing Page →
-</a>
-
-</div>
-
-<!-- 6 Module Metal Box -->
-
-<div class="card" data-category="Accessories">
-
-<div class="icon">
-<img src="images/6-module-metal-box.webp" alt="6 Module Metal Box" loading="lazy">
-</div>
-
-<span class="badge">Metal Box</span>
-
-<h3>6 Module Metal Box</h3>
-
-<p>Heavy-duty 6 Module Metal Boxes engineered for reliable electrical wiring installations.</p>
-
-<a class="btn" href="https://www.eleczo.com/6-module-metal-box.html" target="_blank">
-Visit Landing Page →
-</a>
-
-</div>
-
-<!-- 8 Module Cover Plate -->
-
-<div class="card" data-category="Accessories">
-
-<div class="icon">
-<img src="images/8-module-cover-plate.webp" alt="8 Module Cover Plate" loading="lazy">
-</div>
-
-<span class="badge">Cover Plate</span>
-
-<h3>8 Module Cover Plate</h3>
-
-<p>Discover stylish 8 Module Cover Plates for modern residential and commercial switch installations.</p>
-
-<a class="btn" href="https://www.eleczo.com/8-module-cover-plate.html" target="_blank">
-Visit Landing Page →
-</a>
-
-</div>
-
-<!-- 8 Module Metal Box -->
-
-<div class="card" data-category="Accessories">
-
-<div class="icon">
-<img src="images/8-module-metal-box.webp" alt="8 Module Metal Box" loading="lazy">
-</div>
-
-<span class="badge">Metal Box</span>
-
-<h3>8 Module Metal Box</h3>
-
-<p>Strong and durable 8 Module Metal Boxes built for long-lasting electrical installations.</p>
-
-<a class="btn" href="https://www.eleczo.com/8-module-metal-box.html" target="_blank">
-Visit Landing Page →
-</a>
-
-</div>
-
-<!-- 12 Module Box -->
-
-<div class="card" data-category="Accessories">
-
-<div class="icon">
-<img src="images/12-module-box.webp" alt="12 Module Box" loading="lazy">
-</div>
-
-<span class="badge">Module Box</span>
-
-<h3>12 Module Box</h3>
-
-<p>Browse premium 12 Module Boxes suitable for large modular switchboard installations.</p>
-
-<a class="btn" href="https://www.eleczo.com/12-module-box.html" target="_blank">
-Visit Landing Page →
-</a>
-
-</div>
-
-<!-- 12 Module Cover Plate -->
-
-<div class="card" data-category="Accessories">
-
-<div class="icon">
-<img src="images/12-module-cover-plate.webp" alt="12 Module Cover Plate" loading="lazy">
-</div>
-
-<span class="badge">Cover Plate</span>
+<span class="badge">Cover Plates</span>
 
 <h3>12 Module Cover Plate</h3>
 
-<p>Premium 12 Module Cover Plates providing an elegant finish for modular electrical systems.</p>
+<p>
+Explore high-quality 12 Module Cover Plates suitable for residential,
+commercial and industrial modular wiring systems.
+</p>
 
-<a class="btn" href="https://www.eleczo.com/12-module-cover-plate.html" target="_blank">
+<a class="btn"
+href="https://www.eleczo.com/12-module-cover-plate.html"
+target="_blank">
 Visit Landing Page →
 </a>
 
 </div>
 
-<!-- 12 Module Metal Box -->
-
-<div class="card" data-category="Accessories">
+<div class="card" data-category="Cover Plates">
 
 <div class="icon">
-<img src="images/12-module-metal-box.webp" alt="12 Module Metal Box" loading="lazy">
+<img src="images/6-module-cover-plate.webp"
+alt="6 Module Cover Plate">
 </div>
 
-<span class="badge">Metal Box</span>
+<span class="badge">Cover Plates</span>
+
+<h3>6 Module Cover Plate</h3>
+
+<p>
+Find durable 6 Module Cover Plates from trusted brands offering stylish
+designs and secure installation.
+</p>
+
+<a class="btn"
+href="https://www.eleczo.com/6-module-cover-plate.html"
+target="_blank">
+Visit Landing Page →
+</a>
+
+</div>
+
+<div class="card" data-category="Cover Plates">
+
+<div class="icon">
+<img src="images/8-module-cover-plate.webp"
+alt="8 Module Cover Plate">
+</div>
+
+<span class="badge">Cover Plates</span>
+
+<h3>8 Module Cover Plate</h3>
+
+<p>
+Premium 8 Module Cover Plates providing an elegant finish for modern modular
+electrical switch installations.
+</p>
+
+<a class="btn"
+href="https://www.eleczo.com/8-module-cover-plate.html"
+target="_blank">
+Visit Landing Page →
+</a>
+
+</div>
+
+<!-- ============================= -->
+<!-- MODULE BOXES -->
+<!-- ============================= -->
+
+<div class="card" data-category="Module Boxes">
+
+<div class="icon">
+<img src="images/6-module-box.webp"
+alt="6 Module Box">
+</div>
+
+<span class="badge">Module Boxes</span>
+
+<h3>6 Module Box</h3>
+
+<p>
+Shop strong and reliable 6 Module Boxes engineered for organised and secure
+electrical installations.
+</p>
+
+<a class="btn"
+href="https://www.eleczo.com/6-module-box.html"
+target="_blank">
+Visit Landing Page →
+</a>
+
+</div>
+
+<div class="card" data-category="Module Boxes">
+
+<div class="icon">
+<img src="images/12-module-box.webp"
+alt="12 Module Box">
+</div>
+
+<span class="badge">Module Boxes</span>
+
+<h3>12 Module Box</h3>
+
+<p>
+Discover premium 12 Module Boxes suitable for residential and commercial
+electrical switch mounting applications.
+</p>
+
+<a class="btn"
+href="https://www.eleczo.com/12-module-box.html"
+target="_blank">
+Visit Landing Page →
+</a>
+
+</div>
+
+<!-- ============================= -->
+<!-- METAL BOXES -->
+<!-- ============================= -->
+
+<div class="card" data-category="Metal Boxes">
+
+<div class="icon">
+<img src="images/6-module-metal-box.webp"
+alt="6 Module Metal Box">
+</div>
+
+<span class="badge">Metal Boxes</span>
+
+<h3>6 Module Metal Box</h3>
+
+<p>
+Heavy-duty 6 Module Metal Boxes manufactured for reliable electrical wiring
+and modular switch installations.
+</p>
+
+<a class="btn"
+href="https://www.eleczo.com/6-module-metal-box.html"
+target="_blank">
+Visit Landing Page →
+</a>
+
+</div>
+
+<div class="card" data-category="Metal Boxes">
+
+<div class="icon">
+<img src="images/12-module-metal-box.webp"
+alt="12 Module Metal Box">
+</div>
+
+<span class="badge">Metal Boxes</span>
 
 <h3>12 Module Metal Box</h3>
 
-<p>Heavy-duty 12 Module Metal Boxes designed for safe and organised electrical installations.</p>
+<p>
+Premium 12 Module Metal Boxes designed to provide long-lasting strength and
+safe electrical mounting solutions.
+</p>
 
-<a class="btn" href="https://www.eleczo.com/12-module-metal-box.html" target="_blank">
+<a class="btn"
+href="https://www.eleczo.com/12-module-metal-box.html"
+target="_blank">
 Visit Landing Page →
 </a>
 
 </div>
 
-</div>
-
-</section>
-
-<!-- ===================================================== -->
-
-<section class="category" id="switches">
-
-<div class="category-title">
-
-<h2>Switches & Sockets</h2>
-
-<span>Switches</span>
-
-</div>
-
-<div class="grid">
-
-<!-- 6/10 Amp Switch -->
-
-<div class="card" data-category="Switches">
+<div class="card" data-category="Metal Boxes">
 
 <div class="icon">
-<img src="images/6-10-amp-switch.webp" alt="6/10 Amp Switch" loading="lazy">
+<img src="images/8-module-metal-box.webp"
+alt="8 Module Metal Box">
 </div>
 
-<span class="badge">Switch</span>
+<span class="badge">Metal Boxes</span>
 
-<h3>6/10 Amp Switch</h3>
+<h3>8 Module Metal Box</h3>
 
-<p>Browse reliable 6/10 Amp modular switches for homes, offices and commercial electrical installations.</p>
+<p>
+Explore durable 8 Module Metal Boxes suitable for modular wiring systems in
+homes, offices and commercial buildings.
+</p>
 
-<a class="btn" href="https://www.eleczo.com/6-10-amp-switch.html" target="_blank">
+<a class="btn"
+href="https://www.eleczo.com/8-module-metal-box.html"
+target="_blank">
 Visit Landing Page →
 </a>
 
 </div>
 
-<!-- 16 Amp Switch -->
+<!-- ============================= -->
+<!-- ELECTRICAL CABLES -->
+<!-- ============================= -->
 
-<div class="card" data-category="Switches">
-
-<div class="icon">
-<img src="images/16-amp-switch.webp" alt="16 Amp Switch" loading="lazy">
-</div>
-
-<span class="badge">Switch</span>
-
-<h3>16 Amp Switch</h3>
-
-<p>Premium 16 Amp switches designed for high-load appliances and dependable electrical control.</p>
-
-<a class="btn" href="https://www.eleczo.com/16-amp-switch.html" target="_blank">
-Visit Landing Page →
-</a>
-
-</div>
-
-<!-- 20/25 Amp Switch -->
-
-<div class="card" data-category="Switches">
+<div class="card" data-category="Electrical Cables">
 
 <div class="icon">
-<img src="images/20-25-amp-switch.webp" alt="20 25 Amp Switch" loading="lazy">
+<img src="images/1-sq-mm-cable.webp"
+alt="1 Sq MM Cable">
 </div>
 
-<span class="badge">Switch</span>
+<span class="badge">Electrical Cables</span>
 
-<h3>20/25 Amp Switch</h3>
+<h3>1 Sq MM Cable</h3>
 
-<p>Heavy-duty modular switches suitable for industrial, commercial and high-load electrical applications.</p>
+<p>
+Browse high-quality 1 Sq MM electrical cables suitable for residential wiring,
+lighting circuits and commercial installations.
+</p>
 
-<a class="btn" href="https://www.eleczo.com/20-25-amp-switch.html" target="_blank">
-Visit Landing Page →
-</a>
-
-</div>
-
-<!-- 2 Way Switch -->
-
-<div class="card" data-category="Switches">
-
-<div class="icon">
-<img src="images/2-way-switch.webp" alt="2 Way Switch" loading="lazy">
-</div>
-
-<span class="badge">Switch</span>
-
-<h3>2 Way Switch</h3>
-
-<p>Explore stylish 2 Way switches for controlling lights conveniently from two different locations.</p>
-
-<a class="btn" href="https://www.eleczo.com/2-way-switch.html" target="_blank">
-Visit Landing Page →
-</a>
-
-</div>
-
-<!-- 16 Amp Socket -->
-
-<div class="card" data-category="Switches">
-
-<div class="icon">
-<img src="images/16-amp-socket.webp" alt="16 Amp Socket" loading="lazy">
-</div>
-
-<span class="badge">Socket</span>
-
-<h3>16 Amp Socket</h3>
-
-<p>Browse durable 16 Amp sockets suitable for heavy-duty electrical appliances and industrial use.</p>
-
-<a class="btn" href="https://www.eleczo.com/16-amp-socket.html" target="_blank">
-Visit Landing Page →
-</a>
-
-</div>
-
-<!-- Switch Socket -->
-
-<div class="card" data-category="Switches">
-
-<div class="icon">
-<img src="images/switch-socket.webp" alt="Switch Socket" loading="lazy">
-</div>
-
-<span class="badge">Switches & Sockets</span>
-
-<h3>Switch Socket</h3>
-
-<p>Explore premium modular switch and socket combinations from leading electrical brands.</p>
-
-<a class="btn" href="https://www.eleczo.com/switch-socket.html" target="_blank">
+<a class="btn"
+href="https://www.eleczo.com/1-sq-mm-cable.html"
+target="_blank">
 Visit Landing Page →
 </a>
 
