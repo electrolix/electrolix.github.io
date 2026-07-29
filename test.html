@@ -18,6 +18,120 @@ content="Browse Eleczo's complete collection of electrical products, wiring devi
 <link rel="stylesheet" href="css/style.css">  
 <link rel="stylesheet" href="css/back-to-top.css">  
 
+<style>
+/*======================
+RESOURCE LIBRARY HERO
+======================*/
+
+.library-hero{
+    padding:70px 0;
+    background:linear-gradient(180deg,#ffffff 0%,#f6f9ff 100%);
+    border-bottom:1px solid #e9edf5;
+}
+
+.library-content{
+    max-width:900px;
+    margin:auto;
+    text-align:center;
+}
+
+.library-badge{
+    display:inline-block;
+    padding:8px 18px;
+    margin-bottom:20px;
+    background:#eef4ff;
+    color:#2563eb;
+    font-size:13px;
+    font-weight:700;
+    border-radius:50px;
+}
+
+.library-content h1{
+    font-size:48px;
+    font-weight:800;
+    color:#1f2937;
+    margin-bottom:18px;
+    line-height:1.2;
+}
+
+.library-content p{
+    max-width:760px;
+    margin:0 auto 35px;
+    font-size:18px;
+    color:#6b7280;
+    line-height:1.8;
+}
+
+.search-area{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:16px;
+    flex-wrap:wrap;
+}
+
+.search-box{
+    width:520px;
+    max-width:100%;
+    padding:17px 20px;
+    font-size:16px;
+    border:1px solid #d7dfeb;
+    border-radius:12px;
+    background:#fff;
+    transition:.3s;
+}
+
+.search-box:focus{
+    outline:none;
+    border-color:#2563eb;
+    box-shadow:0 0 0 4px rgba(37,99,235,.12);
+}
+
+#filter{
+    min-width:220px;
+    padding:17px;
+    font-size:15px;
+    border:1px solid #d7dfeb;
+    border-radius:12px;
+    background:#fff;
+    cursor:pointer;
+    transition:.3s;
+}
+
+#filter:focus{
+    outline:none;
+    border-color:#2563eb;
+    box-shadow:0 0 0 4px rgba(37,99,235,.12);
+}
+
+@media (max-width:768px){
+
+    .library-hero{
+        padding:50px 20px;
+    }
+
+    .library-content h1{
+        font-size:34px;
+    }
+
+    .library-content p{
+        font-size:16px;
+    }
+
+    .search-area{
+        flex-direction:column;
+    }
+
+    .search-box,
+    #filter{
+        width:100%;
+        max-width:100%;
+    }
+
+}
+  
+</style>
+  
 
 </head>
 <body>
