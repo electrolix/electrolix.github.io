@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Eleczo Resource Library | Explore Electrical Products & Buying Guides</title>
+<title>Explore Our Resource Library | Eleczo</title>
 
 <meta name="description"
-content="Browse Eleczo's complete resource library featuring electrical wires, cables, switches, sockets, fans, lighting, industrial products, testing instruments and more.">
+content="Browse Eleczo's complete collection of electrical products, wiring devices, cables, wires, lighting, fans, industrial products and brand landing pages.">
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
@@ -22,7 +23,7 @@ box-sizing:border-box;
 
 body{
 font-family:'Inter',sans-serif;
-background:#f6f8fb;
+background:#f5f7fb;
 color:#222;
 line-height:1.6;
 }
@@ -33,136 +34,188 @@ color:inherit;
 }
 
 .container{
-width:min(1280px,92%);
+width:min(1320px,92%);
 margin:auto;
 }
 
-/***************************
+/*======================
 HEADER
-****************************/
+======================*/
 
 header{
+
 background:#fff;
 padding:70px 0;
 text-align:center;
 border-bottom:1px solid #ececec;
+
 }
 
 header h1{
+
 font-size:48px;
 font-weight:800;
-margin-bottom:15px;
+margin-bottom:18px;
+
 }
 
 header p{
-max-width:760px;
+
+max-width:820px;
 margin:auto;
 font-size:18px;
 color:#666;
+
 }
 
+/*======================
+SEARCH
+======================*/
+
 .search-area{
+
 margin-top:40px;
 display:flex;
 justify-content:center;
-gap:15px;
+gap:18px;
 flex-wrap:wrap;
+
 }
 
 .search-box{
-width:480px;
+
+width:520px;
 max-width:100%;
-padding:16px 22px;
+padding:17px 20px;
 font-size:16px;
-border-radius:12px;
 border:1px solid #ddd;
+border-radius:12px;
 outline:none;
 transition:.3s;
+
 }
 
 .search-box:focus{
+
 border-color:#0057ff;
-box-shadow:0 0 0 4px rgba(0,87,255,.1);
+box-shadow:0 0 0 4px rgba(0,87,255,.12);
+
 }
 
 select{
-padding:16px;
+
+padding:17px;
+font-size:15px;
 border-radius:12px;
 border:1px solid #ddd;
-font-size:16px;
 cursor:pointer;
+background:#fff;
+
 }
 
-/***************************
+/*======================
 GRID
-****************************/
+======================*/
 
 .grid{
+
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-gap:30px;
+grid-template-columns:repeat(auto-fit,minmax(340px,1fr));
+gap:32px;
 padding:70px 0;
+
 }
 
-/***************************
+/*======================
 CARD
-****************************/
+======================*/
 
 .card{
+
 background:#fff;
-border-radius:18px;
-padding:28px;
+border-radius:20px;
+overflow:hidden;
+border:1px solid #ececec;
 transition:.35s;
-border:1px solid #eee;
+
 }
 
 .card:hover{
+
 transform:translateY(-8px);
-box-shadow:0 20px 50px rgba(0,0,0,.08);
+box-shadow:0 18px 45px rgba(0,0,0,.08);
+
 }
 
-.icon{
-width:72px;
-height:72px;
-border-radius:14px;
+/*======================
+IMAGE
+======================*/
+
+.card-image{
+
+width:100%;
+height:240px;
 overflow:hidden;
-background:#eef4ff;
-display:flex;
-align-items:center;
-justify-content:center;
-margin-bottom:20px;
+background:#f3f5fa;
+
 }
 
-.icon img{
+.card-image img{
+
 width:100%;
 height:100%;
-object-fit:contain;
-padding:8px;
+object-fit:cover;
+transition:.4s;
+
+}
+
+.card:hover img{
+
+transform:scale(1.05);
+
+}
+
+/*======================
+CONTENT
+======================*/
+
+.content{
+
+padding:26px;
+
 }
 
 .badge{
+
 display:inline-block;
-padding:7px 14px;
-background:#f2f5fa;
-border-radius:50px;
-font-size:13px;
-font-weight:600;
+padding:8px 16px;
+background:#eef4ff;
 color:#0057ff;
-margin-bottom:18px;
+font-size:13px;
+font-weight:700;
+border-radius:50px;
+margin-bottom:16px;
+
 }
 
 .card h3{
-font-size:22px;
+
+font-size:24px;
 margin-bottom:12px;
+font-weight:700;
+
 }
 
 .card p{
+
 font-size:15px;
 color:#666;
 margin-bottom:22px;
+
 }
 
 .btn{
+
 display:inline-flex;
 align-items:center;
 justify-content:center;
@@ -172,24 +225,37 @@ color:#fff;
 border-radius:10px;
 font-weight:600;
 transition:.3s;
+
 }
 
 .btn:hover{
+
 background:#003fc0;
+
 }
 
 footer{
+
 padding:60px 0;
 text-align:center;
 background:#fff;
-border-top:1px solid #eee;
-color:#777;
+border-top:1px solid #ececec;
+color:#666;
+
 }
 
 @media(max-width:768px){
 
 header h1{
+
 font-size:34px;
+
+}
+
+.card-image{
+
+height:210px;
+
 }
 
 }
@@ -208,8 +274,7 @@ font-size:34px;
 
 <p>
 
-Browse electrical products, buying guides, brand collections, wiring devices,
-industrial solutions and much more from Eleczo.
+Browse all Eleczo landing pages organised by electrical product categories and brands. Quickly search products, switches, sockets, cables, wires, lighting, fans and more.
 
 </p>
 
@@ -217,28 +282,34 @@ industrial solutions and much more from Eleczo.
 
 <input
 type="text"
-id="search"
 class="search-box"
+id="search"
 placeholder="Search products, brands or categories...">
 
 <select id="filter">
 
 <option value="all">All Categories</option>
 
-<option>Electrical Wires</option>
-<option>Electrical Cables</option>
-<option>Network Cables</option>
-<option>Switches</option>
-<option>Sockets</option>
 <option>Cover Plates</option>
 <option>Module Boxes</option>
 <option>Metal Boxes</option>
+<option>Switches</option>
+<option>Sockets</option>
+<option>Wires</option>
+<option>Cables</option>
 <option>Fans</option>
 <option>Lighting</option>
-<option>Brand Collections</option>
+<option>Network Cables</option>
 <option>Testing Instruments</option>
-<option>Wire Accessories</option>
-<option>Wiring Devices</option>
+
+<option>Anchor</option>
+<option>Finolex</option>
+<option>Goldmedal</option>
+<option>GM</option>
+<option>Legrand</option>
+<option>Schneider Electric</option>
+<option>Havells</option>
+<option>LAPP</option>
 
 </select>
 
@@ -252,3094 +323,270 @@ placeholder="Search products, brands or categories...">
 
 <div class="grid" id="cards">
 
-<!-- ============================= -->
-<!-- COVER PLATES -->
-<!-- ============================= -->
+<!-- ===========================
+Cover Plates
+============================ -->
 
 <div class="card" data-category="Cover Plates">
 
-<div class="icon">
+<div class="card-image">
 <img src="images/4-module-cover-plate.webp"
+loading="lazy"
 alt="4 Module Cover Plate">
 </div>
+
+<div class="content">
 
 <span class="badge">Cover Plates</span>
 
 <h3>4 Module Cover Plate</h3>
 
 <p>
-Browse premium 4 Module Cover Plates designed for modular switchboards with
-excellent durability and elegant finishing.
+
+Browse premium 4 Module Cover Plates suitable for modular switch installations from leading electrical brands.
+
 </p>
 
-<a class="btn"
-href="https://www.eleczo.com/4-module-cover-plate.html"
-target="_blank">
+<a href="https://www.eleczo.com/4-module-cover-plate.html"
+target="_blank"
+class="btn">
+
 Visit Landing Page →
+
 </a>
+
+</div>
 
 </div>
 
 <div class="card" data-category="Cover Plates">
 
-<div class="icon">
-<img src="images/12-module-cover-plate.webp"
-alt="12 Module Cover Plate">
-</div>
-
-<span class="badge">Cover Plates</span>
-
-<h3>12 Module Cover Plate</h3>
-
-<p>
-Explore high-quality 12 Module Cover Plates suitable for residential,
-commercial and industrial modular wiring systems.
-</p>
-
-<a class="btn"
-href="https://www.eleczo.com/12-module-cover-plate.html"
-target="_blank">
-Visit Landing Page →
-</a>
-
-</div>
-
-<div class="card" data-category="Cover Plates">
-
-<div class="icon">
+<div class="card-image">
 <img src="images/6-module-cover-plate.webp"
+loading="lazy"
 alt="6 Module Cover Plate">
 </div>
+
+<div class="content">
 
 <span class="badge">Cover Plates</span>
 
 <h3>6 Module Cover Plate</h3>
 
 <p>
-Find durable 6 Module Cover Plates from trusted brands offering stylish
-designs and secure installation.
+
+Explore durable 6 Module Cover Plates designed for modern residential and commercial wiring applications.
+
 </p>
 
-<a class="btn"
-href="https://www.eleczo.com/6-module-cover-plate.html"
-target="_blank">
+<a href="https://www.eleczo.com/6-module-cover-plate.html"
+target="_blank"
+class="btn">
+
 Visit Landing Page →
+
 </a>
+
+</div>
 
 </div>
 
 <div class="card" data-category="Cover Plates">
 
-<div class="icon">
+<div class="card-image">
 <img src="images/8-module-cover-plate.webp"
+loading="lazy"
 alt="8 Module Cover Plate">
 </div>
+
+<div class="content">
 
 <span class="badge">Cover Plates</span>
 
 <h3>8 Module Cover Plate</h3>
 
 <p>
-Premium 8 Module Cover Plates providing an elegant finish for modern modular
-electrical switch installations.
+
+Find stylish 8 Module Cover Plates compatible with premium modular switch ranges.
+
 </p>
 
-<a class="btn"
-href="https://www.eleczo.com/8-module-cover-plate.html"
-target="_blank">
+<a href="https://www.eleczo.com/8-module-cover-plate.html"
+target="_blank"
+class="btn">
+
 Visit Landing Page →
+
 </a>
 
 </div>
 
-<!-- ============================= -->
-<!-- MODULE BOXES -->
-<!-- ============================= -->
+</div>
+
+<div class="card" data-category="Cover Plates">
+
+<div class="card-image">
+<img src="images/12-module-cover-plate.webp"
+loading="lazy"
+alt="12 Module Cover Plate">
+</div>
+
+<div class="content">
+
+<span class="badge">Cover Plates</span>
+
+<h3>12 Module Cover Plate</h3>
+
+<p>
+
+Premium 12 Module Cover Plates providing elegant finishing for modular electrical installations.
+
+</p>
+
+<a href="https://www.eleczo.com/12-module-cover-plate.html"
+target="_blank"
+class="btn">
+
+Visit Landing Page →
+
+</a>
+
+</div>
+
+</div>
+
+<!-- ===========================
+Module Boxes
+============================ -->
 
 <div class="card" data-category="Module Boxes">
 
-<div class="icon">
+<div class="card-image">
 <img src="images/6-module-box.webp"
+loading="lazy"
 alt="6 Module Box">
 </div>
+
+<div class="content">
 
 <span class="badge">Module Boxes</span>
 
 <h3>6 Module Box</h3>
 
 <p>
-Shop strong and reliable 6 Module Boxes engineered for organised and secure
-electrical installations.
+
+Strong and durable 6 Module Boxes for safe electrical wiring and switch installations.
+
 </p>
 
-<a class="btn"
-href="https://www.eleczo.com/6-module-box.html"
-target="_blank">
+<a href="https://www.eleczo.com/6-module-box.html"
+target="_blank"
+class="btn">
+
 Visit Landing Page →
+
 </a>
+
+</div>
 
 </div>
 
 <div class="card" data-category="Module Boxes">
 
-<div class="icon">
+<div class="card-image">
 <img src="images/12-module-box.webp"
+loading="lazy"
 alt="12 Module Box">
 </div>
+
+<div class="content">
 
 <span class="badge">Module Boxes</span>
 
 <h3>12 Module Box</h3>
 
 <p>
-Discover premium 12 Module Boxes suitable for residential and commercial
-electrical switch mounting applications.
+
+Browse heavy-duty 12 Module Boxes suitable for residential, commercial and industrial wiring.
+
 </p>
 
-<a class="btn"
-href="https://www.eleczo.com/12-module-box.html"
-target="_blank">
+<a href="https://www.eleczo.com/12-module-box.html"
+target="_blank"
+class="btn">
+
 Visit Landing Page →
+
 </a>
 
 </div>
 
-<!-- ============================= -->
-<!-- METAL BOXES -->
-<!-- ============================= -->
+</div>
+
+<!-- ===========================
+Metal Boxes
+============================ -->
 
 <div class="card" data-category="Metal Boxes">
 
-<div class="icon">
+<div class="card-image">
 <img src="images/6-module-metal-box.webp"
+loading="lazy"
 alt="6 Module Metal Box">
 </div>
+
+<div class="content">
 
 <span class="badge">Metal Boxes</span>
 
 <h3>6 Module Metal Box</h3>
 
 <p>
-Heavy-duty 6 Module Metal Boxes manufactured for reliable electrical wiring
-and modular switch installations.
+
+Discover premium 6 Module Metal Boxes designed for durable concealed electrical installations.
+
 </p>
 
-<a class="btn"
-href="https://www.eleczo.com/6-module-metal-box.html"
-target="_blank">
+<a href="https://www.eleczo.com/6-module-metal-box.html"
+target="_blank"
+class="btn">
+
 Visit Landing Page →
+
 </a>
+
+</div>
 
 </div>
 
 <div class="card" data-category="Metal Boxes">
 
-<div class="icon">
+<div class="card-image">
 <img src="images/12-module-metal-box.webp"
+loading="lazy"
 alt="12 Module Metal Box">
 </div>
+
+<div class="content">
 
 <span class="badge">Metal Boxes</span>
 
 <h3>12 Module Metal Box</h3>
 
 <p>
-Premium 12 Module Metal Boxes designed to provide long-lasting strength and
-safe electrical mounting solutions.
-</p>
-
-<a class="btn"
-href="https://www.eleczo.com/12-module-metal-box.html"
-target="_blank">
-Visit Landing Page →
-</a>
-
-</div>
-
-<div class="card" data-category="Metal Boxes">
-
-<div class="icon">
-<img src="images/8-module-metal-box.webp"
-alt="8 Module Metal Box">
-</div>
-
-<span class="badge">Metal Boxes</span>
-
-<h3>8 Module Metal Box</h3>
-
-<p>
-Explore durable 8 Module Metal Boxes suitable for modular wiring systems in
-homes, offices and commercial buildings.
-</p>
-
-<a class="btn"
-href="https://www.eleczo.com/8-module-metal-box.html"
-target="_blank">
-Visit Landing Page →
-</a>
-
-</div>
-
-<!-- ============================= -->
-<!-- ELECTRICAL CABLES -->
-<!-- ============================= -->
-
-<div class="card" data-category="Electrical Cables">
-
-<div class="icon">
-<img src="images/1-sq-mm-cable.webp"
-alt="1 Sq MM Cable">
-</div>
-
-<span class="badge">Electrical Cables</span>
-
-<h3>1 Sq MM Cable</h3>
-
-<p>
-Browse high-quality 1 Sq MM electrical cables suitable for residential wiring,
-lighting circuits and commercial installations.
-</p>
-
-<a class="btn"
-href="https://www.eleczo.com/1-sq-mm-cable.html"
-target="_blank">
-Visit Landing Page →
-</a>
-
-</div>
-
-  <!-- ============================= -->
-<!-- ELECTRICAL CABLES -->
-<!-- ============================= -->
-
-<div class="card" data-category="Electrical Cables">
-
-<div class="icon">
-<img src="images/1-5-sq-mm-cable.webp"
-alt="1.5 Sq MM Cable">
-</div>
-
-<span class="badge">Electrical Cables</span>
-
-<h3>1.5 Sq MM Cable</h3>
-
-<p>
-Explore premium 1.5 Sq MM electrical cables designed for residential wiring,
-lighting circuits and commercial electrical installations.
-</p>
-
-<a class="btn"
-href="https://www.eleczo.com/1-5-sq-mm-cable.html"
-target="_blank">
-Visit Landing Page →
-</a>
-
-</div>
-
-<div class="card" data-category="Electrical Cables">
-
-<div class="icon">
-<img src="images/4-sq-mm-cable.webp"
-alt="4 Sq MM Cable">
-</div>
-
-<span class="badge">Electrical Cables</span>
-
-<h3>4 Sq MM Cable</h3>
-
-<p>
-Browse durable 4 Sq MM electrical cables suitable for power distribution,
-heavy-duty wiring and industrial applications.
-</p>
-
-<a class="btn"
-href="https://www.eleczo.com/4-sq-mm-cable.html"
-target="_blank">
-Visit Landing Page →
-</a>
-
-</div>
-
-<div class="card" data-category="Electrical Cables">
-
-<div class="icon">
-<img src="images/6-sq-mm-cable.webp"
-alt="6 Sq MM Cable">
-</div>
-
-<span class="badge">Electrical Cables</span>
-
-<h3>6 Sq MM Cable</h3>
-
-<p>
-Shop reliable 6 Sq MM electrical cables engineered for efficient power
-transmission and long-lasting performance.
-</p>
-
-<a class="btn"
-href="https://www.eleczo.com/6-sq-mm-cable.html"
-target="_blank">
-Visit Landing Page →
-</a>
-
-</div>
-
-<div class="card" data-category="Electrical Cables">
-
-<div class="icon">
-<img src="images/10-sq-mm-cable.webp"
-alt="10 Sq MM Cable">
-</div>
-
-<span class="badge">Electrical Cables</span>
-
-<h3>10 Sq MM Cable</h3>
-
-<p>
-Find high-performance 10 Sq MM electrical cables for industrial machinery,
-commercial projects and residential installations.
-</p>
-
-<a class="btn"
-href="https://www.eleczo.com/10-sq-mm-cable.html"
-target="_blank">
-Visit Landing Page →
-</a>
-
-</div>
-
-<div class="card" data-category="Electrical Cables">
-
-<div class="icon">
-<img src="images/16-sq-mm-cable.webp"
-alt="16 Sq MM Cable">
-</div>
-
-<span class="badge">Electrical Cables</span>
-
-<h3>16 Sq MM Cable</h3>
-
-<p>
-Premium 16 Sq MM electrical cables built for dependable power distribution,
-industrial panels and infrastructure projects.
-</p>
-
-<a class="btn"
-href="https://www.eleczo.com/16-sq-mm-cable.html"
-target="_blank">
-Visit Landing Page →
-</a>
-
-</div>
-
-<div class="card" data-category="Electrical Cables">
-
-<div class="icon">
-<img src="images/25-sq-mm-cable.webp"
-alt="25 Sq MM Cable">
-</div>
-
-<span class="badge">Electrical Cables</span>
-
-<h3>25 Sq MM Cable</h3>
-
-<p>
-Explore heavy-duty 25 Sq MM electrical cables delivering excellent conductivity
-for demanding industrial applications.
-</p>
-
-<a class="btn"
-href="https://www.eleczo.com/25-sq-mm-cable.html"
-target="_blank">
-Visit Landing Page →
-</a>
-
-</div>
-
-<div class="card" data-category="Electrical Cables">
-
-<div class="icon">
-<img src="images/bare-copper-cables-and-wires.webp"
-alt="Bare Copper Cables and Wires">
-</div>
-
-<span class="badge">Electrical Cables</span>
-
-<h3>Bare Copper Cables & Wires</h3>
-
-<p>
-Discover premium bare copper cables and wires offering superior conductivity
-for grounding, electrical and industrial applications.
-</p>
-
-<a class="btn"
-href="https://www.eleczo.com/bare-copper-cables-and-wires.html"
-target="_blank">
-Visit Landing Page →
-</a>
-
-</div>
-
-<!-- ============================= -->
-<!-- NETWORK CABLES -->
-<!-- ============================= -->
-
-<div class="card" data-category="Network Cables">
-
-<div class="icon">
-<img src="images/cat5e-ethernet-cables.webp"
-alt="CAT5e Ethernet Cable">
-</div>
-
-<span class="badge">Network Cables</span>
-
-<h3>CAT5e Ethernet Cables</h3>
-
-<p>
-Browse CAT5e Ethernet cables for reliable networking, office connectivity and
-high-speed internet installations.
-</p>
-
-<a class="btn"
-href="https://www.eleczo.com/cat5e-ethernet-cables.html"
-target="_blank">
-Visit Landing Page →
-</a>
-
-</div>
-
-<div class="card" data-category="Network Cables">
-
-<div class="icon">
-<img src="images/cat6-ethernet-cable.webp"
-alt="CAT6 Ethernet Cable">
-</div>
-
-<span class="badge">Network Cables</span>
-
-<h3>CAT6 Ethernet Cable</h3>
-
-<p>
-Explore CAT6 Ethernet cables engineered for fast data transmission, LAN
-networks and professional networking solutions.
-</p>
-
-<a class="btn"
-href="https://www.eleczo.com/network-cables/cat6-ethernet-cable.html"
-target="_blank">
-Visit Landing Page →
-</a>
-
-</div>
-
-<div class="card" data-category="Network Cables">
-
-<div class="icon">
-<img src="images/cat6a-ethernet-cables.webp"
-alt="CAT6A Ethernet Cable">
-</div>
-
-<span class="badge">Network Cables</span>
-
-<h3>CAT6A Ethernet Cables</h3>
-
-<p>
-Discover CAT6A Ethernet cables delivering enhanced bandwidth, improved shielding
-and dependable high-speed networking performance.
-</p>
-
-<a class="btn"
-href="https://www.eleczo.com/cat6a-ethernet-cables.html"
-target="_blank">
-Visit Landing Page →
-</a>
-
-</div>
-
-<div class="card" data-category="Network Cables">
-
-<div class="icon">
-<img src="images/cat7-ethernet-cables.webp"
-alt="CAT7 Ethernet Cable">
-</div>
-
-<span class="badge">Network Cables</span>
-
-<h3>CAT7 Ethernet Cables</h3>
-
-<p>
-Shop CAT7 Ethernet cables offering ultra-fast connectivity for enterprise,
-industrial and smart networking environments.
-</p>
-
-<a class="btn"
-href="https://www.eleczo.com/network-cables/cat7-ethernet-cables.html"
-target="_blank">
-Visit Landing Page →
-</a>
-
-</div>
-
-<div class="card" data-category="Network Cables">
-
-<div class="icon">
-<img src="images/network-cables.webp"
-alt="Network Cables">
-</div>
-
-<span class="badge">Network Cables</span>
-
-<h3>Network Cables</h3>
-
-<p>
-Explore a complete range of network cables designed for structured cabling,
-communication systems and data networking applications.
-</p>
-
-<a class="btn"
-href="https://www.eleczo.com/wires-cables/network-and-signal-cables/network-cables.html"
-target="_blank">
-Visit Landing Page →
-</a>
-
-</div>
-
-<div class="card" data-category="Network Cables">
-
-<div class="icon">
-<img src="images/signal-cables.webp"
-alt="Signal Cables">
-</div>
-
-<span class="badge">Network Cables</span>
-
-<h3>Signal Cables</h3>
-
-<p>
-Browse signal cables engineered for automation, instrumentation and industrial
-control systems requiring reliable signal transmission.
-</p>
-
-<a class="btn"
-href="https://www.eleczo.com/wires-cables/network-and-signal-cables/signal-cables.html"
-target="_blank">
-Visit Landing Page →
-</a>
-
-</div>
-
-<!-- ============================= -->
-<!-- INDUSTRIAL CABLES -->
-<!-- ============================= -->
-
-<div class="card" data-category="Electrical Cables">
-
-<div class="icon">
-<img src="images/industrial-cables.webp"
-alt="Industrial Cables">
-</div>
-
-<span class="badge">Electrical Cables</span>
-
-<h3>Industrial Cables</h3>
-
-<p>
-Discover industrial cables designed for demanding manufacturing environments,
-automation systems and heavy-duty electrical installations.
-</p>
-
-<a class="btn"
-href="https://www.eleczo.com/wires-cables/single-core-cable/industrial-cables.html"
-target="_blank">
-Visit Landing Page →
-</a>
-
-</div>
-
-<div class="card" data-category="Electrical Cables">
-
-<div class="icon">
-<img src="images/wires-cables.webp"
-alt="Wires and Cables">
-</div>
-
-<span class="badge">Electrical Cables</span>
-
-<h3>Wires & Cables</h3>
-
-<p>
-Browse Eleczo's complete collection of electrical wires and cables for homes,
-commercial buildings, industrial facilities and infrastructure projects.
-</p>
-
-<a class="btn"
-href="https://www.eleczo.com/wires-cables.html"
-target="_blank">
-Visit Landing Page →
-</a>
-
-</div>
-
-  <!-- ============================= -->
-<!-- ELECTRICAL WIRES -->
-<!-- ============================= -->
-
-<div class="card" data-category="Electrical Wires">
-
-<div class="icon">
-<img src="images/1-sq-mm-wire.webp"
-alt="1 Sq MM Wire">
-</div>
-
-<span class="badge">Electrical Wires</span>
-
-<h3>1 Sq MM Wire</h3>
-
-<p>
-Browse premium 1 Sq MM copper wires designed for residential wiring,
-lighting circuits and long-lasting electrical performance.
-</p>
-
-<a class="btn"
-href="https://www.eleczo.com/1-sq-mm-wire.html"
-target="_blank">
-Visit Landing Page →
-</a>
-
-</div>
-
-<div class="card" data-category="Electrical Wires">
-
-<div class="icon">
-<img src="images/1-5-sq-mm-wire.webp"
-alt="1.5 Sq MM Wire">
-</div>
-
-<span class="badge">Electrical Wires</span>
-
-<h3>1.5 Sq MM Wire</h3>
-
-<p>
-Explore reliable 1.5 Sq MM wires offering excellent flexibility,
-high conductivity and enhanced safety for domestic wiring.
-</p>
-
-<a class="btn"
-href="https://www.eleczo.com/1-5-sq-mm-wire.html"
-target="_blank">
-Visit Landing Page →
-</a>
-
-</div>
-
-<div class="card" data-category="Electrical Wires">
-
-<div class="icon">
-<img src="images/2-5-sq-mm-wire.webp"
-alt="2.5 Sq MM Wire">
-</div>
-
-<span class="badge">Electrical Wires</span>
-
-<h3>2.5 Sq MM Wire</h3>
-
-<p>
-Discover premium 2.5 Sq MM wires suitable for power sockets,
-electrical appliances and commercial wiring applications.
-</p>
-
-<a class="btn"
-href="https://www.eleczo.com/2-5-sq-mm-wire.html"
-target="_blank">
-Visit Landing Page →
-</a>
-
-</div>
-
-<div class="card" data-category="Electrical Wires">
-
-<div class="icon">
-<img src="images/4-sq-mm-wire.webp"
-alt="4 Sq MM Wire">
-</div>
-
-<span class="badge">Electrical Wires</span>
-
-<h3>4 Sq MM Wire</h3>
-
-<p>
-Browse durable 4 Sq MM electrical wires designed for higher load
-applications and efficient electrical installations.
-</p>
-
-<a class="btn"
-href="https://www.eleczo.com/4-sq-mm-wire.html"
-target="_blank">
-Visit Landing Page →
-</a>
-
-</div>
-
-<div class="card" data-category="Electrical Wires">
-
-<div class="icon">
-<img src="images/copper-wires.webp"
-alt="Copper Wires">
-</div>
-
-<span class="badge">Electrical Wires</span>
-
-<h3>Copper Wires</h3>
-
-<p>
-Explore a wide range of premium copper wires offering superior
-conductivity, durability and dependable electrical performance.
-</p>
-
-<a class="btn"
-href="https://www.eleczo.com/copper-wires.html"
-target="_blank">
-Visit Landing Page →
-</a>
-
-</div>
-
-<div class="card" data-category="Electrical Wires">
-
-<div class="icon">
-<img src="images/pvc-fr-wires.webp"
-alt="PVC FR Wires">
-</div>
-
-<span class="badge">Electrical Wires</span>
-
-<h3>PVC FR Wires</h3>
-
-<p>
-Find flame-retardant PVC FR wires designed to improve electrical
-safety in residential and commercial installations.
-</p>
-
-<a class="btn"
-href="https://www.eleczo.com/pvc-fr-wires.html"
-target="_blank">
-Visit Landing Page →
-</a>
-
-</div>
-
-<div class="card" data-category="Electrical Wires">
-
-<div class="icon">
-<img src="images/pvc-frlsh-wires.webp"
-alt="PVC FRLSH Wires">
-</div>
-
-<span class="badge">Electrical Wires</span>
-
-<h3>PVC FRLSH Wires</h3>
-
-<p>
-Browse low smoke halogen-free FRLSH wires engineered for enhanced
-fire safety and dependable electrical performance.
-</p>
-
-<a class="btn"
-href="https://www.eleczo.com/pvc-frlsh-wires.html"
-target="_blank">
-Visit Landing Page →
-</a>
-
-</div>
-
-<!-- ============================= -->
-<!-- FINOLEX WIRES -->
-<!-- ============================= -->
-
-<div class="card" data-category="Brand Collections">
-
-<div class="icon">
-<img src="images/finolex-0-75-sq-mm-wires.webp"
-alt="Finolex 0.75 Sq MM Wires">
-</div>
-
-<span class="badge">Finolex</span>
-
-<h3>Finolex 0.75 Sq MM Wires</h3>
-
-<p>
-Browse Finolex 0.75 Sq MM wires designed for lighting circuits,
-control wiring and dependable electrical installations.
-</p>
-
-<a class="btn"
-href="https://www.eleczo.com/finolex-0-75-sq-mm-wires.html"
-target="_blank">
-Visit Landing Page →
-</a>
-
-</div>
-
-<div class="card" data-category="Brand Collections">
-
-<div class="icon">
-<img src="images/finolex-1-sq-mm-wire.webp"
-alt="Finolex 1 Sq MM Wire">
-</div>
-
-<span class="badge">Finolex</span>
-
-<h3>Finolex 1 Sq MM Wire</h3>
-
-<p>
-Explore genuine Finolex 1 Sq MM wires trusted for residential,
-commercial and industrial electrical wiring.
-</p>
-
-<a class="btn"
-href="https://www.eleczo.com/finolex-1-sq-mm-wire.html"
-target="_blank">
-Visit Landing Page →
-</a>
-
-</div>
-
-<div class="card" data-category="Brand Collections">
-
-<div class="icon">
-<img src="images/finolex-1-5-sq-mm-wire.webp"
-alt="Finolex 1.5 Sq MM Wire">
-</div>
-
-<span class="badge">Finolex</span>
-
-<h3>Finolex 1.5 Sq MM Wire</h3>
-
-<p>
-Premium Finolex 1.5 Sq MM wires providing excellent insulation,
-durability and safe electrical performance.
-</p>
-
-<a class="btn"
-href="https://www.eleczo.com/finolex-1-5-sq-mm-wire.html"
-target="_blank">
-Visit Landing Page →
-</a>
-
-</div>
-
-<div class="card" data-category="Brand Collections">
-
-<div class="icon">
-<img src="images/finolex-2-5-sq-mm-wires.webp"
-alt="Finolex 2.5 Sq MM Wires">
-</div>
-
-<span class="badge">Finolex</span>
-
-<h3>Finolex 2.5 Sq MM Wires</h3>
-
-<p>
-Browse Finolex 2.5 Sq MM wires engineered for power sockets,
-heavy-duty wiring and long-term performance.
-</p>
-
-<a class="btn"
-href="https://www.eleczo.com/finolex-2-5-sq-mm-wires.html"
-target="_blank">
-Visit Landing Page →
-</a>
-
-</div>
-
-<div class="card" data-category="Brand Collections">
-
-<div class="icon">
-<img src="images/finolex-4-sq-mm-wires.webp"
-alt="Finolex 4 Sq MM Wires">
-</div>
-
-<span class="badge">Finolex</span>
-
-<h3>Finolex 4 Sq MM Wires</h3>
-
-<p>
-Shop Finolex 4 Sq MM wires suitable for high-load electrical
-applications in residential and commercial environments.
-</p>
-
-<a class="btn"
-href="https://www.eleczo.com/finolex-4-sq-mm-wires.html"
-target="_blank">
-Visit Landing Page →
-</a>
-
-</div>
-
-<div class="card" data-category="Brand Collections">
-
-<div class="icon">
-<img src="images/finolex-6-sq-mm-wires.webp"
-alt="Finolex 6 Sq MM Wires">
-</div>
-
-<span class="badge">Finolex</span>
-
-<h3>Finolex 6 Sq MM Wires</h3>
-
-<p>
-Discover Finolex 6 Sq MM wires offering superior conductivity,
-strength and dependable electrical safety.
-</p>
-
-<a class="btn"
-href="https://www.eleczo.com/finolex-6-sq-mm-wires.html"
-target="_blank">
-Visit Landing Page →
-</a>
-
-</div>
-
-<div class="card" data-category="Brand Collections">
-
-<div class="icon">
-<img src="images/finolex-90-mtr-wires.webp"
-alt="Finolex 90 Mtr Wires">
-</div>
-
-<span class="badge">Finolex</span>
-
-<h3>Finolex 90 Mtr Wires</h3>
-
-<p>
-Browse Finolex 90 metre wire rolls ideal for complete residential
-and commercial wiring installations.
-</p>
-
-<a class="btn"
-href="https://www.eleczo.com/finolex-90-mtr-wires.html"
-target="_blank">
-Visit Landing Page →
-</a>
-
-</div>
-
-  <!-- ============================= -->
-<!-- FINOLEX BRAND COLLECTION -->
-<!-- ============================= -->
-
-<div class="card" data-category="Brand Collections">
-
-<div class="icon">
-<img src="images/finolex-copper-wires.webp"
-alt="Finolex Copper Wires">
-</div>
-
-<span class="badge">Finolex</span>
-
-<h3>Finolex Copper Wires</h3>
-
-<p>
-Explore genuine Finolex copper wires offering superior conductivity,
-excellent insulation and dependable electrical performance.
-</p>
-
-<a class="btn"
-href="https://www.eleczo.com/finolex-copper-wires.html"
-target="_blank">
-Visit Landing Page →
-</a>
-
-</div>
-
-<div class="card" data-category="Brand Collections">
-
-<div class="icon">
-<img src="images/finolex-fr-wires.webp"
-alt="Finolex FR Wires">
-</div>
-
-<span class="badge">Finolex</span>
-
-<h3>Finolex FR Wires</h3>
-
-<p>
-Browse Finolex Flame Retardant wires engineered for improved fire safety,
-durability and long-lasting electrical installations.
-</p>
-
-<a class="btn"
-href="https://www.eleczo.com/finolex-fr-wires.html"
-target="_blank">
-Visit Landing Page →
-</a>
-
-</div>
-
-<div class="card" data-category="Brand Collections">
-
-<div class="icon">
-<img src="images/finolex-frls-wires.webp"
-alt="Finolex FRLS Wires">
-</div>
-
-<span class="badge">Finolex</span>
-
-<h3>Finolex FRLS Wires</h3>
-
-<p>
-Discover Finolex FRLS wires with low smoke characteristics for enhanced
-electrical safety in residential and commercial projects.
-</p>
-
-<a class="btn"
-href="https://www.eleczo.com/finolex-frls-wires.html"
-target="_blank">
-Visit Landing Page →
-</a>
-
-</div>
-
-<div class="card" data-category="Brand Collections">
-
-<div class="icon">
-<img src="images/finolex-frlsh-wires.webp"
-alt="Finolex FRLSH Wires">
-</div>
-
-<span class="badge">Finolex</span>
-
-<h3>Finolex FRLSH Wires</h3>
-
-<p>
-Shop Finolex FRLSH wires designed to minimise smoke emission while
-delivering reliable electrical performance.
-</p>
-
-<a class="btn"
-href="https://www.eleczo.com/finolex-frlsh-wires.html"
-target="_blank">
-Visit Landing Page →
-</a>
-
-</div>
-
-<div class="card" data-category="Brand Collections">
-
-<div class="icon">
-<img src="images/finolex-house-wiring.webp"
-alt="Finolex House Wiring Cables">
-</div>
-
-<span class="badge">Finolex</span>
-
-<h3>Finolex House Wiring Cables</h3>
-
-<p>
-Browse Finolex house wiring cables suitable for domestic, commercial and
-modern electrical installations.
-</p>
-
-<a class="btn"
-href="https://www.eleczo.com/finolex-house-wiring-domestic-and-commercial-cables.html"
-target="_blank">
-Visit Landing Page →
-</a>
-
-</div>
-
-<div class="card" data-category="Brand Collections">
-
-<div class="icon">
-<img src="images/finolex-industrial-cables.webp"
-alt="Finolex Industrial Cables">
-</div>
-
-<span class="badge">Finolex</span>
-
-<h3>Finolex Industrial Cables</h3>
-
-<p>
-Explore Finolex industrial cables engineered for factories, automation,
-heavy-duty machinery and industrial power distribution.
-</p>
-
-<a class="btn"
-href="https://www.eleczo.com/finolex-industrial-cables.html"
-target="_blank">
-Visit Landing Page →
-</a>
-
-</div>
-
-<div class="card" data-category="Brand Collections">
-
-<div class="icon">
-<img src="images/finolex-power-socket-wires.webp"
-alt="Finolex Wires for Power Sockets">
-</div>
-
-<span class="badge">Finolex</span>
-
-<h3>Finolex Wires for Power Sockets</h3>
-
-<p>
-Find Finolex wires specially recommended for power sockets,
-ensuring dependable performance and enhanced electrical safety.
-</p>
-
-<a class="btn"
-href="https://www.eleczo.com/finolex-wires-and-cables-for-power-sockets.html"
-target="_blank">
-Visit Landing Page →
-</a>
-
-</div>
-
-<div class="card" data-category="Brand Collections">
-
-<div class="icon">
-<img src="images/finolex-wires-cables.webp"
-alt="Finolex Wires & Cables">
-</div>
-
-<span class="badge">Finolex</span>
-
-<h3>Finolex Wires & Cables</h3>
-
-<p>
-Explore the complete Finolex range of electrical wires and cables for
-homes, commercial buildings and industrial projects.
-</p>
-
-<a class="btn"
-href="https://www.eleczo.com/finolex-wires-cables.html"
-target="_blank">
-Visit Landing Page →
-</a>
-
-</div>
-
-<div class="card" data-category="Brand Collections">
-
-<div class="icon">
-<img src="images/finolex-lighting-wires.webp"
-alt="Finolex Wires for Lighting">
-</div>
-
-<span class="badge">Finolex</span>
-
-<h3>Finolex Wires for Lighting</h3>
-
-<p>
-Browse Finolex lighting wires designed to deliver efficient power
-distribution for residential and commercial lighting systems.
-</p>
-
-<a class="btn"
-href="https://www.eleczo.com/finolex-wires-for-lighting.html"
-target="_blank">
-Visit Landing Page →
-</a>
-
-</div>
-
-<!-- ============================= -->
-<!-- LAPP KABEL -->
-<!-- ============================= -->
-
-<div class="card" data-category="Brand Collections">
-
-<div class="icon">
-<img src="images/lapp-kabel.webp"
-alt="LAPP Kabel Wires & Cables">
-</div>
-
-<span class="badge">LAPP</span>
-
-<h3>LAPP Kabel Wires & Cables</h3>
-
-<p>
-Discover premium LAPP Kabel wires and cables trusted worldwide
-for industrial automation, machinery and control applications.
-</p>
-
-<a class="btn"
-href="https://www.eleczo.com/lapp-kabel-wires-cables.html"
-target="_blank">
-Visit Landing Page →
-</a>
-
-</div>
-
-<!-- ============================= -->
-<!-- ANCHOR COLLECTION -->
-<!-- ============================= -->
-
-<div class="card" data-category="Brand Collections">
-
-<div class="icon">
-<img src="images/anchor-switch.webp"
-alt="Anchor Switch">
-</div>
-
-<span class="badge">Anchor</span>
-
-<h3>Anchor Switch</h3>
-
-<p>
-Browse premium Anchor modular switches featuring stylish designs,
-smooth operation and dependable electrical safety.
-</p>
-
-<a class="btn"
-href="https://www.eleczo.com/anchor-switch.html"
-target="_blank">
-Visit Landing Page →
-</a>
-
-</div>
-
-<div class="card" data-category="Brand Collections">
-
-<div class="icon">
-<img src="images/anchor-socket.webp"
-alt="Anchor Socket">
-</div>
-
-<span class="badge">Anchor</span>
-
-<h3>Anchor Socket</h3>
-
-<p>
-Explore genuine Anchor sockets designed for reliable power
-connections in residential and commercial installations.
-</p>
-
-<a class="btn"
-href="https://www.eleczo.com/anchor-socket.html"
-target="_blank">
-Visit Landing Page →
-</a>
-
-</div>
-
-<div class="card" data-category="Brand Collections">
-
-<div class="icon">
-<img src="images/anchor-cover-plates.webp"
-alt="Anchor Cover Plates">
-</div>
-
-<span class="badge">Anchor</span>
-
-<h3>Anchor Cover Plates</h3>
-
-<p>
-Discover elegant Anchor cover plates that provide a premium finish
-to modular switchboards and electrical installations.
-</p>
-
-<a class="btn"
-href="https://www.eleczo.com/anchor-cover-plates.html"
-target="_blank">
-Visit Landing Page →
-</a>
-
-</div>
-
-<div class="card" data-category="Brand Collections">
-
-<div class="icon">
-<img src="images/anchor-doorbells.webp"
-alt="Anchor Doorbells">
-</div>
-
-<span class="badge">Anchor</span>
-
-<h3>Anchor Doorbells</h3>
-
-<p>
-Browse stylish Anchor doorbells offering dependable performance,
-clear sound quality and modern aesthetics.
-</p>
-
-<a class="btn"
-href="https://www.eleczo.com/anchor-doorbells.html"
-target="_blank">
-Visit Landing Page →
-</a>
-
-</div>
-
-<div class="card" data-category="Brand Collections">
-
-<div class="icon">
-<img src="images/anchor-fan-regulator.webp"
-alt="Anchor Fan Regulators">
-</div>
-
-<span class="badge">Anchor</span>
-
-<h3>Anchor Fan Regulators & Dimmers</h3>
-
-<p>
-Explore Anchor fan regulators and dimmers designed for smooth speed
-control and efficient lighting adjustment.
-</p>
-
-<a class="btn"
-href="https://www.eleczo.com/anchor-fan-regulators-dimmers.html"
-target="_blank">
-Visit Landing Page →
-</a>
-
-</div>
-
-<div class="card" data-category="Brand Collections">
-
-<div class="icon">
-<img src="images/anchor-16-amp-switch.webp"
-alt="Anchor 16 Amp Switch">
-</div>
-
-<span class="badge">Anchor</span>
-
-<h3>Anchor 16 Amp Switch</h3>
-
-<p>
-Shop genuine Anchor 16 Amp switches suitable for heavy electrical
-loads in homes and commercial environments.
-</p>
-
-<a class="btn"
-href="https://www.eleczo.com/anchor-16-amp-switch.html"
-target="_blank">
-Visit Landing Page →
-</a>
-
-</div>
-
-<div class="card" data-category="Brand Collections">
-
-<div class="icon">
-<img src="images/anchor-16-amp-socket.webp"
-alt="Anchor 16 Amp Socket">
-</div>
-
-<span class="badge">Anchor</span>
-
-<h3>Anchor 16 Amp Socket</h3>
-
-<p>
-Find reliable Anchor 16 Amp sockets engineered for high-power
-electrical appliances and demanding installations.
-</p>
-
-<a class="btn"
-href="https://www.eleczo.com/anchor-16-amp-socket.html"
-target="_blank">
-Visit Landing Page →
-</a>
-
-</div>
-
-
-  <!-- ============================= -->
-<!-- ANCHOR COLLECTION (Continued) -->
-<!-- ============================= -->
-
-<div class="card" data-category="Brand Collections">
-
-<div class="icon">
-<img src="images/anchor-6-10-amp-switch.webp"
-alt="Anchor 6/10 Amp Switch">
-</div>
-
-<span class="badge">Anchor</span>
-
-<h3>Anchor 6/10 Amp Switch</h3>
-
-<p>
-Browse genuine Anchor 6/10 Amp switches designed for dependable operation,
-modern interiors and long-lasting electrical performance.
-</p>
-
-<a class="btn"
-href="https://www.eleczo.com/anchor-6-10-amp-switch.html"
-target="_blank">
-Visit Landing Page →
-</a>
-
-</div>
-
-<div class="card" data-category="Brand Collections">
-
-<div class="icon">
-<img src="images/anchor-6-10-amp-socket.webp"
-alt="Anchor 6/10 Amp Socket">
-</div>
-
-<span class="badge">Anchor</span>
-
-<h3>Anchor 6/10 Amp Socket</h3>
-
-<p>
-Discover premium Anchor 6/10 Amp sockets offering secure electrical
-connections for residential and commercial applications.
-</p>
-
-<a class="btn"
-href="https://www.eleczo.com/anchor-6-10-amp-socket.html"
-target="_blank">
-Visit Landing Page →
-</a>
-
-</div>
-
-<div class="card" data-category="Brand Collections">
-
-<div class="icon">
-<img src="images/anchor-20-25-amp-switch.webp"
-alt="Anchor 20/25 Amp Switch">
-</div>
-
-<span class="badge">Anchor</span>
-
-<h3>Anchor 20/25 Amp Switch</h3>
-
-<p>
-Shop heavy-duty Anchor 20/25 Amp switches engineered for high-load
-electrical appliances and industrial installations.
-</p>
-
-<a class="btn"
-href="https://www.eleczo.com/anchor-20-25-amp-switch.html"
-target="_blank">
-Visit Landing Page →
-</a>
-
-</div>
-
-<div class="card" data-category="Brand Collections">
-
-<div class="icon">
-<img src="images/anchor-12-module-cover-plate.webp"
-alt="Anchor 12 Module Cover Plate">
-</div>
-
-<span class="badge">Anchor</span>
-
-<h3>Anchor 12 Module Cover Plate</h3>
-
-<p>
-Explore genuine Anchor 12 Module Cover Plates delivering elegant
-finishing and seamless compatibility with modular switchboards.
-</p>
-
-<a class="btn"
-href="https://www.eleczo.com/anchor-12-module-cover-plate.html"
-target="_blank">
-Visit Landing Page →
-</a>
-
-</div>
-
-<div class="card" data-category="Brand Collections">
-
-<div class="icon">
-<img src="images/anchor-roma-classic-switches.webp"
-alt="Anchor Roma Classic">
-</div>
-
-<span class="badge">Anchor Roma Classic</span>
-
-<h3>Anchor Roma Classic Switches</h3>
-
-<p>
-Browse the complete Anchor Roma Classic modular switch collection
-combining timeless styling with dependable electrical performance.
-</p>
-
-<a class="btn"
-href="https://www.eleczo.com/anchor-roma-classic-switches.html"
-target="_blank">
-Visit Landing Page →
-</a>
-
-</div>
-
-<div class="card" data-category="Brand Collections">
-
-<div class="icon">
-<img src="images/anchor-roma-classic-6-10-amp-switch.webp"
-alt="Anchor Roma Classic 6/10 Amp Switch">
-</div>
-
-<span class="badge">Anchor Roma Classic</span>
-
-<h3>Anchor Roma Classic 6/10 Amp Switch</h3>
-
-<p>
-Find genuine Anchor Roma Classic 6/10 Amp switches designed for
-smooth operation and reliable electrical safety.
-</p>
-
-<a class="btn"
-href="https://www.eleczo.com/anchor-roma-classic-6-10-amp-switch.html"
-target="_blank">
-Visit Landing Page →
-</a>
-
-</div>
-
-<div class="card" data-category="Brand Collections">
-
-<div class="icon">
-<img src="images/anchor-roma-plus-switch.webp"
-alt="Anchor Roma Plus Switch">
-</div>
-
-<span class="badge">Anchor Roma Plus</span>
-
-<h3>Anchor Roma Plus Switch</h3>
-
-<p>
-Explore Anchor Roma Plus modular switches featuring contemporary
-design, premium finish and dependable electrical operation.
-</p>
-
-<a class="btn"
-href="https://www.eleczo.com/anchor-roma-plus-switch.html"
-target="_blank">
-Visit Landing Page →
-</a>
-
-</div>
-
-<div class="card" data-category="Brand Collections">
-
-<div class="icon">
-<img src="images/anchor-roma-urban-switch.webp"
-alt="Anchor Roma Urban Switch">
-</div>
-
-<span class="badge">Anchor Roma Urban</span>
-
-<h3>Anchor Roma Urban Switch</h3>
-
-<p>
-Browse stylish Anchor Roma Urban switches offering elegant aesthetics,
-smooth switching and reliable everyday performance.
-</p>
-
-<a class="btn"
-href="https://www.eleczo.com/anchor-roma-urban-switch.html"
-target="_blank">
-Visit Landing Page →
-</a>
-
-</div>
-
-<div class="card" data-category="Brand Collections">
-
-<div class="icon">
-<img src="images/anchor-woods-switch.webp"
-alt="Anchor Woods Switch">
-</div>
-
-<span class="badge">Anchor Woods</span>
-
-<h3>Anchor Woods Switch</h3>
-
-<p>
-Discover Anchor Woods switches with wood-inspired finishes designed
-to complement premium residential and hospitality interiors.
-</p>
-
-<a class="btn"
-href="https://www.eleczo.com/anchor-woods-switch.html"
-target="_blank">
-Visit Landing Page →
-</a>
-
-</div>
-
-<div class="card" data-category="Brand Collections">
-
-<div class="icon">
-<img src="images/anchor-ziva-switch.webp"
-alt="Anchor Ziva Switch">
-</div>
-
-<span class="badge">Anchor Ziva</span>
-
-<h3>Anchor Ziva Switch</h3>
-
-<p>
-Explore Anchor Ziva modular switches combining modern styling,
-durability and dependable electrical performance.
-</p>
-
-<a class="btn"
-href="https://www.eleczo.com/anchor-ziva-switch.html"
-target="_blank">
-Visit Landing Page →
-</a>
-
-</div>
-
-<!-- ============================= -->
-<!-- GM MODULAR -->
-<!-- ============================= -->
-
-<div class="card" data-category="Brand Collections">
-
-<div class="icon">
-<img src="images/gm-modular-switch.webp"
-alt="GM Modular Switch">
-</div>
-
-<span class="badge">GM Modular</span>
-
-<h3>GM Modular Switch</h3>
-
-<p>
-Browse GM Modular switches featuring elegant finishes, superior build
-quality and reliable switching performance for modern spaces.
-</p>
-
-<a class="btn"
-href="https://www.eleczo.com/gm-modular-switch.html"
-target="_blank">
-Visit Landing Page →
-</a>
-
-</div>
-
-<!-- ============================= -->
-<!-- GOLDMEDAL COLLECTION -->
-<!-- ============================= -->
-
-<div class="card" data-category="Brand Collections">
-
-<div class="icon">
-<img src="images/goldmedal-switch.webp"
-alt="Goldmedal Switch">
-</div>
-
-<span class="badge">Goldmedal</span>
-
-<h3>Goldmedal Switch</h3>
-
-<p>
-Discover Goldmedal modular switches designed with premium styling,
-smooth operation and dependable electrical safety.
-</p>
-
-<a class="btn"
-href="https://www.eleczo.com/goldmedal-switch.html"
-target="_blank">
-Visit Landing Page →
-</a>
-
-</div>
-
-<div class="card" data-category="Brand Collections">
-
-<div class="icon">
-<img src="images/goldmedal-socket.webp"
-alt="Goldmedal Socket">
-</div>
-
-<span class="badge">Goldmedal</span>
-
-<h3>Goldmedal Socket</h3>
-
-<p>
-Browse Goldmedal sockets engineered to provide safe, durable and
-reliable power connections for everyday applications.
-</p>
-
-<a class="btn"
-href="https://www.eleczo.com/goldmedal-socket.html"
-target="_blank">
-Visit Landing Page →
-</a>
-
-</div>
-
-<div class="card" data-category="Brand Collections">
-
-<div class="icon">
-<img src="images/goldmedal-cover-plates.webp"
-alt="Goldmedal Cover Plates">
-</div>
-
-<span class="badge">Goldmedal</span>
-
-<h3>Goldmedal Cover Plates</h3>
-
-<p>
-Explore premium Goldmedal cover plates that provide a clean,
-stylish finish for modular switchboard installations.
-</p>
-
-<a class="btn"
-href="https://www.eleczo.com/goldmedal-cover-plates.html"
-target="_blank">
-Visit Landing Page →
-</a>
-
-</div>
-
-<div class="card" data-category="Brand Collections">
-
-<div class="icon">
-<img src="images/goldmedal-12-module-cover-plate.webp"
-alt="Goldmedal 12 Module Cover Plate">
-</div>
-
-<span class="badge">Goldmedal</span>
-
-<h3>Goldmedal 12 Module Cover Plate</h3>
-
-<p>
-Find genuine Goldmedal 12 Module Cover Plates offering premium
-design, durability and easy installation.
-</p>
-
-<a class="btn"
-href="https://www.eleczo.com/goldmedal-12-module-cover-plate.html"
-target="_blank">
-Visit Landing Page →
-</a>
-
-</div>
-
-<div class="card" data-category="Brand Collections">
-
-<div class="icon">
-<img src="images/goldmedal-doorbells.webp"
-alt="Goldmedal Doorbells">
-</div>
-
-<span class="badge">Goldmedal</span>
-
-<h3>Goldmedal Doorbells</h3>
-
-<p>
-Browse Goldmedal electronic doorbells with stylish designs,
-clear sound quality and dependable performance.
-</p>
-
-<a class="btn"
-href="https://www.eleczo.com/goldmedal-doorbells.html"
-target="_blank">
-Visit Landing Page →
-</a>
-
-</div>
-
-<div class="card" data-category="Brand Collections">
-
-<div class="icon">
-<img src="images/goldmedal-fan-regulators.webp"
-alt="Goldmedal Fan Regulators">
-</div>
-
-<span class="badge">Goldmedal</span>
-
-<h3>Goldmedal Fan Regulators & Dimmers</h3>
-
-<p>
-Discover Goldmedal fan regulators and dimmers designed for smooth
-fan speed control and efficient lighting management.
-</p>
-
-<a class="btn"
-href="https://www.eleczo.com/goldmedal-fan-regulators-dimmers.html"
-target="_blank">
-Visit Landing Page →
-</a>
-
-</div>
-
-  <!-- ============================= -->
-<!-- HAVELLS COLLECTION -->
-<!-- ============================= -->
-
-<div class="card" data-category="Brand Collections">
-
-<div class="icon">
-<img src="images/havells-cover-plates.webp"
-alt="Havells Cover Plates">
-</div>
-
-<span class="badge">Havells</span>
-
-<h3>Havells Cover Plates</h3>
-
-<p>
-Explore premium Havells cover plates designed to provide elegant
-finishing and long-lasting durability for modular switchboards.
-</p>
-
-<a class="btn"
-href="https://www.eleczo.com/havells-cover-plates.html"
-target="_blank">
-Visit Landing Page →
-</a>
-
-</div>
-
-<div class="card" data-category="Brand Collections">
-
-<div class="icon">
-<img src="images/havells-fan-regulators-dimmers.webp"
-alt="Havells Fan Regulators">
-</div>
-
-<span class="badge">Havells</span>
-
-<h3>Havells Fan Regulators & Dimmers</h3>
-
-<p>
-Browse Havells fan regulators and lighting dimmers offering smooth
-operation, modern styling and dependable performance.
-</p>
-
-<a class="btn"
-href="https://www.eleczo.com/havells-fan-regulators-dimmers.html"
-target="_blank">
-Visit Landing Page →
-</a>
-
-</div>
-
-<!-- ============================= -->
-<!-- LEGRAND COLLECTION -->
-<!-- ============================= -->
-
-<div class="card" data-category="Brand Collections">
-
-<div class="icon">
-<img src="images/legrand-switch.webp"
-alt="Legrand Switch">
-</div>
-
-<span class="badge">Legrand</span>
-
-<h3>Legrand Switch</h3>
-
-<p>
-Browse genuine Legrand modular switches designed with premium
-finishes, superior build quality and reliable performance.
-</p>
-
-<a class="btn"
-href="https://www.eleczo.com/legrand-switch.html"
-target="_blank">
-Visit Landing Page →
-</a>
-
-</div>
-
-<div class="card" data-category="Brand Collections">
-
-<div class="icon">
-<img src="images/legrand-socket.webp"
-alt="Legrand Socket">
-</div>
-
-<span class="badge">Legrand</span>
-
-<h3>Legrand Socket</h3>
-
-<p>
-Discover Legrand sockets engineered for safe electrical connections
-with stylish modular designs for every application.
-</p>
-
-<a class="btn"
-href="https://www.eleczo.com/legrand-socket.html"
-target="_blank">
-Visit Landing Page →
-</a>
-
-</div>
-
-<div class="card" data-category="Brand Collections">
-
-<div class="icon">
-<img src="images/legrand-cover-plates.webp"
-alt="Legrand Cover Plates">
-</div>
-
-<span class="badge">Legrand</span>
-
-<h3>Legrand Cover Plates</h3>
-
-<p>
-Explore premium Legrand cover plates that deliver a clean,
-modern finish for modular electrical installations.
-</p>
-
-<a class="btn"
-href="https://www.eleczo.com/legrand-cover-plates.html"
-target="_blank">
-Visit Landing Page →
-</a>
-
-</div>
-
-<div class="card" data-category="Brand Collections">
-
-<div class="icon">
-<img src="images/legrand-doorbells.webp"
-alt="Legrand Doorbells">
-</div>
-
-<span class="badge">Legrand</span>
-
-<h3>Legrand Doorbells</h3>
-
-<p>
-Browse Legrand doorbells featuring contemporary styling,
-clear audio and dependable everyday performance.
-</p>
-
-<a class="btn"
-href="https://www.eleczo.com/legrand-doorbells.html"
-target="_blank">
-Visit Landing Page →
-</a>
-
-</div>
-
-<div class="card" data-category="Brand Collections">
-
-<div class="icon">
-<img src="images/legrand-fan-regulators.webp"
-alt="Legrand Fan Regulators">
-</div>
-
-<span class="badge">Legrand</span>
-
-<h3>Legrand Fan Regulators & Dimmers</h3>
-
-<p>
-Discover Legrand fan regulators and dimmers engineered for
-smooth fan control and efficient lighting adjustment.
-</p>
-
-<a class="btn"
-href="https://www.eleczo.com/legrand-fan-regulators-dimmers.html"
-target="_blank">
-Visit Landing Page →
-</a>
-
-</div>
-
-<div class="card" data-category="Brand Collections">
-
-<div class="icon">
-<img src="images/legrand-16-amp-socket.webp"
-alt="Legrand 16 Amp Socket">
-</div>
-
-<span class="badge">Legrand</span>
-
-<h3>Legrand 16 Amp Socket</h3>
-
-<p>
-Find genuine Legrand 16 Amp sockets designed for heavy electrical
-loads, kitchen appliances and commercial installations.
-</p>
-
-<a class="btn"
-href="https://www.eleczo.com/legrand-16-amp-socket.html"
-target="_blank">
-Visit Landing Page →
-</a>
-
-</div>
-
-<div class="card" data-category="Brand Collections">
-
-<div class="icon">
-<img src="images/legrand-6-10-amp-switch.webp"
-alt="Legrand 6/10 Amp Switch">
-</div>
-
-<span class="badge">Legrand</span>
-
-<h3>Legrand 6/10 Amp Switch</h3>
-
-<p>
-Browse Legrand 6/10 Amp switches combining modern styling,
-reliable switching and premium electrical safety.
-</p>
-
-<a class="btn"
-href="https://www.eleczo.com/legrand-6-10-amp-switch.html"
-target="_blank">
-Visit Landing Page →
-</a>
-
-</div>
-
-<div class="card" data-category="Brand Collections">
-
-<div class="icon">
-<img src="images/legrand-allzy-switches.webp"
-alt="Legrand Allzy Switches">
-</div>
-
-<span class="badge">Legrand Allzy</span>
-
-<h3>Legrand Allzy Switches</h3>
-
-<p>
-Explore Legrand Allzy modular switches featuring sleek designs,
-smooth operation and dependable performance.
-</p>
-
-<a class="btn"
-href="https://www.eleczo.com/legrand-allzy-switches.html"
-target="_blank">
-Visit Landing Page →
-</a>
-
-</div>
-
-<div class="card" data-category="Brand Collections">
-
-<div class="icon">
-<img src="images/legrand-arteor-switches.webp"
-alt="Legrand Arteor Switches">
-</div>
-
-<span class="badge">Legrand Arteor</span>
-
-<h3>Legrand Arteor Switches</h3>
-
-<p>
-Discover the premium Legrand Arteor switch range with luxurious
-designs and advanced modular electrical solutions.
-</p>
-
-<a class="btn"
-href="https://www.eleczo.com/legrand-arteor-switches.html"
-target="_blank">
-Visit Landing Page →
-</a>
-
-</div>
-
-<div class="card" data-category="Brand Collections">
-
-<div class="icon">
-<img src="images/legrand-britzy-switches.webp"
-alt="Legrand Britzy Switches">
-</div>
-
-<span class="badge">Legrand Britzy</span>
-
-<h3>Legrand Britzy Switches</h3>
-
-<p>
-Browse Legrand Britzy switches offering elegant aesthetics,
-premium build quality and reliable daily operation.
-</p>
-
-<a class="btn"
-href="https://www.eleczo.com/legrand-britzy-switches.html"
-target="_blank">
-Visit Landing Page →
-</a>
-
-</div>
-
-<div class="card" data-category="Brand Collections">
-
-<div class="icon">
-<img src="images/legrand-lyncus-switches.webp"
-alt="Legrand Lyncus Switches">
-</div>
-
-<span class="badge">Legrand Lyncus</span>
-
-<h3>Legrand Lyncus Switches</h3>
-
-<p>
-Explore Legrand Lyncus modular switches designed for stylish
-interiors with dependable electrical performance.
-</p>
-
-<a class="btn"
-href="https://www.eleczo.com/legrand-lyncus-switches.html"
-target="_blank">
-Visit Landing Page →
-</a>
-
-</div>
-
-<div class="card" data-category="Brand Collections">
-
-<div class="icon">
-<img src="images/legrand-mylinc-switches.webp"
-alt="Legrand Mylinc Switches">
-</div>
-
-<span class="badge">Legrand Mylinc</span>
-
-<h3>Legrand Mylinc Switches</h3>
-
-<p>
-Discover Legrand Mylinc switches combining affordability,
-modern appearance and trusted Legrand quality.
-</p>
-
-<a class="btn"
-href="https://www.eleczo.com/legrand-mylinc-switches.html"
-target="_blank">
-Visit Landing Page →
-</a>
-
-</div>
-
-<div class="card" data-category="Brand Collections">
-
-<div class="icon">
-<img src="images/legrand-myrius-switches.webp"
-alt="Legrand Myrius Switches">
-</div>
-
-<span class="badge">Legrand Myrius</span>
-
-<h3>Legrand Myrius Switches</h3>
-
-<p>
-Browse Legrand Myrius modular switches offering premium
-design, durability and seamless switching performance.
-</p>
-
-<a class="btn"
-href="https://www.eleczo.com/legrand-myrius-switches.html"
-target="_blank">
-Visit Landing Page →
-</a>
-
-</div>
-
-<div class="card" data-category="Brand Collections">
-
-<div class="icon">
-<img src="images/legrand-myrius-next-gen-switches.webp"
-alt="Legrand Myrius NextGen">
-</div>
-
-<span class="badge">Legrand Myrius NextGen</span>
-
-<h3>Legrand Myrius NextGen Switches</h3>
-
-<p>
-Explore the latest Legrand Myrius NextGen modular switch
-collection with premium finishes and innovative design.
-</p>
-
-<a class="btn"
-href="https://www.eleczo.com/legrand-myrius-next-gen-switches.html"
-target="_blank">
-Visit Landing Page →
-</a>
-
-</div>
-<!-- ============================= -->
-<!-- SCHNEIDER ELECTRIC COLLECTION -->
-<!-- ============================= -->
-
-<div class="card" data-category="Brand Collections">
-
-<div class="icon">
-<img src="images/schneider-electric-switch.webp"
-alt="Schneider Electric Switch">
-</div>
-
-<span class="badge">Schneider Electric</span>
-
-<h3>Schneider Electric Switch</h3>
-
-<p>
-Browse Schneider Electric modular switches offering premium styling,
-dependable performance and long-lasting electrical safety.
-</p>
-
-<a class="btn"
-href="https://www.eleczo.com/schneider-electric-switch.html"
-target="_blank">
-Visit Landing Page →
-</a>
-
-</div>
-
-<div class="card" data-category="Brand Collections">
-
-<div class="icon">
-<img src="images/schneider-electric-socket.webp"
-alt="Schneider Electric Socket">
-</div>
-
-<span class="badge">Schneider Electric</span>
-
-<h3>Schneider Electric Socket</h3>
-
-<p>
-Explore Schneider Electric sockets engineered for safe power
-distribution with modern modular designs.
-</p>
-
-<a class="btn"
-href="https://www.eleczo.com/schneider-electric-socket.html"
-target="_blank">
-Visit Landing Page →
-</a>
-
-</div>
-
-<div class="card" data-category="Brand Collections">
-
-<div class="icon">
-<img src="images/schneider-electric-cover-plates.webp"
-alt="Schneider Electric Cover Plates">
-</div>
-
-<span class="badge">Schneider Electric</span>
-
-<h3>Schneider Electric Cover Plates</h3>
-
-<p>
-Discover Schneider Electric cover plates designed to provide a
-stylish and professional finish for modular switchboards.
-</p>
-
-<a class="btn"
-href="https://www.eleczo.com/schneider-electric-cover-plates.html"
-target="_blank">
-Visit Landing Page →
-</a>
-
-</div>
-
-<div class="card" data-category="Brand Collections">
-
-<div class="icon">
-<img src="images/schneider-electric-fan-regulators.webp"
-alt="Schneider Electric Fan Regulators">
-</div>
-
-<span class="badge">Schneider Electric</span>
-
-<h3>Schneider Electric Fan Regulators & Dimmers</h3>
-
-<p>
-Browse Schneider Electric fan regulators and dimmers offering
-smooth fan speed control and efficient lighting adjustment.
-</p>
-
-<a class="btn"
-href="https://www.eleczo.com/schneider-electric-fan-regulators-dimmers.html"
-target="_blank">
-Visit Landing Page →
-</a>
-
-</div>
-
-<div class="card" data-category="Brand Collections">
-
-<div class="icon">
-<img src="images/schneider-electric-livia-switches.webp"
-alt="Schneider Electric Livia">
-</div>
-
-<span class="badge">Schneider Livia</span>
-
-<h3>Schneider Electric Livia Switches</h3>
-
-<p>
-Explore Schneider Electric Livia switches featuring elegant
-designs, premium finishes and reliable electrical operation.
-</p>
-
-<a class="btn"
-href="https://www.eleczo.com/schneider-electric-livia-switches.html"
-target="_blank">
-Visit Landing Page →
-</a>
-
-</div>
-
-<div class="card" data-category="Brand Collections">
-
-<div class="icon">
-<img src="images/schneider-electric-opale-switches.webp"
-alt="Schneider Electric Opale">
-</div>
-
-<span class="badge">Schneider Opale</span>
-
-<h3>Schneider Electric Opale Switches</h3>
-
-<p>
-Discover Schneider Electric Opale modular switches with stylish
-looks and dependable everyday performance.
-</p>
-
-<a class="btn"
-href="https://www.eleczo.com/schneider-electric-opale-switches.html"
-target="_blank">
-Visit Landing Page →
-</a>
-
-</div>
-
-<div class="card" data-category="Brand Collections">
-
-<div class="icon">
-<img src="images/schneider-electric-zencelo.webp"
-alt="Schneider Electric Zencelo">
-</div>
-
-<span class="badge">Schneider Zencelo</span>
-
-<h3>Schneider Electric Zencelo</h3>
-
-<p>
-Browse Schneider Electric Zencelo switches featuring premium
-flat-profile aesthetics and innovative modular technology.
-</p>
-
-<a class="btn"
-href="https://www.eleczo.com/schneider-electric-zencelo.html"
-target="_blank">
-Visit Landing Page →
-</a>
-
-</div>
-
-<!-- ============================= -->
-<!-- FANS -->
-<!-- ============================= -->
-
-<div class="card" data-category="Fans">
-
-<div class="icon">
-<img src="images/36-inch-ceiling-fan.webp"
-alt="36 Inch Ceiling Fan">
-</div>
-
-<span class="badge">Ceiling Fans</span>
-
-<h3>36 Inch Ceiling Fan</h3>
-
-<p>
-Browse compact 36 Inch ceiling fans designed for bedrooms,
-offices and smaller residential spaces.
-</p>
-
-<a class="btn"
-href="https://www.eleczo.com/36-inch-ceiling-fan.html"
-target="_blank">
-Visit Landing Page →
-</a>
-
-</div>
-
-<div class="card" data-category="Fans">
-
-<div class="icon">
-<img src="images/48-inch-ceiling-fan.webp"
-alt="48 Inch Ceiling Fan">
-</div>
-
-<span class="badge">Ceiling Fans</span>
-
-<h3>48 Inch Ceiling Fan</h3>
-
-<p>
-Discover premium 48 Inch ceiling fans offering powerful airflow,
-energy efficiency and stylish modern designs.
-</p>
-
-<a class="btn"
-href="https://www.eleczo.com/48-inch-ceiling-fan.html"
-target="_blank">
-Visit Landing Page →
-</a>
-
-</div>
-
-<div class="card" data-category="Fans">
-
-<div class="icon">
-<img src="images/4-blade-ceiling-fan.webp"
-alt="4 Blade Ceiling Fan">
-</div>
-
-<span class="badge">Ceiling Fans</span>
-
-<h3>4 Blade Ceiling Fan</h3>
-
-<p>
-Explore stylish 4 Blade ceiling fans designed to provide superior
-air circulation and elegant interior aesthetics.
-</p>
-
-<a class="btn"
-href="https://www.eleczo.com/4-blade-ceiling-fan.html"
-target="_blank">
-Visit Landing Page →
-</a>
-
-</div>
-
-<div class="card" data-category="Fans">
-
-<div class="icon">
-<img src="images/ceiling-fans.webp"
-alt="Ceiling Fans">
-</div>
-
-<span class="badge">Fans</span>
-
-<h3>Ceiling Fans</h3>
-
-<p>
-Browse Eleczo's complete collection of ceiling fans from trusted
-brands suitable for residential and commercial spaces.
-</p>
-
-<a class="btn"
-href="https://www.eleczo.com/fans/ceiling-fans.html"
-target="_blank">
-Visit Landing Page →
-</a>
-
-</div>
-
-<div class="card" data-category="Fans">
-
-<div class="icon">
-<img src="images/wall-fans.webp"
-alt="Wall Fans">
-</div>
-
-<span class="badge">Fans</span>
-
-<h3>Wall Fans</h3>
-
-<p>
-Discover efficient wall fans designed to maximise airflow while
-saving floor space in homes, offices and workshops.
-</p>
-
-<a class="btn"
-href="https://www.eleczo.com/fans/wall-fans.html"
-target="_blank">
-Visit Landing Page →
-</a>
-
-</div>
-
-<!-- ============================= -->
-<!-- LIGHTING -->
-<!-- ============================= -->
-
-<div class="card" data-category="Lighting">
-
-<div class="icon">
-<img src="images/led-flood-lights.webp"
-alt="LED Flood Lights">
-</div>
-
-<span class="badge">Lighting</span>
-
-<h3>LED Flood Lights</h3>
-
-<p>
-Browse energy-efficient LED flood lights ideal for outdoor areas,
-industrial facilities, landscapes and security lighting.
-</p>
-
-<a class="btn"
-href="https://www.eleczo.com/led-lights/outdoor-lighting/led-flood-lights.html"
-target="_blank">
-Visit Landing Page →
-</a>
-
-</div>
-
-<div class="card" data-category="Lighting">
-
-<div class="icon">
-<img src="images/outdoor-wall-lights.webp"
-alt="Outdoor Wall Lights">
-</div>
-
-<span class="badge">Lighting</span>
-
-<h3>Outdoor Wall Lights</h3>
-
-<p>
-Explore decorative outdoor wall lights combining stylish designs,
-durability and energy-efficient illumination.
-</p>
-
-<a class="btn"
-href="https://www.eleczo.com/led-lights/outdoor-lighting/wall-lights.html"
-target="_blank">
-Visit Landing Page →
-</a>
-
-</div>
-
-<!-- ============================= -->
-<!-- TESTING & MEASURING -->
-<!-- ============================= -->
-
-<div class="card" data-category="Testing Instruments">
-
-<div class="icon">
-<img src="images/htc-digital-clamp-meter.webp"
-alt="HTC Digital Clamp Meter">
-</div>
-
-<span class="badge">Testing Instruments</span>
-
-<h3>HTC Digital Clamp Meter</h3>
-
-<p>
-Browse HTC digital clamp meters designed for accurate current
-measurement, electrical troubleshooting and maintenance work.
-</p>
-
-<a class="btn"
-href="https://www.eleczo.com/htc-digital-clamp-meter.html"
-target="_blank">
-Visit Landing Page →
-</a>
-
-</div>
-
-<div class="card" data-category="Testing Instruments">
-
-<div class="icon">
-<img src="images/htc-digital-multimeter.webp"
-alt="HTC Digital Multimeter">
-</div>
-
-<span class="badge">Testing Instruments</span>
-
-<h3>HTC Digital Multimeter</h3>
-
-<p>
-Discover HTC digital multimeters for precise voltage, resistance,
-continuity and current testing applications.
-</p>
-
-<a class="btn"
-href="https://www.eleczo.com/htc-digital-multimeter.html"
-target="_blank">
-Visit Landing Page →
-</a>
-
-</div>
-
-<div class="card" data-category="Testing Instruments">
-
-<div class="icon">
-<img src="images/digital-clamp-meter.webp"
-alt="Digital Clamp Meter">
-</div>
-
-<span class="badge">Testing Instruments</span>
-
-<h3>Digital Clamp Meter</h3>
-
-<p>
-Explore a wide range of digital clamp meters suitable for
-professional electricians, maintenance teams and technicians.
-</p>
-
-<a class="btn"
-href="https://www.eleczo.com/testing-measuring-instruments/electrical-testing-measuring-instruments/digital-clamp-meter.html"
-target="_blank">
-Visit Landing Page →
-</a>
-
-</div>
-
-<div class="card" data-category="Testing Instruments">
-
-<div class="icon">
-<img src="images/digital-multimeter.webp"
-alt="Digital Multimeter">
-</div>
-
-<span class="badge">Testing Instruments</span>
-
-<h3>Digital Multimeter</h3>
-
-<p>
-Browse digital multimeters engineered for accurate electrical
-measurement, diagnostics and troubleshooting across applications.
-</p>
-
-<a class="btn"
-href="https://www.eleczo.com/testing-measuring-instruments/electrical-testing-measuring-instruments/digital-multimeter.html"
-target="_blank">
-Visit Landing Page →
-</a>
-
-</div>
-
-
-  <!-- ============================= -->
-<!-- WIRING DEVICES -->
-<!-- ============================= -->
-
-<div class="card" data-category="Wiring Devices">
-
-<div class="icon">
-<img src="images/switch-socket.webp"
-alt="Switch Socket">
-</div>
-
-<span class="badge">Wiring Devices</span>
-
-<h3>Switch Socket</h3>
-
-<p>
-Browse premium switch sockets designed for residential, commercial and
-industrial electrical installations with superior safety and durability.
-</p>
-
-<a class="btn"
-href="https://www.eleczo.com/switch-socket.html"
-target="_blank">
-Visit Landing Page →
-</a>
-
-</div>
-
-<div class="card" data-category="Wiring Devices">
-
-<div class="icon">
-<img src="images/switch.webp"
-alt="Switch">
-</div>
-
-<span class="badge">Wiring Devices</span>
-
-<h3>Switch</h3>
-
-<p>
-Explore modular electrical switches from leading brands offering stylish
-designs, reliable performance and long service life.
-</p>
-
-<a class="btn"
-href="https://www.eleczo.com/wiring-devices/switch.html"
-target="_blank">
-Visit Landing Page →
-</a>
-
-</div>
-
-<div class="card" data-category="Wiring Devices">
-
-<div class="icon">
-<img src="images/socket.webp"
-alt="Socket">
-</div>
-
-<span class="badge">Wiring Devices</span>
-
-<h3>Socket</h3>
-
-<p>
-Discover modular sockets engineered for safe electrical connections in
-homes, offices, commercial buildings and industrial environments.
-</p>
-
-<a class="btn"
-href="https://www.eleczo.com/wiring-devices/socket.html"
-target="_blank">
-Visit Landing Page →
-</a>
-
-</div>
-
-<div class="card" data-category="Wiring Devices">
-
-<div class="icon">
-<img src="images/audio-video-sockets.webp"
-alt="Audio Video Sockets">
-</div>
-
-<span class="badge">Wiring Devices</span>
-
-<h3>Audio Video Sockets</h3>
-
-<p>
-Browse audio and video sockets designed for multimedia connectivity in
-modern residential and commercial interiors.
-</p>
-
-<a class="btn"
-href="https://www.eleczo.com/wiring-devices/audio-video-sockets.html"
-target="_blank">
-Visit Landing Page →
-</a>
-
-</div>
-
-<div class="card" data-category="Wiring Devices">
-
-<div class="icon">
-<img src="images/bell-push-switches.webp"
-alt="Bell Push Switches">
-</div>
-
-<span class="badge">Wiring Devices</span>
-
-<h3>Bell Push Switches</h3>
-
-<p>
-Explore premium bell push switches featuring elegant designs and
-dependable operation for residential and commercial entrances.
-</p>
-
-<a class="btn"
-href="https://www.eleczo.com/wiring-devices/bell-push-switches.html"
-target="_blank">
-Visit Landing Page →
-</a>
-
-</div>
-
-<div class="card" data-category="Wiring Devices">
-
-<div class="icon">
-<img src="images/blank-plates.webp"
-alt="Blank Plates">
-</div>
-
-<span class="badge">Wiring Devices</span>
-
-<h3>Blank Plates</h3>
-
-<p>
-Find high-quality blank plates for covering unused electrical module
-spaces with a neat and professional finish.
-</p>
-
-<a class="btn"
-href="https://www.eleczo.com/wiring-devices/blank-plates.html"
-target="_blank">
-Visit Landing Page →
-</a>
-
-</div>
-
-<div class="card" data-category="Wiring Devices">
-
-<div class="icon">
-<img src="images/surface-mounting-box.webp"
-alt="Surface Mounting Box">
-</div>
-
-<span class="badge">Wiring Devices</span>
-
-<h3>Surface Mounting Box</h3>
-
-<p>
-Browse durable surface mounting boxes suitable for secure installation
-of switches, sockets and modular electrical accessories.
-</p>
-
-<a class="btn"
-href="https://www.eleczo.com/wiring-devices/concealed-surface-mounting-boxes/surface-mounting-box.html"
-target="_blank">
-Visit Landing Page →
-</a>
-
-</div>
-
-<div class="card" data-category="Wiring Devices">
-
-<div class="icon">
-<img src="images/cover-plates.webp"
-alt="Cover Plates">
-</div>
-
-<span class="badge">Wiring Devices</span>
-
-<h3>Cover Plates</h3>
-
-<p>
-Browse modular cover plates available in various sizes and premium
-finishes for modern electrical switchboards.
-</p>
-
-<a class="btn"
-href="https://www.eleczo.com/wiring-devices/cover-plates.html"
-target="_blank">
-Visit Landing Page →
-</a>
-
-</div>
-
-<div class="card" data-category="Wiring Devices">
-
-<div class="icon">
-<img src="images/doorbells.webp"
-alt="Doorbells">
-</div>
-
-<span class="badge">Wiring Devices</span>
-
-<h3>Doorbells</h3>
-
-<p>
-Discover stylish electronic doorbells from leading electrical brands
-offering reliable performance and clear sound quality.
-</p>
-
-<a class="btn"
-href="https://www.eleczo.com/wiring-devices/doorbells.html"
-target="_blank">
-Visit Landing Page →
-</a>
-
-</div>
-
-<div class="card" data-category="Wiring Devices">
-
-<div class="icon">
-<img src="images/fan-regulators.webp"
-alt="Fan Regulators">
-</div>
-
-<span class="badge">Wiring Devices</span>
-
-<h3>Fan Regulators & Dimmers</h3>
-
-<p>
-Browse premium fan regulators and dimmers providing smooth fan speed
-control and adjustable lighting for modern interiors.
-</p>
-
-<a class="btn"
-href="https://www.eleczo.com/wiring-devices/fan-regulators-dimmers.html"
-target="_blank">
-Visit Landing Page →
-</a>
-
-</div>
-
-<div class="card" data-category="Wiring Devices">
-
-<div class="icon">
-<img src="images/key-card.webp"
-alt="Hotel Key Card Switch">
-</div>
-
-<span class="badge">Hospitality</span>
-
-<h3>Hotel Key Card Switch</h3>
-
-<p>
-Explore hotel key card switches designed for energy-saving hospitality
-applications and smart room management.
-</p>
-
-<a class="btn"
-href="https://www.eleczo.com/wiring-devices/hotel-hospitality/key-card.html"
-target="_blank">
-Visit Landing Page →
-</a>
-
-</div>
-
-<div class="card" data-category="Wiring Devices">
-
-<div class="icon">
-<img src="images/pop-up-box.webp"
-alt="Pop Up Box">
-</div>
-
-<span class="badge">Wiring Devices</span>
-
-<h3>Pop-up Box & Accessories</h3>
-
-<p>
-Browse premium pop-up boxes and accessories for conference tables,
-office workstations and modular power access solutions.
-</p>
-
-<a class="btn"
-href="https://www.eleczo.com/wiring-devices/pop-up-box-and-accessories.html"
-target="_blank">
-Visit Landing Page →
-</a>
-
-</div>
-
-<div class="card" data-category="Wiring Devices">
-
-<div class="icon">
-<img src="images/usb-outlet.webp"
-alt="USB Outlet">
-</div>
-
-<span class="badge">Wiring Devices</span>
-
-<h3>USB Outlet</h3>
-
-<p>
-Discover USB charging outlets that combine traditional sockets with
-built-in USB charging for homes and commercial spaces.
-</p>
-
-<a class="btn"
-href="https://www.eleczo.com/wiring-devices/usb-outlet.html"
-target="_blank">
-Visit Landing Page →
-</a>
 
-</div>
-
-<!-- ============================= -->
-<!-- WIRE ACCESSORIES -->
-<!-- ============================= -->
-
-<div class="card" data-category="Wire Accessories">
-
-<div class="icon">
-<img src="images/ring-terminals.webp"
-alt="Ring Terminals">
-</div>
-
-<span class="badge">Wire Accessories</span>
+Heavy-duty 12 Module Metal Boxes engineered for safe modular switch mounting applications.
 
-<h3>Ring Terminals</h3>
-
-<p>
-Browse high-quality ring terminals for secure wire terminations,
-electrical panels and industrial wiring applications.
 </p>
-
-<a class="btn"
-href="https://www.eleczo.com/wires-cables/wire-and-cable-accessories/lugs/ring-terminals.html"
-target="_blank">
-Visit Landing Page →
-</a>
-
-</div>
-
-<div class="card" data-category="Wire Accessories">
-
-<div class="icon">
-<img src="images/pin-terminals.webp"
-alt="Pin Terminals">
-</div>
-
-<span class="badge">Wire Accessories</span>
 
-<h3>Pin Terminals</h3>
+<a href="https://www.eleczo.com/12-module-metal-box.html"
+target="_blank"
+class="btn">
 
-<p>
-Explore premium pin terminals providing reliable electrical
-connections for control panels and industrial installations.
-</p>
-
-<a class="btn"
-href="https://www.eleczo.com/wires-cables/wire-and-cable-accessories/lugs/pin-terminals.html"
-target="_blank">
 Visit Landing Page →
-</a>
-
-</div>
-
-<div class="card" data-category="Wire Accessories">
-
-<div class="icon">
-<img src="images/reducer-terminals.webp"
-alt="Reducer Terminals">
-</div>
 
-<span class="badge">Wire Accessories</span>
-
-<h3>Reducer Terminals</h3>
-
-<p>
-Discover reducer terminals engineered for safe and efficient cable
-termination in electrical distribution and industrial applications.
-</p>
-
-<a class="btn"
-href="https://www.eleczo.com/wires-cables/wire-and-cable-accessories/lugs/reducer-terminals.html"
-target="_blank">
-Visit Landing Page →
 </a>
-
-</div>
 
 </div>
-
-</section>
 
-<footer>
-
-<div class="container">
-
-© 2026 Eleczo. All Rights Reserved.
-
 </div>
-
-</footer>
-
-<script>
-
-const search=document.getElementById("search");
-const filter=document.getElementById("filter");
-const cards=document.querySelectorAll(".card");
-
-function update(){
-
-const keyword=search.value.toLowerCase().trim();
-const category=filter.value;
-
-cards.forEach(card=>{
-
-const text=card.innerText.toLowerCase();
-const cat=card.dataset.category;
-
-const matchText=text.includes(keyword);
-const matchCategory=category==="all" || category===cat;
-
-card.style.display=(matchText && matchCategory) ? "block" : "none";
-
-});
-
-}
-
-search.addEventListener("keyup",update);
-filter.addEventListener("change",update);
-
-</script>
-
-</body>
-</html>
