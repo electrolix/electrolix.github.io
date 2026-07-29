@@ -28,6 +28,7 @@ content="Browse Eleczo's complete collection of electrical products, wiring devi
 }
 
 body{
+    font-family:'Inter',sans-serif;
     background:#f5f7fb;
     color:#222;
     line-height:1.6;
@@ -96,6 +97,7 @@ SEARCH
     width:520px;
     max-width:100%;
     padding:17px 20px;
+    font-size:16px;
     border:1px solid #ddd;
     border-radius:12px;
     outline:none;
@@ -109,6 +111,7 @@ SEARCH
 
 select{
     padding:17px;
+    font-size:15px;
     border-radius:12px;
     border:1px solid #ddd;
     cursor:pointer;
@@ -186,16 +189,21 @@ CONTENT
     padding:8px 16px;
     background:#eef4ff;
     color:#0057ff;
+    font-size:13px;
+    font-weight:700;
     border-radius:50px;
     margin-bottom:16px;
     width:fit-content;
 }
 
 .card h3{
+    font-size:24px;
+    font-weight:700;
     margin-bottom:12px;
 }
 
 .card p{
+    font-size:15px;
     color:#666;
     margin-bottom:22px;
 }
@@ -208,6 +216,7 @@ CONTENT
     background:#2563eb;
     color:#fff;
     border-radius:10px;
+    font-weight:600;
     transition:.3s;
     margin-top:auto;
     width:fit-content;
@@ -215,6 +224,14 @@ CONTENT
 
 .btn:hover{
     background:#003fc0;
+}
+
+footer{
+    padding:60px 0;
+    text-align:center;
+    background:#fff;
+    border-top:1px solid #ececec;
+    color:#666;
 }
 
 /*======================
@@ -234,10 +251,6 @@ MOBILE
 ======================*/
 
 @media (max-width:768px){
-
-    header{
-        padding:50px 20px;
-    }
 
     .search-area{
         flex-direction:column;
@@ -269,6 +282,14 @@ MOBILE
         padding:20px;
     }
 
+    .card h3{
+        font-size:22px;
+    }
+
+    .card p{
+        font-size:14px;
+    }
+
     .btn{
         width:100%;
         justify-content:center;
@@ -281,7 +302,6 @@ MOBILE
 }
 
 </style>
-  
     
 
 </head>
