@@ -1,3 +1,5 @@
+<script>
+
 const search = document.getElementById("search");
 const filter = document.getElementById("filter");
 const cards = document.querySelectorAll(".card");
@@ -35,3 +37,5 @@ function updateCards(){
 search.addEventListener("keyup",updateCards);
 
 filter.addEventListener("change",updateCards);
+
+</script>
