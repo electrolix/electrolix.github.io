@@ -262,21 +262,32 @@ TABLET
 MOBILE
 ======================*/
 
+/*======================
+MOBILE
+======================*/
+
 @media (max-width:768px){
 
-   .grid{
-    grid-template-columns:1fr;
-    gap:20px;
-    padding:30px 5px;
-}
-    
+    .container{
+        width:100%;
+        max-width:100%;
+        padding:0 8px;
+    }
+
+    .grid{
+        grid-template-columns:1fr;
+        gap:20px;
+        padding:20px 0;
+    }
 
     .card{
+        width:100%;
         max-width:100%;
+        margin:0;
     }
 
     .card-image{
-        height:210px;
+        height:230px;
     }
 
     .content{
