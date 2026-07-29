@@ -125,6 +125,7 @@ display:grid;
 grid-template-columns:repeat(auto-fit,minmax(340px,1fr));
 gap:32px;
 padding:70px 0;
+align-items:stretch;
 
 }
 
@@ -139,6 +140,10 @@ border-radius:20px;
 overflow:hidden;
 border:1px solid #ececec;
 transition:.35s;
+
+display:flex;
+flex-direction:column;
+height:100%;
 
 }
 
@@ -184,6 +189,9 @@ CONTENT
 .content{
 
 padding:26px;
+display:flex;
+flex-direction:column;
+flex:1;
 
 }
 
@@ -228,6 +236,8 @@ border-radius:10px;
 font-weight:600;
 transition:.3s;
 
+margin-top:auto;
+
 }
 
 .btn:hover{
@@ -245,7 +255,6 @@ border-top:1px solid #ececec;
 color:#666;
 
 }
-  
 
 @media (max-width:768px){
 
@@ -285,7 +294,6 @@ color:#666;
     }
 
 }
-
 
 </style>
 
