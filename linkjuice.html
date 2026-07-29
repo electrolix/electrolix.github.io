@@ -244,22 +244,47 @@ border-top:1px solid #ececec;
 color:#666;
 
 }
+  
 
-@media(max-width:768px){
+@media (max-width:768px){
 
-header h1{
+    header h1{
+        font-size:34px;
+    }
 
-font-size:34px;
+    .card-image{
+        height:210px;
+    }
+
+    .grid{
+        grid-template-columns:1fr;
+        gap:20px;
+        padding:30px 15px;
+    }
+
+    .content{
+        padding:18px;
+    }
+
+    .card h3{
+        font-size:22px;
+    }
+
+    .card p{
+        font-size:14px;
+    }
+
+    .btn{
+        width:100%;
+        justify-content:center;
+    }
+
+    body{
+        overflow-x:hidden;
+    }
 
 }
 
-.card-image{
-
-height:210px;
-
-}
-
-}
 
 </style>
 
