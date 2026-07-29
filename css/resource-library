@@ -189,14 +189,6 @@ CONTENT
     background:#003fc0;
 }
 
-footer{
-    padding:60px 0;
-    text-align:center;
-    background:#fff;
-    border-top:1px solid #ececec;
-    color:#666;
-}
-
 /*======================
 TABLET
 ======================*/
