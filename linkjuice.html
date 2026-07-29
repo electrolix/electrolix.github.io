@@ -180,68 +180,38 @@ transform:scale(1.05);
 /*======================
 CONTENT
 ======================*/
+/* Card */
+.card{
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid #ececec;
+    transition: .35s;
+}
 
+/* Content */
 .content{
-
-padding:26px;
-
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 26px;
 }
 
-.card h3{
-    min-height:64px;
-}
-
-.card p{
-    min-height:50px;
-} 
-
-.badge{
-
-display:inline-block;
-padding:8px 16px;
-background:#eef4ff;
-color:#0057ff;
-font-size:13px;
-font-weight:700;
-border-radius:50px;
-margin-bottom:16px;
-
-}
-
-.card h3{
-
-font-size:24px;
-margin-bottom:12px;
-font-weight:700;
-
-}
-
-.card p{
-
-font-size:15px;
-color:#666;
-margin-bottom:22px;
-
-}
-
+/* Push button to bottom */
 .btn{
-
-display:inline-flex;
-align-items:center;
-justify-content:center;
-padding:14px 22px;
-background:#2563eb;
-color:#fff;
-border-radius:10px;
-font-weight:600;
-transition:.3s;
-}
- 
-
-.btn:hover{
-
-background:#003fc0;
-
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 22px;
+    background: #2563eb;
+    color: #fff;
+    border-radius: 10px;
+    font-weight: 600;
+    transition: .3s;
+    margin-top: auto;   /* <-- This is the important line */
+    width: fit-content;
 }
 
 footer{
