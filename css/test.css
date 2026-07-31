@@ -439,3 +439,53 @@
         font-size: 25px;
     }
 }
+
+
+
+
+/* =========================================
+   PRIVACY POLICY CSS ISOLATION
+========================================= */
+
+.electrolix-privacy {
+    margin: 0 !important;
+    padding-bottom: 70px !important;
+}
+
+.electrolix-privacy .privacy-card {
+    margin: 0 !important;
+}
+
+.electrolix-privacy .privacy-section {
+    margin-top: 0 !important;
+}
+
+.electrolix-privacy .privacy-section h2,
+.electrolix-privacy .privacy-section h3,
+.electrolix-privacy .privacy-section p,
+.electrolix-privacy .privacy-section ul,
+.electrolix-privacy .privacy-section li {
+    transform: none !important;
+}
+
+.electrolix-privacy .privacy-section h2 {
+    padding-top: 0 !important;
+}
+
+.electrolix-privacy .privacy-section p {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+.electrolix-privacy .privacy-section ul {
+    padding-top: 0 !important;
+}
+
+.electrolix-privacy .privacy-section li {
+    padding-top: 0 !important;
+}
+
+.electrolix-privacy .legal-notice {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
