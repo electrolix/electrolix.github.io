@@ -1,1 +1,1732 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Electrolix Privacy Policy - Learn how Electrolix handles information, cookies, third-party services, and external links.">
+
+    <meta name="robots" content="index, follow">
+
+    <title>Privacy Policy | Electrolix</title>
+
+    <style>
+        /* ================================
+           RESET
+        ================================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family:
+                Inter,
+                -apple-system,
+                BlinkMacSystemFont,
+                "Segoe UI",
+                Roboto,
+                Arial,
+                sans-serif;
+
+            background: #f7f8fc;
+            color: #1c2740;
+            line-height: 1.7;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* ================================
+           VARIABLES
+        ================================== */
+
+        :root {
+            --primary: #315fe8;
+            --primary-dark: #244bd0;
+            --secondary: #4c43e8;
+            --dark: #17233f;
+            --text: #46516a;
+            --muted: #69748b;
+            --light-bg: #f7f8fc;
+            --white: #ffffff;
+            --border: #e5e9f2;
+            --soft-blue: #eef3ff;
+            --shadow: 0 12px 35px rgba(30, 55, 120, 0.08);
+        }
+
+        /* ================================
+           HEADER
+        ================================== */
+
+        .site-header {
+            height: 78px;
+            background: rgba(255, 255, 255, 0.96);
+            border-bottom: 1px solid #e8ebf3;
+            display: flex;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(12px);
+        }
+
+        .header-container {
+            width: min(1600px, 92%);
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        /* ================================
+           LOGO
+        ================================== */
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 9px;
+            font-size: 22px;
+            font-weight: 800;
+            color: #18233f;
+        }
+
+        .logo-icon {
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+            background: linear-gradient(
+                135deg,
+                #315fe8,
+                #463ce2
+            );
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            color: white;
+            font-size: 19px;
+            font-weight: 900;
+
+            box-shadow:
+                0 5px 14px rgba(49, 95, 232, 0.25);
+        }
+
+        /* ================================
+           NAVIGATION
+        ================================== */
+
+        .main-nav {
+            display: flex;
+            align-items: center;
+            gap: 34px;
+        }
+
+        .main-nav a {
+            font-size: 15px;
+            font-weight: 600;
+            color: #354158;
+            transition: 0.25s ease;
+        }
+
+        .main-nav a:hover {
+            color: var(--primary);
+        }
+
+        .shop-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+
+            background: linear-gradient(
+                135deg,
+                #2864e8,
+                #315ce4
+            );
+
+            color: white !important;
+
+            padding: 14px 25px;
+            border-radius: 30px;
+
+            font-size: 15px !important;
+            font-weight: 700 !important;
+
+            box-shadow:
+                0 8px 22px rgba(48, 92, 228, 0.22);
+
+            transition: 0.25s ease;
+        }
+
+        .shop-button:hover {
+            transform: translateY(-2px);
+            box-shadow:
+                0 12px 28px rgba(48, 92, 228, 0.30);
+        }
+
+        /* ================================
+           HERO
+        ================================== */
+
+        .policy-hero {
+            position: relative;
+            overflow: hidden;
+
+            padding: 85px 20px 100px;
+
+            background:
+                radial-gradient(
+                    circle at 90% 10%,
+                    rgba(110, 105, 245, 0.30),
+                    transparent 32%
+                ),
+                linear-gradient(
+                    135deg,
+                    #315fe8 0%,
+                    #3e48e5 55%,
+                    #5141df 100%
+                );
+
+            color: white;
+        }
+
+        .policy-hero::before {
+            content: "";
+            position: absolute;
+
+            width: 450px;
+            height: 450px;
+
+            border-radius: 50%;
+
+            background: rgba(255,255,255,0.06);
+
+            right: -130px;
+            top: -220px;
+        }
+
+        .policy-hero::after {
+            content: "";
+            position: absolute;
+
+            width: 260px;
+            height: 260px;
+
+            border-radius: 50%;
+
+            background: rgba(255,255,255,0.05);
+
+            left: -120px;
+            bottom: -150px;
+        }
+
+        .hero-inner {
+            width: min(1100px, 92%);
+            margin: auto;
+            position: relative;
+            z-index: 2;
+            text-align: center;
+        }
+
+        .hero-label {
+            display: inline-block;
+
+            padding: 8px 18px;
+            border-radius: 30px;
+
+            background: rgba(255,255,255,0.13);
+            border: 1px solid rgba(255,255,255,0.15);
+
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 0.3px;
+
+            margin-bottom: 20px;
+        }
+
+        .policy-hero h1 {
+            font-size: clamp(42px, 6vw, 68px);
+            line-height: 1.08;
+            letter-spacing: -2px;
+            font-weight: 800;
+            margin-bottom: 20px;
+        }
+
+        .policy-hero p {
+            max-width: 720px;
+            margin: auto;
+
+            font-size: 18px;
+            line-height: 1.75;
+
+            color: rgba(255,255,255,0.90);
+        }
+
+        .updated-date {
+            margin-top: 25px;
+
+            font-size: 14px;
+            font-weight: 600;
+
+            color: rgba(255,255,255,0.75);
+        }
+
+        /* ================================
+           MAIN CONTENT
+        ================================== */
+
+        .policy-wrapper {
+            width: min(1120px, 92%);
+            margin: -55px auto 90px;
+
+            position: relative;
+            z-index: 5;
+        }
+
+        .policy-card {
+            background: white;
+            border-radius: 22px;
+
+            padding: 55px 65px;
+
+            box-shadow:
+                0 20px 60px rgba(31, 54, 120, 0.10);
+
+            border: 1px solid rgba(226,231,242,0.9);
+        }
+
+        /* ================================
+           TABLE OF CONTENTS
+        ================================== */
+
+        .toc {
+            background: var(--soft-blue);
+            border: 1px solid #dfe8ff;
+
+            border-radius: 16px;
+
+            padding: 25px 28px;
+
+            margin-bottom: 45px;
+        }
+
+        .toc h2 {
+            font-size: 18px;
+            color: var(--dark);
+            margin-bottom: 14px;
+        }
+
+        .toc ul {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 7px 25px;
+        }
+
+        .toc a {
+            color: var(--primary);
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .toc a:hover {
+            text-decoration: underline;
+        }
+
+        /* ================================
+           POLICY SECTIONS
+        ================================== */
+
+        .policy-section {
+            padding-bottom: 34px;
+            margin-bottom: 34px;
+
+            border-bottom: 1px solid var(--border);
+        }
+
+        .policy-section:last-of-type {
+            border-bottom: none;
+        }
+
+        .policy-section h2 {
+            color: var(--dark);
+
+            font-size: 26px;
+            line-height: 1.3;
+
+            margin-bottom: 16px;
+
+            letter-spacing: -0.4px;
+        }
+
+        .policy-section h3 {
+            color: #263452;
+
+            font-size: 19px;
+
+            margin-top: 22px;
+            margin-bottom: 10px;
+        }
+
+        .policy-section p {
+            color: var(--text);
+
+            font-size: 15.5px;
+
+            margin-bottom: 14px;
+        }
+
+        .policy-section ul {
+            padding-left: 22px;
+            margin: 10px 0 17px;
+        }
+
+        .policy-section li {
+            color: var(--text);
+            font-size: 15.5px;
+            margin-bottom: 7px;
+            padding-left: 5px;
+        }
+
+        .policy-section strong {
+            color: #263452;
+        }
+
+        /* ================================
+           CONTACT BOX
+        ================================== */
+
+        .contact-box {
+            background:
+                linear-gradient(
+                    135deg,
+                    #f0f4ff,
+                    #f7f6ff
+                );
+
+            border: 1px solid #dde5fb;
+
+            border-radius: 18px;
+
+            padding: 30px;
+
+            margin-top: 15px;
+        }
+
+        .contact-box p {
+            margin-bottom: 9px;
+        }
+
+        .contact-box strong {
+            color: var(--dark);
+        }
+
+        .contact-box a {
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        /* ================================
+           LEGAL NOTICE
+        ================================== */
+
+        .legal-notice {
+            background: #fff8e8;
+
+            border: 1px solid #f4e4b8;
+
+            border-radius: 16px;
+
+            padding: 25px 28px;
+
+            margin-top: 25px;
+        }
+
+        .legal-notice h3 {
+            color: #654f19;
+            margin-top: 0;
+            margin-bottom: 9px;
+            font-size: 18px;
+        }
+
+        .legal-notice p {
+            color: #675a38;
+            margin-bottom: 0;
+        }
+
+        /* ================================
+           CTA
+        ================================== */
+
+        .policy-cta {
+            margin-top: 45px;
+
+            padding: 45px 35px;
+
+            text-align: center;
+
+            border-radius: 20px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #315fe8,
+                    #4d42e2
+                );
+
+            color: white;
+        }
+
+        .policy-cta h2 {
+            font-size: 29px;
+            margin-bottom: 10px;
+        }
+
+        .policy-cta p {
+            max-width: 620px;
+            margin: 0 auto 24px;
+
+            color: rgba(255,255,255,0.85);
+
+            font-size: 15px;
+        }
+
+        .cta-button {
+            display: inline-flex;
+
+            background: white;
+            color: var(--primary);
+
+            padding: 13px 25px;
+
+            border-radius: 30px;
+
+            font-weight: 700;
+
+            transition: 0.25s ease;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+        }
+
+        /* ================================
+           FOOTER
+        ================================== */
+
+        .site-footer {
+            background: #111b34;
+            color: white;
+
+            padding: 55px 20px 25px;
+        }
+
+        .footer-container {
+            width: min(1450px, 92%);
+            margin: auto;
+        }
+
+        .footer-top {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr 1fr;
+            gap: 50px;
+
+            padding-bottom: 45px;
+
+            border-bottom: 1px solid rgba(255,255,255,0.10);
+        }
+
+        .footer-logo {
+            color: white;
+            margin-bottom: 15px;
+        }
+
+        .footer-description {
+            max-width: 370px;
+
+            color: rgba(255,255,255,0.65);
+
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+        .footer-column h3 {
+            font-size: 15px;
+            margin-bottom: 18px;
+        }
+
+        .footer-column a {
+            display: block;
+
+            color: rgba(255,255,255,0.65);
+
+            font-size: 14px;
+
+            margin-bottom: 10px;
+
+            transition: 0.2s ease;
+        }
+
+        .footer-column a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            padding-top: 22px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            gap: 20px;
+        }
+
+        .footer-bottom p {
+            color: rgba(255,255,255,0.50);
+            font-size: 13px;
+        }
+
+        .footer-bottom-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .footer-bottom-links a {
+            color: rgba(255,255,255,0.60);
+            font-size: 13px;
+        }
+
+        .footer-bottom-links a:hover {
+            color: white;
+        }
+
+        /* ================================
+           MOBILE MENU BUTTON
+        ================================== */
+
+        .mobile-menu {
+            display: none;
+
+            border: none;
+            background: transparent;
+
+            font-size: 26px;
+            color: var(--dark);
+
+            cursor: pointer;
+        }
+
+        /* ================================
+           RESPONSIVE
+        ================================== */
+
+        @media (max-width: 900px) {
+
+            .main-nav {
+                gap: 20px;
+            }
+
+            .policy-card {
+                padding: 40px 35px;
+            }
+
+            .footer-top {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 700px) {
+
+            .site-header {
+                height: 70px;
+            }
+
+            .main-nav {
+                display: none;
+            }
+
+            .mobile-menu {
+                display: block;
+            }
+
+            .policy-hero {
+                padding: 65px 15px 85px;
+            }
+
+            .policy-hero h1 {
+                letter-spacing: -1px;
+            }
+
+            .policy-hero p {
+                font-size: 16px;
+            }
+
+            .policy-wrapper {
+                width: 94%;
+                margin-top: -40px;
+            }
+
+            .policy-card {
+                padding: 30px 22px;
+                border-radius: 17px;
+            }
+
+            .toc ul {
+                grid-template-columns: 1fr;
+            }
+
+            .policy-section h2 {
+                font-size: 23px;
+            }
+
+            .policy-section p,
+            .policy-section li {
+                font-size: 15px;
+            }
+
+            .footer-top {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .policy-cta {
+                padding: 35px 22px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- =========================================
+         HEADER
+    ========================================== -->
+
+    <header class="site-header">
+
+        <div class="header-container">
+
+            <a href="/" class="logo">
+                <span class="logo-icon">E</span>
+                <span>Electrolix</span>
+            </a>
+
+            <nav class="main-nav">
+
+                <a href="/">Home</a>
+
+                <a href="/articles">Articles</a>
+
+                <a href="/categories">Categories</a>
+
+                <a href="/brands">Brands</a>
+
+                <a href="/contact">Contact</a>
+
+                <a
+                    href="https://eleczo.com"
+                    class="shop-button"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Shop on Eleczo
+                </a>
+
+            </nav>
+
+            <button
+                class="mobile-menu"
+                aria-label="Open navigation menu"
+                onclick="toggleMenu()"
+            >
+                ☰
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================================
+         HERO
+    ========================================== -->
+
+    <section class="policy-hero">
+
+        <div class="hero-inner">
+
+            <div class="hero-label">
+                ELECTROLIX
+            </div>
+
+            <h1>Privacy Policy</h1>
+
+            <p>
+                Your privacy matters to us. This page explains how
+                information may be handled when you visit and use
+                the Electrolix website.
+            </p>
+
+            <div class="updated-date">
+                Last Updated: [INSERT DATE]
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================
+         MAIN POLICY
+    ========================================== -->
+
+    <main class="policy-wrapper">
+
+        <article class="policy-card">
+
+
+            <!-- TABLE OF CONTENTS -->
+
+            <div class="toc">
+
+                <h2>Quick Navigation</h2>
+
+                <ul>
+
+                    <li>
+                        <a href="#information">
+                            1. Information We Collect
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#cookies">
+                            2. Cookies and Similar Technologies
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#third-party">
+                            3. Third-Party Services
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#eleczo-links">
+                            4. Links to Eleczo and Other Websites
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#eleczo">
+                            5. Electrolix and Eleczo
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#contacting">
+                            6. Contacting Electrolix
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#electrical">
+                            7. Electrical Information Disclaimer
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#children">
+                            8. Children's Privacy
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#security">
+                            9. Data Security
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#retention">
+                            10. Data Retention
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#rights">
+                            11. User Rights and Choices
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#external">
+                            12. Third-Party Websites
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#changes">
+                            13. Changes to This Privacy Policy
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#contact">
+                            14. Contact Us
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#legal">
+                            15. General Legal Notice
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <!-- SECTION 1 -->
+
+            <section class="policy-section" id="information">
+
+                <h2>1. Information We Collect</h2>
+
+                <h3>Information You Provide Voluntarily</h3>
+
+                <p>
+                    Electrolix does not require visitors to create an
+                    account or log in to browse, read, or use the website.
+                </p>
+
+                <p>
+                    We do not intentionally collect personal information
+                    through user registration or login systems because
+                    Electrolix does not operate such systems.
+                </p>
+
+                <p>
+                    However, if you voluntarily contact us through an
+                    available communication method, you may choose to
+                    provide information such as your name, email address,
+                    or other contact details.
+                </p>
+
+                <p>
+                    We may use information you voluntarily provide to:
+                </p>
+
+                <ul>
+                    <li>Respond to your questions or requests.</li>
+                    <li>Communicate with you regarding your inquiry.</li>
+                    <li>Provide information you have requested.</li>
+                    <li>Operate and maintain our communication channels.</li>
+                    <li>Address technical, legal, or security matters where necessary.</li>
+                </ul>
+
+                <h3>Automatically Processed Technical Information</h3>
+
+                <p>
+                    Although Electrolix does not intentionally collect
+                    personal information through user accounts or
+                    registration systems, normal website technology may
+                    automatically process certain technical information
+                    when you visit the website.
+                </p>
+
+                <p>
+                    Depending on the hosting provider, server configuration,
+                    security tools, analytics services, cookies, or other
+                    technologies actually used on the website, this may
+                    potentially include:
+                </p>
+
+                <ul>
+                    <li>IP address.</li>
+                    <li>Browser type and version.</li>
+                    <li>Device or operating system information.</li>
+                    <li>Approximate technical location information.</li>
+                    <li>Pages requested or visited.</li>
+                    <li>Referring website or page.</li>
+                    <li>Date and time of access.</li>
+                    <li>Basic website usage and performance information.</li>
+                    <li>Information relating to security or error detection.</li>
+                </ul>
+
+                <p>
+                    The exact information processed may depend on the
+                    technologies and third-party services operating on
+                    the website at a particular time.
+                </p>
+
+                <p>
+                    Electrolix does not claim that absolutely no technical
+                    information is processed when you visit the website.
+                </p>
+
+            </section>
+
+
+            <!-- SECTION 2 -->
+
+            <section class="policy-section" id="cookies">
+
+                <h2>2. Cookies and Similar Technologies</h2>
+
+                <p>
+                    Cookies are small files or pieces of information that
+                    websites may store on your device to help the website
+                    function or understand how it is being used.
+                </p>
+
+                <p>
+                    Electrolix may use cookies or similar technologies
+                    where applicable for purposes such as:
+                </p>
+
+                <ul>
+                    <li>Basic website functionality.</li>
+                    <li>Security.</li>
+                    <li>Website performance.</li>
+                    <li>Understanding general website usage.</li>
+                    <li>Improving website content and user experience.</li>
+                </ul>
+
+                <p>
+                    The specific cookies or similar technologies used may
+                    change as the website develops or as third-party
+                    services are added or removed.
+                </p>
+
+                <p>
+                    We do not claim to use specific cookies, analytics tools,
+                    or tracking technologies unless they are actually
+                    implemented on the website.
+                </p>
+
+                <p>
+                    Most web browsers allow you to view, block, delete,
+                    or manage cookies through browser settings. Disabling
+                    certain cookies may affect some website functionality.
+                </p>
+
+            </section>
+
+
+            <!-- SECTION 3 -->
+
+            <section class="policy-section" id="third-party">
+
+                <h2>3. Third-Party Services</h2>
+
+                <p>
+                    Electrolix may use third-party services where necessary
+                    to operate, secure, maintain, analyze, or improve
+                    the website.
+                </p>
+
+                <p>
+                    Depending on the services actually used, these may
+                    include categories such as:
+                </p>
+
+                <ul>
+                    <li>Web hosting providers.</li>
+                    <li>Website security services.</li>
+                    <li>Analytics services.</li>
+                    <li>Advertising services.</li>
+                    <li>Performance or technical services.</li>
+                    <li>Other website technologies.</li>
+                </ul>
+
+                <p>
+                    Third-party providers may process certain technical
+                    information in connection with the services they
+                    provide. Their handling of information is generally
+                    governed by their own privacy policies and terms.
+                </p>
+
+                <p>
+                    Electrolix does not intend to represent that any
+                    particular third-party service is being used when
+                    it has not been confirmed.
+                </p>
+
+            </section>
+
+
+            <!-- SECTION 4 -->
+
+            <section class="policy-section" id="eleczo-links">
+
+                <h2>4. Links to Eleczo and Other Websites</h2>
+
+                <p>
+                    Electrolix may contain links, buttons, calls-to-action,
+                    or references directing visitors to Eleczo or other
+                    third-party websites.
+                </p>
+
+                <p>
+                    These links may be provided when visitors want
+                    additional product information, purchasing information,
+                    pricing, availability, or other services that are
+                    not provided directly by Electrolix.
+                </p>
+
+                <p>
+                    When you click a link or button and leave Electrolix,
+                    you are accessing another website. The privacy policy,
+                    terms, security practices, and other policies of that
+                    website will apply to your use of that website.
+                </p>
+
+                <p>
+                    Electrolix does not control the privacy practices,
+                    security, content, transactions, or policies of
+                    third-party websites.
+                </p>
+
+                <p>
+                    Simply clicking an Eleczo button or link on Electrolix
+                    does not mean that Electrolix receives, processes,
+                    or stores your purchasing information.
+                </p>
+
+                <p>
+                    Any information you provide after leaving Electrolix
+                    is handled according to the policies and practices
+                    of the website or service you choose to use.
+                </p>
+
+            </section>
+
+
+            <!-- SECTION 5 -->
+
+            <section class="policy-section" id="eleczo">
+
+                <h2>5. Electrolix and Eleczo</h2>
+
+                <p>
+                    Electrolix provides informational and educational
+                    content about electrical products and related topics.
+                </p>
+
+                <p>
+                    When visitors are interested in purchasing electrical
+                    products or obtaining additional purchasing information,
+                    Electrolix may promote, recommend, or direct visitors
+                    to Eleczo through links, buttons, calls-to-action,
+                    or references.
+                </p>
+
+                <p>
+                    The purpose of such references may include helping
+                    visitors find a place where they can obtain additional
+                    product information, purchasing assistance, pricing,
+                    availability, or related commercial support.
+                </p>
+
+                <p>
+                    Electrolix does not make any unsupported representation
+                    regarding ownership, partnership, affiliation, agency,
+                    commission arrangements, or other legal relationships
+                    with Eleczo.
+                </p>
+
+                <p>
+                    Visitors who wish to purchase products or obtain
+                    purchasing assistance should communicate directly
+                    with Eleczo through the relevant Eleczo website or
+                    contact channels.
+                </p>
+
+            </section>
+
+
+            <!-- SECTION 6 -->
+
+            <section class="policy-section" id="contacting">
+
+                <h2>6. Contacting Electrolix</h2>
+
+                <p>
+                    If you contact Electrolix voluntarily, you may provide
+                    personal information depending on the communication
+                    method you use.
+                </p>
+
+                <p>
+                    For example, an inquiry may contain your name, email
+                    address, or other information you choose to provide.
+                </p>
+
+                <p>
+                    We may use this information to:
+                </p>
+
+                <ul>
+                    <li>Understand and respond to your inquiry.</li>
+                    <li>Communicate with you regarding your request.</li>
+                    <li>Provide relevant information.</li>
+                    <li>Handle website-related questions or concerns.</li>
+                </ul>
+
+                <p>
+                    We do not require visitors to provide personal
+                    information merely to access and read the general
+                    content available on Electrolix.
+                </p>
+
+            </section>
+
+
+            <!-- SECTION 7 -->
+
+            <section class="policy-section" id="electrical">
+
+                <h2>7. Electrical Information Disclaimer</h2>
+
+                <p>
+                    Electrolix publishes electrical-product information,
+                    educational articles, buying guides, comparisons,
+                    specifications, general explanations, and other
+                    informational content.
+                </p>
+
+                <p>
+                    This information is provided for
+                    <strong>general informational and educational purposes only.</strong>
+                </p>
+
+                <p>
+                    Electrical products and installations can involve
+                    safety risks. Product specifications, compatibility,
+                    installation requirements, electrical ratings, safety
+                    requirements, availability, pricing, and other
+                    information may change over time.
+                </p>
+
+                <p>
+                    Before purchasing, selecting, installing, modifying,
+                    or using an electrical product, visitors should
+                    independently verify the relevant information with
+                    the manufacturer, qualified electrician, supplier,
+                    or appropriate professional.
+                </p>
+
+                <p>
+                    Electrolix should not be treated as a substitute for
+                    professional electrical advice, installation guidance,
+                    engineering advice, or other qualified professional
+                    services.
+                </p>
+
+                <p>
+                    Where product information is important to a purchasing
+                    or installation decision, visitors should verify the
+                    current information from the applicable manufacturer,
+                    supplier, or seller.
+                </p>
+
+            </section>
+
+
+            <!-- SECTION 8 -->
+
+            <section class="policy-section" id="children">
+
+                <h2>8. Children's Privacy</h2>
+
+                <p>
+                    Electrolix is a general informational website and is
+                    not specifically directed toward children.
+                </p>
+
+                <p>
+                    We do not knowingly request personal information from
+                    children through account registration or login systems.
+                </p>
+
+                <p>
+                    If a parent or guardian believes that a child has
+                    voluntarily provided personal information to Electrolix,
+                    they may contact us using the contact information
+                    provided below so that the matter can be reviewed
+                    and addressed where appropriate.
+                </p>
+
+            </section>
+
+
+            <!-- SECTION 9 -->
+
+            <section class="policy-section" id="security">
+
+                <h2>9. Data Security</h2>
+
+                <p>
+                    Electrolix may use reasonable technical and
+                    organizational measures to help protect the website
+                    and information that visitors voluntarily provide.
+                </p>
+
+                <p>
+                    However, no website, online service, server, or method
+                    of transmitting information over the internet can be
+                    guaranteed to be completely secure.
+                </p>
+
+                <p>
+                    Accordingly, we do not make an absolute guarantee
+                    that information will always be protected against
+                    every possible security risk, unauthorized access,
+                    loss, misuse, or alteration.
+                </p>
+
+            </section>
+
+
+            <!-- SECTION 10 -->
+
+            <section class="policy-section" id="retention">
+
+                <h2>10. Data Retention</h2>
+
+                <p>
+                    Electrolix does not operate user accounts or require
+                    visitors to register, and therefore does not maintain
+                    user account profiles.
+                </p>
+
+                <p>
+                    Where visitors voluntarily provide information through
+                    communication channels, that information may be
+                    retained for as long as reasonably necessary to:
+                </p>
+
+                <ul>
+                    <li>Respond to or manage the inquiry.</li>
+                    <li>Maintain appropriate communication records.</li>
+                    <li>Operate and maintain the website.</li>
+                    <li>Address technical or security matters.</li>
+                    <li>Comply with applicable legal obligations.</li>
+                    <li>
+                        Establish, exercise, or defend legal claims
+                        where applicable.
+                    </li>
+                    <li>Resolve disputes.</li>
+                </ul>
+
+                <p>
+                    The retention period may depend on the nature and
+                    purpose of the information and the circumstances
+                    in which it was provided.
+                </p>
+
+            </section>
+
+
+            <!-- SECTION 11 -->
+
+            <section class="policy-section" id="rights">
+
+                <h2>11. User Rights and Choices</h2>
+
+                <p>
+                    Visitors have reasonable choices regarding how they
+                    interact with Electrolix.
+                </p>
+
+                <p>You may:</p>
+
+                <ul>
+                    <li>Browse the website without creating an account or logging in.</li>
+
+                    <li>
+                        Manage or disable cookies through your browser
+                        settings, where applicable.
+                    </li>
+
+                    <li>
+                        Choose whether to voluntarily provide personal
+                        information when contacting Electrolix.
+                    </li>
+
+                    <li>
+                        Contact Electrolix regarding information you
+                        have voluntarily provided.
+                    </li>
+                </ul>
+
+                <p>
+                    Depending on the circumstances and applicable law,
+                    you may also have additional rights relating to
+                    personal information.
+                </p>
+
+                <p>
+                    Electrolix does not make specific legal claims
+                    regarding the applicability of any particular
+                    privacy law unless that law applies to the relevant
+                    circumstances.
+                </p>
+
+                <p>
+                    If you have a privacy-related question or concern,
+                    you can contact us using the contact information
+                    provided below.
+                </p>
+
+            </section>
+
+
+            <!-- SECTION 12 -->
+
+            <section class="policy-section" id="external">
+
+                <h2>12. Third-Party Websites and External Services</h2>
+
+                <p>
+                    Electrolix may link to or reference websites,
+                    platforms, services, manufacturers, suppliers,
+                    retailers, or other third parties.
+                </p>
+
+                <p>
+                    Once you leave Electrolix, we do not control how
+                    the third party collects, uses, stores, protects,
+                    or otherwise processes information.
+                </p>
+
+                <p>
+                    You should review the applicable third party's
+                    privacy policy and terms before providing personal
+                    information or completing a transaction on that
+                    website.
+                </p>
+
+                <p>
+                    Electrolix is not responsible for the privacy
+                    practices, security, content, transactions, or
+                    policies of third-party websites or services.
+                </p>
+
+            </section>
+
+
+            <!-- SECTION 13 -->
+
+            <section class="policy-section" id="changes">
+
+                <h2>13. Changes to This Privacy Policy</h2>
+
+                <p>
+                    Electrolix may update this Privacy Policy from time
+                    to time.
+                </p>
+
+                <p>
+                    Changes may be made when the website's content,
+                    technology, services, third-party providers,
+                    communication methods, or applicable legal
+                    requirements change.
+                </p>
+
+                <p>
+                    When this policy is updated, the
+                    <strong>Last Updated</strong> date at the top of
+                    this page may be revised.
+                </p>
+
+                <p>
+                    Visitors are encouraged to review this page
+                    periodically to understand the current privacy
+                    practices of Electrolix.
+                </p>
+
+            </section>
+
+
+            <!-- SECTION 14 -->
+
+            <section class="policy-section" id="contact">
+
+                <h2>14. Contact Us</h2>
+
+                <p>
+                    If you have questions, concerns, or requests
+                    regarding this Privacy Policy or the handling of
+                    information you have voluntarily provided, you may
+                    contact Electrolix using the following details:
+                </p>
+
+                <div class="contact-box">
+
+                    <p>
+                        <strong>Website:</strong>
+                        Electrolix
+                    </p>
+
+                    <p>
+                        <strong>Email:</strong>
+                        <a href="mailto:[INSERT EMAIL ADDRESS]">
+                            [INSERT EMAIL ADDRESS]
+                        </a>
+                    </p>
+
+                    <p>
+                        <strong>Contact Page:</strong>
+                        <a href="[INSERT CONTACT PAGE URL]">
+                            [INSERT CONTACT PAGE URL]
+                        </a>
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <!-- SECTION 15 -->
+
+            <section class="policy-section" id="legal">
+
+                <h2>15. General Legal Notice</h2>
+
+                <div class="legal-notice">
+
+                    <h3>Important Notice</h3>
+
+                    <p>
+                        This Privacy Policy has been prepared as a general
+                        informational privacy notice based on the stated
+                        operating model of Electrolix. It is not a
+                        substitute for legal advice and does not represent
+                        a determination that any particular privacy law,
+                        regulation, or legal requirement applies to
+                        Electrolix.
+                    </p>
+
+                </div>
+
+                <p style="margin-top: 20px;">
+                    Website operators should review their actual hosting
+                    arrangements, cookies, analytics, advertising
+                    technologies, third-party services, contact methods,
+                    and other data-processing activities and obtain advice
+                    from a qualified legal professional where appropriate.
+                </p>
+
+                <p>
+                    If the technologies or services used by Electrolix
+                    change, this Privacy Policy should also be reviewed
+                    and updated accordingly.
+                </p>
+
+            </section>
+
+
+            <!-- FINAL CTA -->
+
+            <div class="policy-cta">
+
+                <h2>Have a Privacy Question?</h2>
+
+                <p>
+                    If you have a question about this Privacy Policy
+                    or information you have voluntarily provided to
+                    Electrolix, please contact us.
+                </p>
+
+                <a
+                    href="/contact"
+                    class="cta-button"
+                >
+                    Contact Electrolix
+                </a>
+
+            </div>
+
+
+        </article>
+
+    </main>
+
+
+    <!-- =========================================
+         FOOTER
+    ========================================== -->
+
+    <footer class="site-footer">
+
+        <div class="footer-container">
+
+            <div class="footer-top">
+
+                <div>
+
+                    <a href="/" class="logo footer-logo">
+                        <span class="logo-icon">E</span>
+                        <span>Electrolix</span>
+                    </a>
+
+                    <p class="footer-description">
+                        Electrical knowledge made simple. Explore
+                        electrical products, buying guides,
+                        comparisons, specifications, and practical
+                        industry information.
+                    </p>
+
+                </div>
+
+
+                <div class="footer-column">
+
+                    <h3>Explore</h3>
+
+                    <a href="/">Home</a>
+
+                    <a href="/articles">Articles</a>
+
+                    <a href="/categories">Categories</a>
+
+                    <a href="/brands">Brands</a>
+
+                </div>
+
+
+                <div class="footer-column">
+
+                    <h3>Information</h3>
+
+                    <a href="/privacy-policy">
+                        Privacy Policy
+                    </a>
+
+                    <a href="/contact">
+                        Contact
+                    </a>
+
+                    <a
+                        href="https://eleczo.com"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Shop on Eleczo
+                    </a>
+
+                </div>
+
+
+                <div class="footer-column">
+
+                    <h3>Contact</h3>
+
+                    <a href="mailto:[INSERT EMAIL ADDRESS]">
+                        [INSERT EMAIL ADDRESS]
+                    </a>
+
+                    <a href="/contact">
+                        Contact Us
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-bottom">
+
+                <p>
+                    © <span id="currentYear"></span>
+                    Electrolix. All rights reserved.
+                </p>
+
+                <div class="footer-bottom-links">
+
+                    <a href="/privacy-policy">
+                        Privacy Policy
+                    </a>
+
+                    <a href="/contact">
+                        Contact
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =========================================
+         JAVASCRIPT
+    ========================================== -->
+
+    <script>
+
+        function toggleMenu() {
+
+            const nav = document.querySelector(".main-nav");
+
+            if (nav.style.display === "flex") {
+
+                nav.style.display = "none";
+
+            } else {
+
+                nav.style.display = "flex";
+
+                nav.style.flexDirection = "column";
+
+                nav.style.position = "absolute";
+
+                nav.style.top = "70px";
+
+                nav.style.left = "0";
+
+                nav.style.right = "0";
+
+                nav.style.background = "#ffffff";
+
+                nav.style.padding = "25px";
+
+                nav.style.boxShadow =
+                    "0 15px 30px rgba(0,0,0,0.10)";
+
+                nav.style.zIndex = "999";
+
+            }
+
+        }
+
+
+        document.getElementById("currentYear").textContent =
+            new Date().getFullYear();
+
+    </script>
+
+</body>
+</html>
