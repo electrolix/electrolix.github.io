@@ -8,6 +8,895 @@
 
 <title>4 Module Cover Plate</title>
 
+    
+
+    <style>
+/* =========================================
+   ELECTROLIX PRIVACY POLICY
+   Content Only — No Header / No Footer
+========================================= */
+
+.electrolix-privacy {
+    --primary: #315fe8;
+    --primary-dark: #244bd0;
+    --secondary: #4c43e8;
+    --dark: #17233f;
+    --text: #46516a;
+    --muted: #69748b;
+    --border: #e4e8f1;
+    --soft-blue: #eef3ff;
+    --white: #ffffff;
+
+    font-family:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Arial,
+        sans-serif;
+
+    color: var(--text);
+    line-height: 1.7;
+    background: #f7f8fc;
+    width: 100%;
+    padding-bottom: 70px;
+}
+
+/* =========================================
+   HERO
+========================================= */
+
+.electrolix-privacy .privacy-hero {
+    position: relative;
+    overflow: hidden;
+    padding: 75px 20px 85px;
+
+    background:
+        radial-gradient(
+            circle at 90% 10%,
+            rgba(110, 105, 245, 0.30),
+            transparent 32%
+        ),
+        linear-gradient(
+            135deg,
+            #315fe8 0%,
+            #3e48e5 55%,
+            #5141df 100%
+        );
+
+    color: #ffffff;
+    text-align: center;
+}
+
+.electrolix-privacy .privacy-hero::before {
+    content: "";
+    position: absolute;
+    width: 420px;
+    height: 420px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.06);
+    right: -130px;
+    top: -220px;
+}
+
+.electrolix-privacy .privacy-hero::after {
+    content: "";
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.05);
+    left: -120px;
+    bottom: -150px;
+}
+
+.electrolix-privacy .privacy-hero-inner {
+    position: relative;
+    z-index: 2;
+    width: min(900px, 92%);
+    margin: 0 auto;
+}
+
+.electrolix-privacy .privacy-label {
+    display: inline-block;
+    padding: 8px 18px;
+    border-radius: 30px;
+    background: rgba(255,255,255,0.13);
+    border: 1px solid rgba(255,255,255,0.15);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+    margin-bottom: 20px;
+}
+
+.electrolix-privacy .privacy-hero h1 {
+    margin: 0 0 18px;
+    color: #ffffff;
+    font-size: clamp(40px, 6vw, 64px);
+    line-height: 1.08;
+    letter-spacing: -1.8px;
+    font-weight: 800;
+}
+
+.electrolix-privacy .privacy-hero p {
+    max-width: 720px;
+    margin: 0 auto;
+    color: rgba(255,255,255,0.90);
+    font-size: 17px;
+    line-height: 1.75;
+}
+
+.electrolix-privacy .privacy-updated {
+    margin-top: 22px;
+    color: rgba(255,255,255,0.72);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* =========================================
+   CONTENT WRAPPER
+========================================= */
+
+.electrolix-privacy .privacy-wrapper {
+    width: min(1120px, 92%);
+    margin: -50px auto 0;
+    position: relative;
+    z-index: 5;
+}
+
+/* =========================================
+   MAIN CARD
+========================================= */
+
+.electrolix-privacy .privacy-card {
+    background: #ffffff;
+    border-radius: 22px;
+    padding: 55px 65px;
+    border: 1px solid rgba(226,231,242,0.9);
+
+    box-shadow:
+        0 20px 60px rgba(31,54,120,0.10);
+}
+
+/* =========================================
+   TABLE OF CONTENTS
+========================================= */
+
+.electrolix-privacy .privacy-toc {
+    background: var(--soft-blue);
+    border: 1px solid #dfe7ff;
+    border-radius: 16px;
+    padding: 25px 28px;
+    margin-bottom: 45px;
+}
+
+.electrolix-privacy .privacy-toc h2 {
+    margin: 0 0 14px;
+    color: var(--dark);
+    font-size: 19px;
+    line-height: 1.4;
+}
+
+.electrolix-privacy .privacy-toc ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px 25px;
+}
+
+.electrolix-privacy .privacy-toc li {
+    margin: 0;
+    padding: 0;
+}
+
+.electrolix-privacy .privacy-toc a {
+    color: var(--primary);
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.2s ease;
+}
+
+.electrolix-privacy .privacy-toc a:hover {
+    color: var(--primary-dark);
+    text-decoration: underline;
+}
+
+/* =========================================
+   SECTIONS
+========================================= */
+
+.electrolix-privacy .privacy-section {
+    padding-bottom: 34px;
+    margin-bottom: 34px;
+    border-bottom: 1px solid var(--border);
+}
+
+.electrolix-privacy .privacy-section:last-of-type {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.electrolix-privacy .privacy-section h2 {
+    margin: 0 0 16px;
+    color: var(--dark);
+    font-size: 26px;
+    line-height: 1.35;
+    letter-spacing: -0.4px;
+    font-weight: 750;
+}
+
+.electrolix-privacy .privacy-section h3 {
+    margin: 24px 0 10px;
+    color: #263452;
+    font-size: 19px;
+    line-height: 1.45;
+    font-weight: 700;
+}
+
+.electrolix-privacy .privacy-section p {
+    margin: 0 0 15px;
+    color: var(--text);
+    font-size: 15.5px;
+    line-height: 1.75;
+}
+
+.electrolix-privacy .privacy-section ul {
+    margin: 10px 0 18px;
+    padding-left: 23px;
+}
+
+.electrolix-privacy .privacy-section li {
+    margin-bottom: 7px;
+    padding-left: 5px;
+    color: var(--text);
+    font-size: 15.5px;
+    line-height: 1.7;
+}
+
+.electrolix-privacy .privacy-section strong {
+    color: #263452;
+}
+
+/* =========================================
+   CONTACT BOX
+========================================= */
+
+.electrolix-privacy .contact-box {
+    background:
+        linear-gradient(
+            135deg,
+            #f0f4ff,
+            #f7f6ff
+        );
+
+    border: 1px solid #dde5fb;
+    border-radius: 18px;
+    padding: 28px 30px;
+    margin-top: 20px;
+}
+
+.electrolix-privacy .contact-box p {
+    margin-bottom: 9px;
+}
+
+.electrolix-privacy .contact-box p:last-child {
+    margin-bottom: 0;
+}
+
+.electrolix-privacy .contact-box strong {
+    color: var(--dark);
+}
+
+.electrolix-privacy .contact-box a {
+    color: var(--primary);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.electrolix-privacy .contact-box a:hover {
+    text-decoration: underline;
+}
+
+/* =========================================
+   LEGAL NOTICE
+========================================= */
+
+.electrolix-privacy .legal-notice {
+    background: #fff8e8;
+    border: 1px solid #f1e2b8;
+    border-radius: 16px;
+    padding: 25px 28px;
+    margin-top: 20px;
+}
+
+.electrolix-privacy .legal-notice h3 {
+    margin: 0 0 9px;
+    color: #654f19;
+    font-size: 18px;
+}
+
+.electrolix-privacy .legal-notice p {
+    margin: 0;
+    color: #675a38;
+}
+
+/* =========================================
+   FINAL CONTACT CTA
+========================================= */
+
+.electrolix-privacy .privacy-cta {
+    margin-top: 45px;
+    padding: 42px 30px;
+    text-align: center;
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #315fe8,
+            #4d42e2
+        );
+
+    color: #ffffff;
+}
+
+.electrolix-privacy .privacy-cta h2 {
+    margin: 0 0 10px;
+    color: #ffffff;
+    font-size: 28px;
+    line-height: 1.3;
+}
+
+.electrolix-privacy .privacy-cta p {
+    max-width: 620px;
+    margin: 0 auto 23px;
+    color: rgba(255,255,255,0.86);
+    font-size: 15px;
+}
+
+.electrolix-privacy .privacy-cta a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 13px 25px;
+    border-radius: 30px;
+    background: #ffffff;
+    color: var(--primary);
+    font-size: 15px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: 0.25s ease;
+}
+
+.electrolix-privacy .privacy-cta a:hover {
+    transform: translateY(-2px);
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 800px) {
+
+    .electrolix-privacy .privacy-card {
+        padding: 40px 35px;
+    }
+
+    .electrolix-privacy .privacy-toc ul {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .electrolix-privacy {
+        padding-bottom: 40px;
+    }
+
+    .electrolix-privacy .privacy-hero {
+        padding: 60px 16px 75px;
+    }
+
+    .electrolix-privacy .privacy-hero h1 {
+        font-size: 42px;
+        letter-spacing: -1px;
+    }
+
+    .electrolix-privacy .privacy-hero p {
+        font-size: 15.5px;
+    }
+
+    .electrolix-privacy .privacy-wrapper {
+        width: 94%;
+        margin-top: -38px;
+    }
+
+    .electrolix-privacy .privacy-card {
+        padding: 30px 21px;
+        border-radius: 17px;
+    }
+
+    .electrolix-privacy .privacy-toc {
+        padding: 22px 20px;
+    }
+
+    .electrolix-privacy .privacy-section h2 {
+        font-size: 23px;
+    }
+
+    .electrolix-privacy .privacy-section h3 {
+        font-size: 18px;
+    }
+
+    .electrolix-privacy .privacy-section p,
+    .electrolix-privacy .privacy-section li {
+        font-size: 15px;
+    }
+
+    .electrolix-privacy .contact-box {
+        padding: 23px 20px;
+    }
+
+    .electrolix-privacy .privacy-cta {
+        padding: 34px 20px;
+    }
+
+    .electrolix-privacy .privacy-cta h2 {
+        font-size: 25px;
+    }
+}
+</style>
+
+
+<div class="electrolix-privacy">
+
+    <section class="privacy-hero">
+        <div class="privacy-hero-inner">
+
+            <div class="privacy-label">
+                ELECTROLIX
+            </div>
+
+            <h1>Privacy Policy</h1>
+
+            <p>
+                This Privacy Policy explains how information may be handled
+                when you visit and use Electrolix.
+            </p>
+
+            <div class="privacy-updated">
+                Last Updated: [INSERT DATE]
+            </div>
+
+        </div>
+    </section>
+
+
+    <div class="privacy-wrapper">
+
+        <article class="privacy-card">
+
+            <div class="privacy-toc">
+
+                <h2>Quick Navigation</h2>
+
+                <ul>
+
+                    <li><a href="#introduction">1. Introduction</a></li>
+                    <li><a href="#information">2. Information We Collect</a></li>
+                    <li><a href="#cookies">3. Cookies and Similar Technologies</a></li>
+                    <li><a href="#third-party">4. Third-Party Services</a></li>
+                    <li><a href="#eleczo-links">5. Links to Eleczo and Other Websites</a></li>
+                    <li><a href="#eleczo">6. Eleczo Relationship</a></li>
+                    <li><a href="#contacting">7. Contacting Electrolix</a></li>
+                    <li><a href="#electrical">8. Electrical Information Disclaimer</a></li>
+                    <li><a href="#children">9. Children's Privacy</a></li>
+                    <li><a href="#security">10. Data Security</a></li>
+                    <li><a href="#retention">11. Data Retention</a></li>
+                    <li><a href="#rights">12. User Rights and Choices</a></li>
+                    <li><a href="#changes">13. Changes to This Privacy Policy</a></li>
+                    <li><a href="#contact">14. Contact Us</a></li>
+                    <li><a href="#legal">General Legal Notice</a></li>
+
+                </ul>
+
+            </div>
+
+
+            <section class="privacy-section" id="introduction">
+
+                <h2>1. Introduction</h2>
+
+                <p>
+                    Electrolix ("we," "our," "the website," or "Electrolix")
+                    is an informational website dedicated to electrical
+                    products, electrical components, and electrical
+                    industry-related content. We publish educational articles,
+                    product guides, comparisons, specifications, and general
+                    buying-related information covering items such as switches,
+                    sockets, cover plates, electrical modules, modular boxes,
+                    metal boxes, fans, lighting products, wires and cables,
+                    fan regulators, and other electrical accessories.
+                </p>
+
+                <p>
+                    This Privacy Policy explains how information may be handled
+                    when you visit and use Electrolix. By using this website,
+                    you acknowledge that you have read and understood this Policy.
+                </p>
+
+            </section>
+
+
+            <section class="privacy-section" id="information">
+
+                <h2>2. Information We Collect</h2>
+
+                <p>
+                    Electrolix does not require visitors to create an account,
+                    register, or log in to access any content on the website.
+                    You can freely browse and read our articles, guides, and
+                    product information without providing any personal information.
+                </p>
+
+                <p>
+                    We do not intentionally collect personal information through
+                    account creation, registration forms, or login systems,
+                    because no such systems exist on this website.
+                </p>
+
+                <p>
+                    That said, like most websites, certain standard technical
+                    information may be processed automatically in the course
+                    of operating the site. This can include information handled
+                    by our web hosting provider, servers, security systems,
+                    analytics tools, cookies, or similar technologies, where
+                    such services are used. This may include details such as
+                    browser type, device information, approximate location,
+                    pages visited, and similar technical data. This happens
+                    as a normal part of how websites function and does not
+                    involve you actively submitting personal information.
+                </p>
+
+            </section>
+
+
+            <section class="privacy-section" id="cookies">
+
+                <h2>3. Cookies and Similar Technologies</h2>
+
+                <p>
+                    Cookies are small text files that a website may place on
+                    your device to help the website function properly, remember
+                    preferences, or gather usage information.
+                </p>
+
+                <p>
+                    Electrolix may use cookies or similar technologies for
+                    purposes such as basic website functionality, performance,
+                    security, analytics, or improving the overall user
+                    experience, where applicable. We do not claim to use
+                    cookies beyond what is actually implemented on the website.
+                </p>
+
+                <p>
+                    You can control or disable cookies at any time through
+                    your browser settings. Please note that disabling certain
+                    cookies may affect how some parts of the website function.
+                </p>
+
+            </section>
+
+
+            <section class="privacy-section" id="third-party">
+
+                <h2>4. Third-Party Services</h2>
+
+                <p>
+                    Electrolix may use third-party services to help operate,
+                    secure, and improve the website. These may include services
+                    such as web hosting providers, analytics services, security
+                    services, or advertising services, where applicable.
+                </p>
+
+                <p>
+                    Any such third-party service may process limited technical
+                    information in accordance with its own privacy policy. We
+                    encourage you to review the privacy policies of any
+                    third-party services if you would like more information
+                    about how they handle data. We do not list specific
+                    third-party tools here unless they are confirmed to be
+                    in active use on the website.
+                </p>
+
+            </section>
+
+
+            <section class="privacy-section" id="eleczo-links">
+
+                <h2>5. Links to Eleczo and Other Websites</h2>
+
+                <p>
+                    Electrolix may contain links, buttons, banners, or references
+                    directing visitors to Eleczo or other third-party websites,
+                    particularly when you are interested in purchasing electrical
+                    products or obtaining further commercial information.
+                </p>
+
+                <p>
+                    Once you leave Electrolix and visit Eleczo or any other
+                    third-party website, that website's own privacy policy and
+                    terms of use will apply to your interaction with it.
+                    Electrolix is not responsible for the privacy practices,
+                    security, content, transactions, or policies of any
+                    third-party website, including Eleczo.
+                </p>
+
+                <p>
+                    Simply clicking a link or button that directs you to Eleczo
+                    does not mean that Electrolix collects, stores, or processes
+                    your purchasing information. Any information you provide
+                    once you reach Eleczo is governed entirely by Eleczo's
+                    own privacy policy.
+                </p>
+
+            </section>
+
+
+            <section class="privacy-section" id="eleczo">
+
+                <h2>6. Eleczo Relationship</h2>
+
+                <p>
+                    Electrolix may promote, recommend, or direct visitors
+                    toward Eleczo as a resource for purchasing electrical
+                    products, obtaining pricing information, checking
+                    availability, or receiving purchasing assistance.
+                </p>
+
+                <p>
+                    This Privacy Policy does not make any claims regarding
+                    ownership, partnership, commission arrangements, or other
+                    legal relationships between Electrolix and Eleczo beyond
+                    what is explicitly stated by us elsewhere. If you wish
+                    to purchase a product or need purchase-related assistance,
+                    please contact Eleczo directly through its official
+                    website or contact channels.
+                </p>
+
+            </section>
+
+
+            <section class="privacy-section" id="contacting">
+
+                <h2>7. Contacting Electrolix</h2>
+
+                <p>
+                    If you choose to contact Electrolix — for example, with
+                    a question, feedback, or a request — you may voluntarily
+                    provide certain information such as your name, email
+                    address, or other contact details, depending on the method
+                    of communication you use.
+                </p>
+
+                <p>
+                    Any information you provide in this way will generally be
+                    used only to respond to your inquiry, address your feedback,
+                    or otherwise communicate with you regarding the purpose
+                    for which it was submitted. We do not claim to store zero
+                    information in these cases, since voluntarily provided
+                    contact details are, by nature, received and may be retained
+                    as described in Section 11.
+                </p>
+
+            </section>
+
+
+            <section class="privacy-section" id="electrical">
+
+                <h2>8. Electrical Information Disclaimer</h2>
+
+                <p>
+                    The content published on Electrolix — including product
+                    guides, comparisons, specifications, and educational
+                    articles — is provided for general informational purposes only.
+                </p>
+
+                <p>
+                    Electrical products, standards, and safety requirements
+                    can vary by region, manufacturer, and specific use case,
+                    and this information may change over time. Before purchasing,
+                    installing, or using any electrical product, we strongly
+                    encourage you to verify product specifications, compatibility,
+                    safety requirements, and installation requirements directly
+                    with the manufacturer, a qualified and licensed electrician,
+                    an authorized supplier, or Eleczo.
+                </p>
+
+                <p>
+                    Electrolix is not a substitute for professional electrical
+                    advice, and nothing on this website should be treated as such.
+                </p>
+
+            </section>
+
+
+            <section class="privacy-section" id="children">
+
+                <h2>9. Children's Privacy</h2>
+
+                <p>
+                    Electrolix is not specifically directed toward children,
+                    and we do not knowingly request or collect personal
+                    information from children. If you believe a child has
+                    provided personal information to us through voluntary
+                    contact, please reach out using the contact details below
+                    so we can address the matter appropriately.
+                </p>
+
+            </section>
+
+
+            <section class="privacy-section" id="security">
+
+                <h2>10. Data Security</h2>
+
+                <p>
+                    We aim to use reasonable measures to help protect the
+                    website and any information that may be voluntarily
+                    provided to us, such as through contact communications.
+                    However, no method of online transmission or storage can
+                    be guaranteed to be completely secure, and we cannot make
+                    absolute guarantees regarding the security of any information.
+                </p>
+
+            </section>
+
+
+            <section class="privacy-section" id="retention">
+
+                <h2>11. Data Retention</h2>
+
+                <p>
+                    Because Electrolix does not operate user accounts or
+                    require registration, we do not maintain ongoing user
+                    account profiles or associated personal data stores.
+                </p>
+
+                <p>
+                    Any information voluntarily provided through communication
+                    channels (such as contact emails) may be retained only
+                    for as long as reasonably necessary to respond to your
+                    inquiry, operate and maintain the website, comply with
+                    applicable legal obligations, or resolve potential disputes,
+                    where applicable.
+                </p>
+
+            </section>
+
+
+            <section class="privacy-section" id="rights">
+
+                <h2>12. User Rights and Choices</h2>
+
+                <p>
+                    You have certain choices regarding your interaction
+                    with Electrolix, including:
+                </p>
+
+                <ul>
+                    <li>
+                        Managing or disabling cookies through your browser
+                        settings, as described in Section 3.
+                    </li>
+
+                    <li>
+                        Choosing whether or not to voluntarily contact us
+                        and provide personal details.
+                    </li>
+
+                    <li>
+                        Choosing whether to click through to Eleczo or other
+                        third-party websites.
+                    </li>
+                </ul>
+
+                <p>
+                    Depending on your location, you may have additional
+                    rights under applicable data protection laws. This Policy
+                    does not make specific claims regarding the applicability
+                    of frameworks such as the GDPR, Indian data protection
+                    law, the CCPA, or other regional regulations unless such
+                    applicability has been separately confirmed. If you have
+                    questions about your rights, we recommend consulting a
+                    qualified legal professional.
+                </p>
+
+            </section>
+
+
+            <section class="privacy-section" id="changes">
+
+                <h2>13. Changes to This Privacy Policy</h2>
+
+                <p>
+                    Electrolix may update this Privacy Policy from time to
+                    time to reflect changes in our website, services,
+                    technology, or applicable legal requirements. Any changes
+                    will be posted on this page along with a revised
+                    "Last Updated" date. We encourage you to review this
+                    Policy periodically.
+                </p>
+
+                <p>
+                    Last Updated: [INSERT DATE]
+                </p>
+
+            </section>
+
+
+            <section class="privacy-section" id="contact">
+
+                <h2>14. Contact Us</h2>
+
+                <p>
+                    If you have any questions, concerns, or requests regarding
+                    this Privacy Policy, please contact us at:
+                </p>
+
+                <div class="contact-box">
+
+                    <p>
+                        <strong>Website:</strong>
+                        Electrolix
+                    </p>
+
+                    <p>
+                        <strong>Email:</strong>
+                        <a href="mailto:[INSERT EMAIL ADDRESS]">
+                            [INSERT EMAIL ADDRESS]
+                        </a>
+                    </p>
+
+                    <p>
+                        <strong>Contact Page:</strong>
+                        <a href="[INSERT CONTACT PAGE URL]">
+                            [INSERT CONTACT PAGE URL]
+                        </a>
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <div class="legal-notice" id="legal">
+
+                <p>
+                    <strong>Disclaimer:</strong>
+                    This Privacy Policy is provided for general informational
+                    purposes and does not constitute legal advice. Electrolix
+                    recommends that this Policy be reviewed by a qualified
+                    legal professional to ensure compliance with applicable
+                    laws and regulations relevant to your jurisdiction and
+                    business operations before publishing.
+                </p>
+
+            </div>
+
+
+        </article>
+
+    </div>
+
+</div>
+
 
 
 <link rel="icon" href="https://electrolix.github.io/images/favicon.ico" sizes="any">
