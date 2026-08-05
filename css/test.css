@@ -1,8 +1,5 @@
-
-
 /* =========================================
    ELECTROLIX PRIVACY POLICY
-   RESET + ROOT + HERO
 ========================================= */
 
 .electrolix-privacy{
@@ -81,20 +78,9 @@
     position:relative;
     overflow:hidden;
     padding:75px 20px 85px;
-
     background:
-        radial-gradient(
-            circle at 90% 10%,
-            rgba(110,105,245,.30),
-            transparent 32%
-        ),
-        linear-gradient(
-            135deg,
-            #315fe8 0%,
-            #3e48e5 55%,
-            #5141df 100%
-        );
-
+        radial-gradient(circle at 90% 10%,rgba(110,105,245,.30),transparent 32%),
+        linear-gradient(135deg,#315fe8 0%,#3e48e5 55%,#5141df 100%);
     color:#fff;
     text-align:center;
 }
@@ -134,7 +120,7 @@
     border-radius:30px;
     background:rgba(255,255,255,.13);
     border:1px solid rgba(255,255,255,.15);
-    font-size:13px;
+    font-size:14px;
     font-weight:700;
     letter-spacing:.4px;
     margin-bottom:20px;
@@ -143,7 +129,7 @@
 .electrolix-privacy .privacy-hero h1{
     margin:0 0 18px;
     color:#fff;
-    font-size:clamp(40px,6vw,64px);
+    font-size:64px;
     line-height:1.08;
     letter-spacing:-1.8px;
     font-weight:800;
@@ -153,14 +139,14 @@
     max-width:720px;
     margin:0 auto;
     color:rgba(255,255,255,.90);
-    font-size:17px;
+    font-size:18px;
     line-height:1.75;
 }
 
 .electrolix-privacy .privacy-updated{
     margin-top:22px;
     color:rgba(255,255,255,.72);
-    font-size:14px;
+    font-size:15px;
     font-weight:600;
 }
 
@@ -181,13 +167,11 @@
 ========================================= */
 
 .electrolix-privacy .privacy-card{
-    background:#ffffff;
+    background:#fff;
     border-radius:22px;
     padding:55px 65px;
     border:1px solid rgba(226,231,242,.9);
-
-    box-shadow:
-        0 20px 60px rgba(31,54,120,.10);
+    box-shadow:0 20px 60px rgba(31,54,120,.10);
 }
 
 /* =========================================
@@ -205,7 +189,7 @@
 .electrolix-privacy .privacy-toc h2{
     margin:0 0 14px;
     color:var(--dark);
-    font-size:19px;
+    font-size:20px;
     line-height:1.4;
     font-weight:700;
 }
@@ -214,7 +198,6 @@
     list-style:none;
     padding:0;
     margin:0;
-
     display:grid;
     grid-template-columns:repeat(2,minmax(0,1fr));
     gap:8px 25px;
@@ -228,9 +211,8 @@
 .electrolix-privacy .privacy-toc a{
     display:inline-block;
     color:var(--primary);
-    font-size:14px;
+    font-size:17px;
     font-weight:600;
-    text-decoration:none;
     transition:color .25s ease;
 }
 
@@ -243,7 +225,7 @@
    SPACING HELPERS
 ========================================= */
 
-.electrolix-privacy .privacy-card > *:last-child{
+.electrolix-privacy .privacy-card>*:last-child{
     margin-bottom:0;
 }
 
@@ -272,7 +254,7 @@
 .electrolix-privacy .privacy-section h2{
     margin:0 0 16px;
     color:var(--dark);
-    font-size:26px;
+    font-size:48px;
     line-height:1.35;
     letter-spacing:-.4px;
     font-weight:750;
@@ -281,7 +263,7 @@
 .electrolix-privacy .privacy-section h3{
     margin:24px 0 10px;
     color:#263452;
-    font-size:19px;
+    font-size:20px;
     line-height:1.45;
     font-weight:700;
 }
@@ -289,7 +271,7 @@
 .electrolix-privacy .privacy-section p{
     margin:0 0 15px;
     color:var(--text);
-    font-size:15.5px;
+    font-size:17px;
     line-height:1.75;
 }
 
@@ -303,7 +285,7 @@
     margin-bottom:7px;
     padding-left:5px;
     color:var(--text);
-    font-size:15.5px;
+    font-size:17px;
     line-height:1.7;
 }
 
@@ -323,14 +305,7 @@
 .electrolix-privacy .contact-box{
     margin-top:20px;
     padding:28px 30px;
-
-    background:
-        linear-gradient(
-            135deg,
-            #f0f4ff,
-            #f7f6ff
-        );
-
+    background:linear-gradient(135deg,#f0f4ff,#f7f6ff);
     border:1px solid #dde5fb;
     border-radius:18px;
 }
@@ -350,7 +325,6 @@
 .electrolix-privacy .contact-box a{
     color:var(--primary);
     font-weight:600;
-    text-decoration:none;
     transition:color .25s ease;
 }
 
@@ -366,9 +340,7 @@
 .electrolix-privacy .legal-notice{
     margin-top:20px;
     padding:25px 28px;
-
     background:#fff8e8;
-
     border:1px solid #f1e2b8;
     border-radius:16px;
 }
@@ -376,13 +348,13 @@
 .electrolix-privacy .legal-notice h3{
     margin:0 0 9px;
     color:#654f19;
-    font-size:18px;
+    font-size:20px;
     font-weight:700;
 }
 
 .electrolix-privacy .legal-notice p{
     margin:0;
     color:#675a38;
-    font-size:15.5px;
+    font-size:17px;
     line-height:1.75;
 }
