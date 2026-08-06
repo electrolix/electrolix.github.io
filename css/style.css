@@ -393,3 +393,30 @@ main li{
     }
 
 }
+
+
+/*==========================================
+        HYPERLINK
+==========================================*/
+
+
+main a{
+    color:#2563eb;
+    text-decoration:none;
+    font-weight:500;
+    transition:color .3s ease;
+}
+
+main a:hover{
+    color:#1d4ed8;
+    text-decoration:underline;
+}
+
+main a:visited{
+    color:#7c3aed;
+}
+
+main a:focus{
+    outline:2px solid #93c5fd;
+    outline-offset:2px;
+}
