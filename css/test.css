@@ -20,8 +20,6 @@
     padding:0 0 70px;
 
     background:#f7f8fc;
-    color:var(--text);
-    line-height:1.7;
 }
 
 /* =========================================
@@ -126,6 +124,19 @@
     margin:0 auto;
 }
 
+/* Keep hero text white */
+.electrolix-privacy .privacy-hero h1,
+.electrolix-privacy .privacy-hero p,
+.electrolix-privacy .privacy-label,
+.electrolix-privacy .privacy-updated{
+    color:#fff;
+}
+
+.electrolix-privacy .privacy-hero p{
+    max-width:720px;
+    margin:0 auto;
+}
+
 .electrolix-privacy .privacy-label{
     display:inline-block;
     padding:8px 18px;
@@ -135,19 +146,9 @@
     margin-bottom:20px;
 }
 
-.electrolix-privacy .privacy-hero h1{
-    color:#fff;
-}
-
-.electrolix-privacy .privacy-hero p{
-    max-width:720px;
-    margin:0 auto;
-    color:rgba(255,255,255,.90);
-}
-
 .electrolix-privacy .privacy-updated{
+    opacity:.72;
     margin-top:22px;
-    color:rgba(255,255,255,.72);
 }
 
 /* =========================================
@@ -167,7 +168,7 @@
 ========================================= */
 
 .electrolix-privacy .privacy-card{
-    background:#ffffff;
+    background:#fff;
     border-radius:22px;
     padding:55px 65px;
     border:1px solid rgba(226,231,242,.9);
@@ -188,10 +189,6 @@
     margin-bottom:45px;
 }
 
-.electrolix-privacy .privacy-toc h2{
-    color:var(--dark);
-}
-
 .electrolix-privacy .privacy-toc ul{
     list-style:none;
     padding:0;
@@ -205,20 +202,11 @@
     padding:0;
 }
 
-.electrolix-privacy .privacy-toc a{
-    color:var(--primary);
-    transition:color .25s ease;
-}
-
-.electrolix-privacy .privacy-toc a:hover{
-    color:var(--primary-dark);
-}
-
 /* =========================================
    SPACING HELPERS
 ========================================= */
 
-.electrolix-privacy .privacy-card > *:last-child{
+.electrolix-privacy .privacy-card>*:last-child{
     margin-bottom:0;
 }
 
@@ -227,6 +215,7 @@
     display:block;
     clear:both;
 }
+
 
 /* =========================================
    PRIVACY SECTIONS
@@ -244,18 +233,6 @@
     border-bottom:none;
 }
 
-.electrolix-privacy .privacy-section h2{
-    color:#0f172a;
-}
-
-.electrolix-privacy .privacy-section h3{
-    color:#263452;
-}
-
-.electrolix-privacy .privacy-section p{
-    color:var(--text);
-}
-
 .electrolix-privacy .privacy-section ul,
 .electrolix-privacy .privacy-section ol{
     padding-left:23px;
@@ -263,7 +240,6 @@
 
 .electrolix-privacy .privacy-section li{
     padding-left:5px;
-    color:var(--text);
 }
 
 .electrolix-privacy .privacy-section li:last-child{
@@ -297,19 +273,6 @@
     margin-bottom:0;
 }
 
-.electrolix-privacy .contact-box strong{
-    color:var(--dark);
-}
-
-.electrolix-privacy .contact-box a{
-    color:var(--primary);
-    transition:color .25s ease;
-}
-
-.electrolix-privacy .contact-box a:hover{
-    color:var(--primary-dark);
-}
-
 /* =========================================
    LEGAL NOTICE
 ========================================= */
@@ -319,17 +282,8 @@
     padding:25px 28px;
 
     background:#fff8e8;
-
     border:1px solid #f1e2b8;
     border-radius:16px;
-}
-
-.electrolix-privacy .legal-notice h3{
-    color:#654f19;
-}
-
-.electrolix-privacy .legal-notice p{
-    color:#675a38;
 }
 
 /* =========================================
@@ -482,6 +436,11 @@
     margin-bottom:10px;
 }
 
+.electrolix-privacy strong{
+    color:#263452;
+    font-weight:600;
+}
+
 .electrolix-privacy a{
     color:#2563eb;
     text-decoration:none;
@@ -533,13 +492,12 @@
         font-size:16px;
     }
 
-    .electrolix-privacy p{
-        font-size:16px;
-    }
-
+    .electrolix-privacy p,
     .electrolix-privacy ul,
     .electrolix-privacy ol{
         font-size:16px;
     }
 
 }
+
+end
