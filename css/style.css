@@ -157,7 +157,7 @@ footer{
 .footer-container{
 
     display:grid;
-    grid-template-columns:2fr 1fr 1fr;
+    grid-template-columns:2fr 1fr 1fr 1fr;
     gap:60px;
     margin-bottom:50px;
 
@@ -206,6 +206,18 @@ footer ul li:hover{
     color:#94a3b8;
 
 }
+
+
+footer a {
+    color: #cbd5e1;
+    text-decoration: none;
+    transition: .3s;
+}
+
+footer a:hover {
+    color: #fff;
+}
+
 
 /*==========================================
         RESPONSIVE
