@@ -136,16 +136,13 @@
 }
 
 .electrolix-privacy .privacy-hero h1{
-    margin:0 0 18px;
     color:#fff;
-    line-height:1.1;
 }
 
 .electrolix-privacy .privacy-hero p{
     max-width:720px;
     margin:0 auto;
     color:rgba(255,255,255,.90);
-    line-height:1.7;
 }
 
 .electrolix-privacy .privacy-updated{
@@ -192,15 +189,12 @@
 }
 
 .electrolix-privacy .privacy-toc h2{
-    margin:0 0 14px;
     color:var(--dark);
-    line-height:1.4;
 }
 
 .electrolix-privacy .privacy-toc ul{
     list-style:none;
     padding:0;
-    margin:0;
 
     display:grid;
     grid-template-columns:repeat(2,minmax(0,1fr));
@@ -208,20 +202,16 @@
 }
 
 .electrolix-privacy .privacy-toc li{
-    margin:0;
     padding:0;
 }
 
 .electrolix-privacy .privacy-toc a{
-    display:inline-block;
     color:var(--primary);
-    text-decoration:none;
     transition:color .25s ease;
 }
 
 .electrolix-privacy .privacy-toc a:hover{
     color:var(--primary-dark);
-    text-decoration:underline;
 }
 
 /* =========================================
@@ -255,34 +245,25 @@
 }
 
 .electrolix-privacy .privacy-section h2{
-    margin:18px 0;
     color:#0f172a;
-    line-height:1.2;
 }
 
 .electrolix-privacy .privacy-section h3{
-    margin:24px 0 10px;
     color:#263452;
-    line-height:1.4;
 }
 
 .electrolix-privacy .privacy-section p{
-    margin:0 0 15px;
     color:var(--text);
-    line-height:1.7;
 }
 
 .electrolix-privacy .privacy-section ul,
 .electrolix-privacy .privacy-section ol{
-    margin:10px 0 18px;
     padding-left:23px;
 }
 
 .electrolix-privacy .privacy-section li{
-    margin-bottom:7px;
     padding-left:5px;
     color:var(--text);
-    line-height:1.7;
 }
 
 .electrolix-privacy .privacy-section li:last-child{
@@ -312,10 +293,6 @@
     border-radius:18px;
 }
 
-.electrolix-privacy .contact-box p{
-    margin-bottom:9px;
-}
-
 .electrolix-privacy .contact-box p:last-child{
     margin-bottom:0;
 }
@@ -326,13 +303,11 @@
 
 .electrolix-privacy .contact-box a{
     color:var(--primary);
-    text-decoration:none;
     transition:color .25s ease;
 }
 
 .electrolix-privacy .contact-box a:hover{
     color:var(--primary-dark);
-    text-decoration:underline;
 }
 
 /* =========================================
@@ -350,14 +325,11 @@
 }
 
 .electrolix-privacy .legal-notice h3{
-    margin:0 0 9px;
     color:#654f19;
 }
 
 .electrolix-privacy .legal-notice p{
-    margin:0;
     color:#675a38;
-    line-height:1.7;
 }
 
 /* =========================================
@@ -437,7 +409,6 @@
 
 }
 
-
 /* =========================================
    TYPOGRAPHY
 ========================================= */
@@ -480,6 +451,14 @@
     font-weight:600;
     line-height:1.5;
     margin:25px 0 14px;
+}
+
+.electrolix-privacy h6{
+    color:#1e293b;
+    font-size:18px;
+    font-weight:600;
+    line-height:1.5;
+    margin:22px 0 12px;
 }
 
 .electrolix-privacy p{
@@ -548,6 +527,10 @@
 
     .electrolix-privacy h5{
         font-size:18px;
+    }
+
+    .electrolix-privacy h6{
+        font-size:16px;
     }
 
     .electrolix-privacy p{
