@@ -267,6 +267,10 @@ MOBILE
         font-size:22px;
     }
 
+    .card p{
+        font-size:16px;
+    }
+
     .btn{
         width:100%;
         justify-content:center;
