@@ -144,11 +144,257 @@
 </main>
 
 
+    <!-- FAQ SECTION -->
+<section class="faq-section">
+    <div class="faq-container">
+
+        <div class="faq-heading">
+            <span>FAQ</span>
+            <h2>Frequently Asked Questions</h2>
+            <p>Find quick answers to common questions about electrical products and installation.</p>
+        </div>
+
+        <div class="faq-list">
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>What is an electrical fan regulator?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>
+                        An electrical fan regulator is a device used to control the speed
+                        of a ceiling or wall fan by regulating the power supplied to the fan.
+                    </p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>How does a fan regulator work?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>
+                        A fan regulator controls the electrical power delivered to the
+                        fan motor, allowing you to increase or decrease the fan speed.
+                    </p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Which fan regulator is best for home use?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>
+                        The best regulator depends on your fan type, required speed control,
+                        compatibility, design preference and electrical specifications.
+                    </p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Can I install a fan regulator myself?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>
+                        Electrical installation should be performed by a qualified electrician,
+                        especially when working with mains electricity.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+    <style>
+/* =========================
+   FAQ SECTION
+========================= */
+
+.faq-section {
+    background: #f6f8fb;
+    padding: 70px 20px;
+}
+
+.faq-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.faq-heading {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.faq-heading span {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 700;
+    color: #2563eb;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.faq-heading h2 {
+    margin: 0 0 12px;
+    font-size: 32px;
+    color: #172b4d;
+}
+
+.faq-heading p {
+    margin: 0 auto;
+    max-width: 650px;
+    color: #64748b;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+
+/* FAQ ITEM */
+
+.faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.faq-item {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: 0.3s ease;
+}
+
+.faq-item:hover {
+    border-color: #2563eb;
+}
+
+
+/* QUESTION */
+
+.faq-question {
+    width: 100%;
+    border: none;
+    background: transparent;
+    padding: 22px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: 600;
+    color: #172b4d;
+}
+
+.faq-icon {
+    font-size: 25px;
+    font-weight: 400;
+    color: #2563eb;
+    transition: transform 0.3s ease;
+}
+
+
+/* ANSWER */
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease;
+}
+
+.faq-answer p {
+    padding: 0 24px 22px;
+    margin: 0;
+    color: #64748b;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+
+/* ACTIVE */
+
+.faq-item.active .faq-icon {
+    transform: rotate(45deg);
+}
+
+.faq-item.active {
+    border-color: #2563eb;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .faq-section {
+        padding: 50px 15px;
+    }
+
+    .faq-heading h2 {
+        font-size: 26px;
+    }
+
+    .faq-question {
+        padding: 18px;
+        font-size: 15px;
+    }
+
+    .faq-answer p {
+        padding: 0 18px 18px;
+        font-size: 14px;
+    }
+}
+</style>
+
+    
+
+
 <div id="footer"></div>
 
 
 <script src="js/script.js"></script>
       <script src="js/back-to-top.js"></script>
+
+
+    
+    <script>
+document.querySelectorAll(".faq-question").forEach(function(question) {
+
+    question.addEventListener("click", function() {
+
+        const item = this.parentElement;
+        const answer = item.querySelector(".faq-answer");
+
+        // Close other FAQs
+        document.querySelectorAll(".faq-item").forEach(function(otherItem) {
+            if (otherItem !== item) {
+                otherItem.classList.remove("active");
+                otherItem.querySelector(".faq-answer").style.maxHeight = null;
+            }
+        });
+
+        // Toggle current FAQ
+        item.classList.toggle("active");
+
+        if (item.classList.contains("active")) {
+            answer.style.maxHeight = answer.scrollHeight + "px";
+        } else {
+            answer.style.maxHeight = null;
+        }
+
+    });
+
+});
+</script>
     
 
 </body>
