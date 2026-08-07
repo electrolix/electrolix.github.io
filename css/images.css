@@ -1,0 +1,27 @@
+.blog-img {
+    margin: 60px 0;
+    text-align: left;
+}
+
+.blog-img img {
+    width: 50%;
+    max-width: 50%;
+    height: auto;
+    border-radius: 12px;
+    display: block;
+    margin: 0;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .blog-img {
+        margin: 30px 0;
+    }
+
+    .blog-img img {
+        width: 100%;
+        max-width: 100%;
+        border-radius: 10px;
+        margin: 0;
+    }
+}
