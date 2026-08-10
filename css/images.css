@@ -10,6 +10,7 @@
     border-radius: 12px;
     display: block;
     margin: 0;
+    mix-blend-mode: multiply;
 }
 
 /* Mobile */
