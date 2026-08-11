@@ -503,3 +503,21 @@ outline-offset:2px;
     border: 1px solid #e2e8f0;
 }
 
+
+@media (max-width: 768px) {
+    .blog-table {
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .blog-table table {
+        min-width: 700px;
+    }
+
+    .blog-table th,
+    .blog-table td {
+        font-size: 18px;
+        padding: 10px 12px;
+    }
+}
