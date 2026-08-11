@@ -436,3 +436,35 @@ main a:focus{
 outline:2px solid #93c5fd;
 outline-offset:2px;
 }
+
+
+/*==========================================
+        Vertical divider line
+==========================================*/
+
+
+
+/* DESKTOP ONLY */
+@media screen and (min-width: 769px) {
+    main {
+        position: relative;
+    }
+
+    main::after {
+        content: "";
+        position: absolute;
+        top: 80px;
+        left: calc(40% + 450px);
+        width: 1px;
+        bottom: 80px;
+        background: #dbe2ea;
+    }
+}
+
+/* MOBILE - completely disable the line */
+@media screen and (max-width: 768px) {
+    main::after {
+        content: none !important;
+        display: none !important;
+    }
+}
