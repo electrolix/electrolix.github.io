@@ -499,6 +499,7 @@ outline-offset:2px;
     color: #64748b;
     font-size: 18px;
     padding: 12px 14px;
+    max-width: 00px; /* Manually add this own line from my side */
     text-align: left;
     border: 1px solid #e2e8f0;
 }
