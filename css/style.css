@@ -468,3 +468,38 @@ outline-offset:2px;
         display: none !important;
     }
 }
+
+
+
+/*==========================================
+        Blog table
+==========================================*/
+
+.blog-table {
+    max-width: 900px;
+    margin-bottom: 18px;
+    overflow-x: auto;
+}
+
+.blog-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.blog-table th {
+    background-color: #2563eb;
+    color: #ffffff;
+    font-size: 18px;
+    padding: 12px 14px;
+    text-align: left;
+    border: 1px solid #ffffff;
+}
+
+.blog-table td {
+    color: #64748b;
+    font-size: 18px;
+    padding: 12px 14px;
+    text-align: left;
+    border: 1px solid #e2e8f0;
+}
+
