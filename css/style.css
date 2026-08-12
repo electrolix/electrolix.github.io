@@ -313,7 +313,7 @@ background: #f7f9fc;
 main h1{
 color:#1e293b;
 font-size:36px;
-font-weight:800;
+font-weight:600;
 line-height:1.2;
 margin-bottom:30px;
 max-width:900px;
@@ -322,7 +322,7 @@ max-width:900px;
 main h2{
 color:#1e293b;
 font-size:28px;
-font-weight:700;
+font-weight:600;
 line-height:1.3;
 margin:40px 0 20px;
 max-width:900px;
@@ -331,7 +331,7 @@ max-width:900px;
 main h3{
 color:#1e293b;
 font-size:21px;
-font-weight:700;
+font-weight:600;
 line-height:1.4;
 margin:35px 0 18px;
 max-width:900px;
