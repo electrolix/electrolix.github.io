@@ -468,8 +468,8 @@ outline-offset:2px;
     }
 }
 
-/* MOBILE - completely disable the line */
-@media screen and (max-width: 768px) {
+/* MOBILE + PHABLETS + TABLETS - completely disable the line */
+@media screen and (max-width: 1024px) {
     main::after {
         content: none !important;
         display: none !important;
