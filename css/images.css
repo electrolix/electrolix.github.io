@@ -4,7 +4,7 @@
 }
 
 .blog-img img {
-    width: 40%;  /* Manually change this width default width is 50 */
+    width: 50%;  /* Manually change this width default width is 50 */
     max-width: 50%;
     height: auto;
     border-radius: 12px;
@@ -25,4 +25,19 @@
         border-radius: 10px;
         margin: 0;
     }
+}
+
+
+
+
+
+____
+
+
+.blog-img {
+    margin: 60px 0;
+    width: fit-content;
+    max-width: 900px;
+    border: 1px solid #f1f1f1;
+    border-radius: 12px;
 }
