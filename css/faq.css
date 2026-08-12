@@ -160,7 +160,7 @@
 @media (min-width: 769px) and (max-width: 1024px) {
 
     .faq-container {
-        width: 90%;
+        width: 100%;
     }
 
     .faq-heading h2 {
