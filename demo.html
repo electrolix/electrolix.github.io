@@ -1,1 +1,380 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact Us | Electrolix</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f5f7fa;
+            color: #1f2937;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 60px 20px;
+        }
+
+        .contact-container {
+            width: 100%;
+            max-width: 1100px;
+            background: #ffffff;
+            border-radius: 18px;
+            overflow: hidden;
+            display: grid;
+            grid-template-columns: 40% 60%;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+        }
+
+        /* Left Side */
+        .contact-info {
+            background: #111827;
+            color: #ffffff;
+            padding: 55px 45px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .contact-info .small-title {
+            color: #f59e0b;
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 15px;
+        }
+
+        .contact-info h1 {
+            font-size: 42px;
+            line-height: 1.15;
+            margin-bottom: 20px;
+        }
+
+        .contact-info p {
+            color: #d1d5db;
+            font-size: 16px;
+            line-height: 1.7;
+            margin-bottom: 30px;
+        }
+
+        .contact-info .info-text {
+            color: #e5e7eb;
+            font-size: 15px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        /* Eleczo Button */
+        .eleczo-button {
+            display: inline-block;
+            width: fit-content;
+            padding: 14px 25px;
+            background: #f59e0b;
+            color: #111827;
+            text-decoration: none;
+            font-weight: 700;
+            border-radius: 8px;
+            transition: 0.3s ease;
+        }
+
+        .eleczo-button:hover {
+            background: #fbbf24;
+            transform: translateY(-2px);
+        }
+
+        /* Form Side */
+        .contact-form {
+            padding: 55px 50px;
+        }
+
+        .contact-form h2 {
+            font-size: 30px;
+            margin-bottom: 10px;
+            color: #111827;
+        }
+
+        .contact-form .form-description {
+            color: #6b7280;
+            font-size: 15px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 18px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 14px;
+            font-weight: 600;
+            color: #374151;
+            margin-bottom: 8px;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 14px 15px;
+            border: 1px solid #d1d5db;
+            border-radius: 8px;
+            font-size: 15px;
+            font-family: inherit;
+            outline: none;
+            transition: 0.3s ease;
+        }
+
+        .form-group input {
+            height: 50px;
+        }
+
+        .form-group textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color: #f59e0b;
+            box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.12);
+        }
+
+        /* Send Button */
+        .send-button {
+            width: 100%;
+            border: none;
+            padding: 15px 20px;
+            background: #111827;
+            color: #ffffff;
+            font-size: 16px;
+            font-weight: 700;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+
+        .send-button:hover {
+            background: #1f2937;
+            transform: translateY(-1px);
+        }
+
+        /* Small Note */
+        .form-note {
+            margin-top: 15px;
+            font-size: 13px;
+            color: #6b7280;
+            line-height: 1.5;
+        }
+
+        /* Responsive */
+        @media (max-width: 800px) {
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-info {
+                padding: 40px 30px;
+            }
+
+            .contact-form {
+                padding: 40px 30px;
+            }
+
+            .contact-info h1 {
+                font-size: 34px;
+            }
+        }
+
+        @media (max-width: 550px) {
+            .contact-section {
+                padding: 30px 15px;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+                gap: 0;
+            }
+
+            .contact-info,
+            .contact-form {
+                padding: 30px 22px;
+            }
+
+            .contact-info h1 {
+                font-size: 30px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<section class="contact-section">
+
+    <div class="contact-container">
+
+        <!-- LEFT SIDE -->
+        <div class="contact-info">
+
+            <div class="small-title">
+                Get In Touch
+            </div>
+
+            <h1>
+                Have a question?
+                Let's talk.
+            </h1>
+
+            <p>
+                Have a question about an electrical product, article,
+                specification, or recommendation? Send us a message and
+                we'll get back to you by email.
+            </p>
+
+            <div class="info-text">
+                Looking to purchase electrical products?
+                You can also visit Eleczo directly to explore products
+                and connect with the right supplier.
+            </div>
+
+            <a
+                href="https://www.eleczo.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="eleczo-button"
+            >
+                Contact Eleczo →
+            </a>
+
+        </div>
+
+
+        <!-- RIGHT SIDE -->
+        <div class="contact-form">
+
+            <h2>Send Us a Message</h2>
+
+            <p class="form-description">
+                Fill in the details below and we'll reply to your email.
+            </p>
+
+            <form
+                action="mailto:your-email@example.com"
+                method="post"
+                enctype="text/plain"
+            >
+
+                <!-- Name + Email -->
+                <div class="form-row">
+
+                    <div class="form-group">
+                        <label for="name">
+                            Your Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="name"
+                            name="Name"
+                            placeholder="Enter your name"
+                            required
+                        >
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="email">
+                            Your Email
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="Email"
+                            placeholder="Enter your email"
+                            required
+                        >
+                    </div>
+
+                </div>
+
+
+                <!-- Subject -->
+                <div class="form-group">
+
+                    <label for="subject">
+                        Subject
+                    </label>
+
+                    <input
+                        type="text"
+                        id="subject"
+                        name="Subject"
+                        placeholder="What would you like to ask?"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Message -->
+                <div class="form-group">
+
+                    <label for="message">
+                        Message
+                    </label>
+
+                    <textarea
+                        id="message"
+                        name="Message"
+                        placeholder="Write your message here..."
+                        required
+                    ></textarea>
+
+                </div>
+
+
+                <!-- Submit -->
+                <button
+                    type="submit"
+                    class="send-button"
+                >
+                    Send Message
+                </button>
+
+                <p class="form-note">
+                    Your message will be sent to the Electrolix email address.
+                    We will use your email to reply to your enquiry.
+                </p>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+</body>
+</html>
