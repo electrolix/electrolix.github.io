@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,214 +14,473 @@
         }
 
         body {
-            font-family: Arial, Helvetica, sans-serif;
-            background: #f5f7fa;
-            color: #1f2937;
-        }
-
-        /* Contact Section */
-        .contact-section {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 60px 20px;
-        }
-
-        .contact-container {
-            width: 100%;
-            max-width: 1100px;
-            background: #ffffff;
-            border-radius: 18px;
-            overflow: hidden;
-            display: grid;
-            grid-template-columns: 40% 60%;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
-        }
-
-        /* Left Side */
-        .contact-info {
-            background: #111827;
+            background: #315ee8;
             color: #ffffff;
-            padding: 55px 45px;
+        }
+
+        /* =========================================
+           CONTACT PAGE
+        ========================================= */
+
+        .electrolix-contact-page {
+            min-height: 100vh;
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+
+            background:
+                radial-gradient(
+                    circle at 95% 5%,
+                    rgba(99, 91, 230, 0.65) 0,
+                    rgba(99, 91, 230, 0.35) 18%,
+                    transparent 38%
+                ),
+                linear-gradient(
+                    135deg,
+                    #315ee8 0%,
+                    #2f5eea 45%,
+                    #4645df 100%
+                );
+
+            padding: 75px 7.5%;
+        }
+
+        /* Decorative background shapes */
+
+        .contact-bg-circle-one {
+            position: absolute;
+            width: 420px;
+            height: 420px;
+            border-radius: 50%;
+            background: rgba(120, 130, 255, 0.13);
+            top: -180px;
+            right: -100px;
+            pointer-events: none;
+        }
+
+        .contact-bg-circle-two {
+            position: absolute;
+            width: 280px;
+            height: 280px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.045);
+            bottom: -120px;
+            left: -90px;
+            pointer-events: none;
+        }
+
+        .contact-wrapper {
+            position: relative;
+            z-index: 2;
+
+            width: 100%;
+            max-width: 1400px;
+            margin: 0 auto;
+
+            display: grid;
+            grid-template-columns: 0.9fr 1.1fr;
+            gap: 70px;
+
+            align-items: center;
+        }
+
+        /* =========================================
+           LEFT CONTENT
+        ========================================= */
+
+        .contact-content {
+            padding-right: 20px;
+        }
+
+        .contact-badge {
+            display: inline-flex;
+            align-items: center;
+
+            padding: 12px 20px;
+
+            border-radius: 30px;
+
+            background: rgba(255, 255, 255, 0.14);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+
+            color: #ffffff;
+
+            font-size: 14px;
+            font-weight: 700;
+
+            letter-spacing: 0.3px;
+            text-transform: uppercase;
+
+            margin-bottom: 25px;
+        }
+
+        .contact-content h1 {
+            font-size: clamp(45px, 4.3vw, 70px);
+            line-height: 1.05;
+            font-weight: 800;
+
+            color: #ffffff;
+
+            margin-bottom: 25px;
+        }
+
+        .contact-content h1 span {
+            color: #ffffff;
+        }
+
+        .contact-content > p {
+            max-width: 620px;
+
+            color: rgba(255, 255, 255, 0.88);
+
+            font-size: 17px;
+            line-height: 1.7;
+
+            margin-bottom: 32px;
+        }
+
+        /* Small information blocks */
+
+        .contact-points {
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            gap: 15px;
+
+            margin-bottom: 35px;
         }
 
-        .contact-info .small-title {
-            color: #f59e0b;
-            font-size: 14px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            margin-bottom: 15px;
-        }
+        .contact-point {
+            display: flex;
+            align-items: center;
+            gap: 15px;
 
-        .contact-info h1 {
-            font-size: 42px;
-            line-height: 1.15;
-            margin-bottom: 20px;
-        }
+            color: rgba(255, 255, 255, 0.92);
 
-        .contact-info p {
-            color: #d1d5db;
-            font-size: 16px;
-            line-height: 1.7;
-            margin-bottom: 30px;
-        }
-
-        .contact-info .info-text {
-            color: #e5e7eb;
             font-size: 15px;
-            line-height: 1.6;
-            margin-bottom: 30px;
-        }
-
-        /* Eleczo Button */
-        .eleczo-button {
-            display: inline-block;
-            width: fit-content;
-            padding: 14px 25px;
-            background: #f59e0b;
-            color: #111827;
-            text-decoration: none;
-            font-weight: 700;
-            border-radius: 8px;
-            transition: 0.3s ease;
-        }
-
-        .eleczo-button:hover {
-            background: #fbbf24;
-            transform: translateY(-2px);
-        }
-
-        /* Form Side */
-        .contact-form {
-            padding: 55px 50px;
-        }
-
-        .contact-form h2 {
-            font-size: 30px;
-            margin-bottom: 10px;
-            color: #111827;
-        }
-
-        .contact-form .form-description {
-            color: #6b7280;
-            font-size: 15px;
-            line-height: 1.6;
-            margin-bottom: 30px;
-        }
-
-        .form-group {
-            margin-bottom: 20px;
-        }
-
-        .form-row {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 18px;
-        }
-
-        .form-group label {
-            display: block;
-            font-size: 14px;
-            font-weight: 600;
-            color: #374151;
-            margin-bottom: 8px;
-        }
-
-        .form-group input,
-        .form-group textarea {
-            width: 100%;
-            padding: 14px 15px;
-            border: 1px solid #d1d5db;
-            border-radius: 8px;
-            font-size: 15px;
-            font-family: inherit;
-            outline: none;
-            transition: 0.3s ease;
-        }
-
-        .form-group input {
-            height: 50px;
-        }
-
-        .form-group textarea {
-            min-height: 150px;
-            resize: vertical;
-        }
-
-        .form-group input:focus,
-        .form-group textarea:focus {
-            border-color: #f59e0b;
-            box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.12);
-        }
-
-        /* Send Button */
-        .send-button {
-            width: 100%;
-            border: none;
-            padding: 15px 20px;
-            background: #111827;
-            color: #ffffff;
-            font-size: 16px;
-            font-weight: 700;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: 0.3s ease;
-        }
-
-        .send-button:hover {
-            background: #1f2937;
-            transform: translateY(-1px);
-        }
-
-        /* Small Note */
-        .form-note {
-            margin-top: 15px;
-            font-size: 13px;
-            color: #6b7280;
             line-height: 1.5;
         }
 
-        /* Responsive */
-        @media (max-width: 800px) {
-            .contact-container {
+        .contact-point-icon {
+            width: 42px;
+            height: 42px;
+
+            flex-shrink: 0;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 12px;
+
+            background: rgba(255, 255, 255, 0.13);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+
+            font-size: 18px;
+        }
+
+        /* =========================================
+           ELECZO BUTTON
+        ========================================= */
+
+        .eleczo-contact-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+
+            padding: 15px 25px;
+
+            background: #ffffff;
+            color: #2860e9;
+
+            border: 2px solid rgba(255, 255, 255, 0.8);
+
+            border-radius: 30px;
+
+            text-decoration: none;
+
+            font-size: 15px;
+            font-weight: 700;
+
+            transition:
+                transform 0.25s ease,
+                box-shadow 0.25s ease,
+                background 0.25s ease;
+        }
+
+        .eleczo-contact-button:hover {
+            transform: translateY(-3px);
+
+            background: #f7f9ff;
+
+            box-shadow:
+                0 12px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        /* =========================================
+           CONTACT FORM CARD
+        ========================================= */
+
+        .contact-form-card {
+            width: 100%;
+
+            padding: 42px;
+
+            background: rgba(255, 255, 255, 0.98);
+
+            border-radius: 24px;
+
+            box-shadow:
+                0 25px 70px rgba(21, 43, 130, 0.22);
+
+            color: #18233d;
+        }
+
+        .contact-form-header {
+            margin-bottom: 28px;
+        }
+
+        .contact-form-header h2 {
+            font-size: 30px;
+            line-height: 1.2;
+
+            color: #17233d;
+
+            margin-bottom: 9px;
+        }
+
+        .contact-form-header p {
+            color: #68738b;
+
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+        /* =========================================
+           FORM
+        ========================================= */
+
+        .contact-form {
+            width: 100%;
+        }
+
+        .contact-form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+
+            gap: 18px;
+        }
+
+        .contact-field {
+            margin-bottom: 20px;
+        }
+
+        .contact-field label {
+            display: block;
+
+            margin-bottom: 8px;
+
+            color: #26334e;
+
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+        .contact-field input,
+        .contact-field textarea {
+            width: 100%;
+
+            border: 1px solid #dce2ee;
+
+            background: #f8faff;
+
+            color: #1d2942;
+
+            border-radius: 10px;
+
+            outline: none;
+
+            font-size: 15px;
+
+            transition:
+                border-color 0.2s ease,
+                box-shadow 0.2s ease,
+                background 0.2s ease;
+        }
+
+        .contact-field input {
+            height: 52px;
+
+            padding: 0 15px;
+        }
+
+        .contact-field textarea {
+            min-height: 145px;
+
+            padding: 14px 15px;
+
+            resize: vertical;
+
+            line-height: 1.5;
+        }
+
+        .contact-field input::placeholder,
+        .contact-field textarea::placeholder {
+            color: #9aa5ba;
+        }
+
+        .contact-field input:focus,
+        .contact-field textarea:focus {
+            background: #ffffff;
+
+            border-color: #3264eb;
+
+            box-shadow:
+                0 0 0 3px rgba(50, 100, 235, 0.12);
+        }
+
+        /* =========================================
+           SEND BUTTON
+        ========================================= */
+
+        .contact-send-button {
+            width: 100%;
+
+            height: 54px;
+
+            border: none;
+            border-radius: 10px;
+
+            background: linear-gradient(
+                90deg,
+                #2d63e9,
+                #315ee8
+            );
+
+            color: #ffffff;
+
+            font-size: 16px;
+            font-weight: 700;
+
+            cursor: pointer;
+
+            box-shadow:
+                0 8px 20px rgba(45, 99, 233, 0.22);
+
+            transition:
+                transform 0.25s ease,
+                box-shadow 0.25s ease,
+                filter 0.25s ease;
+        }
+
+        .contact-send-button:hover {
+            transform: translateY(-2px);
+
+            box-shadow:
+                0 12px 28px rgba(45, 99, 233, 0.30);
+
+            filter: brightness(1.04);
+        }
+
+        .contact-send-button:active {
+            transform: translateY(0);
+        }
+
+        .contact-form-note {
+            text-align: center;
+
+            margin-top: 14px;
+
+            color: #8993a8;
+
+            font-size: 12.5px;
+            line-height: 1.5;
+        }
+
+        /* =========================================
+           RESPONSIVE
+        ========================================= */
+
+        @media (max-width: 1000px) {
+
+            .electrolix-contact-page {
+                padding: 60px 5%;
+            }
+
+            .contact-wrapper {
                 grid-template-columns: 1fr;
+
+                gap: 45px;
+
+                max-width: 750px;
             }
 
-            .contact-info {
-                padding: 40px 30px;
+            .contact-content {
+                padding-right: 0;
             }
 
-            .contact-form {
-                padding: 40px 30px;
-            }
-
-            .contact-info h1 {
-                font-size: 34px;
+            .contact-content h1 {
+                font-size: 52px;
             }
         }
 
-        @media (max-width: 550px) {
-            .contact-section {
-                padding: 30px 15px;
+        @media (max-width: 650px) {
+
+            .electrolix-contact-page {
+                padding: 40px 18px;
             }
 
-            .form-row {
+            .contact-wrapper {
+                gap: 35px;
+            }
+
+            .contact-content h1 {
+                font-size: 42px;
+            }
+
+            .contact-content > p {
+                font-size: 15px;
+            }
+
+            .contact-badge {
+                font-size: 12px;
+
+                padding: 10px 15px;
+            }
+
+            .contact-form-card {
+                padding: 28px 22px;
+
+                border-radius: 18px;
+            }
+
+            .contact-form-header h2 {
+                font-size: 25px;
+            }
+
+            .contact-form-row {
                 grid-template-columns: 1fr;
+
                 gap: 0;
             }
 
-            .contact-info,
-            .contact-form {
-                padding: 30px 22px;
+            .contact-field input {
+                height: 50px;
             }
 
-            .contact-info h1 {
-                font-size: 30px;
+            .contact-field textarea {
+                min-height: 130px;
+            }
+        }
+
+        @media (max-width: 400px) {
+
+            .contact-content h1 {
+                font-size: 36px;
+            }
+
+            .contact-form-card {
+                padding: 24px 18px;
             }
         }
     </style>
@@ -230,106 +488,164 @@
 
 <body>
 
-<section class="contact-section">
+<section class="electrolix-contact-page">
 
-    <div class="contact-container">
+    <!-- Decorative background -->
+    <div class="contact-bg-circle-one"></div>
+    <div class="contact-bg-circle-two"></div>
 
-        <!-- LEFT SIDE -->
-        <div class="contact-info">
 
-            <div class="small-title">
-                Get In Touch
+    <div class="contact-wrapper">
+
+
+        <!-- =====================================
+             LEFT SIDE
+        ====================================== -->
+
+        <div class="contact-content">
+
+            <div class="contact-badge">
+                India's Trusted Electrical Knowledge Platform
             </div>
 
             <h1>
-                Have a question?
-                Let's talk.
+                Have a Question?
+                <br>
+                Let's Talk.
             </h1>
 
             <p>
                 Have a question about an electrical product, article,
-                specification, or recommendation? Send us a message and
-                we'll get back to you by email.
+                specification, installation, or recommendation?
+                Send us a message and the Electrolix team will get
+                back to you by email.
             </p>
 
-            <div class="info-text">
-                Looking to purchase electrical products?
-                You can also visit Eleczo directly to explore products
-                and connect with the right supplier.
-            </div>
 
-            <a
-                href="https://www.eleczo.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="eleczo-button"
-            >
-                Contact Eleczo →
-            </a>
+            <div class="contact-points">
 
-        </div>
+                <div class="contact-point">
 
-
-        <!-- RIGHT SIDE -->
-        <div class="contact-form">
-
-            <h2>Send Us a Message</h2>
-
-            <p class="form-description">
-                Fill in the details below and we'll reply to your email.
-            </p>
-
-            <form
-                action="mailto:your-email@example.com"
-                method="post"
-                enctype="text/plain"
-            >
-
-                <!-- Name + Email -->
-                <div class="form-row">
-
-                    <div class="form-group">
-                        <label for="name">
-                            Your Name
-                        </label>
-
-                        <input
-                            type="text"
-                            id="name"
-                            name="Name"
-                            placeholder="Enter your name"
-                            required
-                        >
+                    <div class="contact-point-icon">
+                        ✉
                     </div>
 
-
-                    <div class="form-group">
-                        <label for="email">
-                            Your Email
-                        </label>
-
-                        <input
-                            type="email"
-                            id="email"
-                            name="Email"
-                            placeholder="Enter your email"
-                            required
-                        >
+                    <div>
+                        Send us your question and we'll reply
+                        directly to your email.
                     </div>
 
                 </div>
 
 
-                <!-- Subject -->
-                <div class="form-group">
+                <div class="contact-point">
 
-                    <label for="subject">
+                    <div class="contact-point-icon">
+                        ⚡
+                    </div>
+
+                    <div>
+                        Looking for electrical products?
+                        Explore genuine products on Eleczo.
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <a
+                href="https://www.eleczo.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="eleczo-contact-button"
+            >
+                Shop on Eleczo
+                <span>→</span>
+            </a>
+
+        </div>
+
+
+        <!-- =====================================
+             RIGHT SIDE - CONTACT FORM
+        ====================================== -->
+
+        <div class="contact-form-card">
+
+            <div class="contact-form-header">
+
+                <h2>
+                    Send Us a Message
+                </h2>
+
+                <p>
+                    Fill in the details below and we'll get back
+                    to you as soon as possible.
+                </p>
+
+            </div>
+
+
+            <form
+                class="contact-form"
+                action="mailto:your-email@example.com"
+                method="post"
+                enctype="text/plain"
+            >
+
+
+                <!-- NAME + EMAIL -->
+
+                <div class="contact-form-row">
+
+                    <div class="contact-field">
+
+                        <label for="contact-name">
+                            Your Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="contact-name"
+                            name="Name"
+                            placeholder="Enter your name"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="contact-field">
+
+                        <label for="contact-email">
+                            Your Email
+                        </label>
+
+                        <input
+                            type="email"
+                            id="contact-email"
+                            name="Email"
+                            placeholder="Enter your email"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <!-- SUBJECT -->
+
+                <div class="contact-field">
+
+                    <label for="contact-subject">
                         Subject
                     </label>
 
                     <input
                         type="text"
-                        id="subject"
+                        id="contact-subject"
                         name="Subject"
                         placeholder="What would you like to ask?"
                         required
@@ -338,15 +654,16 @@
                 </div>
 
 
-                <!-- Message -->
-                <div class="form-group">
+                <!-- MESSAGE -->
 
-                    <label for="message">
+                <div class="contact-field">
+
+                    <label for="contact-message">
                         Message
                     </label>
 
                     <textarea
-                        id="message"
+                        id="contact-message"
                         name="Message"
                         placeholder="Write your message here..."
                         required
@@ -355,17 +672,18 @@
                 </div>
 
 
-                <!-- Submit -->
+                <!-- SEND -->
+
                 <button
                     type="submit"
-                    class="send-button"
+                    class="contact-send-button"
                 >
                     Send Message
                 </button>
 
-                <p class="form-note">
-                    Your message will be sent to the Electrolix email address.
-                    We will use your email to reply to your enquiry.
+
+                <p class="contact-form-note">
+                    We'll use your email only to reply to your enquiry.
                 </p>
 
             </form>
