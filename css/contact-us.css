@@ -388,6 +388,19 @@
             line-height: 1.5;
         }
 
+
+       /* White space between Contact section and Footer */
+
+          html,
+          body {
+         background: #ffffff;
+         }
+
+         .electrolix-contact-page {
+         margin-bottom: 50px;
+         }
+
+
         /* =========================================
            RESPONSIVE
         ========================================= */
