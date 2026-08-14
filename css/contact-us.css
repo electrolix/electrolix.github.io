@@ -40,10 +40,10 @@
 
         .contact-bg-circle-one {
             position: absolute;
-            width: 420px;
-            height: 420px;
+            width: 555px;
+            height: 550px;
             border-radius: 50%;
-            background: rgba(120, 130, 255, 0.13);
+            background: rgba(255,255,255,.08);
             top: -180px;
             right: -100px;
             pointer-events: none;
@@ -51,12 +51,12 @@
 
         .contact-bg-circle-two {
             position: absolute;
-            width: 280px;
-            height: 280px;
+            width: 420px;
+            height: 420px;
             border-radius: 50%;
-            background: rgba(255, 255, 255, 0.045);
-            bottom: -120px;
-            left: -90px;
+            background: rgba(255,255,255,.05);
+            bottom: -180px;
+            left: -120px;
             pointer-events: none;
         }
 
