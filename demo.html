@@ -589,106 +589,119 @@
             </div>
 
 
-            <form
-                class="contact-form"
-                action="mailto:nitishpatil.in@gmail.com"
-                method="post"
-                enctype="text/plain"
+           <form
+    class="contact-form"
+    action="https://api.web3forms.com/submit"
+    method="POST"
+>
+
+    <!-- Web3Forms Access Key -->
+    <input
+        type="hidden"
+        name="access_key"
+        value="6992477b-cf6f-4943-b42c-8fe43e297f8d"
+    >
+
+    <!-- Email subject -->
+    <input
+        type="hidden"
+        name="subject"
+        value="New Contact Message - Electrolix"
+    >
+
+    <!-- Sender name shown in your inbox -->
+    <input
+        type="hidden"
+        name="from_name"
+        value="Electrolix Website"
+    >
+
+    <!-- Spam protection -->
+    <input
+        type="checkbox"
+        name="botcheck"
+        style="display:none;"
+    >
+
+    <!-- NAME + EMAIL -->
+    <div class="contact-form-row">
+
+        <div class="contact-field">
+            <label for="contact-name">
+                Your Name
+            </label>
+
+            <input
+                type="text"
+                id="contact-name"
+                name="name"
+                placeholder="Enter your name"
+                required
             >
+        </div>
 
+        <div class="contact-field">
+            <label for="contact-email">
+                Your Email
+            </label>
 
-                <!-- NAME + EMAIL -->
+            <input
+                type="email"
+                id="contact-email"
+                name="email"
+                placeholder="Enter your email"
+                required
+            >
+        </div>
 
-                <div class="contact-form-row">
+    </div>
 
-                    <div class="contact-field">
+    <!-- SUBJECT -->
+    <div class="contact-field">
 
-                        <label for="contact-name">
-                            Your Name
-                        </label>
+        <label for="contact-subject">
+            Subject
+        </label>
 
-                        <input
-                            type="text"
-                            id="contact-name"
-                            name="Name"
-                            placeholder="Enter your name"
-                            required
-                        >
+        <input
+            type="text"
+            id="contact-subject"
+            name="message_subject"
+            placeholder="What would you like to ask?"
+            required
+        >
 
-                    </div>
+    </div>
 
+    <!-- MESSAGE -->
+    <div class="contact-field">
 
-                    <div class="contact-field">
+        <label for="contact-message">
+            Message
+        </label>
 
-                        <label for="contact-email">
-                            Your Email
-                        </label>
+        <textarea
+            id="contact-message"
+            name="message"
+            placeholder="Write your message here..."
+            required
+        ></textarea>
 
-                        <input
-                            type="email"
-                            id="contact-email"
-                            name="Email"
-                            placeholder="Enter your email"
-                            required
-                        >
+    </div>
 
-                    </div>
+    <!-- SEND -->
+    <button
+        type="submit"
+        class="contact-send-button"
+    >
+        Send Message
+    </button>
 
-                </div>
+    <p class="contact-form-note">
+        We'll use your email only to reply to your enquiry.
+    </p>
 
-
-                <!-- SUBJECT -->
-
-                <div class="contact-field">
-
-                    <label for="contact-subject">
-                        Subject
-                    </label>
-
-                    <input
-                        type="text"
-                        id="contact-subject"
-                        name="Subject"
-                        placeholder="What would you like to ask?"
-                        required
-                    >
-
-                </div>
-
-
-                <!-- MESSAGE -->
-
-                <div class="contact-field">
-
-                    <label for="contact-message">
-                        Message
-                    </label>
-
-                    <textarea
-                        id="contact-message"
-                        name="Message"
-                        placeholder="Write your message here..."
-                        required
-                    ></textarea>
-
-                </div>
-
-
-                <!-- SEND -->
-
-                <button
-                    type="submit"
-                    class="contact-send-button"
-                >
-                    Send Message
-                </button>
-
-
-                <p class="contact-form-note">
-                    We'll use your email only to reply to your enquiry.
-                </p>
-
-            </form>
+</form>
 
         </div>
 
