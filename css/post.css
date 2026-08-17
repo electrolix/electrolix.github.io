@@ -242,3 +242,14 @@
     }
 
 }
+
+/* TABLET For Manually I Aded */
+
+@media (max-width:1024px){
+
+    .hero-right img{
+        max-width:850px;
+        width:100%;
+    }
+
+}
