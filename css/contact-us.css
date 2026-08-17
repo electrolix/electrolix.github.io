@@ -431,7 +431,7 @@
         @media (max-width: 650px) {
 
             .electrolix-contact-page {
-                padding: 40px 18px;
+                padding: 120px 18px;
             }
 
             .contact-wrapper {
@@ -447,7 +447,7 @@
             }
 
             .contact-badge {
-                font-size: 12px;
+                font-size: 13px;
 
                 padding: 10px 15px;
             }
