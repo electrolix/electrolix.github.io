@@ -489,6 +489,16 @@
         }
 
 
+  /* Manually I Aded To Increase The Badge Tablet Version */
+
+        @media (max-width: 1024px) {
+
+            .electrolix-contact-page {
+                padding: 120px 18px;
+            }
+
+
+
     /* Manually I Aded  To Block In Mobile Version */
 
        @media (max-width: 768px) {
