@@ -487,3 +487,13 @@
                 padding: 24px 18px;
             }
         }
+
+
+    /* Manually I Aded  To Block In Mobile Version */
+
+       @media (max-width: 768px) {
+    .contact-bg-circle-one,
+    .contact-bg-circle-two {
+        display: none;
+    }
+}   
