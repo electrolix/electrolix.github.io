@@ -95,27 +95,6 @@
     text-align:center;
 }
 
-.electrolix-privacy .privacy-hero::before{
-    content:"";
-    position:absolute;
-    width:420px;
-    height:420px;
-    border-radius:50%;
-    background:rgba(255,255,255,.06);
-    right:-130px;
-    top:-220px;
-}
-
-.electrolix-privacy .privacy-hero::after{
-    content:"";
-    position:absolute;
-    width:250px;
-    height:250px;
-    border-radius:50%;
-    background:rgba(255,255,255,.05);
-    left:-120px;
-    bottom:-150px;
-}
 
 .electrolix-privacy .privacy-hero-inner{
     position:relative;
