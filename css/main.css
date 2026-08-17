@@ -1466,3 +1466,25 @@ section{
     }
 
 }
+
+
+/* Manually I Aded To Decrease The Circle Shape Mobile Version */
+
+
+@media (max-width: 768px) {
+
+    .hero::before {
+        width: 300px;
+        height: 300px;
+        top: -100px;
+        right: -120px;
+    }
+
+    .hero::after {
+        width: 250px;
+        height: 250px;
+        bottom: -100px;
+        left: -120px;
+    }
+
+}
