@@ -36,30 +36,6 @@
             padding: 200px 20%;
         }
 
-        /* Decorative background shapes */
-
-        .contact-bg-circle-one {
-            position: absolute;
-            width: 555px;
-            height: 550px;
-            border-radius: 50%;
-            background: rgba(255,255,255,.08);
-            top: -180px;
-            right: -100px;
-            pointer-events: none;
-        }
-
-        .contact-bg-circle-two {
-            position: absolute;
-            width: 420px;
-            height: 420px;
-            border-radius: 50%;
-            background: rgba(255,255,255,.05);
-            bottom: -180px;
-            left: -120px;
-            pointer-events: none;
-        }
-
         .contact-wrapper {
             position: relative;
             z-index: 2;
@@ -497,13 +473,3 @@
                 padding: 120px 18px;
             }
 
-
-
-    /* Manually I Aded  To Block In Mobile Version */
-
-       @media (max-width: 768px) {
-    .contact-bg-circle-one,
-    .contact-bg-circle-two {
-        display: none;
-    }
-}   
