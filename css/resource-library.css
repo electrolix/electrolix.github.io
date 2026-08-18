@@ -124,14 +124,11 @@
 
 .card-image {
     height: 240px;
-    background: #f3f5fa
-}
-
-/* FIX: prevents product images from being cut */
-.card-image {
-    height: 240px;
     background: #fff;
     overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center
 }
 
 .card-image img {
@@ -139,7 +136,7 @@
     height: 100%;
     object-fit: contain;
     object-position: center;
-    transition: .4s;
+    transition: .4s
 }
 
 .card:hover .card-image img {
@@ -194,7 +191,7 @@
     background: #003fc0
 }
 
-/* TABLET: always 2 columns */
+/* TABLET - EXACTLY 2 COLUMNS */
 @media (min-width: 769px) and (max-width: 1200px) {
     .grid {
         grid-template-columns: repeat(2, 340px);
@@ -202,9 +199,14 @@
         gap: 35px;
         padding: 70px 0
     }
+
+    .card {
+        max-width: 380px;
+        width: 100%
+    }
 }
 
-/* MOBILE: 1 column */
+/* MOBILE - EXACTLY 1 COLUMN */
 @media (max-width: 768px) {
     .container {
         width:100%;
