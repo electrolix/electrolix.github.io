@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
 <meta charset="UTF-8">
@@ -10,7 +11,10 @@
 <style>
 
 /* =========================================================
-   RESET
+   IMPORTANT
+   Your existing website font is NOT overridden here.
+   If your main website already has a font declaration,
+   it will continue to be used.
 ========================================================= */
 
 *{
@@ -24,203 +28,321 @@ html{
 }
 
 body{
-    font-family:
-        Inter,
-        -apple-system,
-        BlinkMacSystemFont,
-        "Segoe UI",
-        Roboto,
-        Arial,
-        sans-serif;
-
-    background:#ffffff;
-    color:#111827;
-    line-height:1.6;
-}
-
-img{
-    max-width:100%;
-}
-
-a{
-    color:inherit;
+    margin:0;
+    background:#f7f9ff;
+    color:#172033;
 }
 
 
 /* =========================================================
-   VARIABLES
+   PAGE
 ========================================================= */
 
-:root{
-
-    --blue:#1746d1;
-    --blue-dark:#0b1f4d;
-
-    --text:#111827;
-    --muted:#667085;
-    --light-muted:#98a2b3;
-
-    --border:#e8ebf0;
-
-    --background:#ffffff;
-    --soft:#f7f8fa;
-
-    --max-width:1240px;
-}
-
-
-/* =========================================================
-   TOP NAVIGATION
-========================================================= */
-
-.site-header{
-
-    position:relative;
-
-    width:100%;
-
-    background:#ffffff;
-
-    border-bottom:1px solid var(--border);
-
-}
-
-.header-inner{
-
-    max-width:var(--max-width);
-
-    margin:auto;
-
-    padding:22px 24px;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:space-between;
-
-    gap:30px;
-
-}
-
-.logo{
-
-    text-decoration:none;
-
-    font-size:25px;
-
-    font-weight:800;
-
-    letter-spacing:-1px;
-
-    color:#111827;
-
-}
-
-.logo span{
-
-    color:var(--blue);
-
-}
-
-.header-label{
-
-    font-size:12px;
-
-    font-weight:700;
-
-    letter-spacing:1.5px;
-
-    text-transform:uppercase;
-
-    color:#667085;
-
+.articles-page{
+    overflow:hidden;
 }
 
 
 /* =========================================================
    HERO
+   MATCHES YOUR HOMEPAGE STYLE
 ========================================================= */
 
-.blog-hero{
+.articles-hero{
 
-    background:#f7f8fa;
+    position:relative;
 
-    padding:90px 24px 100px;
+    min-height:560px;
 
-    border-bottom:1px solid var(--border);
+    display:grid;
+
+    grid-template-columns:1.05fr .95fr;
+
+    align-items:center;
+
+    gap:70px;
+
+    padding:
+        120px
+        max(24px, calc((100% - 1280px) / 2))
+        100px;
+
+    overflow:hidden;
+
+    color:#fff;
+
+    background:
+        radial-gradient(
+            circle at top left,
+            #4f46e5 0,
+            #2563eb 45%,
+            #4f46e5 100%
+        );
 
 }
 
-.hero-inner{
 
-    max-width:var(--max-width);
+/* =========================================================
+   HERO BACKGROUND GLOW
+========================================================= */
 
-    margin:auto;
+.articles-hero::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:600px;
+    height:600px;
+
+    top:-250px;
+    left:-200px;
+
+    border-radius:50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(255,255,255,.16),
+            transparent 70%
+        );
+
+    filter:blur(20px);
+
+    pointer-events:none;
 
 }
 
-.hero-label{
+.articles-hero::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:500px;
+    height:500px;
+
+    right:-180px;
+    bottom:-250px;
+
+    border-radius:50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(255,255,255,.12),
+            transparent 70%
+        );
+
+    filter:blur(30px);
+
+    pointer-events:none;
+
+}
+
+
+/* =========================================================
+   HERO LEFT
+========================================================= */
+
+.articles-hero-left{
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+.articles-badge{
 
     display:inline-flex;
 
     align-items:center;
 
-    gap:9px;
+    padding:10px 18px;
 
-    margin-bottom:25px;
+    margin-bottom:24px;
 
-    color:var(--blue);
+    border:
+        1px solid
+        rgba(255,255,255,.18);
 
-    font-size:12px;
+    border-radius:30px;
+
+    background:
+        rgba(255,255,255,.14);
+
+    backdrop-filter:blur(10px);
+
+    -webkit-backdrop-filter:blur(10px);
+
+    font-size:14px;
+
+    font-weight:600;
+
+    letter-spacing:.5px;
+
+}
+
+.articles-hero h1{
+
+    max-width:720px;
+
+    font-size:
+        clamp(
+            42px,
+            5.5vw,
+            68px
+        );
+
+    line-height:1.08;
 
     font-weight:800;
 
-    letter-spacing:1.7px;
-
-    text-transform:uppercase;
-
-}
-
-.hero-label::before{
-
-    content:"";
-
-    width:28px;
-
-    height:2px;
-
-    background:var(--blue);
-
-}
-
-.blog-hero h1{
-
-    max-width:900px;
-
-    font-size:clamp(44px,6vw,76px);
-
-    line-height:1.02;
-
-    letter-spacing:-3px;
-
-    font-weight:800;
-
-    color:#101828;
+    letter-spacing:-2px;
 
     margin-bottom:25px;
 
 }
 
-.blog-hero-description{
+.articles-hero-text{
 
-    max-width:700px;
+    max-width:650px;
 
     font-size:18px;
 
-    line-height:1.8;
+    line-height:1.75;
 
-    color:#667085;
+    color:rgba(255,255,255,.9);
+
+}
+
+
+/* =========================================================
+   HERO IMAGE
+========================================================= */
+
+.articles-hero-right{
+
+    position:relative;
+
+    z-index:2;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.articles-hero-right::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:92%;
+    height:92%;
+
+    border-radius:40px;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(79,70,229,.35) 0,
+            rgba(37,99,235,.25) 45%,
+            transparent 80%
+        );
+
+    filter:blur(55px);
+
+    z-index:-2;
+
+}
+
+.articles-hero-right::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:-12px;
+
+    border-radius:36px;
+
+    border:
+        1px solid
+        rgba(255,255,255,.12);
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,255,255,.08),
+            rgba(255,255,255,.02)
+        );
+
+    backdrop-filter:blur(12px);
+
+    -webkit-backdrop-filter:blur(12px);
+
+    z-index:-1;
+
+}
+
+.articles-hero-right img{
+
+    width:100%;
+
+    max-width:620px;
+
+    /* EXACT 1536 × 1024 RATIO */
+
+    aspect-ratio:3 / 2;
+
+    object-fit:cover;
+
+    display:block;
+
+    border:
+        1px solid
+        rgba(255,255,255,.15);
+
+    border-radius:28px;
+
+    background:#fff;
+
+    box-shadow:
+        0 40px 90px rgba(0,0,0,.3),
+        0 20px 45px rgba(37,99,235,.2);
+
+    filter:
+        saturate(.92)
+        contrast(1.05)
+        brightness(.99)
+        hue-rotate(-6deg);
+
+    transition:
+        transform .45s ease,
+        box-shadow .45s ease,
+        filter .45s ease;
+
+}
+
+.articles-hero-right:hover img{
+
+    transform:
+        translateY(-10px)
+        scale(1.02);
+
+    box-shadow:
+        0 55px 110px rgba(0,0,0,.35),
+        0 25px 60px rgba(79,70,229,.3);
+
+    filter:
+        saturate(.96)
+        contrast(1.08)
+        brightness(1);
 
 }
 
@@ -229,106 +351,108 @@ a{
    MAIN
 ========================================================= */
 
-.blog-container{
+.articles-container{
 
-    max-width:var(--max-width);
+    max-width:1280px;
 
     margin:auto;
 
-    padding:75px 24px 100px;
+    padding:
+        70px
+        24px
+        100px;
 
 }
 
 
 /* =========================================================
-   SEARCH AREA
+   SEARCH
 ========================================================= */
 
-.toolbar{
+.articles-search-area{
+
+    position:relative;
+
+    z-index:5;
+
+    max-width:800px;
+
+    margin:
+        -105px
+        auto
+        75px;
+
+    padding:10px;
+
+    border:
+        1px solid
+        rgba(255,255,255,.7);
+
+    border-radius:22px;
+
+    background:
+        rgba(255,255,255,.88);
+
+    backdrop-filter:blur(18px);
+
+    -webkit-backdrop-filter:blur(18px);
+
+    box-shadow:
+        0 25px 70px rgba(37,99,235,.15);
+
+}
+
+.search-inner{
 
     display:flex;
 
     align-items:center;
 
-    justify-content:space-between;
+    gap:12px;
 
-    gap:30px;
+    min-height:62px;
 
-    margin-bottom:55px;
+    padding:0 20px;
 
-}
+    border-radius:15px;
 
-.search-wrapper{
-
-    width:100%;
-
-    max-width:470px;
-
-    position:relative;
+    background:#f7f9ff;
 
 }
 
 .search-icon{
 
-    position:absolute;
+    width:22px;
 
-    left:18px;
+    height:22px;
 
-    top:50%;
-
-    transform:translateY(-50%);
-
-    color:#98a2b3;
-
-    pointer-events:none;
-
-}
-
-.search-wrapper input{
-
-    width:100%;
-
-    height:54px;
-
-    padding:0 20px 0 50px;
-
-    border:1px solid var(--border);
-
-    border-radius:8px;
-
-    outline:none;
-
-    background:#ffffff;
-
-    font-size:15px;
-
-    color:var(--text);
-
-    transition:.2s ease;
-
-}
-
-.search-wrapper input::placeholder{
-
-    color:#98a2b3;
-
-}
-
-.search-wrapper input:focus{
-
-    border-color:#9bb3f3;
-
-    box-shadow:0 0 0 4px rgba(23,70,209,.07);
-
-}
-
-.article-count{
+    flex-shrink:0;
 
     color:#667085;
 
-    font-size:14px;
+}
 
-    white-space:nowrap;
+.search-inner input{
+
+    width:100%;
+
+    height:55px;
+
+    border:0;
+
+    outline:0;
+
+    background:transparent;
+
+    color:#172033;
+
+    font-size:16px;
+
+}
+
+.search-inner input::placeholder{
+
+    color:#98a2b3;
 
 }
 
@@ -337,7 +461,7 @@ a{
    SECTION HEADER
 ========================================================= */
 
-.section-heading{
+.articles-heading{
 
     display:flex;
 
@@ -345,27 +469,53 @@ a{
 
     align-items:end;
 
+    gap:20px;
+
     margin-bottom:30px;
-
-    padding-bottom:18px;
-
-    border-bottom:1px solid var(--border);
 
 }
 
-.section-heading h2{
+.articles-heading-left{
 
-    font-size:30px;
+    position:relative;
 
-    letter-spacing:-1px;
+}
+
+.articles-heading-left small{
+
+    display:block;
+
+    margin-bottom:8px;
+
+    color:#2563eb;
+
+    font-size:12px;
+
+    font-weight:800;
+
+    letter-spacing:1.5px;
+
+    text-transform:uppercase;
+
+}
+
+.articles-heading h2{
+
+    font-size:36px;
 
     line-height:1.2;
 
+    font-weight:800;
+
+    letter-spacing:-1px;
+
+    color:#172033;
+
 }
 
-.section-heading p{
+.articles-heading p{
 
-    color:#98a2b3;
+    color:#64748b;
 
     font-size:14px;
 
@@ -376,59 +526,80 @@ a{
    FEATURED ARTICLE
 ========================================================= */
 
-.featured-article{
+.featured-card{
+
+    position:relative;
 
     display:grid;
 
-    grid-template-columns:1.45fr 1fr;
+    grid-template-columns:1.15fr .85fr;
 
-    min-height:480px;
-
-    border:1px solid var(--border);
-
-    background:#ffffff;
+    overflow:hidden;
 
     margin-bottom:80px;
 
-    overflow:hidden;
+    border:
+        1px solid
+        rgba(37,99,235,.1);
+
+    border-radius:28px;
+
+    background:#fff;
+
+    box-shadow:
+        0 25px 70px rgba(37,99,235,.09),
+        0 10px 30px rgba(79,70,229,.06);
+
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease;
+
+}
+
+.featured-card:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:
+        0 35px 85px rgba(37,99,235,.14),
+        0 15px 40px rgba(79,70,229,.08);
 
 }
 
 .featured-image{
 
-    position:relative;
-
     display:block;
 
     overflow:hidden;
+
+    position:relative;
 
     /* EXACT 1536 × 1024 RATIO */
 
     aspect-ratio:3 / 2;
 
-    min-height:100%;
-
-    background:#e9eef8;
+    background:#edf2ff;
 
 }
 
 .featured-image img{
 
     width:100%;
-
     height:100%;
 
     display:block;
 
     object-fit:cover;
 
-    transition:transform .7s cubic-bezier(.2,.7,.2,1);
+    transition:
+        transform .6s ease;
 
 }
 
-.featured-article:hover .featured-image img{
+.featured-card:hover
+.featured-image img{
 
-    transform:scale(1.035);
+    transform:scale(1.045);
 
 }
 
@@ -440,65 +611,79 @@ a{
 
     justify-content:center;
 
-    padding:55px;
+    padding:50px;
 
 }
 
-.featured-badge{
+.featured-label{
 
-    display:inline-block;
+    display:inline-flex;
 
     align-self:flex-start;
 
-    margin-bottom:22px;
+    padding:8px 14px;
 
-    padding:7px 11px;
+    margin-bottom:20px;
 
-    background:#edf3ff;
+    border-radius:30px;
 
-    color:var(--blue);
+    background:
+        linear-gradient(
+            135deg,
+            #2563eb,
+            #4f46e5
+        );
+
+    color:#fff;
 
     font-size:11px;
 
     font-weight:800;
 
-    letter-spacing:1.2px;
+    letter-spacing:1px;
 
     text-transform:uppercase;
 
 }
 
-.featured-date{
+.article-date{
 
-    color:#98a2b3;
+    margin-bottom:12px;
+
+    color:#94a3b8;
 
     font-size:13px;
-
-    margin-bottom:15px;
 
 }
 
 .featured-title{
 
-    font-size:clamp(30px,3vw,45px);
+    font-size:
+        clamp(
+            28px,
+            3vw,
+            42px
+        );
 
-    line-height:1.12;
+    line-height:1.18;
 
-    letter-spacing:-1.7px;
+    letter-spacing:-1.3px;
 
-    margin-bottom:20px;
+    color:#172033;
+
+    margin-bottom:18px;
 
 }
 
 .featured-description{
 
-    color:#667085;
+    color:#64748b;
 
     font-size:15px;
 
     line-height:1.8;
 
-    margin-bottom:30px;
+    margin-bottom:28px;
 
     display:-webkit-box;
 
@@ -510,51 +695,50 @@ a{
 
 }
 
-.featured-link{
+.read-button{
 
     display:inline-flex;
 
     align-items:center;
 
-    gap:12px;
+    justify-content:center;
 
     align-self:flex-start;
+
+    gap:9px;
+
+    padding:13px 21px;
+
+    border-radius:50px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #2563eb,
+            #4f46e5
+        );
+
+    color:#fff;
 
     text-decoration:none;
 
     font-size:14px;
 
-    font-weight:800;
+    font-weight:700;
 
-    color:#111827;
+    box-shadow:
+        0 12px 30px rgba(37,99,235,.2);
 
-    border-bottom:1px solid #111827;
-
-    padding-bottom:5px;
-
-    transition:.2s ease;
+    transition:.3s ease;
 
 }
 
-.featured-link span{
+.read-button:hover{
 
-    font-size:18px;
+    transform:translateY(-3px);
 
-    transition:.2s ease;
-
-}
-
-.featured-link:hover{
-
-    color:var(--blue);
-
-    border-color:var(--blue);
-
-}
-
-.featured-link:hover span{
-
-    transform:translateX(4px);
+    box-shadow:
+        0 18px 40px rgba(37,99,235,.3);
 
 }
 
@@ -570,7 +754,7 @@ a{
     grid-template-columns:
         repeat(3,1fr);
 
-    gap:50px 28px;
+    gap:30px;
 
 }
 
@@ -581,9 +765,39 @@ a{
 
 .article-card{
 
-    min-width:0;
+    overflow:hidden;
+
+    border:
+        1px solid
+        rgba(37,99,235,.09);
+
+    border-radius:24px;
+
+    background:#fff;
+
+    box-shadow:
+        0 15px 40px rgba(37,99,235,.06);
+
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease;
 
 }
+
+.article-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:
+        0 28px 65px rgba(37,99,235,.13),
+        0 10px 30px rgba(79,70,229,.08);
+
+}
+
+
+/* =========================================================
+   CARD IMAGE
+========================================================= */
 
 .article-image{
 
@@ -593,20 +807,22 @@ a{
 
     overflow:hidden;
 
-    margin-bottom:22px;
-
-    background:#edf1f7;
-
-    /* EXACT 1536 × 1024 RATIO */
+    /* EXACT 1536 × 1024 */
 
     aspect-ratio:3 / 2;
+
+    background:
+        linear-gradient(
+            135deg,
+            #dbeafe,
+            #e0e7ff
+        );
 
 }
 
 .article-image img{
 
     width:100%;
-
     height:100%;
 
     display:block;
@@ -614,50 +830,27 @@ a{
     object-fit:cover;
 
     transition:
-        transform .65s cubic-bezier(.2,.7,.2,1);
+        transform .55s ease;
 
 }
 
-.article-card:hover .article-image img{
+.article-card:hover
+.article-image img{
 
-    transform:scale(1.045);
-
-}
-
-
-/* =========================================================
-   IMAGE FALLBACK
-========================================================= */
-
-.no-image{
-
-    width:100%;
-
-    height:100%;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    background:
-        linear-gradient(
-            135deg,
-            #edf3ff,
-            #f5f7fa
-        );
-
-    color:#98a2b3;
-
-    font-size:13px;
+    transform:scale(1.06);
 
 }
 
 
 /* =========================================================
-   ARTICLE META
+   CARD CONTENT
 ========================================================= */
+
+.article-content{
+
+    padding:25px 25px 28px;
+
+}
 
 .article-meta{
 
@@ -665,81 +858,71 @@ a{
 
     align-items:center;
 
-    gap:10px;
+    gap:8px;
 
     margin-bottom:11px;
 
-    color:#98a2b3;
+    color:#94a3b8;
 
     font-size:12px;
 
 }
 
-.article-category{
+.article-meta::before{
 
-    color:var(--blue);
+    content:"";
 
-    font-weight:800;
-
-    text-transform:uppercase;
-
-    letter-spacing:1px;
-
-}
-
-.meta-dot{
-
-    width:3px;
-
-    height:3px;
-
-    background:#c7cdd6;
+    width:7px;
+    height:7px;
 
     border-radius:50%;
 
+    background:
+        linear-gradient(
+            135deg,
+            #2563eb,
+            #4f46e5
+        );
+
 }
-
-
-/* =========================================================
-   TITLE
-========================================================= */
 
 .article-title{
 
-    font-size:23px;
-
-    line-height:1.3;
-
-    letter-spacing:-.6px;
-
-    font-weight:750;
-
     margin-bottom:12px;
+
+    font-size:21px;
+
+    line-height:1.35;
+
+    font-weight:800;
+
+    letter-spacing:-.4px;
+
+    color:#172033;
 
 }
 
 .article-title a{
 
+    color:inherit;
+
     text-decoration:none;
 
-    transition:.2s ease;
+    transition:.25s ease;
 
 }
 
 .article-title a:hover{
 
-    color:var(--blue);
+    color:#2563eb;
 
 }
 
-
-/* =========================================================
-   DESCRIPTION
-========================================================= */
-
 .article-description{
 
-    color:#667085;
+    margin-bottom:20px;
+
+    color:#64748b;
 
     font-size:14px;
 
@@ -753,24 +936,17 @@ a{
 
     overflow:hidden;
 
-    margin-bottom:18px;
-
 }
 
-
-/* =========================================================
-   READ LINK
-========================================================= */
-
-.article-link{
+.article-read{
 
     display:inline-flex;
 
     align-items:center;
 
-    gap:8px;
+    gap:7px;
 
-    color:#111827;
+    color:#2563eb;
 
     text-decoration:none;
 
@@ -778,23 +954,17 @@ a{
 
     font-weight:800;
 
-    transition:.2s ease;
+    transition:.25s ease;
 
 }
 
-.article-link span{
+.article-read span{
 
-    transition:.2s ease;
-
-}
-
-.article-link:hover{
-
-    color:var(--blue);
+    transition:.25s ease;
 
 }
 
-.article-link:hover span{
+.article-read:hover span{
 
     transform:translateX(4px);
 
@@ -802,117 +972,122 @@ a{
 
 
 /* =========================================================
-   LOADING / EMPTY
+   EMPTY / LOADING
 ========================================================= */
 
 .message{
 
     grid-column:1 / -1;
 
-    padding:90px 20px;
+    padding:70px 25px;
+
+    border-radius:24px;
+
+    border:
+        1px solid
+        rgba(37,99,235,.08);
+
+    background:#fff;
 
     text-align:center;
 
-    border:1px solid var(--border);
+    color:#64748b;
 
-    background:#fafbfc;
-
-    color:#667085;
+    box-shadow:
+        0 15px 40px rgba(37,99,235,.05);
 
 }
 
 .message h3{
 
-    color:#111827;
-
     margin-bottom:8px;
+
+    color:#172033;
 
 }
 
 
 /* =========================================================
-   NEWSLETTER / CTA
+   CTA
 ========================================================= */
 
-.blog-cta{
+.articles-cta{
 
-    margin-top:100px;
+    position:relative;
 
-    padding:60px;
+    overflow:hidden;
 
-    background:#0d1f45;
+    margin-top:90px;
 
-    color:#ffffff;
+    padding:55px;
 
-    display:flex;
+    border-radius:30px;
 
-    align-items:center;
+    color:#fff;
 
-    justify-content:space-between;
+    background:
+        radial-gradient(
+            circle at top left,
+            #4f46e5 0,
+            #2563eb 50%,
+            #4f46e5 100%
+        );
 
-    gap:40px;
+    box-shadow:
+        0 30px 70px rgba(37,99,235,.18);
 
 }
 
-.blog-cta-content{
+.articles-cta::after{
 
-    max-width:650px;
+    content:"";
+
+    position:absolute;
+
+    width:300px;
+    height:300px;
+
+    right:-100px;
+    top:-150px;
+
+    border-radius:50%;
+
+    background:
+        rgba(255,255,255,.08);
+
+    filter:blur(10px);
 
 }
 
-.blog-cta h2{
+.articles-cta-content{
 
-    font-size:32px;
+    position:relative;
 
-    line-height:1.2;
+    z-index:2;
 
-    letter-spacing:-1px;
+    max-width:700px;
+
+}
+
+.articles-cta h2{
 
     margin-bottom:12px;
 
+    font-size:34px;
+
+    line-height:1.2;
+
+    font-weight:800;
+
 }
 
-.blog-cta p{
+.articles-cta p{
 
-    color:#b9c5da;
+    color:rgba(255,255,255,.88);
 
     font-size:15px;
 
     line-height:1.7;
-
-}
-
-.blog-cta-button{
-
-    flex-shrink:0;
-
-    display:inline-flex;
-
-    align-items:center;
-
-    gap:12px;
-
-    padding:15px 22px;
-
-    background:#ffffff;
-
-    color:#0d1f45;
-
-    text-decoration:none;
-
-    font-size:13px;
-
-    font-weight:800;
-
-    transition:.2s ease;
-
-}
-
-.blog-cta-button:hover{
-
-    transform:translateY(-2px);
-
-    background:#edf3ff;
 
 }
 
@@ -921,9 +1096,27 @@ a{
    RESPONSIVE
 ========================================================= */
 
-@media(max-width:1000px){
+@media(max-width:1050px){
 
-    .featured-article{
+    .articles-hero{
+
+        grid-template-columns:1fr;
+
+        padding-top:100px;
+
+    }
+
+    .articles-hero-right{
+
+        max-width:700px;
+
+        width:100%;
+
+        margin:auto;
+
+    }
+
+    .featured-card{
 
         grid-template-columns:1fr;
 
@@ -933,22 +1126,12 @@ a{
 
         aspect-ratio:3 / 2;
 
-        min-height:auto;
-
-    }
-
-    .featured-content{
-
-        padding:40px;
-
     }
 
     .articles-grid{
 
         grid-template-columns:
             repeat(2,1fr);
-
-        gap:45px 24px;
 
     }
 
@@ -957,69 +1140,52 @@ a{
 
 @media(max-width:700px){
 
-    .header-inner{
+    .articles-hero{
 
-        padding:18px 18px;
+        min-height:auto;
 
-    }
+        padding:
+            80px
+            20px
+            90px;
 
-    .header-label{
-
-        display:none;
-
-    }
-
-    .blog-hero{
-
-        padding:65px 18px 70px;
+        gap:45px;
 
     }
 
-    .blog-hero h1{
+    .articles-hero h1{
 
-        font-size:44px;
+        font-size:42px;
 
-        letter-spacing:-2px;
+        letter-spacing:-1.5px;
 
     }
 
-    .blog-hero-description{
+    .articles-hero-text{
 
         font-size:16px;
 
     }
 
-    .blog-container{
+    .articles-container{
 
-        padding:50px 18px 70px;
-
-    }
-
-    .toolbar{
-
-        flex-direction:column;
-
-        align-items:stretch;
-
-        gap:15px;
-
-        margin-bottom:45px;
+        padding:
+            55px
+            16px
+            70px;
 
     }
 
-    .search-wrapper{
+    .articles-search-area{
 
-        max-width:none;
-
-    }
-
-    .article-count{
-
-        text-align:left;
+        margin:
+            -90px
+            10px
+            55px;
 
     }
 
-    .section-heading{
+    .articles-heading{
 
         align-items:flex-start;
 
@@ -1029,21 +1195,21 @@ a{
 
     }
 
-    .featured-article{
+    .articles-heading h2{
 
-        margin-bottom:65px;
+        font-size:30px;
 
     }
 
     .featured-content{
 
-        padding:30px 25px 35px;
+        padding:32px 25px 35px;
 
     }
 
     .featured-title{
 
-        font-size:32px;
+        font-size:29px;
 
     }
 
@@ -1051,52 +1217,44 @@ a{
 
         grid-template-columns:1fr;
 
-        gap:45px;
+        gap:25px;
 
     }
 
-    .blog-cta{
+    .articles-cta{
 
-        margin-top:70px;
+        margin-top:65px;
 
-        padding:40px 25px;
-
-        flex-direction:column;
-
-        align-items:flex-start;
+        padding:38px 25px;
 
     }
 
-    .blog-cta h2{
+    .articles-cta h2{
 
-        font-size:27px;
+        font-size:28px;
 
     }
 
 }
 
 
-/* =========================================================
-   VERY SMALL DEVICES
-========================================================= */
+@media(max-width:430px){
 
-@media(max-width:420px){
+    .articles-hero h1{
 
-    .blog-hero h1{
-
-        font-size:38px;
+        font-size:36px;
 
     }
 
-    .featured-title{
+    .articles-badge{
 
-        font-size:28px;
+        font-size:12px;
 
     }
 
-    .article-title{
+    .featured-content{
 
-        font-size:21px;
+        padding:28px 20px 30px;
 
     }
 
@@ -1109,9 +1267,7 @@ a{
 
 @media(prefers-reduced-motion:reduce){
 
-    *,
-    *::before,
-    *::after{
+    *{
 
         scroll-behavior:auto !important;
 
@@ -1129,100 +1285,102 @@ a{
 <body>
 
 
-<!-- =======================================================
-     HEADER
-======================================================= -->
-
-<header class="site-header">
-
-    <div class="header-inner">
-
-        <a
-            href="/"
-            class="logo"
-        >
-            Electrolix<span>.</span>
-        </a>
-
-        <div class="header-label">
-            Knowledge &amp; Guides
-        </div>
-
-    </div>
-
-</header>
+<div class="articles-page">
 
 
 <!-- =======================================================
      HERO
 ======================================================= -->
 
-<section class="blog-hero">
+<section class="articles-hero">
 
-    <div class="hero-inner">
 
-        <div class="hero-label">
-            Electrolix Knowledge Hub
+    <div class="articles-hero-left">
+
+
+        <div class="articles-badge">
+
+            ELECTROLIX KNOWLEDGE HUB
+
         </div>
 
+
         <h1>
+
             Electrical knowledge,
-            explained simply.
+            made simple.
+
         </h1>
 
-        <p class="blog-hero-description">
-            Explore practical electrical guides, wire specifications,
-            product information, buying advice and useful knowledge
-            for everyday electrical work.
+
+        <p class="articles-hero-text">
+
+            Practical guides, wire specifications,
+            product information and useful electrical
+            knowledge — all in one place.
+
         </p>
+
 
     </div>
 
+
+
+    <!-- HERO IMAGE -->
+
+    <div class="articles-hero-right">
+
+        <img
+            id="heroArticleImage"
+            src=""
+            alt="Electrolix Electrical Guide"
+        >
+
+    </div>
+
+
 </section>
+
 
 
 <!-- =======================================================
      MAIN
 ======================================================= -->
 
-<main class="blog-container">
+<main class="articles-container">
 
 
     <!-- SEARCH -->
 
-    <div class="toolbar">
+    <div class="articles-search-area">
 
-        <div class="search-wrapper">
+        <div class="search-inner">
 
-            <span class="search-icon">
 
-                <svg
-                    width="19"
-                    height="19"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                >
+            <svg
+                class="search-icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+            >
 
-                    <circle
-                        cx="11"
-                        cy="11"
-                        r="7"
-                    ></circle>
+                <circle
+                    cx="11"
+                    cy="11"
+                    r="7"
+                ></circle>
 
-                    <line
-                        x1="16.65"
-                        y1="16.65"
-                        x2="21"
-                        y2="21"
-                    ></line>
+                <line
+                    x1="16.65"
+                    y1="16.65"
+                    x2="21"
+                    y2="21"
+                ></line>
 
-                </svg>
-
-            </span>
+            </svg>
 
 
             <input
@@ -1232,61 +1390,69 @@ a{
                 autocomplete="off"
             >
 
-        </div>
 
-
-        <div
-            class="article-count"
-            id="articleCount"
-        >
-            Loading articles...
         </div>
 
     </div>
 
 
-    <!-- ===================================================
-         FEATURED HEADING
-    ==================================================== -->
 
-    <div class="section-heading">
+    <!-- FEATURED HEADING -->
 
-        <h2>
-            Featured Guide
-        </h2>
+    <div class="articles-heading">
 
-        <p>
-            Editor's selection
+        <div class="articles-heading-left">
+
+            <small>
+                Latest from Electrolix
+            </small>
+
+            <h2>
+                Featured Guide
+            </h2>
+
+        </div>
+
+        <p id="articleCount">
+            Loading articles...
         </p>
 
     </div>
 
 
-    <!-- ===================================================
-         FEATURED ARTICLE
-    ==================================================== -->
+
+    <!-- FEATURED ARTICLE -->
 
     <section
         id="featuredArticle"
-        class="featured-article"
+        class="featured-card"
     >
 
         <div class="message">
-            Loading featured article...
+
+            Loading article...
+
         </div>
 
     </section>
 
 
-    <!-- ===================================================
-         LATEST ARTICLES
-    ==================================================== -->
 
-    <div class="section-heading">
+    <!-- ARTICLES HEADING -->
 
-        <h2>
-            Latest Articles
-        </h2>
+    <div class="articles-heading">
+
+        <div class="articles-heading-left">
+
+            <small>
+                Explore
+            </small>
+
+            <h2>
+                All Articles
+            </h2>
+
+        </div>
 
         <p id="resultsText">
             Loading...
@@ -1294,6 +1460,9 @@ a{
 
     </div>
 
+
+
+    <!-- ARTICLE GRID -->
 
     <section
         class="articles-grid"
@@ -1307,7 +1476,7 @@ a{
             </h3>
 
             <p>
-                Please wait while we load the latest guides.
+                Please wait...
             </p>
 
         </div>
@@ -1315,38 +1484,32 @@ a{
     </section>
 
 
-    <!-- ===================================================
-         CTA
-    ==================================================== -->
 
-    <section class="blog-cta">
+    <!-- CTA -->
 
-        <div class="blog-cta-content">
+    <section class="articles-cta">
+
+        <div class="articles-cta-content">
 
             <h2>
-                Learn more about electrical products.
+                Learn before you buy.
             </h2>
 
             <p>
-                Browse our guides to understand wire sizes,
-                specifications, applications and important
-                electrical information.
+                Explore our electrical guides to understand
+                wire sizes, specifications, applications,
+                features and important buying information.
             </p>
 
         </div>
-
-        <a
-            href="/"
-            class="blog-cta-button"
-        >
-            Explore Electrolix
-            <span>→</span>
-        </a>
 
     </section>
 
 
 </main>
+
+</div>
+
 
 
 <script>
@@ -1384,14 +1547,14 @@ const blogLinks = [
 
 
 /* =========================================================
-   VARIABLES
+   DATA
 ========================================================= */
 
 let allArticles = [];
 
 
 /* =========================================================
-   META HELPER
+   META
 ========================================================= */
 
 function getMeta(doc, selector){
@@ -1414,7 +1577,7 @@ function getMeta(doc, selector){
 
 
 /* =========================================================
-   GET DATE
+   DATE
 ========================================================= */
 
 function getDate(doc){
@@ -1455,7 +1618,7 @@ function getDate(doc){
 
         catch(error){
 
-            // Ignore invalid JSON-LD
+            // Ignore invalid JSON
 
         }
 
@@ -1467,7 +1630,7 @@ function getDate(doc){
 
 
 /* =========================================================
-   GET HERO IMAGE
+   IMAGE
 ========================================================= */
 
 function getHeroImage(doc){
@@ -1515,6 +1678,169 @@ function getHeroImage(doc){
 
 
 /* =========================================================
+   REAL ARTICLE DESCRIPTION
+========================================================= */
+
+function getArticleDescription(doc){
+
+    /*
+       FIRST:
+       Use OpenGraph description
+    */
+
+    let description =
+        getMeta(
+            doc,
+            'meta[property="og:description"]'
+        );
+
+
+    if(description){
+
+        return cleanText(description);
+
+    }
+
+
+    /*
+       SECOND:
+       Normal meta description
+    */
+
+    description =
+        getMeta(
+            doc,
+            'meta[name="description"]'
+        );
+
+
+    if(description){
+
+        return cleanText(description);
+
+    }
+
+
+    /*
+       THIRD:
+       Try common article intro/excerpt elements
+    */
+
+    const selectors = [
+
+        ".article-excerpt",
+
+        ".article-description",
+
+        ".post-excerpt",
+
+        ".post-description",
+
+        ".excerpt",
+
+        ".hero-description",
+
+        ".hero p",
+
+        "article p"
+
+    ];
+
+
+    for(const selector of selectors){
+
+        const element =
+            doc.querySelector(selector);
+
+
+        if(element){
+
+            const text =
+                cleanText(
+                    element.textContent
+                );
+
+
+            if(text.length > 40){
+
+                return shortenText(text);
+
+            }
+
+        }
+
+    }
+
+
+    /*
+       FOURTH:
+       Find first meaningful paragraph
+    */
+
+    const paragraphs =
+        doc.querySelectorAll("p");
+
+
+    for(const paragraph of paragraphs){
+
+        const text =
+            cleanText(
+                paragraph.textContent
+            );
+
+
+        if(text.length > 60){
+
+            return shortenText(text);
+
+        }
+
+    }
+
+
+    return "";
+
+}
+
+
+/* =========================================================
+   CLEAN TEXT
+========================================================= */
+
+function cleanText(text){
+
+    return String(text || "")
+        .replace(/\s+/g," ")
+        .trim();
+
+}
+
+
+/* =========================================================
+   SHORTEN REAL TEXT
+========================================================= */
+
+function shortenText(text){
+
+    if(text.length <= 180){
+
+        return text;
+
+    }
+
+
+    return (
+        text
+            .substring(0,180)
+            .replace(/\s+\S*$/,"")
+            .trim()
+        + "..."
+    );
+
+}
+
+
+/* =========================================================
    FORMAT DATE
 ========================================================= */
 
@@ -1551,34 +1877,6 @@ function formatDate(date){
 
 
 /* =========================================================
-   GET CATEGORY
-========================================================= */
-
-function getCategory(title){
-
-    const text =
-        title.toLowerCase();
-
-
-    if(
-        text.includes("wire")
-        ||
-        text.includes("copper")
-        ||
-        text.includes("sq mm")
-    ){
-
-        return "Electrical Guides";
-
-    }
-
-
-    return "Electrical Knowledge";
-
-}
-
-
-/* =========================================================
    FETCH ARTICLE
 ========================================================= */
 
@@ -1593,7 +1891,7 @@ async function fetchArticle(url){
         if(!response.ok){
 
             throw new Error(
-                "Could not load article"
+                "Article could not be loaded"
             );
 
         }
@@ -1637,22 +1935,7 @@ async function fetchArticle(url){
 
 
         const description =
-
-            getMeta(
-                doc,
-                'meta[property="og:description"]'
-            )
-
-            ||
-
-            getMeta(
-                doc,
-                'meta[name="description"]'
-            )
-
-            ||
-
-            "";
+            getArticleDescription(doc);
 
 
         const image =
@@ -1661,20 +1944,20 @@ async function fetchArticle(url){
 
         return {
 
-            title:title.trim(),
+            title:
+                cleanText(title),
 
             description:
-                description.trim(),
+                description,
 
-            image:image,
+            image:
+                image,
 
             date:
                 getDate(doc),
 
-            url:url,
-
-            category:
-                getCategory(title)
+            url:
+                url
 
         };
 
@@ -1683,7 +1966,7 @@ async function fetchArticle(url){
     catch(error){
 
         console.error(
-            "Failed to load:",
+            "Failed:",
             url,
             error
         );
@@ -1696,7 +1979,7 @@ async function fetchArticle(url){
 
 
 /* =========================================================
-   LOAD ARTICLES
+   LOAD ALL
 ========================================================= */
 
 async function loadArticles(){
@@ -1724,12 +2007,35 @@ async function loadArticles(){
     document.getElementById(
         "articleCount"
     ).textContent =
-        allArticles.length +
+        allArticles.length
+        +
         (
             allArticles.length === 1
                 ? " Article"
                 : " Articles"
         );
+
+
+    /*
+       Set hero image from first article
+    */
+
+    if(allArticles[0]?.image){
+
+        document.getElementById(
+            "heroArticleImage"
+        ).src =
+            allArticles[0].image;
+
+    }
+    else{
+
+        document.getElementById(
+            "heroArticleImage"
+        ).style.display =
+            "none";
+
+    }
 
 
     renderArticles();
@@ -1738,7 +2044,7 @@ async function loadArticles(){
 
 
 /* =========================================================
-   RENDER FEATURED
+   FEATURED
 ========================================================= */
 
 function renderFeatured(article){
@@ -1756,7 +2062,7 @@ function renderFeatured(article){
             <div class="message">
 
                 <h3>
-                    No featured article available
+                    No article available
                 </h3>
 
             </div>
@@ -1791,8 +2097,8 @@ function renderFeatured(article){
                 :
 
                 `
-                <div class="no-image">
-                    Electrolix
+                <div class="message">
+                    No image available
                 </div>
                 `
 
@@ -1803,7 +2109,7 @@ function renderFeatured(article){
 
         <div class="featured-content">
 
-            <div class="featured-badge">
+            <div class="featured-label">
                 Featured Guide
             </div>
 
@@ -1814,7 +2120,7 @@ function renderFeatured(article){
                 ?
 
                 `
-                <div class="featured-date">
+                <div class="article-date">
                     ${formatDate(article.date)}
                 </div>
                 `
@@ -1833,19 +2139,34 @@ function renderFeatured(article){
             </h2>
 
 
-            <p class="featured-description">
+            ${
+                article.description
 
-                ${escapeHtml(article.description)}
+                ?
 
-            </p>
+                `
+                <p class="featured-description">
+
+                    ${escapeHtml(
+                        article.description
+                    )}
+
+                </p>
+                `
+
+                :
+
+                ""
+
+            }
 
 
             <a
                 href="${escapeHtml(article.url)}"
-                class="featured-link"
+                class="read-button"
             >
 
-                Read the guide
+                Read Article
 
                 <span>→</span>
 
@@ -1859,7 +2180,7 @@ function renderFeatured(article){
 
 
 /* =========================================================
-   RENDER ARTICLES
+   RENDER CARDS
 ========================================================= */
 
 function renderArticles(){
@@ -1870,19 +2191,16 @@ function renderArticles(){
         );
 
 
-    const searchInput =
+    const search =
         document.getElementById(
             "articleSearch"
-        );
+        )
+        .value
+        .toLowerCase()
+        .trim();
 
 
-    const searchValue =
-        searchInput.value
-            .toLowerCase()
-            .trim();
-
-
-    const filteredArticles =
+    const filtered =
         allArticles.filter(
             article => {
 
@@ -1890,13 +2208,13 @@ function renderArticles(){
 
                     article.title
                         .toLowerCase()
-                        .includes(searchValue)
+                        .includes(search)
 
                     ||
 
                     article.description
                         .toLowerCase()
-                        .includes(searchValue)
+                        .includes(search)
 
                 );
 
@@ -1907,24 +2225,21 @@ function renderArticles(){
     document.getElementById(
         "resultsText"
     ).textContent =
-
-        filteredArticles.length
+        filtered.length
         +
         (
-            filteredArticles.length === 1
-                ? " article"
-                : " articles"
+            filtered.length === 1
+                ? " article found"
+                : " articles found"
         );
 
 
     /*
-       FEATURED ARTICLE
-
-       Always use the first article
-       when there is no search.
+       Normal page:
+       first article is featured
     */
 
-    if(!searchValue){
+    if(!search){
 
         renderFeatured(
             allArticles[0]
@@ -1932,21 +2247,40 @@ function renderArticles(){
 
     }
 
+
+    /*
+       Search:
+       hide featured
+    */
+
     else{
 
-        document.getElementById(
-            "featuredArticle"
-        ).style.display =
+        const featured =
+            document.getElementById(
+                "featuredArticle"
+            );
+
+        featured.style.display =
             "none";
 
     }
 
 
     /*
-       NO RESULTS
+       Restore featured if search cleared
     */
 
-    if(filteredArticles.length === 0){
+    if(!search){
+
+        document.getElementById(
+            "featuredArticle"
+        ).style.display =
+            "grid";
+
+    }
+
+
+    if(filtered.length === 0){
 
         grid.innerHTML = `
 
@@ -1957,7 +2291,7 @@ function renderArticles(){
                 </h3>
 
                 <p>
-                    Try searching with another keyword.
+                    Try another search term.
                 </p>
 
             </div>
@@ -1970,51 +2304,26 @@ function renderArticles(){
 
 
     /*
-       REMOVE FIRST ARTICLE FROM GRID
-
-       It is already displayed
-       as the featured article.
+       Don't duplicate featured article
     */
 
-    const gridArticles =
-        searchValue
-            ? filteredArticles
-            : filteredArticles.slice(1);
+    const articles =
+        search
+            ? filtered
+            : filtered.slice(1);
 
 
-    /*
-       IF ONLY ONE ARTICLE
-    */
+    if(articles.length === 0){
 
-    if(gridArticles.length === 0){
-
-        grid.innerHTML = `
-
-            <div class="message">
-
-                <h3>
-                    You're all caught up.
-                </h3>
-
-                <p>
-                    More guides will appear here soon.
-                </p>
-
-            </div>
-
-        `;
+        grid.innerHTML = "";
 
         return;
 
     }
 
-
-    /*
-       BUILD CARDS
-    */
 
     grid.innerHTML =
-        gridArticles.map(
+        articles.map(
             article => `
 
             <article class="article-card">
@@ -2041,8 +2350,8 @@ function renderArticles(){
                         :
 
                         `
-                        <div class="no-image">
-                            Electrolix
+                        <div class="message">
+                            No image
                         </div>
                         `
 
@@ -2051,26 +2360,48 @@ function renderArticles(){
                 </a>
 
 
-                <div class="article-meta">
+                <div class="article-content">
 
-                    <span class="article-category">
 
-                        ${escapeHtml(article.category)}
+                    <div class="article-meta">
 
-                    </span>
+                        ${
+                            article.date
+                                ? formatDate(article.date)
+                                : "Electrolix Guide"
+                        }
+
+                    </div>
+
+
+                    <h2 class="article-title">
+
+                        <a
+                            href="${escapeHtml(article.url)}"
+                        >
+
+                            ${escapeHtml(
+                                article.title
+                            )}
+
+                        </a>
+
+                    </h2>
 
 
                     ${
-                        article.date
+                        article.description
 
                         ?
 
                         `
-                        <span class="meta-dot"></span>
+                        <p class="article-description">
 
-                        <span>
-                            ${formatDate(article.date)}
-                        </span>
+                            ${escapeHtml(
+                                article.description
+                            )}
+
+                        </p>
                         `
 
                         :
@@ -2079,39 +2410,20 @@ function renderArticles(){
 
                     }
 
-                </div>
-
-
-                <h2 class="article-title">
 
                     <a
                         href="${escapeHtml(article.url)}"
+                        class="article-read"
                     >
 
-                        ${escapeHtml(article.title)}
+                        Read Article
+
+                        <span>→</span>
 
                     </a>
 
-                </h2>
 
-
-                <p class="article-description">
-
-                    ${escapeHtml(article.description)}
-
-                </p>
-
-
-                <a
-                    href="${escapeHtml(article.url)}"
-                    class="article-link"
-                >
-
-                    Read Article
-
-                    <span>→</span>
-
-                </a>
+                </div>
 
 
             </article>
@@ -2123,15 +2435,13 @@ function renderArticles(){
 
 
 /* =========================================================
-   ESCAPE HTML
+   SECURITY
 ========================================================= */
 
 function escapeHtml(text){
 
     const div =
-        document.createElement(
-            "div"
-        );
+        document.createElement("div");
 
 
     div.textContent =
@@ -2167,4 +2477,5 @@ loadArticles();
 
 
 </body>
+
 </html>
