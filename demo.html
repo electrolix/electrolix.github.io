@@ -1,1615 +1,792 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
-
-    <title>Electrical Guides & Articles | Electrolix</title>
-
-    <meta name="description"
-          content="Explore expert electrical guides, wire specifications, buying guides, safety information and practical knowledge from Electrolix.">
-
-    <link rel="stylesheet" href="css/style.css">
-
-    <style>
-
-        /* ================================
-           ALL ARTICLES PAGE
-        ================================= */
-
-        :root {
-            --articles-primary: #2563eb;
-            --articles-dark: #0f172a;
-            --articles-text: #1e293b;
-            --articles-muted: #64748b;
-            --articles-border: #e2e8f0;
-            --articles-light: #f8fafc;
-            --articles-white: #ffffff;
-        }
-
-
-        * {
-            box-sizing: border-box;
-        }
-
-
-        body {
-            margin: 0;
-            background: var(--articles-light);
-            color: var(--articles-text);
-            font-family: inherit;
-        }
-
-
-        /* ================================
-           HERO
-        ================================= */
-
-        .articles-hero {
-            position: relative;
-            overflow: hidden;
-            padding: 110px 20px 100px;
-            background:
-                radial-gradient(
-                    circle at 15% 20%,
-                    rgba(59, 130, 246, 0.25),
-                    transparent 35%
-                ),
-                radial-gradient(
-                    circle at 85% 80%,
-                    rgba(99, 102, 241, 0.22),
-                    transparent 40%
-                ),
-                linear-gradient(
-                    135deg,
-                    #0f172a,
-                    #111c35 50%,
-                    #172554
-                );
-            color: white;
-        }
-
-
-        .articles-hero::before {
-            content: "";
-            position: absolute;
-            inset: 0;
-            background-image:
-                linear-gradient(
-                    rgba(255,255,255,0.035) 1px,
-                    transparent 1px
-                ),
-                linear-gradient(
-                    90deg,
-                    rgba(255,255,255,0.035) 1px,
-                    transparent 1px
-                );
-            background-size: 55px 55px;
-            pointer-events: none;
-        }
-
-
-        .articles-hero-inner {
-            position: relative;
-            z-index: 2;
-            max-width: 1250px;
-            margin: auto;
-            text-align: center;
-        }
-
-
-        .articles-breadcrumb {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            margin-bottom: 28px;
-            font-size: 14px;
-            color: #cbd5e1;
-        }
-
-
-        .articles-breadcrumb a {
-            color: #ffffff;
-            text-decoration: none;
-            transition: opacity 0.2s ease;
-        }
-
-
-        .articles-breadcrumb a:hover {
-            opacity: 0.7;
-        }
-
-
-        .articles-label {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-
-            padding: 9px 16px;
-
-            border: 1px solid rgba(255,255,255,0.15);
-            border-radius: 999px;
-
-            background: rgba(255,255,255,0.08);
-            backdrop-filter: blur(12px);
-
-            color: #bfdbfe;
-
-            font-size: 12px;
-            font-weight: 700;
-            letter-spacing: 1.5px;
-
-            margin-bottom: 22px;
-        }
-
-
-        .articles-hero h1 {
-            margin: 0 auto 20px;
-            max-width: 850px;
-
-            font-size: clamp(42px, 6vw, 74px);
-            line-height: 1.08;
-            letter-spacing: -2px;
-        }
-
-
-        .articles-hero p {
-            max-width: 720px;
-            margin: 0 auto;
-
-            color: #cbd5e1;
-
-            font-size: 18px;
-            line-height: 1.8;
-        }
-
-
-        /* ================================
-           STATS
-        ================================= */
-
-        .articles-stats {
-            position: relative;
-            z-index: 5;
-
-            max-width: 1000px;
-
-            margin:
-                -42px
-                auto
-                0;
-
-            padding: 0 20px;
-        }
-
-
-        .articles-stats-grid {
-            display: grid;
-
-            grid-template-columns:
-                repeat(3, 1fr);
-
-            background: white;
-
-            border-radius: 20px;
-
-            box-shadow:
-                0 20px 60px
-                rgba(15,23,42,0.14);
-
-            overflow: hidden;
-        }
-
-
-        .article-stat {
-            padding: 28px 20px;
-            text-align: center;
-            border-right: 1px solid #e2e8f0;
-        }
-
-
-        .article-stat:last-child {
-            border-right: none;
-        }
-
-
-        .article-stat strong {
-            display: block;
-
-            color: var(--articles-dark);
-
-            font-size: 28px;
-            margin-bottom: 5px;
-        }
-
-
-        .article-stat span {
-            color: var(--articles-muted);
-            font-size: 13px;
-        }
-
-
-        /* ================================
-           MAIN
-        ================================= */
-
-        .articles-main {
-            max-width: 1250px;
-            margin: auto;
-            padding: 80px 20px 100px;
-        }
-
-
-        /* ================================
-           TOOLBAR
-        ================================= */
-
-        .articles-toolbar {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 20px;
-
-            margin-bottom: 35px;
-        }
-
-
-        .articles-heading h2 {
-            margin: 0 0 8px;
-            font-size: 30px;
-            color: var(--articles-dark);
-        }
-
-
-        .articles-heading p {
-            margin: 0;
-            color: var(--articles-muted);
-        }
-
-
-        .articles-search {
-            position: relative;
-            width: 100%;
-            max-width: 380px;
-        }
-
-
-        .articles-search input {
-            width: 100%;
-
-            padding:
-                15px
-                18px
-                15px
-                48px;
-
-            border:
-                1px solid
-                var(--articles-border);
-
-            border-radius: 12px;
-
-            outline: none;
-
-            background: white;
-
-            font-size: 14px;
-
-            transition:
-                border-color 0.2s ease,
-                box-shadow 0.2s ease;
-        }
-
-
-        .articles-search input:focus {
-            border-color: var(--articles-primary);
-
-            box-shadow:
-                0 0 0 4px
-                rgba(37,99,235,0.1);
-        }
-
-
-        .search-icon {
-            position: absolute;
-
-            left: 17px;
-            top: 50%;
-
-            transform: translateY(-50%);
-
-            color: #94a3b8;
-
-            font-size: 18px;
-        }
-
-
-        /* ================================
-           FILTERS
-        ================================= */
-
-        .articles-filters {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-
-            margin-bottom: 45px;
-        }
-
-
-        .filter-btn {
-            border: 1px solid var(--articles-border);
-
-            background: white;
-
-            padding: 10px 17px;
-
-            border-radius: 999px;
-
-            color: var(--articles-muted);
-
-            cursor: pointer;
-
-            font-size: 13px;
-            font-weight: 600;
-
-            transition: all 0.25s ease;
-        }
-
-
-        .filter-btn:hover {
-            border-color: var(--articles-primary);
-            color: var(--articles-primary);
-        }
-
-
-        .filter-btn.active {
-            background: var(--articles-dark);
-            color: white;
-            border-color: var(--articles-dark);
-        }
-
-
-        /* ================================
-           BLOG GRID
-        ================================= */
-
-        .articles-grid {
-            display: grid;
-
-            grid-template-columns:
-                repeat(3, minmax(0, 1fr));
-
-            gap: 28px;
-        }
-
-
-        .article-card {
-            display: flex;
-            flex-direction: column;
-
-            min-height: 100%;
-
-            background: white;
-
-            border:
-                1px solid
-                rgba(226,232,240,0.9);
-
-            border-radius: 18px;
-
-            overflow: hidden;
-
-            box-shadow:
-                0 5px 20px
-                rgba(15,23,42,0.04);
-
-            transition:
-                transform 0.3s ease,
-                box-shadow 0.3s ease,
-                border-color 0.3s ease;
-        }
-
-
-        .article-card:hover {
-            transform: translateY(-7px);
-
-            border-color:
-                rgba(37,99,235,0.35);
-
-            box-shadow:
-                0 20px 45px
-                rgba(15,23,42,0.12);
-        }
-
-
-        .article-image {
-            position: relative;
-
-            aspect-ratio: 16 / 9;
-
-            overflow: hidden;
-
-            background:
-                linear-gradient(
-                    135deg,
-                    #e2e8f0,
-                    #cbd5e1
-                );
-        }
-
-
-        .article-image img {
-            width: 100%;
-            height: 100%;
-
-            object-fit: cover;
-
-            display: block;
-
-            transition:
-                transform 0.5s ease;
-        }
-
-
-        .article-card:hover
-        .article-image img {
-            transform: scale(1.06);
-        }
-
-
-        .article-image::after {
-            content: "";
-
-            position: absolute;
-
-            inset: 0;
-
-            background:
-                linear-gradient(
-                    to top,
-                    rgba(15,23,42,0.25),
-                    transparent 45%
-                );
-
-            pointer-events: none;
-        }
-
-
-        .article-content {
-            display: flex;
-            flex-direction: column;
-
-            flex: 1;
-
-            padding: 24px;
-        }
-
-
-        .article-meta {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-
-            gap: 10px;
-
-            margin-bottom: 15px;
-
-            font-size: 12px;
-        }
-
-
-        .article-category {
-            display: inline-block;
-
-            padding: 6px 10px;
-
-            border-radius: 999px;
-
-            background: #eff6ff;
-
-            color: #2563eb;
-
-            font-weight: 700;
-        }
-
-
-        .article-date {
-            color: #94a3b8;
-        }
-
-
-        .article-title {
-            margin: 0 0 13px;
-
-            color: var(--articles-dark);
-
-            font-size: 21px;
-            line-height: 1.4;
-        }
-
-
-        .article-description {
-            margin: 0;
-
-            color: var(--articles-muted);
-
-            font-size: 14px;
-            line-height: 1.7;
-
-            display: -webkit-box;
-            -webkit-line-clamp: 3;
-            -webkit-box-orient: vertical;
-
-            overflow: hidden;
-        }
-
-
-        .article-bottom {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-
-            margin-top: auto;
-            padding-top: 24px;
-        }
-
-
-        .read-article {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-
-            color: var(--articles-primary);
-
-            text-decoration: none;
-
-            font-size: 14px;
-            font-weight: 700;
-        }
-
-
-        .read-article span {
-            transition: transform 0.25s ease;
-        }
-
-
-        .read-article:hover span {
-            transform: translateX(5px);
-        }
-
-
-        /* ================================
-           LOADING
-        ================================= */
-
-        .articles-loading {
-            grid-column: 1 / -1;
-
-            text-align: center;
-
-            padding: 90px 20px;
-
-            color: var(--articles-muted);
-        }
-
-
-        .loader {
-            width: 42px;
-            height: 42px;
-
-            margin:
-                0
-                auto
-                18px;
-
-            border: 4px solid #e2e8f0;
-            border-top-color: #2563eb;
-
-            border-radius: 50%;
-
-            animation: spin 0.8s linear infinite;
-        }
-
-
-        @keyframes spin {
-            to {
-                transform: rotate(360deg);
-            }
-        }
-
-
-        /* ================================
-           EMPTY
-        ================================= */
-
-        .articles-empty {
-            grid-column: 1 / -1;
-
-            text-align: center;
-
-            padding: 80px 20px;
-
-            background: white;
-
-            border-radius: 18px;
-
-            border:
-                1px solid
-                var(--articles-border);
-        }
-
-
-        .articles-empty h3 {
-            color: var(--articles-dark);
-            margin-bottom: 8px;
-        }
-
-
-        .articles-empty p {
-            color: var(--articles-muted);
-        }
-
-
-        /* ================================
-           FOOTER CTA
-        ================================= */
-
-        .articles-cta {
-            margin-top: 80px;
-
-            padding: 55px 35px;
-
-            border-radius: 24px;
-
-            text-align: center;
-
-            color: white;
-
-            background:
-                linear-gradient(
-                    135deg,
-                    #0f172a,
-                    #172554
-                );
-
-            box-shadow:
-                0 20px 50px
-                rgba(15,23,42,0.15);
-        }
-
-
-        .articles-cta h2 {
-            margin: 0 0 14px;
-            font-size: 32px;
-        }
-
-
-        .articles-cta p {
-            max-width: 650px;
-
-            margin:
-                0
-                auto;
-
-            color: #cbd5e1;
-
-            line-height: 1.7;
-        }
-
-
-        /* ================================
-           RESPONSIVE
-        ================================= */
-
-        @media (max-width: 1000px) {
-
-            .articles-grid {
-                grid-template-columns:
-                    repeat(2, 1fr);
-            }
-
-        }
-
-
-        @media (max-width: 700px) {
-
-            .articles-hero {
-                padding:
-                    85px
-                    20px
-                    75px;
-            }
-
-
-            .articles-hero h1 {
-                letter-spacing: -1px;
-            }
-
-
-            .articles-hero p {
-                font-size: 16px;
-            }
-
-
-            .articles-stats-grid {
-                grid-template-columns:
-                    1fr;
-            }
-
-
-            .article-stat {
-                border-right: none;
-                border-bottom: 1px solid #e2e8f0;
-            }
-
-
-            .article-stat:last-child {
-                border-bottom: none;
-            }
-
-
-            .articles-main {
-                padding-top: 60px;
-            }
-
-
-            .articles-toolbar {
-                flex-direction: column;
-                align-items: stretch;
-            }
-
-
-            .articles-search {
-                max-width: none;
-            }
-
-
-            .articles-grid {
-                grid-template-columns: 1fr;
-            }
-
-
-            .articles-cta {
-                padding: 40px 22px;
-            }
-
-        }
-
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Articles | Electrolix</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    background:#f6f8fc;
+    color:#172033;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.articles-hero{
+    background:
+        radial-gradient(circle at top left, rgba(59,130,246,.22), transparent 35%),
+        linear-gradient(135deg,#0b1530,#14265a);
+    color:#fff;
+    padding:100px 20px 130px;
+    text-align:center;
+}
+
+.hero-inner{
+    max-width:850px;
+    margin:auto;
+}
+
+.hero-tag{
+    display:inline-block;
+    padding:9px 16px;
+    margin-bottom:22px;
+    border:1px solid rgba(255,255,255,.2);
+    border-radius:30px;
+    background:rgba(255,255,255,.08);
+    font-size:12px;
+    font-weight:700;
+    letter-spacing:1.5px;
+}
+
+.articles-hero h1{
+    font-size:clamp(42px,6vw,72px);
+    line-height:1.1;
+    margin-bottom:20px;
+}
+
+.articles-hero p{
+    max-width:650px;
+    margin:auto;
+    color:#cbd5e1;
+    font-size:17px;
+    line-height:1.8;
+}
+
+/* =========================
+   MAIN
+========================= */
+
+.articles-container{
+    max-width:1280px;
+    margin:-55px auto 0;
+    padding:0 20px 100px;
+    position:relative;
+}
+
+/* =========================
+   SEARCH
+========================= */
+
+.search-box{
+    max-width:750px;
+    margin:0 auto 70px;
+    background:#fff;
+    padding:10px;
+    border-radius:18px;
+    box-shadow:0 20px 60px rgba(15,23,42,.15);
+}
+
+.search-box input{
+    width:100%;
+    border:none;
+    outline:none;
+    padding:18px 20px;
+    font-size:16px;
+    background:#f8fafc;
+    border-radius:12px;
+}
+
+.search-box input:focus{
+    box-shadow:0 0 0 3px rgba(37,99,235,.12);
+}
+
+/* =========================
+   TOP INFO
+========================= */
+
+.articles-top{
+    display:flex;
+    align-items:end;
+    justify-content:space-between;
+    gap:20px;
+    margin-bottom:35px;
+}
+
+.articles-top h2{
+    font-size:30px;
+    margin-bottom:8px;
+}
+
+.articles-top p{
+    color:#64748b;
+}
+
+#articleCount{
+    white-space:nowrap;
+}
+
+/* =========================
+   GRID
+========================= */
+
+.articles-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:28px;
+}
+
+/* =========================
+   CARD
+========================= */
+
+.article-card{
+    background:#fff;
+    border:1px solid #e7edf5;
+    border-radius:20px;
+    overflow:hidden;
+    display:flex;
+    flex-direction:column;
+    transition:.3s ease;
+    box-shadow:0 5px 20px rgba(15,23,42,.04);
+}
+
+.article-card:hover{
+    transform:translateY(-7px);
+    box-shadow:0 22px 50px rgba(15,23,42,.13);
+}
+
+.article-image{
+    display:block;
+    height:220px;
+    overflow:hidden;
+    background:linear-gradient(135deg,#dbeafe,#e0e7ff);
+}
+
+.article-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+    transition:transform .5s ease;
+}
+
+.article-card:hover .article-image img{
+    transform:scale(1.06);
+}
+
+.article-content{
+    padding:24px;
+    display:flex;
+    flex-direction:column;
+    flex:1;
+}
+
+.article-date{
+    font-size:12px;
+    color:#64748b;
+    margin-bottom:14px;
+}
+
+.article-title{
+    font-size:21px;
+    line-height:1.4;
+    margin-bottom:13px;
+    color:#172033;
+}
+
+.article-description{
+    font-size:14px;
+    line-height:1.75;
+    color:#64748b;
+    display:-webkit-box;
+    -webkit-line-clamp:3;
+    -webkit-box-orient:vertical;
+    overflow:hidden;
+}
+
+.article-link{
+    margin-top:auto;
+    padding-top:25px;
+    text-decoration:none;
+    color:#2563eb;
+    font-weight:700;
+    font-size:14px;
+}
+
+.article-link:hover{
+    text-decoration:underline;
+}
+
+/* =========================
+   LOADING / EMPTY
+========================= */
+
+.message{
+    grid-column:1/-1;
+    background:#fff;
+    padding:70px 20px;
+    text-align:center;
+    border-radius:20px;
+    color:#64748b;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:1000px){
+
+    .articles-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+@media(max-width:650px){
+
+    .articles-hero{
+        padding:80px 20px 110px;
+    }
+
+    .articles-container{
+        padding:0 15px 70px;
+    }
+
+    .articles-grid{
+        grid-template-columns:1fr;
+    }
+
+    .articles-top{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+
+    .article-image{
+        height:230px;
+    }
+
+}
+
+</style>
 </head>
-
 
 <body>
 
 
-    <!-- EXISTING HEADER -->
-    <div id="header"></div>
+<!-- HERO -->
 
+<section class="articles-hero">
 
-    <!-- HERO -->
+    <div class="hero-inner">
 
-    <section class="articles-hero">
-
-        <div class="articles-hero-inner">
-
-            <div class="articles-breadcrumb">
-
-                <a href="index.html">Home</a>
-
-                <span>›</span>
-
-                <span>Articles</span>
-
-            </div>
-
-
-            <div class="articles-label">
-                ELECTROLIX KNOWLEDGE HUB
-            </div>
-
-
-            <h1>
-                Electrical Knowledge,
-                Made Simple.
-            </h1>
-
-
-            <p>
-                Explore practical guides, wire specifications,
-                buying insights and essential electrical knowledge
-                from Electrolix.
-            </p>
-
+        <div class="hero-tag">
+            ELECTROLIX KNOWLEDGE HUB
         </div>
 
-    </section>
+        <h1>
+            Explore Our Latest Electrical Guides
+        </h1>
+
+        <p>
+            Practical guides, wire specifications, buying insights
+            and useful electrical knowledge — all in one place.
+        </p>
+
+    </div>
+
+</section>
 
 
-    <!-- STATS -->
+<!-- CONTENT -->
 
-    <section class="articles-stats">
-
-        <div class="articles-stats-grid">
-
-            <div class="article-stat">
-
-                <strong id="articleCount">
-                    0
-                </strong>
-
-                <span>
-                    Expert Articles
-                </span>
-
-            </div>
+<main class="articles-container">
 
 
-            <div class="article-stat">
+    <!-- SEARCH -->
 
-                <strong>
-                    100%
-                </strong>
+    <div class="search-box">
 
-                <span>
-                    Practical Knowledge
-                </span>
-
-            </div>
-
-
-            <div class="article-stat">
-
-                <strong>
-                    Free
-                </strong>
-
-                <span>
-                    To Explore
-                </span>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- MAIN -->
-
-    <main class="articles-main">
-
-
-        <div class="articles-toolbar">
-
-            <div class="articles-heading">
-
-                <h2>
-                    Latest Articles
-                </h2>
-
-                <p id="resultsText">
-                    Loading articles...
-                </p>
-
-            </div>
-
-
-            <div class="articles-search">
-
-                <span class="search-icon">
-                    ⌕
-                </span>
-
-                <input
-                    type="search"
-                    id="articleSearch"
-                    placeholder="Search articles..."
-                    autocomplete="off"
-                >
-
-            </div>
-
-        </div>
-
-
-        <!-- FILTERS -->
-
-        <div class="articles-filters">
-
-            <button
-                class="filter-btn active"
-                data-category="All"
-            >
-                All Articles
-            </button>
-
-
-            <button
-                class="filter-btn"
-                data-category="Wire Guides"
-            >
-                Wire Guides
-            </button>
-
-
-            <button
-                class="filter-btn"
-                data-category="Wire Sizes"
-            >
-                Wire Sizes
-            </button>
-
-
-            <button
-                class="filter-btn"
-                data-category="Safety & Insulation"
-            >
-                Safety & Insulation
-            </button>
-
-
-            <button
-                class="filter-btn"
-                data-category="Buying Guides"
-            >
-                Buying Guides
-            </button>
-
-        </div>
-
-
-        <!-- ARTICLES -->
-
-        <section
-            class="articles-grid"
-            id="articlesGrid"
+        <input
+            type="search"
+            id="articleSearch"
+            placeholder="Search articles..."
+            autocomplete="off"
         >
 
-            <div class="articles-loading">
+    </div>
 
-                <div class="loader"></div>
+
+    <!-- TITLE -->
+
+    <div class="articles-top">
+
+        <div>
+
+            <h2>All Articles</h2>
+
+            <p id="resultsText">
+                Loading articles...
+            </p>
+
+        </div>
+
+        <p id="articleCount"></p>
+
+    </div>
+
+
+    <!-- BLOG GRID -->
+
+    <section
+        class="articles-grid"
+        id="articlesGrid"
+    >
+
+        <div class="message">
+            Loading articles...
+        </div>
+
+    </section>
+
+
+</main>
+
+
+<script>
+
+/* ========================================
+   ADD ONLY BLOG LINKS HERE
+======================================== */
+
+const blogLinks = [
+
+    "https://electrolix.github.io/finolex-90-mtr-wires-buying-guide.html",
+
+    "https://electrolix.github.io/finolex-copper-wires-guide.html",
+
+    "https://electrolix.github.io/finolex-frlsh-wires-explained.html",
+
+    "https://electrolix.github.io/finolex-frls-wires-features-uses.html",
+
+    "https://electrolix.github.io/finolex-fr-wires-features-sizes-uses.html",
+
+    "https://electrolix.github.io/finolex-4-sq-mm-wire-uses-specifications.html",
+
+    "https://electrolix.github.io/finolex-6-sq-mm-wire-guide.html",
+
+    "https://electrolix.github.io/understanding-finolex-1-5-sq-mm-wire.html",
+
+    "https://electrolix.github.io/finolex-1-sq-mm-wire-details.html"
+
+];
+
+
+/* ========================================
+   VARIABLES
+======================================== */
+
+let allArticles = [];
+
+
+/* ========================================
+   GET META DATA
+======================================== */
+
+function getMeta(doc, selector){
+
+    const element = doc.querySelector(selector);
+
+    if(element){
+        return element.getAttribute("content") || "";
+    }
+
+    return "";
+
+}
+
+
+/* ========================================
+   GET ARTICLE DATE
+======================================== */
+
+function getDate(doc){
+
+    const jsonScripts = doc.querySelectorAll(
+        'script[type="application/ld+json"]'
+    );
+
+    for(const script of jsonScripts){
+
+        try{
+
+            const data = JSON.parse(script.textContent);
+
+            const items = data["@graph"]
+                ? data["@graph"]
+                : [data];
+
+            for(const item of items){
+
+                if(item.datePublished){
+                    return item.datePublished;
+                }
+
+            }
+
+        }catch(error){
+
+            // Ignore invalid JSON-LD
+
+        }
+
+    }
+
+    return "";
+
+}
+
+
+/* ========================================
+   FORMAT DATE
+======================================== */
+
+function formatDate(date){
+
+    if(!date) return "";
+
+    const parsedDate = new Date(date);
+
+    if(isNaN(parsedDate)) return "";
+
+    return parsedDate.toLocaleDateString(
+        "en-IN",
+        {
+            day:"numeric",
+            month:"short",
+            year:"numeric"
+        }
+    );
+
+}
+
+
+/* ========================================
+   FETCH ONE ARTICLE
+======================================== */
+
+async function fetchArticle(url){
+
+    try{
+
+        const response = await fetch(url);
+
+        if(!response.ok){
+            throw new Error("Could not load article");
+        }
+
+        const html = await response.text();
+
+        const parser = new DOMParser();
+
+        const doc = parser.parseFromString(
+            html,
+            "text/html"
+        );
+
+
+        const title =
+
+            getMeta(
+                doc,
+                'meta[property="og:title"]'
+            )
+
+            ||
+
+            doc.querySelector("h1")
+                ?.textContent
+
+            ||
+
+            doc.querySelector("title")
+                ?.textContent
+
+            ||
+
+            "Electrolix Article";
+
+
+        const description =
+
+            getMeta(
+                doc,
+                'meta[property="og:description"]'
+            )
+
+            ||
+
+            getMeta(
+                doc,
+                'meta[name="description"]'
+            )
+
+            ||
+
+            "";
+
+
+        const image = getMeta(
+            doc,
+            'meta[property="og:image"]'
+        );
+
+
+        return {
+
+            title: title.trim(),
+
+            description: description.trim(),
+
+            image: image,
+
+            date: getDate(doc),
+
+            url: url
+
+        };
+
+    }
+
+    catch(error){
+
+        console.error(
+            "Failed to load:",
+            url,
+            error
+        );
+
+        return null;
+
+    }
+
+}
+
+
+/* ========================================
+   LOAD ALL BLOGS
+======================================== */
+
+async function loadArticles(){
+
+    const requests = blogLinks.map(
+        url => fetchArticle(url)
+    );
+
+    const results = await Promise.all(requests);
+
+    allArticles = results.filter(
+        article => article !== null
+    );
+
+    document.getElementById(
+        "articleCount"
+    ).textContent =
+        allArticles.length + " Articles";
+
+
+    renderArticles();
+
+}
+
+
+/* ========================================
+   RENDER BLOGS
+======================================== */
+
+function renderArticles(){
+
+    const grid = document.getElementById(
+        "articlesGrid"
+    );
+
+
+    const searchValue = document
+        .getElementById("articleSearch")
+        .value
+        .toLowerCase()
+        .trim();
+
+
+    const filteredArticles = allArticles.filter(
+        article => {
+
+            return (
+
+                article.title
+                    .toLowerCase()
+                    .includes(searchValue)
+
+                ||
+
+                article.description
+                    .toLowerCase()
+                    .includes(searchValue)
+
+            );
+
+        }
+    );
+
+
+    document.getElementById(
+        "resultsText"
+    ).textContent =
+        filteredArticles.length +
+        (
+            filteredArticles.length === 1
+                ? " article found"
+                : " articles found"
+        );
+
+
+    if(filteredArticles.length === 0){
+
+        grid.innerHTML = `
+
+            <div class="message">
+
+                <h3>No articles found</h3>
+
+                <br>
 
                 <p>
-                    Loading Electrolix articles...
+                    Try searching with another keyword.
                 </p>
 
             </div>
 
-        </section>
+        `;
 
+        return;
 
-        <!-- CTA -->
+    }
 
-        <section class="articles-cta">
 
-            <h2>
-                Building Better Electrical Knowledge
-            </h2>
+    grid.innerHTML = filteredArticles.map(
+        article => `
 
-            <p>
-                Our guides are designed to help homeowners,
-                electricians and buyers better understand
-                electrical wires, cables and related products.
-            </p>
+        <article class="article-card">
 
-        </section>
 
+            <a
+                href="${article.url}"
+                class="article-image"
+            >
 
-    </main>
+                ${
+                    article.image
 
+                    ?
 
-    <!-- EXISTING FOOTER -->
+                    `<img
+                        src="${article.image}"
+                        alt="${escapeHtml(article.title)}"
+                        loading="lazy"
+                    >`
 
-    <div id="footer"></div>
+                    :
 
-
-    <script src="js/script.js"></script>
-
-
-    <script>
-
-        /* =====================================
-           BLOG URLS
-
-           TO ADD A NEW BLOG:
-
-           JUST ADD ITS URL HERE.
-        ===================================== */
-
-        const blogLinks = [
-
-            "https://electrolix.github.io/finolex-90-mtr-wires-buying-guide.html",
-
-            "https://electrolix.github.io/finolex-copper-wires-guide.html",
-
-            "https://electrolix.github.io/finolex-frlsh-wires-explained.html",
-
-            "https://electrolix.github.io/finolex-frls-wires-features-uses.html",
-
-            "https://electrolix.github.io/finolex-fr-wires-features-sizes-uses.html",
-
-            "https://electrolix.github.io/finolex-4-sq-mm-wire-uses-specifications.html",
-
-            "https://electrolix.github.io/finolex-6-sq-mm-wire-guide.html",
-
-            "https://electrolix.github.io/understanding-finolex-1-5-sq-mm-wire.html",
-
-            "https://electrolix.github.io/finolex-1-sq-mm-wire-details.html"
-
-        ];
-
-
-        let allArticles = [];
-
-        let activeCategory = "All";
-
-
-        /* =====================================
-           GET META CONTENT
-        ===================================== */
-
-        function getMeta(document, selector) {
-
-            const element =
-                document.querySelector(selector);
-
-            return element
-                ? element.getAttribute("content")
-                : "";
-
-        }
-
-
-        /* =====================================
-           FIND CATEGORY
-        ===================================== */
-
-        function detectCategory(title, url) {
-
-            const text =
-                (title + " " + url).toLowerCase();
-
-
-            if (
-                text.includes("buying") ||
-                text.includes("90-mtr")
-            ) {
-                return "Buying Guides";
-            }
-
-
-            if (
-                text.includes("frls") ||
-                text.includes("frlsh") ||
-                text.includes("fr-wires") ||
-                text.includes("safety") ||
-                text.includes("insulation")
-            ) {
-                return "Safety & Insulation";
-            }
-
-
-            if (
-                text.includes("1-sq-mm") ||
-                text.includes("1-5") ||
-                text.includes("4-sq-mm") ||
-                text.includes("6-sq-mm") ||
-                text.includes("wire size")
-            ) {
-                return "Wire Sizes";
-            }
-
-
-            return "Wire Guides";
-
-        }
-
-
-        /* =====================================
-           FORMAT DATE
-        ===================================== */
-
-        function formatDate(dateValue) {
-
-            if (!dateValue) {
-                return "";
-            }
-
-
-            const date =
-                new Date(dateValue);
-
-
-            if (isNaN(date)) {
-                return "";
-            }
-
-
-            return date.toLocaleDateString(
-                "en-IN",
-                {
-                    day: "numeric",
-                    month: "short",
-                    year: "numeric"
-                }
-            );
-
-        }
-
-
-        /* =====================================
-           EXTRACT DATE FROM JSON-LD
-        ===================================== */
-
-        function getPublishedDate(doc) {
-
-            const scripts =
-                doc.querySelectorAll(
-                    'script[type="application/ld+json"]'
-                );
-
-
-            for (const script of scripts) {
-
-                try {
-
-                    const data =
-                        JSON.parse(script.textContent);
-
-
-                    const items =
-                        data["@graph"]
-                        ? data["@graph"]
-                        : [data];
-
-
-                    for (const item of items) {
-
-                        if (
-                            item["@type"] === "Article" &&
-                            item.datePublished
-                        ) {
-                            return item.datePublished;
-                        }
-
-                    }
-
-                } catch (error) {
-
-                    console.log(
-                        "Date metadata not found"
-                    );
+                    ""
 
                 }
 
-            }
+            </a>
 
 
-            return "";
-
-        }
+            <div class="article-content">
 
 
-        /* =====================================
-           FETCH SINGLE BLOG
-        ===================================== */
+                ${
+                    article.date
 
-        async function fetchArticle(url) {
+                    ?
 
-            try {
+                    `<div class="article-date">
+                        ${formatDate(article.date)}
+                    </div>`
 
-                const response =
-                    await fetch(url);
+                    :
 
+                    ""
 
-                if (!response.ok) {
-                    throw new Error(
-                        "Unable to load article"
-                    );
                 }
 
 
-                const html =
-                    await response.text();
+                <h2 class="article-title">
+                    ${escapeHtml(article.title)}
+                </h2>
 
 
-                const parser =
-                    new DOMParser();
+                <p class="article-description">
+                    ${escapeHtml(article.description)}
+                </p>
 
 
-                const doc =
-                    parser.parseFromString(
-                        html,
-                        "text/html"
-                    );
+                <a
+                    href="${article.url}"
+                    class="article-link"
+                >
+                    Read Article →
+                </a>
 
 
-                const title =
-                    getMeta(
-                        doc,
-                        'meta[property="og:title"]'
-                    )
-                    ||
-                    doc.querySelector("title")
-                        ?.textContent
-                    ||
-                    "Electrolix Article";
+            </div>
 
 
-                const description =
-                    getMeta(
-                        doc,
-                        'meta[property="og:description"]'
-                    )
-                    ||
-                    getMeta(
-                        doc,
-                        'meta[name="description"]'
-                    )
-                    ||
-                    "";
+        </article>
 
+    `
+    ).join("");
 
-                const image =
-                    getMeta(
-                        doc,
-                        'meta[property="og:image"]'
-                    );
+}
 
 
-                const publishedDate =
-                    getPublishedDate(doc);
+/* ========================================
+   PREVENT HTML ISSUES
+======================================== */
 
+function escapeHtml(text){
 
-                const canonical =
-                    doc.querySelector(
-                        'link[rel="canonical"]'
-                    )
-                    ?.href
-                    ||
-                    url;
+    const div = document.createElement("div");
 
+    div.textContent = text;
 
-                return {
+    return div.innerHTML;
 
-                    title:
-                        title.trim(),
+}
 
-                    description:
-                        description.trim(),
 
-                    image,
+/* ========================================
+   WORKING SEARCH
+======================================== */
 
-                    date:
-                        publishedDate,
+document
+    .getElementById("articleSearch")
+    .addEventListener(
+        "input",
+        renderArticles
+    );
 
-                    url:
-                        canonical,
 
-                    category:
-                        detectCategory(
-                            title,
-                            url
-                        )
+/* ========================================
+   START
+======================================== */
 
-                };
+loadArticles();
 
-            }
-
-
-            catch (error) {
-
-                console.error(
-                    "Article failed:",
-                    url,
-                    error
-                );
-
-
-                return null;
-
-            }
-
-        }
-
-
-        /* =====================================
-           LOAD ALL ARTICLES
-        ===================================== */
-
-        async function loadArticles() {
-
-            const requests =
-                blogLinks.map(
-                    url => fetchArticle(url)
-                );
-
-
-            const results =
-                await Promise.all(requests);
-
-
-            allArticles =
-                results.filter(
-                    article => article !== null
-                );
-
-
-            document.getElementById(
-                "articleCount"
-            ).textContent =
-                allArticles.length;
-
-
-            renderArticles();
-
-        }
-
-
-        /* =====================================
-           RENDER ARTICLES
-        ===================================== */
-
-        function renderArticles() {
-
-            const grid =
-                document.getElementById(
-                    "articlesGrid"
-                );
-
-
-            const searchValue =
-                document
-                    .getElementById(
-                        "articleSearch"
-                    )
-                    .value
-                    .toLowerCase()
-                    .trim();
-
-
-            const filtered =
-                allArticles.filter(article => {
-
-                    const matchesSearch =
-
-                        article.title
-                            .toLowerCase()
-                            .includes(searchValue)
-
-                        ||
-
-                        article.description
-                            .toLowerCase()
-                            .includes(searchValue);
-
-
-                    const matchesCategory =
-
-                        activeCategory === "All"
-
-                        ||
-
-                        article.category ===
-                        activeCategory;
-
-
-                    return
-                        matchesSearch &&
-                        matchesCategory;
-
-                });
-
-
-            document.getElementById(
-                "resultsText"
-            ).textContent =
-
-                filtered.length === 1
-
-                    ? "1 article found"
-
-                    : `${filtered.length} articles found`;
-
-
-            if (!filtered.length) {
-
-                grid.innerHTML = `
-
-                    <div class="articles-empty">
-
-                        <h3>
-                            No articles found
-                        </h3>
-
-                        <p>
-                            Try searching with a
-                            different keyword.
-                        </p>
-
-                    </div>
-
-                `;
-
-                return;
-
-            }
-
-
-            grid.innerHTML =
-                filtered.map(article => `
-
-                    <article class="article-card">
-
-
-                        <a
-                            href="${article.url}"
-                            class="article-image"
-                            aria-label="${article.title}"
-                        >
-
-                            ${
-                                article.image
-
-                                ?
-
-                                `
-                                <img
-                                    src="${article.image}"
-                                    alt="${article.title}"
-                                    loading="lazy"
-                                >
-                                `
-
-                                :
-
-                                ""
-                            }
-
-                        </a>
-
-
-                        <div class="article-content">
-
-
-                            <div class="article-meta">
-
-                                <span
-                                    class="article-category"
-                                >
-                                    ${article.category}
-                                </span>
-
-
-                                <span
-                                    class="article-date"
-                                >
-                                    ${
-                                        formatDate(
-                                            article.date
-                                        )
-                                    }
-                                </span>
-
-                            </div>
-
-
-                            <h2 class="article-title">
-
-                                ${article.title}
-
-                            </h2>
-
-
-                            <p
-                                class="article-description"
-                            >
-
-                                ${article.description}
-
-                            </p>
-
-
-                            <div
-                                class="article-bottom"
-                            >
-
-                                <a
-                                    href="${article.url}"
-                                    class="read-article"
-                                >
-
-                                    Read Article
-
-                                    <span>
-                                        →
-                                    </span>
-
-                                </a>
-
-                            </div>
-
-
-                        </div>
-
-
-                    </article>
-
-                `).join("");
-
-        }
-
-
-        /* =====================================
-           SEARCH
-        ===================================== */
-
-        document
-            .getElementById(
-                "articleSearch"
-            )
-            .addEventListener(
-                "input",
-                renderArticles
-            );
-
-
-        /* =====================================
-           CATEGORY FILTER
-        ===================================== */
-
-        document
-            .querySelectorAll(
-                ".filter-btn"
-            )
-            .forEach(button => {
-
-                button.addEventListener(
-                    "click",
-                    function() {
-
-                        document
-                            .querySelectorAll(
-                                ".filter-btn"
-                            )
-                            .forEach(btn => {
-
-                                btn.classList.remove(
-                                    "active"
-                                );
-
-                            });
-
-
-                        this.classList.add(
-                            "active"
-                        );
-
-
-                        activeCategory =
-                            this.dataset.category;
-
-
-                        renderArticles();
-
-                    }
-                );
-
-            });
-
-
-        /* =====================================
-           START
-        ===================================== */
-
-        loadArticles();
-
-    </script>
-
+</script>
 
 </body>
 </html>
