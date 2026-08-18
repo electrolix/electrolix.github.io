@@ -7,9 +7,6 @@
 
 <title>Articles | Electrolix</title>
 
-<meta name="description"
-      content="Explore electrical guides, wire specifications, buying guides and practical electrical knowledge from Electrolix.">
-
 <style>
 
 /* =========================================================
@@ -36,8 +33,8 @@ body{
         Arial,
         sans-serif;
 
-    background:#f8fafc;
-    color:#101828;
+    background:#ffffff;
+    color:#111827;
     line-height:1.6;
 }
 
@@ -56,176 +53,88 @@ a{
 
 :root{
 
-    --navy:#08152f;
-    --navy-2:#102653;
+    --blue:#1746d1;
+    --blue-dark:#0b1f4d;
 
-    --blue:#2563eb;
-    --blue-dark:#1d4ed8;
-
-    --text:#101828;
+    --text:#111827;
     --muted:#667085;
-    --light:#98a2b3;
+    --light-muted:#98a2b3;
 
-    --border:#e4e7ec;
-    --surface:#ffffff;
-    --surface-soft:#f8fafc;
+    --border:#e8ebf0;
 
-    --radius:18px;
+    --background:#ffffff;
+    --soft:#f7f8fa;
 
-    --shadow:
-        0 10px 40px rgba(16,24,40,.06);
-
-    --shadow-hover:
-        0 20px 55px rgba(16,24,40,.12);
-
+    --max-width:1240px;
 }
 
 
 /* =========================================================
-   HEADER
+   TOP NAVIGATION
 ========================================================= */
 
 .site-header{
 
-    position:sticky;
-    top:0;
-    z-index:1000;
+    position:relative;
 
-    height:76px;
+    width:100%;
 
-    background:rgba(255,255,255,.92);
+    background:#ffffff;
 
-    backdrop-filter:blur(18px);
+    border-bottom:1px solid var(--border);
 
-    border-bottom:1px solid rgba(228,231,236,.8);
 }
 
 .header-inner{
 
-    max-width:1240px;
-
-    height:100%;
+    max-width:var(--max-width);
 
     margin:auto;
 
-    padding:0 24px;
+    padding:22px 24px;
 
     display:flex;
 
     align-items:center;
 
     justify-content:space-between;
+
+    gap:30px;
+
 }
-
-
-/* LOGO */
 
 .logo{
 
-    display:flex;
-
-    align-items:center;
-
-    gap:11px;
-
     text-decoration:none;
-}
 
-.logo-mark{
-
-    width:38px;
-    height:38px;
-
-    border-radius:11px;
-
-    background:var(--navy);
-
-    color:#fff;
-
-    display:flex;
-
-    align-items:center;
-    justify-content:center;
-
-    font-weight:900;
-
-    font-size:18px;
-
-    box-shadow:
-        0 6px 18px rgba(8,21,47,.18);
-}
-
-.logo-text{
-
-    font-size:19px;
+    font-size:25px;
 
     font-weight:800;
 
-    letter-spacing:-.5px;
+    letter-spacing:-1px;
+
+    color:#111827;
+
 }
 
-.logo-text span{
+.logo span{
+
     color:var(--blue);
+
 }
 
+.header-label{
 
-/* NAV */
+    font-size:12px;
 
-.main-nav{
+    font-weight:700;
 
-    display:flex;
+    letter-spacing:1.5px;
 
-    align-items:center;
+    text-transform:uppercase;
 
-    gap:30px;
-}
+    color:#667085;
 
-.main-nav a{
-
-    text-decoration:none;
-
-    font-size:14px;
-
-    font-weight:600;
-
-    color:#475467;
-
-    transition:.2s;
-}
-
-.main-nav a:hover{
-    color:var(--blue);
-}
-
-.nav-active{
-    color:var(--blue)!important;
-}
-
-
-/* HEADER BUTTON */
-
-.header-button{
-
-    text-decoration:none;
-
-    background:var(--navy);
-
-    color:#fff!important;
-
-    padding:10px 17px;
-
-    border-radius:9px;
-
-    font-size:13px!important;
-
-    transition:.25s;
-}
-
-.header-button:hover{
-
-    background:var(--blue);
-
-    transform:translateY(-1px);
 }
 
 
@@ -233,160 +142,86 @@ a{
    HERO
 ========================================================= */
 
-.articles-hero{
+.blog-hero{
 
-    position:relative;
+    background:#f7f8fa;
 
-    overflow:hidden;
+    padding:90px 24px 100px;
 
-    background:
-        radial-gradient(
-            circle at 15% 20%,
-            rgba(37,99,235,.28),
-            transparent 30%
-        ),
-        radial-gradient(
-            circle at 85% 70%,
-            rgba(59,130,246,.14),
-            transparent 30%
-        ),
-        linear-gradient(
-            135deg,
-            #07142f 0%,
-            #0d1f47 55%,
-            #102b5c 100%
-        );
+    border-bottom:1px solid var(--border);
 
-    color:#fff;
-
-    padding:110px 24px 150px;
 }
-
-
-/* decorative grid */
-
-.articles-hero::before{
-
-    content:"";
-
-    position:absolute;
-
-    inset:0;
-
-    opacity:.08;
-
-    background-image:
-        linear-gradient(
-            rgba(255,255,255,.5) 1px,
-            transparent 1px
-        ),
-        linear-gradient(
-            90deg,
-            rgba(255,255,255,.5) 1px,
-            transparent 1px
-        );
-
-    background-size:50px 50px;
-
-    mask-image:
-        linear-gradient(
-            to bottom,
-            black,
-            transparent
-        );
-
-    pointer-events:none;
-}
-
 
 .hero-inner{
 
-    position:relative;
-
-    max-width:920px;
+    max-width:var(--max-width);
 
     margin:auto;
 
-    text-align:center;
 }
 
-
-/* BADGE */
-
-.hero-tag{
+.hero-label{
 
     display:inline-flex;
 
     align-items:center;
 
-    gap:8px;
-
-    padding:7px 13px;
+    gap:9px;
 
     margin-bottom:25px;
 
-    border:1px solid rgba(255,255,255,.16);
+    color:var(--blue);
 
-    border-radius:50px;
-
-    background:rgba(255,255,255,.07);
-
-    color:#dbeafe;
-
-    font-size:11px;
+    font-size:12px;
 
     font-weight:800;
 
-    letter-spacing:1.6px;
+    letter-spacing:1.7px;
+
+    text-transform:uppercase;
+
 }
 
-.hero-tag::before{
+.hero-label::before{
 
     content:"";
 
-    width:6px;
-    height:6px;
+    width:28px;
 
-    border-radius:50%;
+    height:2px;
 
-    background:#60a5fa;
+    background:var(--blue);
 
-    box-shadow:0 0 12px #60a5fa;
 }
 
-
-.articles-hero h1{
+.blog-hero h1{
 
     max-width:900px;
 
-    margin:auto;
-
-    font-size:
-        clamp(
-            42px,
-            7vw,
-            78px
-        );
+    font-size:clamp(44px,6vw,76px);
 
     line-height:1.02;
 
     letter-spacing:-3px;
 
-    font-weight:850;
+    font-weight:800;
+
+    color:#101828;
+
+    margin-bottom:25px;
+
 }
 
+.blog-hero-description{
 
-.articles-hero p{
+    max-width:700px;
 
-    max-width:680px;
-
-    margin:28px auto 0;
-
-    color:#b9c7dc;
-
-    font-size:17px;
+    font-size:18px;
 
     line-height:1.8;
+
+    color:#667085;
+
 }
 
 
@@ -394,50 +229,50 @@ a{
    MAIN
 ========================================================= */
 
-.articles-container{
+.blog-container{
 
-    max-width:1240px;
+    max-width:var(--max-width);
 
-    margin:-65px auto 0;
+    margin:auto;
 
-    padding:0 24px 100px;
+    padding:75px 24px 100px;
 
-    position:relative;
-
-    z-index:2;
 }
 
 
 /* =========================================================
-   SEARCH PANEL
+   SEARCH AREA
 ========================================================= */
 
-.search-panel{
+.toolbar{
 
-    background:#fff;
+    display:flex;
 
-    border:1px solid rgba(228,231,236,.9);
+    align-items:center;
 
-    border-radius:18px;
+    justify-content:space-between;
 
-    padding:14px;
+    gap:30px;
 
-    box-shadow:
-        0 20px 60px rgba(16,24,40,.13);
+    margin-bottom:55px;
 
-    margin-bottom:70px;
 }
 
 .search-wrapper{
 
+    width:100%;
+
+    max-width:470px;
+
     position:relative;
+
 }
 
 .search-icon{
 
     position:absolute;
 
-    left:19px;
+    left:18px;
 
     top:50%;
 
@@ -445,43 +280,56 @@ a{
 
     color:#98a2b3;
 
-    width:19px;
-    height:19px;
+    pointer-events:none;
+
 }
 
-.search-box{
+.search-wrapper input{
 
     width:100%;
 
-    border:0;
+    height:54px;
 
-    outline:0;
+    padding:0 20px 0 50px;
 
-    background:#f8fafc;
+    border:1px solid var(--border);
 
-    border-radius:11px;
+    border-radius:8px;
 
-    padding:17px 20px 17px 51px;
+    outline:none;
 
-    font-family:inherit;
+    background:#ffffff;
 
     font-size:15px;
 
     color:var(--text);
 
-    transition:.2s;
+    transition:.2s ease;
+
 }
 
-.search-box::placeholder{
+.search-wrapper input::placeholder{
+
     color:#98a2b3;
+
 }
 
-.search-box:focus{
+.search-wrapper input:focus{
 
-    background:#fff;
+    border-color:#9bb3f3;
 
-    box-shadow:
-        0 0 0 3px rgba(37,99,235,.12);
+    box-shadow:0 0 0 4px rgba(23,70,209,.07);
+
+}
+
+.article-count{
+
+    color:#667085;
+
+    font-size:14px;
+
+    white-space:nowrap;
+
 }
 
 
@@ -493,62 +341,34 @@ a{
 
     display:flex;
 
-    align-items:flex-end;
-
     justify-content:space-between;
 
-    gap:30px;
+    align-items:end;
 
-    margin-bottom:32px;
-}
+    margin-bottom:30px;
 
-.section-heading-left{
+    padding-bottom:18px;
 
-    max-width:650px;
-}
+    border-bottom:1px solid var(--border);
 
-.section-eyebrow{
-
-    color:var(--blue);
-
-    font-size:11px;
-
-    font-weight:800;
-
-    letter-spacing:1.6px;
-
-    text-transform:uppercase;
-
-    margin-bottom:8px;
 }
 
 .section-heading h2{
 
-    font-size:34px;
+    font-size:30px;
 
-    line-height:1.15;
+    letter-spacing:-1px;
 
-    letter-spacing:-1.2px;
+    line-height:1.2;
+
 }
 
 .section-heading p{
 
-    color:var(--muted);
-
-    margin-top:8px;
+    color:#98a2b3;
 
     font-size:14px;
-}
 
-.article-count{
-
-    white-space:nowrap;
-
-    color:#667085;
-
-    font-size:13px;
-
-    font-weight:600;
 }
 
 
@@ -560,139 +380,81 @@ a{
 
     display:grid;
 
-    grid-template-columns:
-        minmax(0,1.35fr)
-        minmax(320px,.85fr);
+    grid-template-columns:1.45fr 1fr;
 
-    min-height:440px;
-
-    background:#fff;
+    min-height:480px;
 
     border:1px solid var(--border);
 
-    border-radius:22px;
+    background:#ffffff;
+
+    margin-bottom:80px;
 
     overflow:hidden;
 
-    margin-bottom:70px;
-
-    box-shadow:var(--shadow);
-
-    transition:.35s ease;
 }
-
-.featured-article:hover{
-
-    box-shadow:var(--shadow-hover);
-
-    transform:translateY(-3px);
-}
-
 
 .featured-image{
 
     position:relative;
 
-    min-height:440px;
+    display:block;
 
     overflow:hidden;
 
-    background:
-        linear-gradient(
-            135deg,
-            #dbeafe,
-            #e0e7ff
-        );
+    /* EXACT 1536 × 1024 RATIO */
+
+    aspect-ratio:3 / 2;
+
+    min-height:100%;
+
+    background:#e9eef8;
+
 }
 
 .featured-image img{
 
     width:100%;
-    height:100%;
 
-    object-fit:cover;
+    height:100%;
 
     display:block;
 
-    transition:
-        transform .7s cubic-bezier(.2,.8,.2,1);
+    object-fit:cover;
+
+    transition:transform .7s cubic-bezier(.2,.7,.2,1);
+
 }
 
-.featured-article:hover
-.featured-image img{
+.featured-article:hover .featured-image img{
 
-    transform:scale(1.04);
+    transform:scale(1.035);
+
 }
-
-
-/* image gradient */
-
-.featured-image::after{
-
-    content:"";
-
-    position:absolute;
-
-    inset:0;
-
-    background:
-        linear-gradient(
-            to top,
-            rgba(0,0,0,.28),
-            transparent 45%
-        );
-
-    pointer-events:none;
-}
-
-
-/* FEATURED BADGE */
-
-.featured-badge{
-
-    position:absolute;
-
-    left:22px;
-
-    top:22px;
-
-    z-index:2;
-
-    background:#fff;
-
-    color:var(--navy);
-
-    padding:8px 12px;
-
-    border-radius:8px;
-
-    font-size:10px;
-
-    font-weight:800;
-
-    letter-spacing:1px;
-
-    text-transform:uppercase;
-
-    box-shadow:
-        0 8px 25px rgba(0,0,0,.12);
-}
-
-
-/* FEATURED CONTENT */
 
 .featured-content{
-
-    padding:48px;
 
     display:flex;
 
     flex-direction:column;
 
     justify-content:center;
+
+    padding:55px;
+
 }
 
-.featured-label{
+.featured-badge{
+
+    display:inline-block;
+
+    align-self:flex-start;
+
+    margin-bottom:22px;
+
+    padding:7px 11px;
+
+    background:#edf3ff;
 
     color:var(--blue);
 
@@ -700,29 +462,32 @@ a{
 
     font-weight:800;
 
-    letter-spacing:1.5px;
+    letter-spacing:1.2px;
 
     text-transform:uppercase;
 
-    margin-bottom:17px;
+}
+
+.featured-date{
+
+    color:#98a2b3;
+
+    font-size:13px;
+
+    margin-bottom:15px;
+
 }
 
 .featured-title{
 
-    font-size:
-        clamp(
-            28px,
-            3.2vw,
-            42px
-        );
+    font-size:clamp(30px,3vw,45px);
 
-    line-height:1.13;
+    line-height:1.12;
 
-    letter-spacing:-1.6px;
+    letter-spacing:-1.7px;
 
-    color:#101828;
+    margin-bottom:20px;
 
-    margin-bottom:18px;
 }
 
 .featured-description{
@@ -733,6 +498,8 @@ a{
 
     line-height:1.8;
 
+    margin-bottom:30px;
+
     display:-webkit-box;
 
     -webkit-line-clamp:4;
@@ -740,42 +507,8 @@ a{
     -webkit-box-orient:vertical;
 
     overflow:hidden;
+
 }
-
-
-/* META */
-
-.article-meta{
-
-    display:flex;
-
-    align-items:center;
-
-    flex-wrap:wrap;
-
-    gap:10px;
-
-    margin-top:25px;
-
-    color:#98a2b3;
-
-    font-size:12px;
-
-    font-weight:600;
-}
-
-.meta-dot{
-
-    width:4px;
-    height:4px;
-
-    background:#cbd5e1;
-
-    border-radius:50%;
-}
-
-
-/* READ BUTTON */
 
 .featured-link{
 
@@ -783,42 +516,46 @@ a{
 
     align-items:center;
 
-    gap:10px;
+    gap:12px;
 
-    width:max-content;
-
-    margin-top:32px;
-
-    padding:12px 17px;
-
-    border-radius:9px;
-
-    background:var(--navy);
-
-    color:#fff;
+    align-self:flex-start;
 
     text-decoration:none;
 
-    font-size:13px;
+    font-size:14px;
 
-    font-weight:700;
+    font-weight:800;
 
-    transition:.25s;
+    color:#111827;
+
+    border-bottom:1px solid #111827;
+
+    padding-bottom:5px;
+
+    transition:.2s ease;
+
 }
 
 .featured-link span{
 
-    transition:.25s;
+    font-size:18px;
+
+    transition:.2s ease;
+
 }
 
 .featured-link:hover{
 
-    background:var(--blue);
+    color:var(--blue);
+
+    border-color:var(--blue);
+
 }
 
 .featured-link:hover span{
 
     transform:translateX(4px);
+
 }
 
 
@@ -831,9 +568,10 @@ a{
     display:grid;
 
     grid-template-columns:
-        repeat(3,minmax(0,1fr));
+        repeat(3,1fr);
 
-    gap:28px;
+    gap:50px 28px;
+
 }
 
 
@@ -843,180 +581,167 @@ a{
 
 .article-card{
 
-    background:#fff;
-
-    border:1px solid var(--border);
-
-    border-radius:17px;
-
-    overflow:hidden;
-
-    display:flex;
-
-    flex-direction:column;
-
     min-width:0;
 
-    transition:
-        transform .3s ease,
-        box-shadow .3s ease,
-        border-color .3s ease;
 }
-
-.article-card:hover{
-
-    transform:translateY(-6px);
-
-    box-shadow:
-        0 18px 45px rgba(16,24,40,.10);
-
-    border-color:#d5dbe5;
-}
-
-
-/* IMAGE */
 
 .article-image{
 
-    position:relative;
-
     display:block;
 
-    height:225px;
+    position:relative;
 
     overflow:hidden;
 
-    background:
-        linear-gradient(
-            135deg,
-            #dbeafe,
-            #eef2ff
-        );
+    margin-bottom:22px;
+
+    background:#edf1f7;
+
+    /* EXACT 1536 × 1024 RATIO */
+
+    aspect-ratio:3 / 2;
+
 }
 
 .article-image img{
 
     width:100%;
-    height:100%;
 
-    object-fit:cover;
+    height:100%;
 
     display:block;
 
+    object-fit:cover;
+
     transition:
-        transform .6s ease;
+        transform .65s cubic-bezier(.2,.7,.2,1);
+
 }
 
-.article-card:hover
-.article-image img{
+.article-card:hover .article-image img{
 
-    transform:scale(1.06);
+    transform:scale(1.045);
+
 }
 
 
-/* image fallback */
+/* =========================================================
+   IMAGE FALLBACK
+========================================================= */
 
-.image-placeholder{
+.no-image{
 
     width:100%;
+
     height:100%;
 
     display:flex;
 
     align-items:center;
+
     justify-content:center;
 
-    color:#64748b;
-
-    font-size:13px;
-
-    font-weight:700;
-}
-
-
-/* CATEGORY */
-
-.article-category{
-
-    position:absolute;
-
-    left:16px;
-
-    bottom:16px;
-
-    padding:6px 10px;
-
-    border-radius:7px;
-
-    background:rgba(255,255,255,.94);
-
-    backdrop-filter:blur(10px);
-
-    color:#344054;
-
-    font-size:10px;
-
-    font-weight:800;
-
-    letter-spacing:.7px;
-
-    text-transform:uppercase;
-}
-
-
-/* CONTENT */
-
-.article-content{
-
-    padding:24px;
-
-    display:flex;
-
-    flex-direction:column;
-
-    flex:1;
-}
-
-
-/* DATE */
-
-.article-date{
+    background:
+        linear-gradient(
+            135deg,
+            #edf3ff,
+            #f5f7fa
+        );
 
     color:#98a2b3;
 
-    font-size:11px;
+    font-size:13px;
 
-    font-weight:600;
-
-    margin-bottom:12px;
 }
 
 
-/* TITLE */
+/* =========================================================
+   ARTICLE META
+========================================================= */
 
-.article-title{
+.article-meta{
 
-    color:#101828;
+    display:flex;
 
-    font-size:20px;
+    align-items:center;
 
-    line-height:1.35;
-
-    letter-spacing:-.45px;
+    gap:10px;
 
     margin-bottom:11px;
 
-    font-weight:750;
+    color:#98a2b3;
+
+    font-size:12px;
+
+}
+
+.article-category{
+
+    color:var(--blue);
+
+    font-weight:800;
+
+    text-transform:uppercase;
+
+    letter-spacing:1px;
+
+}
+
+.meta-dot{
+
+    width:3px;
+
+    height:3px;
+
+    background:#c7cdd6;
+
+    border-radius:50%;
+
 }
 
 
-/* DESCRIPTION */
+/* =========================================================
+   TITLE
+========================================================= */
+
+.article-title{
+
+    font-size:23px;
+
+    line-height:1.3;
+
+    letter-spacing:-.6px;
+
+    font-weight:750;
+
+    margin-bottom:12px;
+
+}
+
+.article-title a{
+
+    text-decoration:none;
+
+    transition:.2s ease;
+
+}
+
+.article-title a:hover{
+
+    color:var(--blue);
+
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
 
 .article-description{
 
     color:#667085;
 
-    font-size:13.5px;
+    font-size:14px;
 
     line-height:1.75;
 
@@ -1027,73 +752,81 @@ a{
     -webkit-box-orient:vertical;
 
     overflow:hidden;
+
+    margin-bottom:18px;
+
 }
 
 
-/* LINK */
+/* =========================================================
+   READ LINK
+========================================================= */
 
 .article-link{
 
-    display:flex;
+    display:inline-flex;
 
     align-items:center;
 
     gap:8px;
 
-    width:max-content;
-
-    margin-top:auto;
-
-    padding-top:23px;
-
-    color:var(--blue);
+    color:#111827;
 
     text-decoration:none;
 
     font-size:13px;
 
-    font-weight:750;
+    font-weight:800;
+
+    transition:.2s ease;
+
 }
 
 .article-link span{
 
-    transition:.25s;
+    transition:.2s ease;
+
+}
+
+.article-link:hover{
+
+    color:var(--blue);
+
 }
 
 .article-link:hover span{
 
     transform:translateX(4px);
+
 }
 
 
 /* =========================================================
-   NO RESULTS / LOADING
+   LOADING / EMPTY
 ========================================================= */
 
 .message{
 
-    grid-column:1/-1;
+    grid-column:1 / -1;
 
-    background:#fff;
-
-    border:1px solid var(--border);
-
-    border-radius:18px;
-
-    padding:80px 25px;
+    padding:90px 20px;
 
     text-align:center;
 
+    border:1px solid var(--border);
+
+    background:#fafbfc;
+
     color:#667085;
+
 }
 
 .message h3{
 
-    color:#101828;
-
-    font-size:22px;
+    color:#111827;
 
     margin-bottom:8px;
+
 }
 
 
@@ -1103,72 +836,13 @@ a{
 
 .blog-cta{
 
-    margin-top:90px;
+    margin-top:100px;
 
-    border-radius:22px;
+    padding:60px;
 
-    padding:60px 30px;
+    background:#0d1f45;
 
-    text-align:center;
-
-    color:#fff;
-
-    background:
-        radial-gradient(
-            circle at 20% 30%,
-            rgba(37,99,235,.4),
-            transparent 30%
-        ),
-        linear-gradient(
-            135deg,
-            #08152f,
-            #102653
-        );
-
-    overflow:hidden;
-
-    position:relative;
-}
-
-.blog-cta h2{
-
-    font-size:32px;
-
-    letter-spacing:-1px;
-
-    margin-bottom:10px;
-}
-
-.blog-cta p{
-
-    max-width:600px;
-
-    margin:auto;
-
-    color:#b9c7dc;
-
-    font-size:14px;
-}
-
-
-/* =========================================================
-   FOOTER
-========================================================= */
-
-.site-footer{
-
-    border-top:1px solid var(--border);
-
-    background:#fff;
-
-    padding:35px 24px;
-}
-
-.footer-inner{
-
-    max-width:1240px;
-
-    margin:auto;
+    color:#ffffff;
 
     display:flex;
 
@@ -1176,21 +850,70 @@ a{
 
     justify-content:space-between;
 
-    gap:20px;
+    gap:40px;
+
 }
 
-.footer-inner p{
+.blog-cta-content{
 
-    color:#98a2b3;
+    max-width:650px;
 
-    font-size:12px;
 }
 
-.footer-brand{
+.blog-cta h2{
 
-    font-size:14px;
+    font-size:32px;
+
+    line-height:1.2;
+
+    letter-spacing:-1px;
+
+    margin-bottom:12px;
+
+}
+
+.blog-cta p{
+
+    color:#b9c5da;
+
+    font-size:15px;
+
+    line-height:1.7;
+
+}
+
+.blog-cta-button{
+
+    flex-shrink:0;
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    padding:15px 22px;
+
+    background:#ffffff;
+
+    color:#0d1f45;
+
+    text-decoration:none;
+
+    font-size:13px;
 
     font-weight:800;
+
+    transition:.2s ease;
+
+}
+
+.blog-cta-button:hover{
+
+    transform:translateY(-2px);
+
+    background:#edf3ff;
+
 }
 
 
@@ -1200,10 +923,6 @@ a{
 
 @media(max-width:1000px){
 
-    .main-nav{
-        gap:18px;
-    }
-
     .featured-article{
 
         grid-template-columns:1fr;
@@ -1212,18 +931,24 @@ a{
 
     .featured-image{
 
-        min-height:350px;
+        aspect-ratio:3 / 2;
+
+        min-height:auto;
+
     }
 
     .featured-content{
 
-        padding:35px;
+        padding:40px;
+
     }
 
     .articles-grid{
 
         grid-template-columns:
-            repeat(2,minmax(0,1fr));
+            repeat(2,1fr);
+
+        gap:45px 24px;
 
     }
 
@@ -1232,97 +957,93 @@ a{
 
 @media(max-width:700px){
 
-    .site-header{
-        height:68px;
-    }
-
     .header-inner{
-        padding:0 16px;
+
+        padding:18px 18px;
+
     }
 
-    .main-nav{
+    .header-label{
+
         display:none;
-    }
-
-    .header-button{
-        display:none;
-    }
-
-    .logo-text{
-        font-size:17px;
-    }
-
-    .articles-hero{
-
-        padding:
-            80px
-            20px
-            125px;
 
     }
 
-    .articles-hero h1{
+    .blog-hero{
+
+        padding:65px 18px 70px;
+
+    }
+
+    .blog-hero h1{
+
+        font-size:44px;
 
         letter-spacing:-2px;
 
     }
 
-    .articles-hero p{
+    .blog-hero-description{
 
-        font-size:15px;
-
-    }
-
-    .articles-container{
-
-        padding:
-            0 15px 70px;
+        font-size:16px;
 
     }
 
-    .search-panel{
+    .blog-container{
 
-        margin-bottom:50px;
+        padding:50px 18px 70px;
+
+    }
+
+    .toolbar{
+
+        flex-direction:column;
+
+        align-items:stretch;
+
+        gap:15px;
+
+        margin-bottom:45px;
+
+    }
+
+    .search-wrapper{
+
+        max-width:none;
+
+    }
+
+    .article-count{
+
+        text-align:left;
 
     }
 
     .section-heading{
 
-        flex-direction:column;
-
         align-items:flex-start;
 
-        gap:8px;
+        flex-direction:column;
 
-    }
-
-    .section-heading h2{
-
-        font-size:29px;
+        gap:6px;
 
     }
 
     .featured-article{
 
-        margin-bottom:55px;
-
-    }
-
-    .featured-image{
-
-        min-height:260px;
+        margin-bottom:65px;
 
     }
 
     .featured-content{
 
-        padding:28px 24px;
+        padding:30px 25px 35px;
 
     }
 
     .featured-title{
 
-        font-size:30px;
+        font-size:32px;
 
     }
 
@@ -1330,21 +1051,19 @@ a{
 
         grid-template-columns:1fr;
 
-        gap:20px;
-
-    }
-
-    .article-image{
-
-        height:235px;
+        gap:45px;
 
     }
 
     .blog-cta{
 
-        margin-top:65px;
+        margin-top:70px;
 
-        padding:45px 25px;
+        padding:40px 25px;
+
+        flex-direction:column;
+
+        align-items:flex-start;
 
     }
 
@@ -1354,28 +1073,30 @@ a{
 
     }
 
-    .footer-inner{
-
-        flex-direction:column;
-
-        align-items:flex-start;
-
-    }
-
 }
 
 
-@media(max-width:400px){
+/* =========================================================
+   VERY SMALL DEVICES
+========================================================= */
 
-    .articles-hero h1{
+@media(max-width:420px){
 
-        font-size:39px;
+    .blog-hero h1{
+
+        font-size:38px;
 
     }
 
     .featured-title{
 
-        font-size:27px;
+        font-size:28px;
+
+    }
+
+    .article-title{
+
+        font-size:21px;
 
     }
 
@@ -1383,21 +1104,27 @@ a{
 
 
 /* =========================================================
-   ACCESSIBILITY
+   REDUCED MOTION
 ========================================================= */
 
-:focus-visible{
+@media(prefers-reduced-motion:reduce){
 
-    outline:
-        3px solid rgba(37,99,235,.35);
+    *,
+    *::before,
+    *::after{
 
-    outline-offset:3px;
+        scroll-behavior:auto !important;
+
+        transition:none !important;
+
+    }
 
 }
 
 </style>
 
 </head>
+
 
 <body>
 
@@ -1410,71 +1137,43 @@ a{
 
     <div class="header-inner">
 
-        <a href="/" class="logo">
-
-            <div class="logo-mark">
-                E
-            </div>
-
-            <div class="logo-text">
-                Electro<span>lix</span>
-            </div>
-
+        <a
+            href="/"
+            class="logo"
+        >
+            Electrolix<span>.</span>
         </a>
 
-
-        <nav class="main-nav">
-
-            <a href="/">
-                Home
-            </a>
-
-            <a href="#" class="nav-active">
-                Articles
-            </a>
-
-            <a href="#">
-                Products
-            </a>
-
-            <a href="#">
-                About
-            </a>
-
-        </nav>
-
-
-        <a href="#" class="header-button">
-            Explore Electrolix
-        </a>
+        <div class="header-label">
+            Knowledge &amp; Guides
+        </div>
 
     </div>
 
 </header>
 
 
-
 <!-- =======================================================
      HERO
 ======================================================= -->
 
-<section class="articles-hero">
+<section class="blog-hero">
 
     <div class="hero-inner">
 
-        <div class="hero-tag">
-            ELECTROLIX KNOWLEDGE HUB
+        <div class="hero-label">
+            Electrolix Knowledge Hub
         </div>
 
         <h1>
-            Electrical Knowledge,
-            Explained Clearly.
+            Electrical knowledge,
+            explained simply.
         </h1>
 
-        <p>
-            Practical electrical guides, wire specifications,
-            buying advice and useful knowledge for everyday
-            electrical decisions.
+        <p class="blog-hero-description">
+            Explore practical electrical guides, wire specifications,
+            product information, buying advice and useful knowledge
+            for everyday electrical work.
         </p>
 
     </div>
@@ -1482,99 +1181,119 @@ a{
 </section>
 
 
-
 <!-- =======================================================
      MAIN
 ======================================================= -->
 
-<main class="articles-container">
+<main class="blog-container">
 
 
     <!-- SEARCH -->
 
-    <div class="search-panel">
+    <div class="toolbar">
 
         <div class="search-wrapper">
 
-            <svg
-                class="search-icon"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-            >
+            <span class="search-icon">
 
-                <circle
-                    cx="11"
-                    cy="11"
-                    r="7"
-                />
+                <svg
+                    width="19"
+                    height="19"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                >
 
-                <path
-                    d="m20 20-3.5-3.5"
-                />
+                    <circle
+                        cx="11"
+                        cy="11"
+                        r="7"
+                    ></circle>
 
-            </svg>
+                    <line
+                        x1="16.65"
+                        y1="16.65"
+                        x2="21"
+                        y2="21"
+                    ></line>
+
+                </svg>
+
+            </span>
 
 
             <input
                 type="search"
                 id="articleSearch"
-                class="search-box"
-                placeholder="Search electrical guides, wires, specifications..."
+                placeholder="Search articles..."
                 autocomplete="off"
             >
 
         </div>
 
-    </div>
-
-
-
-    <!-- SECTION HEADING -->
-
-    <div class="section-heading">
-
-        <div class="section-heading-left">
-
-            <div class="section-eyebrow">
-                Latest Knowledge
-            </div>
-
-            <h2>
-                Explore Our Articles
-            </h2>
-
-            <p id="resultsText">
-                Loading articles...
-            </p>
-
-        </div>
 
         <div
             class="article-count"
             id="articleCount"
-        ></div>
+        >
+            Loading articles...
+        </div>
 
     </div>
 
 
+    <!-- ===================================================
+         FEATURED HEADING
+    ==================================================== -->
 
-    <!-- FEATURED -->
+    <div class="section-heading">
 
-    <section id="featuredArticle">
+        <h2>
+            Featured Guide
+        </h2>
+
+        <p>
+            Editor's selection
+        </p>
+
+    </div>
+
+
+    <!-- ===================================================
+         FEATURED ARTICLE
+    ==================================================== -->
+
+    <section
+        id="featuredArticle"
+        class="featured-article"
+    >
 
         <div class="message">
-
             Loading featured article...
-
         </div>
 
     </section>
 
 
+    <!-- ===================================================
+         LATEST ARTICLES
+    ==================================================== -->
 
-    <!-- ARTICLE GRID -->
+    <div class="section-heading">
+
+        <h2>
+            Latest Articles
+        </h2>
+
+        <p id="resultsText">
+            Loading...
+        </p>
+
+    </div>
+
 
     <section
         class="articles-grid"
@@ -1583,27 +1302,46 @@ a{
 
         <div class="message">
 
-            Loading articles...
+            <h3>
+                Loading articles...
+            </h3>
+
+            <p>
+                Please wait while we load the latest guides.
+            </p>
 
         </div>
 
     </section>
 
 
-
-    <!-- CTA -->
+    <!-- ===================================================
+         CTA
+    ==================================================== -->
 
     <section class="blog-cta">
 
-        <h2>
-            Learn More. Choose Better.
-        </h2>
+        <div class="blog-cta-content">
 
-        <p>
-            Explore our electrical guides to understand
-            wires, specifications, applications and
-            buying considerations before making your next decision.
-        </p>
+            <h2>
+                Learn more about electrical products.
+            </h2>
+
+            <p>
+                Browse our guides to understand wire sizes,
+                specifications, applications and important
+                electrical information.
+            </p>
+
+        </div>
+
+        <a
+            href="/"
+            class="blog-cta-button"
+        >
+            Explore Electrolix
+            <span>→</span>
+        </a>
 
     </section>
 
@@ -1611,34 +1349,8 @@ a{
 </main>
 
 
-
-<!-- =======================================================
-     FOOTER
-======================================================= -->
-
-<footer class="site-footer">
-
-    <div class="footer-inner">
-
-        <div class="footer-brand">
-            Electrolix
-        </div>
-
-        <p>
-            Electrical knowledge made simple.
-        </p>
-
-        <p>
-            © 2026 Electrolix
-        </p>
-
-    </div>
-
-</footer>
-
-
-
 <script>
+
 
 /* =========================================================
    BLOG LINKS
@@ -1684,12 +1396,14 @@ let allArticles = [];
 
 function getMeta(doc, selector){
 
-    const element = doc.querySelector(selector);
+    const element =
+        doc.querySelector(selector);
 
     if(element){
 
         return (
-            element.getAttribute("content") || ""
+            element.getAttribute("content")
+            || ""
         );
 
     }
@@ -1705,18 +1419,21 @@ function getMeta(doc, selector){
 
 function getDate(doc){
 
-    const jsonScripts =
+    const scripts =
         doc.querySelectorAll(
             'script[type="application/ld+json"]'
         );
 
 
-    for(const script of jsonScripts){
+    for(const script of scripts){
 
         try{
 
             const data =
-                JSON.parse(script.textContent);
+                JSON.parse(
+                    script.textContent
+                );
+
 
             const items =
                 data["@graph"]
@@ -1738,44 +1455,13 @@ function getDate(doc){
 
         catch(error){
 
-            /* Ignore invalid JSON-LD */
+            // Ignore invalid JSON-LD
 
         }
 
     }
 
     return "";
-
-}
-
-
-/* =========================================================
-   FORMAT DATE
-========================================================= */
-
-function formatDate(date){
-
-    if(!date){
-        return "";
-    }
-
-    const parsedDate =
-        new Date(date);
-
-
-    if(isNaN(parsedDate)){
-        return "";
-    }
-
-
-    return parsedDate.toLocaleDateString(
-        "en-IN",
-        {
-            day:"numeric",
-            month:"short",
-            year:"numeric"
-        }
-    );
 
 }
 
@@ -1793,23 +1479,27 @@ function getHeroImage(doc){
 
 
     if(!image){
+
         return "";
+
     }
 
 
-    const imageUrl =
+    const src =
         image.getAttribute("src");
 
 
-    if(!imageUrl){
+    if(!src){
+
         return "";
+
     }
 
 
     try{
 
         return new URL(
-            imageUrl,
+            src,
             doc.baseURI
         ).href;
 
@@ -1817,7 +1507,7 @@ function getHeroImage(doc){
 
     catch(error){
 
-        return imageUrl;
+        return src;
 
     }
 
@@ -1825,7 +1515,43 @@ function getHeroImage(doc){
 
 
 /* =========================================================
-   GENERATE CATEGORY
+   FORMAT DATE
+========================================================= */
+
+function formatDate(date){
+
+    if(!date){
+
+        return "";
+
+    }
+
+
+    const parsed =
+        new Date(date);
+
+
+    if(isNaN(parsed)){
+
+        return "";
+
+    }
+
+
+    return parsed.toLocaleDateString(
+        "en-IN",
+        {
+            day:"numeric",
+            month:"short",
+            year:"numeric"
+        }
+    );
+
+}
+
+
+/* =========================================================
+   GET CATEGORY
 ========================================================= */
 
 function getCategory(title){
@@ -1835,35 +1561,14 @@ function getCategory(title){
 
 
     if(
-        text.includes("1 sq") ||
-        text.includes("1.5 sq") ||
-        text.includes("4 sq") ||
-        text.includes("6 sq") ||
-        text.includes("0.75")
-    ){
-
-        return "Wire Guide";
-
-    }
-
-
-    if(
-        text.includes("buying") ||
-        text.includes("guide")
-    ){
-
-        return "Buying Guide";
-
-    }
-
-
-    if(
-        text.includes("frls") ||
-        text.includes("frlsh") ||
+        text.includes("wire")
+        ||
         text.includes("copper")
+        ||
+        text.includes("sq mm")
     ){
 
-        return "Electrical Guide";
+        return "Electrical Guides";
 
     }
 
@@ -1909,8 +1614,6 @@ async function fetchArticle(url){
             );
 
 
-        /* TITLE */
-
         const title =
 
             getMeta(
@@ -1933,8 +1636,6 @@ async function fetchArticle(url){
             "Electrolix Article";
 
 
-        /* DESCRIPTION */
-
         const description =
 
             getMeta(
@@ -1954,34 +1655,23 @@ async function fetchArticle(url){
             "";
 
 
-        /* IMAGE */
-
         const image =
             getHeroImage(doc);
 
 
-        /* DATE */
-
-        const date =
-            getDate(doc);
-
-
         return {
 
-            title:
-                title.trim(),
+            title:title.trim(),
 
             description:
                 description.trim(),
 
-            image:
-                image,
+            image:image,
 
             date:
-                date,
+                getDate(doc),
 
-            url:
-                url,
+            url:url,
 
             category:
                 getCategory(title)
@@ -2011,85 +1701,38 @@ async function fetchArticle(url){
 
 async function loadArticles(){
 
-    const grid =
-        document.getElementById(
-            "articlesGrid"
+    const requests =
+        blogLinks.map(
+            url =>
+                fetchArticle(url)
         );
 
 
-    const featured =
-        document.getElementById(
-            "featuredArticle"
+    const results =
+        await Promise.all(
+            requests
         );
 
 
-    try{
-
-        const requests =
-            blogLinks.map(
-                url =>
-                    fetchArticle(url)
-            );
-
-
-        const results =
-            await Promise.all(
-                requests
-            );
-
-
-        allArticles =
-            results.filter(
-                article =>
-                    article !== null
-            );
-
-
-        /* SORT NEWEST FIRST */
-
-        allArticles.sort(
-            (a,b) => {
-
-                const dateA =
-                    new Date(a.date || 0);
-
-                const dateB =
-                    new Date(b.date || 0);
-
-                return dateB - dateA;
-
-            }
+    allArticles =
+        results.filter(
+            article =>
+                article !== null
         );
 
 
-        document.getElementById(
-            "articleCount"
-        ).textContent =
-            allArticles.length +
-            (
-                allArticles.length === 1
-                    ? " Article"
-                    : " Articles"
-            );
+    document.getElementById(
+        "articleCount"
+    ).textContent =
+        allArticles.length +
+        (
+            allArticles.length === 1
+                ? " Article"
+                : " Articles"
+        );
 
 
-        renderArticles();
-
-    }
-
-    catch(error){
-
-        console.error(error);
-
-        featured.innerHTML = `
-            <div class="message">
-                Unable to load articles.
-            </div>
-        `;
-
-        grid.innerHTML = "";
-
-    }
+    renderArticles();
 
 }
 
@@ -2100,7 +1743,7 @@ async function loadArticles(){
 
 function renderFeatured(article){
 
-    const featured =
+    const container =
         document.getElementById(
             "featuredArticle"
         );
@@ -2108,117 +1751,107 @@ function renderFeatured(article){
 
     if(!article){
 
-        featured.innerHTML = "";
+        container.innerHTML = `
+
+            <div class="message">
+
+                <h3>
+                    No featured article available
+                </h3>
+
+            </div>
+
+        `;
 
         return;
 
     }
 
 
-    const imageHtml =
-        article.image
+    container.innerHTML = `
 
-        ?
-
-        `
-        <img
-            src="${escapeHtml(article.image)}"
-            alt="${escapeHtml(article.title)}"
+        <a
+            href="${escapeHtml(article.url)}"
+            class="featured-image"
         >
-        `
 
-        :
+            ${
+                article.image
 
-        `
-        <div class="image-placeholder">
-            Electrolix
-        </div>
-        `;
+                ?
+
+                `
+                <img
+                    src="${escapeHtml(article.image)}"
+                    alt="${escapeHtml(article.title)}"
+                    loading="eager"
+                >
+                `
+
+                :
+
+                `
+                <div class="no-image">
+                    Electrolix
+                </div>
+                `
+
+            }
+
+        </a>
 
 
-    featured.innerHTML = `
+        <div class="featured-content">
 
-        <article class="featured-article">
+            <div class="featured-badge">
+                Featured Guide
+            </div>
+
+
+            ${
+                article.date
+
+                ?
+
+                `
+                <div class="featured-date">
+                    ${formatDate(article.date)}
+                </div>
+                `
+
+                :
+
+                ""
+
+            }
+
+
+            <h2 class="featured-title">
+
+                ${escapeHtml(article.title)}
+
+            </h2>
+
+
+            <p class="featured-description">
+
+                ${escapeHtml(article.description)}
+
+            </p>
+
 
             <a
-                href="${article.url}"
-                class="featured-image"
+                href="${escapeHtml(article.url)}"
+                class="featured-link"
             >
 
-                <div class="featured-badge">
-                    Featured
-                </div>
+                Read the guide
 
-                ${imageHtml}
+                <span>→</span>
 
             </a>
 
-
-            <div class="featured-content">
-
-                <div class="featured-label">
-                    ${escapeHtml(article.category)}
-                </div>
-
-
-                <h2 class="featured-title">
-                    ${escapeHtml(article.title)}
-                </h2>
-
-
-                <p class="featured-description">
-                    ${
-                        escapeHtml(
-                            article.description ||
-                            "Explore this practical electrical guide from Electrolix."
-                        )
-                    }
-                </p>
-
-
-                <div class="article-meta">
-
-                    ${
-                        article.date
-                        ?
-                        `<span>
-                            ${formatDate(article.date)}
-                        </span>`
-                        :
-                        ""
-                    }
-
-                    ${
-                        article.date
-                        ?
-                        `<span class="meta-dot"></span>`
-                        :
-                        ""
-                    }
-
-                    <span>
-                        Electrolix Editorial
-                    </span>
-
-                </div>
-
-
-                <a
-                    href="${article.url}"
-                    class="featured-link"
-                >
-
-                    Read Full Article
-
-                    <span>
-                        →
-                    </span>
-
-                </a>
-
-            </div>
-
-        </article>
+        </div>
 
     `;
 
@@ -2237,12 +1870,14 @@ function renderArticles(){
         );
 
 
+    const searchInput =
+        document.getElementById(
+            "articleSearch"
+        );
+
+
     const searchValue =
-        document
-            .getElementById(
-                "articleSearch"
-            )
-            .value
+        searchInput.value
             .toLowerCase()
             .trim();
 
@@ -2273,47 +1908,45 @@ function renderArticles(){
         "resultsText"
     ).textContent =
 
-        filteredArticles.length +
-
+        filteredArticles.length
+        +
         (
             filteredArticles.length === 1
-                ? " article found"
-                : " articles found"
+                ? " article"
+                : " articles"
         );
 
 
-    /* =====================================================
-       SEARCH MODE
-    ===================================================== */
+    /*
+       FEATURED ARTICLE
 
-    if(searchValue){
+       Always use the first article
+       when there is no search.
+    */
 
-        document.getElementById(
-            "featuredArticle"
-        ).innerHTML = "";
+    if(!searchValue){
+
+        renderFeatured(
+            allArticles[0]
+        );
 
     }
 
     else{
 
-        renderFeatured(
-            filteredArticles[0]
-        );
+        document.getElementById(
+            "featuredArticle"
+        ).style.display =
+            "none";
 
     }
 
 
-    /* =====================================================
-       GRID ARTICLES
-    ===================================================== */
+    /*
+       NO RESULTS
+    */
 
-    const articlesToShow =
-        searchValue
-            ? filteredArticles
-            : filteredArticles.slice(1);
-
-
-    if(articlesToShow.length === 0){
+    if(filteredArticles.length === 0){
 
         grid.innerHTML = `
 
@@ -2336,132 +1969,154 @@ function renderArticles(){
     }
 
 
+    /*
+       REMOVE FIRST ARTICLE FROM GRID
+
+       It is already displayed
+       as the featured article.
+    */
+
+    const gridArticles =
+        searchValue
+            ? filteredArticles
+            : filteredArticles.slice(1);
+
+
+    /*
+       IF ONLY ONE ARTICLE
+    */
+
+    if(gridArticles.length === 0){
+
+        grid.innerHTML = `
+
+            <div class="message">
+
+                <h3>
+                    You're all caught up.
+                </h3>
+
+                <p>
+                    More guides will appear here soon.
+                </p>
+
+            </div>
+
+        `;
+
+        return;
+
+    }
+
+
+    /*
+       BUILD CARDS
+    */
+
     grid.innerHTML =
-        articlesToShow.map(
-            article => {
+        gridArticles.map(
+            article => `
+
+            <article class="article-card">
 
 
-                const imageHtml =
+                <a
+                    href="${escapeHtml(article.url)}"
+                    class="article-image"
+                >
 
-                    article.image
+                    ${
+                        article.image
 
-                    ?
+                        ?
 
-                    `
-                    <img
-                        src="${escapeHtml(article.image)}"
-                        alt="${escapeHtml(article.title)}"
-                        loading="lazy"
-                    >
-                    `
-
-                    :
-
-                    `
-                    <div class="image-placeholder">
-                        Electrolix
-                    </div>
-                    `;
-
-
-                return `
-
-                    <article
-                        class="article-card"
-                    >
-
-
-                        <a
-                            href="${article.url}"
-                            class="article-image"
+                        `
+                        <img
+                            src="${escapeHtml(article.image)}"
+                            alt="${escapeHtml(article.title)}"
+                            loading="lazy"
                         >
+                        `
 
-                            ${imageHtml}
+                        :
 
-
-                            <div class="article-category">
-
-                                ${escapeHtml(
-                                    article.category
-                                )}
-
-                            </div>
-
-                        </a>
-
-
-                        <div
-                            class="article-content"
-                        >
-
-
-                            ${
-                                article.date
-
-                                ?
-
-                                `
-                                <div class="article-date">
-
-                                    ${formatDate(
-                                        article.date
-                                    )}
-
-                                </div>
-                                `
-
-                                :
-
-                                ""
-                            }
-
-
-                            <h2
-                                class="article-title"
-                            >
-
-                                ${escapeHtml(
-                                    article.title
-                                )}
-
-                            </h2>
-
-
-                            <p
-                                class="article-description"
-                            >
-
-                                ${escapeHtml(
-                                    article.description
-                                    ||
-                                    "Explore this practical electrical guide from Electrolix."
-                                )}
-
-                            </p>
-
-
-                            <a
-                                href="${article.url}"
-                                class="article-link"
-                            >
-
-                                Read Article
-
-                                <span>
-                                    →
-                                </span>
-
-                            </a>
-
-
+                        `
+                        <div class="no-image">
+                            Electrolix
                         </div>
+                        `
+
+                    }
+
+                </a>
 
 
-                    </article>
+                <div class="article-meta">
 
-                `;
+                    <span class="article-category">
 
-            }
+                        ${escapeHtml(article.category)}
+
+                    </span>
+
+
+                    ${
+                        article.date
+
+                        ?
+
+                        `
+                        <span class="meta-dot"></span>
+
+                        <span>
+                            ${formatDate(article.date)}
+                        </span>
+                        `
+
+                        :
+
+                        ""
+
+                    }
+
+                </div>
+
+
+                <h2 class="article-title">
+
+                    <a
+                        href="${escapeHtml(article.url)}"
+                    >
+
+                        ${escapeHtml(article.title)}
+
+                    </a>
+
+                </h2>
+
+
+                <p class="article-description">
+
+                    ${escapeHtml(article.description)}
+
+                </p>
+
+
+                <a
+                    href="${escapeHtml(article.url)}"
+                    class="article-link"
+                >
+
+                    Read Article
+
+                    <span>→</span>
+
+                </a>
+
+
+            </article>
+
+        `
         ).join("");
 
 }
@@ -2509,6 +2164,7 @@ document
 loadArticles();
 
 </script>
+
 
 </body>
 </html>
