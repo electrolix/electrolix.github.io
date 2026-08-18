@@ -477,6 +477,47 @@ function formatDate(date){
 
 
 /* ========================================
+   GET HERO RIGHT IMAGE
+======================================== */
+
+function getHeroImage(doc){
+
+    const image = doc.querySelector(
+        ".hero-right img"
+    );
+
+    if(!image){
+        return "";
+    }
+
+    let imageUrl = image.getAttribute("src");
+
+    if(!imageUrl){
+        return "";
+    }
+
+    /*
+       Convert relative image URLs into
+       absolute URLs based on the article URL.
+    */
+
+    try{
+
+        return new URL(
+            imageUrl,
+            doc.baseURI
+        ).href;
+
+    }catch(error){
+
+        return imageUrl;
+
+    }
+
+}
+
+
+/* ========================================
    FETCH ONE ARTICLE
 ======================================== */
 
@@ -500,6 +541,10 @@ async function fetchArticle(url){
         );
 
 
+        /* =========================
+           TITLE
+        ========================= */
+
         const title =
 
             getMeta(
@@ -522,6 +567,10 @@ async function fetchArticle(url){
             "Electrolix Article";
 
 
+        /* =========================
+           DESCRIPTION
+        ========================= */
+
         const description =
 
             getMeta(
@@ -541,11 +590,24 @@ async function fetchArticle(url){
             "";
 
 
-        const image = getMeta(
-            doc,
-            'meta[property="og:image"]'
-        );
+        /* =========================
+           IMAGE
 
+           IMPORTANT:
+           DO NOT USE OG IMAGE.
+
+           The image is taken directly
+           from:
+
+           .hero-right img
+        ========================= */
+
+        const image = getHeroImage(doc);
+
+
+        /* =========================
+           RETURN ARTICLE
+        ========================= */
 
         return {
 
@@ -593,6 +655,7 @@ async function loadArticles(){
     allArticles = results.filter(
         article => article !== null
     );
+
 
     document.getElementById(
         "articleCount"
@@ -655,6 +718,10 @@ function renderArticles(){
         );
 
 
+    /* =========================
+       NO RESULTS
+    ========================= */
+
     if(filteredArticles.length === 0){
 
         grid.innerHTML = `
@@ -678,6 +745,10 @@ function renderArticles(){
     }
 
 
+    /* =========================
+       ARTICLE CARDS
+    ========================= */
+
     grid.innerHTML = filteredArticles.map(
         article => `
 
@@ -695,7 +766,7 @@ function renderArticles(){
                     ?
 
                     `<img
-                        src="${article.image}"
+                        src="${escapeHtml(article.image)}"
                         alt="${escapeHtml(article.title)}"
                         loading="lazy"
                     >`
