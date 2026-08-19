@@ -10,37 +10,30 @@
 
 <style>
 
-
 /* =========================================================
    IMPORTANT
-   Your existing website font is NOT overridden here.
-   If your main website already has a font declaration,
-   it will continue to be used.
+   BLOG-ONLY CSS
+   Nothing here styles the global header or footer.
 ========================================================= */
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
 
-html{
-    scroll-behavior:smooth;
-}
+/* =========================================================
+   BLOG PAGE RESET
+========================================================= */
 
-body{
-    margin:0;
-    background:#f7f9ff;
-    color:#172033;
+.articles-page,
+.articles-page * {
+    box-sizing: border-box;
 }
 
 
 /* =========================================================
-   PAGE
+   BLOG PAGE
 ========================================================= */
 
-.articles-page{
-    overflow:hidden;
+.articles-page {
+    width: 100%;
+    position: relative;
 }
 
 
@@ -48,28 +41,36 @@ body{
    HERO
 ========================================================= */
 
-.articles-hero{
+.articles-page .articles-hero {
 
-    position:relative;
+    position: relative;
 
-    min-height:560px;
+    isolation: isolate;
 
-    display:grid;
+    min-height: 560px;
 
-    grid-template-columns:1.05fr .95fr;
+    display: grid;
 
-    align-items:center;
+    grid-template-columns: 1.05fr .95fr;
 
-    gap:70px;
+    align-items: center;
+
+    gap: 70px;
+
+    /*
+       Your header is fixed.
+       Add top space so the hero does not go
+       underneath the header.
+    */
 
     padding:
-        120px
+        140px
         max(24px, calc((100% - 1280px) / 2))
         100px;
 
-    overflow:hidden;
+    overflow: hidden;
 
-    color:#fff;
+    color: #fff;
 
     background:
         radial-gradient(
@@ -86,19 +87,19 @@ body{
    HERO BACKGROUND GLOW
 ========================================================= */
 
-.articles-hero::before{
+.articles-page .articles-hero::before {
 
-    content:"";
+    content: "";
 
-    position:absolute;
+    position: absolute;
 
-    width:600px;
-    height:600px;
+    width: 600px;
+    height: 600px;
 
-    top:-250px;
-    left:-200px;
+    top: -250px;
+    left: -200px;
 
-    border-radius:50%;
+    border-radius: 50%;
 
     background:
         radial-gradient(
@@ -107,25 +108,27 @@ body{
             transparent 70%
         );
 
-    filter:blur(20px);
+    filter: blur(20px);
 
-    pointer-events:none;
+    pointer-events: none;
+
+    z-index: -1;
 
 }
 
-.articles-hero::after{
+.articles-page .articles-hero::after {
 
-    content:"";
+    content: "";
 
-    position:absolute;
+    position: absolute;
 
-    width:500px;
-    height:500px;
+    width: 500px;
+    height: 500px;
 
-    right:-180px;
-    bottom:-250px;
+    right: -180px;
+    bottom: -250px;
 
-    border-radius:50%;
+    border-radius: 50%;
 
     background:
         radial-gradient(
@@ -134,9 +137,11 @@ body{
             transparent 70%
         );
 
-    filter:blur(30px);
+    filter: blur(30px);
 
-    pointer-events:none;
+    pointer-events: none;
+
+    z-index: -1;
 
 }
 
@@ -145,48 +150,48 @@ body{
    HERO LEFT
 ========================================================= */
 
-.articles-hero-left{
+.articles-page .articles-hero-left {
 
-    position:relative;
+    position: relative;
 
-    z-index:2;
+    z-index: 2;
 
 }
 
-.articles-badge{
+.articles-page .articles-badge {
 
-    display:inline-flex;
+    display: inline-flex;
 
-    align-items:center;
+    align-items: center;
 
-    padding:10px 18px;
+    padding: 10px 18px;
 
-    margin-bottom:24px;
+    margin-bottom: 24px;
 
     border:
         1px solid
         rgba(255,255,255,.18);
 
-    border-radius:30px;
+    border-radius: 30px;
 
     background:
         rgba(255,255,255,.14);
 
-    backdrop-filter:blur(10px);
+    backdrop-filter: blur(10px);
 
-    -webkit-backdrop-filter:blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 
-    font-size:14px;
+    font-size: 14px;
 
-    font-weight:600;
+    font-weight: 600;
 
-    letter-spacing:.5px;
+    letter-spacing: .5px;
 
 }
 
-.articles-hero h1{
+.articles-page .articles-hero h1 {
 
-    max-width:720px;
+    max-width: 720px;
 
     font-size:
         clamp(
@@ -195,25 +200,25 @@ body{
             68px
         );
 
-    line-height:1.08;
+    line-height: 1.08;
 
-    font-weight:800;
+    font-weight: 800;
 
-    letter-spacing:-2px;
+    letter-spacing: -2px;
 
-    margin-bottom:25px;
+    margin: 0 0 25px;
 
 }
 
-.articles-hero-text{
+.articles-page .articles-hero-text {
 
-    max-width:650px;
+    max-width: 650px;
 
-    font-size:18px;
+    font-size: 18px;
 
-    line-height:1.75;
+    line-height: 1.75;
 
-    color:rgba(255,255,255,.9);
+    color: rgba(255,255,255,.9);
 
 }
 
@@ -222,30 +227,30 @@ body{
    HERO IMAGE
 ========================================================= */
 
-.articles-hero-right{
+.articles-page .articles-hero-right {
 
-    position:relative;
+    position: relative;
 
-    z-index:2;
+    z-index: 2;
 
-    display:flex;
+    display: flex;
 
-    justify-content:center;
+    justify-content: center;
 
-    align-items:center;
+    align-items: center;
 
 }
 
-.articles-hero-right::before{
+.articles-page .articles-hero-right::before {
 
-    content:"";
+    content: "";
 
-    position:absolute;
+    position: absolute;
 
-    width:92%;
-    height:92%;
+    width: 92%;
+    height: 92%;
 
-    border-radius:40px;
+    border-radius: 40px;
 
     background:
         radial-gradient(
@@ -255,21 +260,21 @@ body{
             transparent 80%
         );
 
-    filter:blur(55px);
+    filter: blur(55px);
 
-    z-index:-2;
+    z-index: -2;
 
 }
 
-.articles-hero-right::after{
+.articles-page .articles-hero-right::after {
 
-    content:"";
+    content: "";
 
-    position:absolute;
+    position: absolute;
 
-    inset:-12px;
+    inset: -12px;
 
-    border-radius:36px;
+    border-radius: 36px;
 
     border:
         1px solid
@@ -282,33 +287,33 @@ body{
             rgba(255,255,255,.02)
         );
 
-    backdrop-filter:blur(12px);
+    backdrop-filter: blur(12px);
 
-    -webkit-backdrop-filter:blur(12px);
+    -webkit-backdrop-filter: blur(12px);
 
-    z-index:-1;
+    z-index: -1;
 
 }
 
-.articles-hero-right img{
+.articles-page .articles-hero-right img {
 
-    width:100%;
+    width: 100%;
 
-    max-width:620px;
+    max-width: 620px;
 
-    aspect-ratio:3 / 2;
+    aspect-ratio: 3 / 2;
 
-    object-fit:cover;
+    object-fit: cover;
 
-    display:block;
+    display: block;
 
     border:
         1px solid
         rgba(255,255,255,.15);
 
-    border-radius:28px;
+    border-radius: 28px;
 
-    background:#fff;
+    background: #fff;
 
     box-shadow:
         0 40px 90px rgba(0,0,0,.3),
@@ -327,7 +332,7 @@ body{
 
 }
 
-.articles-hero-right:hover img{
+.articles-page .articles-hero-right:hover img {
 
     transform:
         translateY(-10px)
@@ -349,11 +354,11 @@ body{
    MAIN
 ========================================================= */
 
-.articles-container{
+.articles-page .articles-container {
 
-    max-width:1280px;
+    max-width: 1280px;
 
-    margin:auto;
+    margin: auto;
 
     padding:
         70px
@@ -367,90 +372,90 @@ body{
    SEARCH
 ========================================================= */
 
-.articles-search-area{
+.articles-page .articles-search-area {
 
-    position:relative;
+    position: relative;
 
-    z-index:5;
+    z-index: 5;
 
-    max-width:800px;
+    max-width: 800px;
 
     margin:
         -105px
         auto
         75px;
 
-    padding:10px;
+    padding: 10px;
 
     border:
         1px solid
         rgba(255,255,255,.7);
 
-    border-radius:22px;
+    border-radius: 22px;
 
     background:
         rgba(255,255,255,.88);
 
-    backdrop-filter:blur(18px);
+    backdrop-filter: blur(18px);
 
-    -webkit-backdrop-filter:blur(18px);
+    -webkit-backdrop-filter: blur(18px);
 
     box-shadow:
         0 25px 70px rgba(37,99,235,.15);
 
 }
 
-.search-inner{
+.articles-page .search-inner {
 
-    display:flex;
+    display: flex;
 
-    align-items:center;
+    align-items: center;
 
-    gap:12px;
+    gap: 12px;
 
-    min-height:62px;
+    min-height: 62px;
 
-    padding:0 20px;
+    padding: 0 20px;
 
-    border-radius:15px;
+    border-radius: 15px;
 
-    background:#f7f9ff;
-
-}
-
-.search-icon{
-
-    width:22px;
-
-    height:22px;
-
-    flex-shrink:0;
-
-    color:#667085;
+    background: #f7f9ff;
 
 }
 
-.search-inner input{
+.articles-page .search-icon {
 
-    width:100%;
+    width: 22px;
 
-    height:55px;
+    height: 22px;
 
-    border:0;
+    flex-shrink: 0;
 
-    outline:0;
-
-    background:transparent;
-
-    color:#172033;
-
-    font-size:16px;
+    color: #667085;
 
 }
 
-.search-inner input::placeholder{
+.articles-page .search-inner input {
 
-    color:#98a2b3;
+    width: 100%;
+
+    height: 55px;
+
+    border: 0;
+
+    outline: 0;
+
+    background: transparent;
+
+    color: #172033;
+
+    font-size: 16px;
+
+}
+
+.articles-page .search-inner input::placeholder {
+
+    color: #98a2b3;
 
 }
 
@@ -459,63 +464,67 @@ body{
    SECTION HEADER
 ========================================================= */
 
-.articles-heading{
+.articles-page .articles-heading {
 
-    display:flex;
+    display: flex;
 
-    justify-content:space-between;
+    justify-content: space-between;
 
-    align-items:end;
+    align-items: end;
 
-    gap:20px;
+    gap: 20px;
 
-    margin-bottom:30px;
-
-}
-
-.articles-heading-left{
-
-    position:relative;
+    margin-bottom: 30px;
 
 }
 
-.articles-heading-left small{
+.articles-page .articles-heading-left {
 
-    display:block;
-
-    margin-bottom:8px;
-
-    color:#2563eb;
-
-    font-size:12px;
-
-    font-weight:800;
-
-    letter-spacing:1.5px;
-
-    text-transform:uppercase;
+    position: relative;
 
 }
 
-.articles-heading h2{
+.articles-page .articles-heading-left small {
 
-    font-size:36px;
+    display: block;
 
-    line-height:1.2;
+    margin-bottom: 8px;
 
-    font-weight:800;
+    color: #2563eb;
 
-    letter-spacing:-1px;
+    font-size: 12px;
 
-    color:#172033;
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+
+    text-transform: uppercase;
 
 }
 
-.articles-heading p{
+.articles-page .articles-heading h2 {
 
-    color:#64748b;
+    font-size: 36px;
 
-    font-size:14px;
+    line-height: 1.2;
+
+    font-weight: 800;
+
+    letter-spacing: -1px;
+
+    color: #172033;
+
+    margin: 0;
+
+}
+
+.articles-page .articles-heading p {
+
+    color: #64748b;
+
+    font-size: 14px;
+
+    margin: 0;
 
 }
 
@@ -524,25 +533,25 @@ body{
    FEATURED ARTICLE
 ========================================================= */
 
-.featured-card{
+.articles-page .featured-card {
 
-    position:relative;
+    position: relative;
 
-    display:grid;
+    display: grid;
 
-    grid-template-columns:1.15fr .85fr;
+    grid-template-columns: 1.15fr .85fr;
 
-    overflow:hidden;
+    overflow: hidden;
 
-    margin-bottom:80px;
+    margin-bottom: 80px;
 
     border:
         1px solid
         rgba(37,99,235,.1);
 
-    border-radius:28px;
+    border-radius: 28px;
 
-    background:#fff;
+    background: #fff;
 
     box-shadow:
         0 25px 70px rgba(37,99,235,.09),
@@ -554,9 +563,9 @@ body{
 
 }
 
-.featured-card:hover{
+.articles-page .featured-card:hover {
 
-    transform:translateY(-6px);
+    transform: translateY(-6px);
 
     box-shadow:
         0 35px 85px rgba(37,99,235,.14),
@@ -564,64 +573,64 @@ body{
 
 }
 
-.featured-image{
+.articles-page .featured-image {
 
-    display:block;
+    display: block;
 
-    overflow:hidden;
+    overflow: hidden;
 
-    position:relative;
+    position: relative;
 
-    aspect-ratio:3 / 2;
+    aspect-ratio: 3 / 2;
 
-    background:#edf2ff;
+    background: #edf2ff;
 
 }
 
-.featured-image img{
+.articles-page .featured-image img {
 
-    width:100%;
-    height:100%;
+    width: 100%;
+    height: 100%;
 
-    display:block;
+    display: block;
 
-    object-fit:cover;
+    object-fit: cover;
 
     transition:
         transform .6s ease;
 
 }
 
-.featured-card:hover
-.featured-image img{
+.articles-page .featured-card:hover
+.featured-image img {
 
-    transform:scale(1.045);
-
-}
-
-.featured-content{
-
-    display:flex;
-
-    flex-direction:column;
-
-    justify-content:center;
-
-    padding:50px;
+    transform: scale(1.045);
 
 }
 
-.featured-label{
+.articles-page .featured-content {
 
-    display:inline-flex;
+    display: flex;
 
-    align-self:flex-start;
+    flex-direction: column;
 
-    padding:8px 14px;
+    justify-content: center;
 
-    margin-bottom:20px;
+    padding: 50px;
 
-    border-radius:30px;
+}
+
+.articles-page .featured-label {
+
+    display: inline-flex;
+
+    align-self: flex-start;
+
+    padding: 8px 14px;
+
+    margin-bottom: 20px;
+
+    border-radius: 30px;
 
     background:
         linear-gradient(
@@ -630,29 +639,29 @@ body{
             #4f46e5
         );
 
-    color:#fff;
+    color: #fff;
 
-    font-size:11px;
+    font-size: 11px;
 
-    font-weight:800;
+    font-weight: 800;
 
-    letter-spacing:1px;
+    letter-spacing: 1px;
 
-    text-transform:uppercase;
-
-}
-
-.article-date{
-
-    margin-bottom:12px;
-
-    color:#94a3b8;
-
-    font-size:13px;
+    text-transform: uppercase;
 
 }
 
-.featured-title{
+.articles-page .article-date {
+
+    margin-bottom: 12px;
+
+    color: #94a3b8;
+
+    font-size: 13px;
+
+}
+
+.articles-page .featured-title {
 
     font-size:
         clamp(
@@ -661,51 +670,51 @@ body{
             42px
         );
 
-    line-height:1.18;
+    line-height: 1.18;
 
-    letter-spacing:-1.3px;
+    letter-spacing: -1.3px;
 
-    color:#172033;
+    color: #172033;
 
-    margin-bottom:18px;
-
-}
-
-.featured-description{
-
-    color:#64748b;
-
-    font-size:15px;
-
-    line-height:1.8;
-
-    margin-bottom:28px;
-
-    display:-webkit-box;
-
-    -webkit-line-clamp:4;
-
-    -webkit-box-orient:vertical;
-
-    overflow:hidden;
+    margin: 0 0 18px;
 
 }
 
-.read-button{
+.articles-page .featured-description {
 
-    display:inline-flex;
+    color: #64748b;
 
-    align-items:center;
+    font-size: 15px;
 
-    justify-content:center;
+    line-height: 1.8;
 
-    align-self:flex-start;
+    margin: 0 0 28px;
 
-    gap:9px;
+    display: -webkit-box;
 
-    padding:13px 21px;
+    -webkit-line-clamp: 4;
 
-    border-radius:50px;
+    -webkit-box-orient: vertical;
+
+    overflow: hidden;
+
+}
+
+.articles-page .read-button {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    align-self: flex-start;
+
+    gap: 9px;
+
+    padding: 13px 21px;
+
+    border-radius: 50px;
 
     background:
         linear-gradient(
@@ -714,24 +723,24 @@ body{
             #4f46e5
         );
 
-    color:#fff;
+    color: #fff;
 
-    text-decoration:none;
+    text-decoration: none;
 
-    font-size:14px;
+    font-size: 14px;
 
-    font-weight:700;
+    font-weight: 700;
 
     box-shadow:
         0 12px 30px rgba(37,99,235,.2);
 
-    transition:.3s ease;
+    transition: .3s ease;
 
 }
 
-.read-button:hover{
+.articles-page .read-button:hover {
 
-    transform:translateY(-3px);
+    transform: translateY(-3px);
 
     box-shadow:
         0 18px 40px rgba(37,99,235,.3);
@@ -743,14 +752,14 @@ body{
    ARTICLE GRID
 ========================================================= */
 
-.articles-grid{
+.articles-page .articles-grid {
 
-    display:grid;
+    display: grid;
 
     grid-template-columns:
-        repeat(3,1fr);
+        repeat(3, 1fr);
 
-    gap:30px;
+    gap: 30px;
 
 }
 
@@ -759,17 +768,17 @@ body{
    ARTICLE CARD
 ========================================================= */
 
-.article-card{
+.articles-page .article-card {
 
-    overflow:hidden;
+    overflow: hidden;
 
     border:
         1px solid
         rgba(37,99,235,.09);
 
-    border-radius:24px;
+    border-radius: 24px;
 
-    background:#fff;
+    background: #fff;
 
     box-shadow:
         0 15px 40px rgba(37,99,235,.06);
@@ -780,9 +789,9 @@ body{
 
 }
 
-.article-card:hover{
+.articles-page .article-card:hover {
 
-    transform:translateY(-8px);
+    transform: translateY(-8px);
 
     box-shadow:
         0 28px 65px rgba(37,99,235,.13),
@@ -795,15 +804,15 @@ body{
    CARD IMAGE
 ========================================================= */
 
-.article-image{
+.articles-page .article-image {
 
-    display:block;
+    display: block;
 
-    position:relative;
+    position: relative;
 
-    overflow:hidden;
+    overflow: hidden;
 
-    aspect-ratio:3 / 2;
+    aspect-ratio: 3 / 2;
 
     background:
         linear-gradient(
@@ -814,24 +823,24 @@ body{
 
 }
 
-.article-image img{
+.articles-page .article-image img {
 
-    width:100%;
-    height:100%;
+    width: 100%;
+    height: 100%;
 
-    display:block;
+    display: block;
 
-    object-fit:cover;
+    object-fit: cover;
 
     transition:
         transform .55s ease;
 
 }
 
-.article-card:hover
-.article-image img{
+.articles-page .article-card:hover
+.article-image img {
 
-    transform:scale(1.06);
+    transform: scale(1.06);
 
 }
 
@@ -840,36 +849,38 @@ body{
    CARD CONTENT
 ========================================================= */
 
-.article-content{
+.articles-page .article-content {
 
-    padding:25px 25px 28px;
-
-}
-
-.article-meta{
-
-    display:flex;
-
-    align-items:center;
-
-    gap:8px;
-
-    margin-bottom:11px;
-
-    color:#94a3b8;
-
-    font-size:12px;
+    padding: 25px 25px 28px;
 
 }
 
-.article-meta::before{
+.articles-page .article-meta {
 
-    content:"";
+    display: flex;
 
-    width:7px;
-    height:7px;
+    align-items: center;
 
-    border-radius:50%;
+    gap: 8px;
+
+    margin-bottom: 11px;
+
+    color: #94a3b8;
+
+    font-size: 12px;
+
+}
+
+.articles-page .article-meta::before {
+
+    content: "";
+
+    width: 7px;
+    height: 7px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
 
     background:
         linear-gradient(
@@ -880,87 +891,87 @@ body{
 
 }
 
-.article-title{
+.articles-page .article-title {
 
-    margin-bottom:12px;
+    margin: 0 0 12px;
 
-    font-size:21px;
+    font-size: 21px;
 
-    line-height:1.35;
+    line-height: 1.35;
 
-    font-weight:800;
+    font-weight: 800;
 
-    letter-spacing:-.4px;
+    letter-spacing: -.4px;
 
-    color:#172033;
-
-}
-
-.article-title a{
-
-    color:inherit;
-
-    text-decoration:none;
-
-    transition:.25s ease;
+    color: #172033;
 
 }
 
-.article-title a:hover{
+.articles-page .article-title a {
 
-    color:#2563eb;
+    color: inherit;
 
-}
+    text-decoration: none;
 
-.article-description{
-
-    margin-bottom:20px;
-
-    color:#64748b;
-
-    font-size:14px;
-
-    line-height:1.75;
-
-    display:-webkit-box;
-
-    -webkit-line-clamp:3;
-
-    -webkit-box-orient:vertical;
-
-    overflow:hidden;
+    transition: .25s ease;
 
 }
 
-.article-read{
+.articles-page .article-title a:hover {
 
-    display:inline-flex;
-
-    align-items:center;
-
-    gap:7px;
-
-    color:#2563eb;
-
-    text-decoration:none;
-
-    font-size:13px;
-
-    font-weight:800;
-
-    transition:.25s ease;
+    color: #2563eb;
 
 }
 
-.article-read span{
+.articles-page .article-description {
 
-    transition:.25s ease;
+    margin: 0 0 20px;
+
+    color: #64748b;
+
+    font-size: 14px;
+
+    line-height: 1.75;
+
+    display: -webkit-box;
+
+    -webkit-line-clamp: 3;
+
+    -webkit-box-orient: vertical;
+
+    overflow: hidden;
 
 }
 
-.article-read:hover span{
+.articles-page .article-read {
 
-    transform:translateX(4px);
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    color: #2563eb;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    font-weight: 800;
+
+    transition: .25s ease;
+
+}
+
+.articles-page .article-read span {
+
+    transition: .25s ease;
+
+}
+
+.articles-page .article-read:hover span {
+
+    transform: translateX(4px);
 
 }
 
@@ -969,34 +980,40 @@ body{
    EMPTY / LOADING
 ========================================================= */
 
-.message{
+.articles-page .message {
 
-    grid-column:1 / -1;
+    grid-column: 1 / -1;
 
-    padding:70px 25px;
+    padding: 70px 25px;
 
-    border-radius:24px;
+    border-radius: 24px;
 
     border:
         1px solid
         rgba(37,99,235,.08);
 
-    background:#fff;
+    background: #fff;
 
-    text-align:center;
+    text-align: center;
 
-    color:#64748b;
+    color: #64748b;
 
     box-shadow:
         0 15px 40px rgba(37,99,235,.05);
 
 }
 
-.message h3{
+.articles-page .message h3 {
 
-    margin-bottom:8px;
+    margin: 0 0 8px;
 
-    color:#172033;
+    color: #172033;
+
+}
+
+.articles-page .message p {
+
+    margin: 0;
 
 }
 
@@ -1005,53 +1022,53 @@ body{
    PAGINATION
 ========================================================= */
 
-.articles-pagination{
+.articles-page .articles-pagination {
 
-    display:flex;
+    display: flex;
 
-    justify-content:center;
+    justify-content: center;
 
-    align-items:center;
+    align-items: center;
 
-    gap:10px;
+    gap: 10px;
 
-    margin-top:55px;
+    margin-top: 55px;
 
-    min-height:48px;
+    min-height: 48px;
 
 }
 
-.pagination-button{
+.articles-page .pagination-button {
 
-    min-width:44px;
+    min-width: 44px;
 
-    height:44px;
+    height: 44px;
 
-    padding:0 14px;
+    padding: 0 14px;
 
-    display:inline-flex;
+    display: inline-flex;
 
-    align-items:center;
+    align-items: center;
 
-    justify-content:center;
+    justify-content: center;
 
     border:
         1px solid
         rgba(37,99,235,.12);
 
-    border-radius:12px;
+    border-radius: 12px;
 
-    background:#fff;
+    background: #fff;
 
-    color:#172033;
+    color: #172033;
 
-    font-size:14px;
+    font-size: 14px;
 
-    font-weight:700;
+    font-weight: 700;
 
-    text-decoration:none;
+    text-decoration: none;
 
-    cursor:pointer;
+    cursor: pointer;
 
     box-shadow:
         0 8px 25px rgba(37,99,235,.05);
@@ -1064,29 +1081,11 @@ body{
 
 }
 
-.pagination-button:hover{
+.articles-page .pagination-button:hover {
 
-    transform:translateY(-2px);
+    transform: translateY(-2px);
 
-    color:#fff;
-
-    background:
-        linear-gradient(
-            135deg,
-            #2563eb,
-            #4f46e5
-        );
-
-    box-shadow:
-        0 12px 30px rgba(37,99,235,.18);
-
-}
-
-.pagination-button.active{
-
-    color:#fff;
-
-    border-color:#2563eb;
+    color: #fff;
 
     background:
         linear-gradient(
@@ -1100,21 +1099,39 @@ body{
 
 }
 
-.pagination-button.disabled{
+.articles-page .pagination-button.active {
 
-    opacity:.45;
+    color: #fff;
 
-    cursor:not-allowed;
+    border-color: #2563eb;
 
-    pointer-events:none;
+    background:
+        linear-gradient(
+            135deg,
+            #2563eb,
+            #4f46e5
+        );
+
+    box-shadow:
+        0 12px 30px rgba(37,99,235,.18);
 
 }
 
-.pagination-arrow{
+.articles-page .pagination-button.disabled {
 
-    font-size:18px;
+    opacity: .45;
 
-    line-height:1;
+    cursor: not-allowed;
+
+    pointer-events: none;
+
+}
+
+.articles-page .pagination-arrow {
+
+    font-size: 18px;
+
+    line-height: 1;
 
 }
 
@@ -1123,19 +1140,19 @@ body{
    CTA
 ========================================================= */
 
-.articles-cta{
+.articles-page .articles-cta {
 
-    position:relative;
+    position: relative;
 
-    overflow:hidden;
+    overflow: hidden;
 
-    margin-top:90px;
+    margin-top: 90px;
 
-    padding:55px;
+    padding: 55px;
 
-    border-radius:30px;
+    border-radius: 30px;
 
-    color:#fff;
+    color: #fff;
 
     background:
         radial-gradient(
@@ -1150,56 +1167,60 @@ body{
 
 }
 
-.articles-cta::after{
+.articles-page .articles-cta::after {
 
-    content:"";
+    content: "";
 
-    position:absolute;
+    position: absolute;
 
-    width:300px;
-    height:300px;
+    width: 300px;
+    height: 300px;
 
-    right:-100px;
-    top:-150px;
+    right: -100px;
+    top: -150px;
 
-    border-radius:50%;
+    border-radius: 50%;
 
     background:
         rgba(255,255,255,.08);
 
-    filter:blur(10px);
+    filter: blur(10px);
+
+    pointer-events: none;
 
 }
 
-.articles-cta-content{
+.articles-page .articles-cta-content {
 
-    position:relative;
+    position: relative;
 
-    z-index:2;
+    z-index: 2;
 
-    max-width:700px;
-
-}
-
-.articles-cta h2{
-
-    margin-bottom:12px;
-
-    font-size:34px;
-
-    line-height:1.2;
-
-    font-weight:800;
+    max-width: 700px;
 
 }
 
-.articles-cta p{
+.articles-page .articles-cta h2 {
 
-    color:rgba(255,255,255,.88);
+    margin: 0 0 12px;
 
-    font-size:15px;
+    font-size: 34px;
 
-    line-height:1.7;
+    line-height: 1.2;
+
+    font-weight: 800;
+
+}
+
+.articles-page .articles-cta p {
+
+    margin: 0;
+
+    color: rgba(255,255,255,.88);
+
+    font-size: 15px;
+
+    line-height: 1.7;
 
 }
 
@@ -1208,78 +1229,78 @@ body{
    RESPONSIVE
 ========================================================= */
 
-@media(max-width:1050px){
+@media(max-width:1050px) {
 
-    .articles-hero{
+    .articles-page .articles-hero {
 
-        grid-template-columns:1fr;
+        grid-template-columns: 1fr;
 
-        padding-top:100px;
-
-    }
-
-    .articles-hero-right{
-
-        max-width:700px;
-
-        width:100%;
-
-        margin:auto;
+        padding-top: 120px;
 
     }
 
-    .featured-card{
+    .articles-page .articles-hero-right {
 
-        grid-template-columns:1fr;
+        max-width: 700px;
 
-    }
+        width: 100%;
 
-    .featured-image{
-
-        aspect-ratio:3 / 2;
+        margin: auto;
 
     }
 
-    .articles-grid{
+    .articles-page .featured-card {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .articles-page .featured-image {
+
+        aspect-ratio: 3 / 2;
+
+    }
+
+    .articles-page .articles-grid {
 
         grid-template-columns:
-            repeat(2,1fr);
+            repeat(2, 1fr);
 
     }
 
 }
 
 
-@media(max-width:700px){
+@media(max-width:700px) {
 
-    .articles-hero{
+    .articles-page .articles-hero {
 
-        min-height:auto;
+        min-height: auto;
 
         padding:
-            80px
+            110px
             20px
             90px;
 
-        gap:45px;
+        gap: 45px;
 
     }
 
-    .articles-hero h1{
+    .articles-page .articles-hero h1 {
 
-        font-size:42px;
+        font-size: 42px;
 
-        letter-spacing:-1.5px;
-
-    }
-
-    .articles-hero-text{
-
-        font-size:16px;
+        letter-spacing: -1.5px;
 
     }
 
-    .articles-container{
+    .articles-page .articles-hero-text {
+
+        font-size: 16px;
+
+    }
+
+    .articles-page .articles-container {
 
         padding:
             55px
@@ -1288,7 +1309,7 @@ body{
 
     }
 
-    .articles-search-area{
+    .articles-page .articles-search-area {
 
         margin:
             -90px
@@ -1297,96 +1318,96 @@ body{
 
     }
 
-    .articles-heading{
+    .articles-page .articles-heading {
 
-        align-items:flex-start;
+        align-items: flex-start;
 
-        flex-direction:column;
+        flex-direction: column;
 
-        gap:6px;
-
-    }
-
-    .articles-heading h2{
-
-        font-size:30px;
+        gap: 6px;
 
     }
 
-    .featured-content{
+    .articles-page .articles-heading h2 {
 
-        padding:32px 25px 35px;
-
-    }
-
-    .featured-title{
-
-        font-size:29px;
+        font-size: 30px;
 
     }
 
-    .articles-grid{
+    .articles-page .featured-content {
 
-        grid-template-columns:1fr;
-
-        gap:25px;
+        padding: 32px 25px 35px;
 
     }
 
-    .articles-pagination{
+    .articles-page .featured-title {
 
-        gap:7px;
-
-        margin-top:40px;
+        font-size: 29px;
 
     }
 
-    .pagination-button{
+    .articles-page .articles-grid {
 
-        min-width:40px;
+        grid-template-columns: 1fr;
 
-        height:40px;
-
-        padding:0 11px;
-
-        font-size:13px;
+        gap: 25px;
 
     }
 
-    .articles-cta{
+    .articles-page .articles-pagination {
 
-        margin-top:65px;
+        gap: 7px;
 
-        padding:38px 25px;
+        margin-top: 40px;
 
     }
 
-    .articles-cta h2{
+    .articles-page .pagination-button {
 
-        font-size:28px;
+        min-width: 40px;
+
+        height: 40px;
+
+        padding: 0 11px;
+
+        font-size: 13px;
+
+    }
+
+    .articles-page .articles-cta {
+
+        margin-top: 65px;
+
+        padding: 38px 25px;
+
+    }
+
+    .articles-page .articles-cta h2 {
+
+        font-size: 28px;
 
     }
 
 }
 
 
-@media(max-width:430px){
+@media(max-width:430px) {
 
-    .articles-hero h1{
+    .articles-page .articles-hero h1 {
 
-        font-size:36px;
-
-    }
-
-    .articles-badge{
-
-        font-size:12px;
+        font-size: 36px;
 
     }
 
-    .featured-content{
+    .articles-page .articles-badge {
 
-        padding:28px 20px 30px;
+        font-size: 12px;
+
+    }
+
+    .articles-page .featured-content {
+
+        padding: 28px 20px 30px;
 
     }
 
@@ -1395,20 +1416,23 @@ body{
 
 /* =========================================================
    REDUCED MOTION
+   IMPORTANT:
+   Scoped only to the BLOG.
+   It will NOT affect header/footer.
 ========================================================= */
 
-@media(prefers-reduced-motion:reduce){
+@media(prefers-reduced-motion: reduce) {
 
-    *{
+    .articles-page * {
 
-        scroll-behavior:auto !important;
+        scroll-behavior: auto !important;
 
-        transition:none !important;
+        transition: none !important;
 
     }
 
 }
-     
+
 </style>
 
 </head>
@@ -1416,7 +1440,19 @@ body{
 
 <body>
 
+
+<!-- =======================================================
+     YOUR EXISTING HEADER
+     KEEP YOUR HEADER CODE EXACTLY AS IT IS
+======================================================= -->
+
 <div id="header"></div>
+
+
+<!-- =======================================================
+     ARTICLES PAGE
+======================================================= -->
+
 <div class="articles-page">
 
 
@@ -1457,7 +1493,6 @@ body{
     </div>
 
 
-
     <!-- HERO IMAGE -->
 
     <div class="articles-hero-right">
@@ -1472,7 +1507,6 @@ body{
 
 
 </section>
-
 
 
 <!-- =======================================================
@@ -1528,7 +1562,6 @@ body{
     </div>
 
 
-
     <!-- FEATURED HEADING -->
 
     <div class="articles-heading">
@@ -1552,7 +1585,6 @@ body{
     </div>
 
 
-
     <!-- FEATURED ARTICLE -->
 
     <section
@@ -1567,7 +1599,6 @@ body{
         </div>
 
     </section>
-
 
 
     <!-- ARTICLES HEADING -->
@@ -1593,7 +1624,6 @@ body{
     </div>
 
 
-
     <!-- ARTICLE GRID -->
 
     <section
@@ -1616,7 +1646,6 @@ body{
     </section>
 
 
-
     <!-- PAGINATION -->
 
     <div
@@ -1624,7 +1653,6 @@ body{
         id="articlesPagination"
         aria-label="Articles pagination"
     ></div>
-
 
 
     <!-- CTA -->
@@ -1652,12 +1680,14 @@ body{
 
 </div>
 
-   
+
+<!-- =======================================================
+     YOUR EXISTING FOOTER
+     KEEP YOUR FOOTER CODE EXACTLY AS IT IS
+======================================================= -->
+
 
 <script>
-
-   
-
 
 
 /* =========================================================
@@ -1695,25 +1725,6 @@ const blogLinks = [
    PAGINATION SETTINGS
 ========================================================= */
 
-/*
-   Number of normal article cards per page.
-
-   IMPORTANT:
-   Featured article is separate.
-
-   Therefore:
-
-   Page 1 =
-   Featured #1
-   +
-   6 normal articles
-
-   Page 2 =
-   Featured #1
-   +
-   next 6 normal articles
-*/
-
 const ARTICLES_PER_PAGE = 6;
 
 
@@ -1730,13 +1741,13 @@ let currentPage = 1;
    META
 ========================================================= */
 
-function getMeta(doc, selector){
+function getMeta(doc, selector) {
 
     const element =
         doc.querySelector(selector);
 
 
-    if(element){
+    if (element) {
 
         return (
             element.getAttribute("content")
@@ -1754,7 +1765,7 @@ function getMeta(doc, selector){
    DATE
 ========================================================= */
 
-function getDate(doc){
+function getDate(doc) {
 
     const scripts =
         doc.querySelectorAll(
@@ -1762,9 +1773,9 @@ function getDate(doc){
         );
 
 
-    for(const script of scripts){
+    for (const script of scripts) {
 
-        try{
+        try {
 
             const data =
                 JSON.parse(
@@ -1778,9 +1789,9 @@ function getDate(doc){
                     : [data];
 
 
-            for(const item of items){
+            for (const item of items) {
 
-                if(item.datePublished){
+                if (item.datePublished) {
 
                     return item.datePublished;
 
@@ -1790,7 +1801,7 @@ function getDate(doc){
 
         }
 
-        catch(error){
+        catch (error) {
 
             // Ignore invalid JSON
 
@@ -1807,7 +1818,7 @@ function getDate(doc){
    IMAGE
 ========================================================= */
 
-function getHeroImage(doc){
+function getHeroImage(doc) {
 
     const image =
         doc.querySelector(
@@ -1815,7 +1826,7 @@ function getHeroImage(doc){
         );
 
 
-    if(!image){
+    if (!image) {
 
         return "";
 
@@ -1826,14 +1837,14 @@ function getHeroImage(doc){
         image.getAttribute("src");
 
 
-    if(!src){
+    if (!src) {
 
         return "";
 
     }
 
 
-    try{
+    try {
 
         return new URL(
             src,
@@ -1842,7 +1853,7 @@ function getHeroImage(doc){
 
     }
 
-    catch(error){
+    catch (error) {
 
         return src;
 
@@ -1855,7 +1866,8 @@ function getHeroImage(doc){
    REAL ARTICLE DESCRIPTION
 ========================================================= */
 
-function getArticleDescription(doc){
+function getArticleDescription(doc) {
+
 
     /*
        FIRST:
@@ -1869,7 +1881,7 @@ function getArticleDescription(doc){
         );
 
 
-    if(description){
+    if (description) {
 
         return cleanText(description);
 
@@ -1888,7 +1900,7 @@ function getArticleDescription(doc){
         );
 
 
-    if(description){
+    if (description) {
 
         return cleanText(description);
 
@@ -1921,13 +1933,13 @@ function getArticleDescription(doc){
     ];
 
 
-    for(const selector of selectors){
+    for (const selector of selectors) {
 
         const element =
             doc.querySelector(selector);
 
 
-        if(element){
+        if (element) {
 
             const text =
                 cleanText(
@@ -1935,7 +1947,7 @@ function getArticleDescription(doc){
                 );
 
 
-            if(text.length > 40){
+            if (text.length > 40) {
 
                 return shortenText(text);
 
@@ -1955,7 +1967,7 @@ function getArticleDescription(doc){
         doc.querySelectorAll("p");
 
 
-    for(const paragraph of paragraphs){
+    for (const paragraph of paragraphs) {
 
         const text =
             cleanText(
@@ -1963,7 +1975,7 @@ function getArticleDescription(doc){
             );
 
 
-        if(text.length > 60){
+        if (text.length > 60) {
 
             return shortenText(text);
 
@@ -1981,10 +1993,10 @@ function getArticleDescription(doc){
    CLEAN TEXT
 ========================================================= */
 
-function cleanText(text){
+function cleanText(text) {
 
     return String(text || "")
-        .replace(/\s+/g," ")
+        .replace(/\s+/g, " ")
         .trim();
 
 }
@@ -1994,9 +2006,9 @@ function cleanText(text){
    SHORTEN REAL TEXT
 ========================================================= */
 
-function shortenText(text){
+function shortenText(text) {
 
-    if(text.length <= 180){
+    if (text.length <= 180) {
 
         return text;
 
@@ -2005,8 +2017,8 @@ function shortenText(text){
 
     return (
         text
-            .substring(0,180)
-            .replace(/\s+\S*$/,"")
+            .substring(0, 180)
+            .replace(/\s+\S*$/, "")
             .trim()
         + "..."
     );
@@ -2018,9 +2030,9 @@ function shortenText(text){
    FORMAT DATE
 ========================================================= */
 
-function formatDate(date){
+function formatDate(date) {
 
-    if(!date){
+    if (!date) {
 
         return "";
 
@@ -2031,7 +2043,7 @@ function formatDate(date){
         new Date(date);
 
 
-    if(isNaN(parsed)){
+    if (isNaN(parsed)) {
 
         return "";
 
@@ -2041,9 +2053,9 @@ function formatDate(date){
     return parsed.toLocaleDateString(
         "en-IN",
         {
-            day:"numeric",
-            month:"short",
-            year:"numeric"
+            day: "numeric",
+            month: "short",
+            year: "numeric"
         }
     );
 
@@ -2054,15 +2066,15 @@ function formatDate(date){
    FETCH ARTICLE
 ========================================================= */
 
-async function fetchArticle(url){
+async function fetchArticle(url) {
 
-    try{
+    try {
 
         const response =
             await fetch(url);
 
 
-        if(!response.ok){
+        if (!response.ok) {
 
             throw new Error(
                 "Article could not be loaded"
@@ -2137,7 +2149,7 @@ async function fetchArticle(url){
 
     }
 
-    catch(error){
+    catch (error) {
 
         console.error(
             "Failed:",
@@ -2156,7 +2168,7 @@ async function fetchArticle(url){
    LOAD ALL
 ========================================================= */
 
-async function loadArticles(){
+async function loadArticles() {
 
     const requests =
         blogLinks.map(
@@ -2194,7 +2206,7 @@ async function loadArticles(){
        Set hero image from first article
     */
 
-    if(allArticles[0]?.image){
+    if (allArticles[0]?.image) {
 
         document.getElementById(
             "heroArticleImage"
@@ -2202,7 +2214,8 @@ async function loadArticles(){
             allArticles[0].image;
 
     }
-    else{
+
+    else {
 
         document.getElementById(
             "heroArticleImage"
@@ -2223,7 +2236,7 @@ async function loadArticles(){
    FEATURED
 ========================================================= */
 
-function renderFeatured(article){
+function renderFeatured(article) {
 
     const container =
         document.getElementById(
@@ -2231,7 +2244,7 @@ function renderFeatured(article){
         );
 
 
-    if(!article){
+    if (!article) {
 
         container.innerHTML = `
 
@@ -2359,7 +2372,7 @@ function renderFeatured(article){
    PAGINATION
 ========================================================= */
 
-function renderPagination(totalArticles){
+function renderPagination(totalArticles) {
 
     const pagination =
         document.getElementById(
@@ -2374,12 +2387,7 @@ function renderPagination(totalArticles){
         );
 
 
-    /*
-       If only one page exists,
-       don't show pagination.
-    */
-
-    if(totalPages <= 1){
+    if (totalPages <= 1) {
 
         pagination.innerHTML = "";
 
@@ -2421,11 +2429,11 @@ function renderPagination(totalArticles){
        PAGE NUMBERS
     ===================================================== */
 
-    for(
+    for (
         let page = 1;
         page <= totalPages;
         page++
-    ){
+    ) {
 
         html += `
 
@@ -2494,7 +2502,7 @@ function renderPagination(totalArticles){
 
             button.addEventListener(
                 "click",
-                function(){
+                function () {
 
                     const page =
                         Number(
@@ -2502,10 +2510,10 @@ function renderPagination(totalArticles){
                         );
 
 
-                    if(
+                    if (
                         !page ||
                         page === currentPage
-                    ){
+                    ) {
 
                         return;
 
@@ -2527,8 +2535,8 @@ function renderPagination(totalArticles){
                             "articlesGrid"
                         )
                         .scrollIntoView({
-                            behavior:"smooth",
-                            block:"start"
+                            behavior: "smooth",
+                            block: "start"
                         });
 
                 }
@@ -2543,7 +2551,7 @@ function renderPagination(totalArticles){
    RENDER CARDS
 ========================================================= */
 
-function renderArticles(){
+function renderArticles() {
 
     const grid =
         document.getElementById(
@@ -2598,7 +2606,7 @@ function renderArticles(){
        FEATURED ARTICLE
     ===================================================== */
 
-    if(!search){
+    if (!search) {
 
         renderFeatured(
             allArticles[0]
@@ -2612,12 +2620,7 @@ function renderArticles(){
 
     }
 
-    else{
-
-        /*
-           During search, keep your
-           original behavior and hide featured.
-        */
+    else {
 
         document.getElementById(
             "featuredArticle"
@@ -2631,7 +2634,7 @@ function renderArticles(){
        NO RESULTS
     ===================================================== */
 
-    if(filtered.length === 0){
+    if (filtered.length === 0) {
 
         grid.innerHTML = `
 
@@ -2653,7 +2656,6 @@ function renderArticles(){
         document.getElementById(
             "articlesPagination"
         ).innerHTML = "";
-
 
         return;
 
@@ -2689,7 +2691,7 @@ function renderArticles(){
        of pages, return to last valid page.
     */
 
-    if(currentPage > totalPages){
+    if (currentPage > totalPages) {
 
         currentPage = totalPages;
 
@@ -2723,13 +2725,13 @@ function renderArticles(){
        RENDER ARTICLE CARDS
     ===================================================== */
 
-    if(pageArticles.length === 0){
+    if (pageArticles.length === 0) {
 
         grid.innerHTML = "";
 
     }
 
-    else{
+    else {
 
         grid.innerHTML =
             pageArticles.map(
@@ -2858,7 +2860,7 @@ function renderArticles(){
    SECURITY
 ========================================================= */
 
-function escapeHtml(text){
+function escapeHtml(text) {
 
     const div =
         document.createElement("div");
@@ -2883,7 +2885,7 @@ document
     )
     .addEventListener(
         "input",
-        function(){
+        function () {
 
             /*
                Every new search starts
@@ -2903,7 +2905,9 @@ document
 ========================================================= */
 
 loadArticles();
+
 </script>
+
 
 </body>
 
