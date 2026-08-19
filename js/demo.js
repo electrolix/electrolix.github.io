@@ -1,4 +1,5 @@
 
+<script>
 
 
 /* =========================================================
@@ -33,10 +34,38 @@ const blogLinks = [
 
 
 /* =========================================================
+   PAGINATION SETTINGS
+========================================================= */
+
+/*
+   Number of normal article cards per page.
+
+   IMPORTANT:
+   Featured article is separate.
+
+   Therefore:
+
+   Page 1 =
+   Featured #1
+   +
+   6 normal articles
+
+   Page 2 =
+   Featured #1
+   +
+   next 6 normal articles
+*/
+
+const ARTICLES_PER_PAGE = 6;
+
+
+/* =========================================================
    DATA
 ========================================================= */
 
 let allArticles = [];
+
+let currentPage = 1;
 
 
 /* =========================================================
@@ -47,6 +76,7 @@ function getMeta(doc, selector){
 
     const element =
         doc.querySelector(selector);
+
 
     if(element){
 
@@ -524,6 +554,8 @@ async function loadArticles(){
     }
 
 
+    currentPage = 1;
+
     renderArticles();
 
 }
@@ -666,6 +698,190 @@ function renderFeatured(article){
 
 
 /* =========================================================
+   PAGINATION
+========================================================= */
+
+function renderPagination(totalArticles){
+
+    const pagination =
+        document.getElementById(
+            "articlesPagination"
+        );
+
+
+    const totalPages =
+        Math.ceil(
+            totalArticles /
+            ARTICLES_PER_PAGE
+        );
+
+
+    /*
+       If only one page exists,
+       don't show pagination.
+    */
+
+    if(totalPages <= 1){
+
+        pagination.innerHTML = "";
+
+        return;
+
+    }
+
+
+    let html = "";
+
+
+    /* =====================================================
+       PREVIOUS BUTTON
+    ===================================================== */
+
+    html += `
+
+        <button
+            class="pagination-button pagination-arrow ${
+                currentPage === 1
+                    ? "disabled"
+                    : ""
+            }"
+            data-page="${currentPage - 1}"
+            aria-label="Previous page"
+            ${
+                currentPage === 1
+                    ? "disabled"
+                    : ""
+            }
+        >
+            ←
+        </button>
+
+    `;
+
+
+    /* =====================================================
+       PAGE NUMBERS
+    ===================================================== */
+
+    for(
+        let page = 1;
+        page <= totalPages;
+        page++
+    ){
+
+        html += `
+
+            <button
+                class="pagination-button ${
+                    page === currentPage
+                        ? "active"
+                        : ""
+                }"
+                data-page="${page}"
+                aria-label="Page ${page}"
+                ${
+                    page === currentPage
+                        ? 'aria-current="page"'
+                        : ""
+                }
+            >
+
+                ${page}
+
+            </button>
+
+        `;
+
+    }
+
+
+    /* =====================================================
+       NEXT BUTTON
+    ===================================================== */
+
+    html += `
+
+        <button
+            class="pagination-button pagination-arrow ${
+                currentPage === totalPages
+                    ? "disabled"
+                    : ""
+            }"
+            data-page="${currentPage + 1}"
+            aria-label="Next page"
+            ${
+                currentPage === totalPages
+                    ? "disabled"
+                    : ""
+            }
+        >
+            →
+        </button>
+
+    `;
+
+
+    pagination.innerHTML = html;
+
+
+    /* =====================================================
+       PAGE CLICK EVENTS
+    ===================================================== */
+
+    pagination
+        .querySelectorAll(
+            ".pagination-button:not(.disabled)"
+        )
+        .forEach(button => {
+
+            button.addEventListener(
+                "click",
+                function(){
+
+                    const page =
+                        Number(
+                            this.dataset.page
+                        );
+
+
+                    if(
+                        !page ||
+                        page === currentPage
+                    ){
+
+                        return;
+
+                    }
+
+
+                    currentPage = page;
+
+
+                    renderArticles();
+
+
+                    /*
+                       Scroll back to article cards
+                    */
+
+                    document
+                        .getElementById(
+                            "articlesGrid"
+                        )
+                        .scrollIntoView({
+                            behavior:"smooth",
+                            block:"start"
+                        });
+
+                }
+            );
+
+        });
+
+}
+
+
+/* =========================================================
    RENDER CARDS
 ========================================================= */
 
@@ -720,10 +936,9 @@ function renderArticles(){
         );
 
 
-    /*
-       Normal page:
-       first article is featured
-    */
+    /* =====================================================
+       FEATURED ARTICLE
+    ===================================================== */
 
     if(!search){
 
@@ -731,32 +946,6 @@ function renderArticles(){
             allArticles[0]
         );
 
-    }
-
-
-    /*
-       Search:
-       hide featured
-    */
-
-    else{
-
-        const featured =
-            document.getElementById(
-                "featuredArticle"
-            );
-
-        featured.style.display =
-            "none";
-
-    }
-
-
-    /*
-       Restore featured if search cleared
-    */
-
-    if(!search){
 
         document.getElementById(
             "featuredArticle"
@@ -765,6 +954,24 @@ function renderArticles(){
 
     }
 
+    else{
+
+        /*
+           During search, keep your
+           original behavior and hide featured.
+        */
+
+        document.getElementById(
+            "featuredArticle"
+        ).style.display =
+            "none";
+
+    }
+
+
+    /* =====================================================
+       NO RESULTS
+    ===================================================== */
 
     if(filtered.length === 0){
 
@@ -784,14 +991,20 @@ function renderArticles(){
 
         `;
 
+
+        document.getElementById(
+            "articlesPagination"
+        ).innerHTML = "";
+
+
         return;
 
     }
 
 
-    /*
-       Don't duplicate featured article
-    */
+    /* =====================================================
+       REMOVE FEATURED FROM NORMAL ARTICLE LIST
+    ===================================================== */
 
     const articles =
         search
@@ -799,123 +1012,186 @@ function renderArticles(){
             : filtered.slice(1);
 
 
-    if(articles.length === 0){
+    /* =====================================================
+       TOTAL PAGES
+    ===================================================== */
 
-        grid.innerHTML = "";
+    const totalPages =
+        Math.max(
+            1,
+            Math.ceil(
+                articles.length /
+                ARTICLES_PER_PAGE
+            )
+        );
 
-        return;
+
+    /*
+       If filtering reduces the number
+       of pages, return to last valid page.
+    */
+
+    if(currentPage > totalPages){
+
+        currentPage = totalPages;
 
     }
 
 
-    grid.innerHTML =
-        articles.map(
-            article => `
+    /* =====================================================
+       CURRENT PAGE
+    ===================================================== */
 
-            <article class="article-card">
-
-
-                <a
-                    href="${escapeHtml(article.url)}"
-                    class="article-image"
-                >
-
-                    ${
-                        article.image
-
-                        ?
-
-                        `
-                        <img
-                            src="${escapeHtml(article.image)}"
-                            alt="${escapeHtml(article.title)}"
-                            loading="lazy"
-                        >
-                        `
-
-                        :
-
-                        `
-                        <div class="message">
-                            No image
-                        </div>
-                        `
-
-                    }
-
-                </a>
+    const startIndex =
+        (
+            currentPage - 1
+        ) *
+        ARTICLES_PER_PAGE;
 
 
-                <div class="article-content">
+    const endIndex =
+        startIndex +
+        ARTICLES_PER_PAGE;
 
 
-                    <div class="article-meta">
-
-                        ${
-                            article.date
-                                ? formatDate(article.date)
-                                : "Electrolix Guide"
-                        }
-
-                    </div>
+    const pageArticles =
+        articles.slice(
+            startIndex,
+            endIndex
+        );
 
 
-                    <h2 class="article-title">
+    /* =====================================================
+       RENDER ARTICLE CARDS
+    ===================================================== */
 
-                        <a
-                            href="${escapeHtml(article.url)}"
-                        >
+    if(pageArticles.length === 0){
 
-                            ${escapeHtml(
-                                article.title
-                            )}
+        grid.innerHTML = "";
 
-                        </a>
+    }
 
-                    </h2>
+    else{
 
+        grid.innerHTML =
+            pageArticles.map(
+                article => `
 
-                    ${
-                        article.description
-
-                        ?
-
-                        `
-                        <p class="article-description">
-
-                            ${escapeHtml(
-                                article.description
-                            )}
-
-                        </p>
-                        `
-
-                        :
-
-                        ""
-
-                    }
+                <article class="article-card">
 
 
                     <a
                         href="${escapeHtml(article.url)}"
-                        class="article-read"
+                        class="article-image"
                     >
 
-                        Read Article
+                        ${
+                            article.image
 
-                        <span>→</span>
+                            ?
+
+                            `
+                            <img
+                                src="${escapeHtml(article.image)}"
+                                alt="${escapeHtml(article.title)}"
+                                loading="lazy"
+                            >
+                            `
+
+                            :
+
+                            `
+                            <div class="message">
+                                No image
+                            </div>
+                            `
+
+                        }
 
                     </a>
 
 
-                </div>
+                    <div class="article-content">
 
 
-            </article>
+                        <div class="article-meta">
 
-        `
-        ).join("");
+                            ${
+                                article.date
+                                    ? formatDate(article.date)
+                                    : "Electrolix Guide"
+                            }
+
+                        </div>
+
+
+                        <h2 class="article-title">
+
+                            <a
+                                href="${escapeHtml(article.url)}"
+                            >
+
+                                ${escapeHtml(
+                                    article.title
+                                )}
+
+                            </a>
+
+                        </h2>
+
+
+                        ${
+                            article.description
+
+                            ?
+
+                            `
+                            <p class="article-description">
+
+                                ${escapeHtml(
+                                    article.description
+                                )}
+
+                            </p>
+                            `
+
+                            :
+
+                            ""
+
+                        }
+
+
+                        <a
+                            href="${escapeHtml(article.url)}"
+                            class="article-read"
+                        >
+
+                            Read Article
+
+                            <span>→</span>
+
+                        </a>
+
+
+                    </div>
+
+
+                </article>
+
+            `
+            ).join("");
+
+    }
+
+
+    /* =====================================================
+       RENDER PAGINATION
+    ===================================================== */
+
+    renderPagination(
+        articles.length
+    );
 
 }
 
@@ -949,7 +1225,18 @@ document
     )
     .addEventListener(
         "input",
-        renderArticles
+        function(){
+
+            /*
+               Every new search starts
+               from page 1.
+            */
+
+            currentPage = 1;
+
+            renderArticles();
+
+        }
     );
 
 
@@ -959,3 +1246,4 @@ document
 
 loadArticles();
 
+</script>
