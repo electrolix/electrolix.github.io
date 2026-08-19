@@ -294,46 +294,4 @@ section{
 
 
 
-/* Tablet */
-@media(min-width:769px) and (max-width:1024px){
-
-main{
-    padding-top:70px;
-    padding-left:5%;
-    padding-right:5%;
-    padding-bottom:70px;
-}
-
-main h1{
-    font-size:34px;
-}
-
-main h2{
-    font-size:27px;
-}
-
-main h3{
-    font-size:21px;
-}
-
-main h4{
-    font-size:20px;
-}
-
-main h5{
-    font-size:17px;
-}
-
-main p{
-    font-size:17px;
-}
-
-main ul,
-main ol{
-    font-size:17px;
-}
-
-}
-
-
 
