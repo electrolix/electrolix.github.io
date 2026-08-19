@@ -1,5 +1,5 @@
 
-
+<script>
 
 
 /* =========================================================
@@ -37,25 +37,6 @@ const blogLinks = [
    PAGINATION SETTINGS
 ========================================================= */
 
-/*
-   Number of normal article cards per page.
-
-   IMPORTANT:
-   Featured article is separate.
-
-   Therefore:
-
-   Page 1 =
-   Featured #1
-   +
-   6 normal articles
-
-   Page 2 =
-   Featured #1
-   +
-   next 6 normal articles
-*/
-
 const ARTICLES_PER_PAGE = 6;
 
 
@@ -76,7 +57,6 @@ function getMeta(doc, selector){
 
     const element =
         doc.querySelector(selector);
-
 
     if(element){
 
@@ -103,7 +83,6 @@ function getDate(doc){
             'script[type="application/ld+json"]'
         );
 
-
     for(const script of scripts){
 
         try{
@@ -113,12 +92,10 @@ function getDate(doc){
                     script.textContent
                 );
 
-
             const items =
                 data["@graph"]
                     ? data["@graph"]
                     : [data];
-
 
             for(const item of items){
 
@@ -156,24 +133,20 @@ function getHeroImage(doc){
             ".hero-right img"
         );
 
-
     if(!image){
 
         return "";
 
     }
 
-
     const src =
         image.getAttribute("src");
-
 
     if(!src){
 
         return "";
 
     }
-
 
     try{
 
@@ -199,17 +172,11 @@ function getHeroImage(doc){
 
 function getArticleDescription(doc){
 
-    /*
-       FIRST:
-       Use OpenGraph description
-    */
-
     let description =
         getMeta(
             doc,
             'meta[property="og:description"]'
         );
-
 
     if(description){
 
@@ -217,11 +184,6 @@ function getArticleDescription(doc){
 
     }
 
-
-    /*
-       SECOND:
-       Normal meta description
-    */
 
     description =
         getMeta(
@@ -229,18 +191,12 @@ function getArticleDescription(doc){
             'meta[name="description"]'
         );
 
-
     if(description){
 
         return cleanText(description);
 
     }
 
-
-    /*
-       THIRD:
-       Try common article intro/excerpt elements
-    */
 
     const selectors = [
 
@@ -268,14 +224,12 @@ function getArticleDescription(doc){
         const element =
             doc.querySelector(selector);
 
-
         if(element){
 
             const text =
                 cleanText(
                     element.textContent
                 );
-
 
             if(text.length > 40){
 
@@ -288,14 +242,8 @@ function getArticleDescription(doc){
     }
 
 
-    /*
-       FOURTH:
-       Find first meaningful paragraph
-    */
-
     const paragraphs =
         doc.querySelectorAll("p");
-
 
     for(const paragraph of paragraphs){
 
@@ -303,7 +251,6 @@ function getArticleDescription(doc){
             cleanText(
                 paragraph.textContent
             );
-
 
         if(text.length > 60){
 
@@ -344,7 +291,6 @@ function shortenText(text){
 
     }
 
-
     return (
         text
             .substring(0,180)
@@ -368,17 +314,14 @@ function formatDate(date){
 
     }
 
-
     const parsed =
         new Date(date);
-
 
     if(isNaN(parsed)){
 
         return "";
 
     }
-
 
     return parsed.toLocaleDateString(
         "en-IN",
@@ -403,7 +346,6 @@ async function fetchArticle(url){
         const response =
             await fetch(url);
 
-
         if(!response.ok){
 
             throw new Error(
@@ -412,14 +354,11 @@ async function fetchArticle(url){
 
         }
 
-
         const html =
             await response.text();
 
-
         const parser =
             new DOMParser();
-
 
         const doc =
             parser.parseFromString(
@@ -532,9 +471,7 @@ async function loadArticles(){
         );
 
 
-    /*
-       Set hero image from first article
-    */
+    /* Set hero image from first article */
 
     if(allArticles[0]?.image){
 
@@ -544,6 +481,7 @@ async function loadArticles(){
             allArticles[0].image;
 
     }
+
     else{
 
         document.getElementById(
@@ -716,11 +654,6 @@ function renderPagination(totalArticles){
         );
 
 
-    /*
-       If only one page exists,
-       don't show pagination.
-    */
-
     if(totalPages <= 1){
 
         pagination.innerHTML = "";
@@ -733,9 +666,7 @@ function renderPagination(totalArticles){
     let html = "";
 
 
-    /* =====================================================
-       PREVIOUS BUTTON
-    ===================================================== */
+    /* PREVIOUS */
 
     html += `
 
@@ -759,9 +690,7 @@ function renderPagination(totalArticles){
     `;
 
 
-    /* =====================================================
-       PAGE NUMBERS
-    ===================================================== */
+    /* PAGE NUMBERS */
 
     for(
         let page = 1;
@@ -795,9 +724,7 @@ function renderPagination(totalArticles){
     }
 
 
-    /* =====================================================
-       NEXT BUTTON
-    ===================================================== */
+    /* NEXT */
 
     html += `
 
@@ -824,9 +751,7 @@ function renderPagination(totalArticles){
     pagination.innerHTML = html;
 
 
-    /* =====================================================
-       PAGE CLICK EVENTS
-    ===================================================== */
+    /* PAGE CLICK EVENTS */
 
     pagination
         .querySelectorAll(
@@ -859,10 +784,6 @@ function renderPagination(totalArticles){
 
                     renderArticles();
 
-
-                    /*
-                       Scroll back to article cards
-                    */
 
                     document
                         .getElementById(
@@ -936,9 +857,7 @@ function renderArticles(){
         );
 
 
-    /* =====================================================
-       FEATURED ARTICLE
-    ===================================================== */
+    /* FEATURED */
 
     if(!search){
 
@@ -956,11 +875,6 @@ function renderArticles(){
 
     else{
 
-        /*
-           During search, keep your
-           original behavior and hide featured.
-        */
-
         document.getElementById(
             "featuredArticle"
         ).style.display =
@@ -969,9 +883,7 @@ function renderArticles(){
     }
 
 
-    /* =====================================================
-       NO RESULTS
-    ===================================================== */
+    /* NO RESULTS */
 
     if(filtered.length === 0){
 
@@ -996,15 +908,12 @@ function renderArticles(){
             "articlesPagination"
         ).innerHTML = "";
 
-
         return;
 
     }
 
 
-    /* =====================================================
-       REMOVE FEATURED FROM NORMAL ARTICLE LIST
-    ===================================================== */
+    /* REMOVE FEATURED FROM NORMAL LIST */
 
     const articles =
         search
@@ -1012,9 +921,7 @@ function renderArticles(){
             : filtered.slice(1);
 
 
-    /* =====================================================
-       TOTAL PAGES
-    ===================================================== */
+    /* TOTAL PAGES */
 
     const totalPages =
         Math.max(
@@ -1026,11 +933,6 @@ function renderArticles(){
         );
 
 
-    /*
-       If filtering reduces the number
-       of pages, return to last valid page.
-    */
-
     if(currentPage > totalPages){
 
         currentPage = totalPages;
@@ -1038,9 +940,7 @@ function renderArticles(){
     }
 
 
-    /* =====================================================
-       CURRENT PAGE
-    ===================================================== */
+    /* CURRENT PAGE */
 
     const startIndex =
         (
@@ -1061,9 +961,7 @@ function renderArticles(){
         );
 
 
-    /* =====================================================
-       RENDER ARTICLE CARDS
-    ===================================================== */
+    /* RENDER ARTICLE CARDS */
 
     if(pageArticles.length === 0){
 
@@ -1185,9 +1083,7 @@ function renderArticles(){
     }
 
 
-    /* =====================================================
-       RENDER PAGINATION
-    ===================================================== */
+    /* RENDER PAGINATION */
 
     renderPagination(
         articles.length
@@ -1205,10 +1101,8 @@ function escapeHtml(text){
     const div =
         document.createElement("div");
 
-
     div.textContent =
         text || "";
-
 
     return div.innerHTML;
 
@@ -1227,11 +1121,6 @@ document
         "input",
         function(){
 
-            /*
-               Every new search starts
-               from page 1.
-            */
-
             currentPage = 1;
 
             renderArticles();
@@ -1246,3 +1135,4 @@ document
 
 loadArticles();
 
+</script>
