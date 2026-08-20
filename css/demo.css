@@ -1189,7 +1189,14 @@
 
         grid-template-columns:1fr;
 
-        padding-top:140px;
+         min-height:auto;
+
+        padding:
+            120px
+            20px
+            150px;
+
+        gap:45px;
 
     }
 
