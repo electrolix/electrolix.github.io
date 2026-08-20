@@ -1202,7 +1202,7 @@
 
     .articles-page .articles-hero-right{
 
-        max-width:700px;
+        max-width:auto;
 
         width:100%;
 
@@ -1229,7 +1229,7 @@
 
    .articles-page .articles-search-area{
 
-        max-width:700px;
+        max-width:auto;
 
         margin:
             -200px
