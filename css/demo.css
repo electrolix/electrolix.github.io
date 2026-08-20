@@ -1210,6 +1210,35 @@
 
     }
 
+
+    .articles-page .articles-hero-right img{
+
+        max-width:100%;
+
+        border-radius:22px;
+
+    }
+
+    .articles-page .articles-hero-right::after{
+
+        border-radius:28px;
+
+    }
+
+
+
+   .articles-page .articles-search-area{
+
+        max-width:600px;
+
+        margin:
+            -200px
+            auto
+            60px;
+
+    }
+   
+
     .articles-page .featured-card{
 
         grid-template-columns:1fr;
