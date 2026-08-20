@@ -1183,17 +1183,63 @@
    RESPONSIVE
 ========================================================= */
 
-/* =========================================================
-   MOBILE
-   700px and below
-========================================================= */
+@media(max-width:1050px){
+
+    .articles-page .articles-hero{
+
+        grid-template-columns:1fr;
+
+         min-height:auto;
+
+        padding:
+            120px
+            20px
+            150px;
+
+        gap:45px;
+
+    }
+
+    .articles-page .articles-hero-right{
+
+        max-width:600px;
+
+        width:100%;
+
+        margin:auto;
+
+    }
+
+    .articles-page .featured-card{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .articles-page .featured-image{
+
+        aspect-ratio:3 / 2;
+
+    }
+
+    .articles-page .articles-grid{
+
+        grid-template-columns:
+            repeat(2,1fr);
+
+    }
+
+}
+
 
 @media(max-width:700px){
 
     .articles-page .articles-hero{
 
+        min-height:auto;
+
         padding:
-            110px
+            120px
             20px
             150px;
 
@@ -1215,134 +1261,63 @@
 
     }
 
-    .articles-page .articles-hero-right{
-
-        max-width:100%;
-
-    }
-
-
-    /* SEARCH */
-
-    .articles-page .articles-search-area{
-
-        width:calc(100% - 40px);
-
-        margin:
-            -95px
-            auto
-            50px;
-
-        padding:7px;
-
-    }
-
-
-    /* MAIN */
-
     .articles-page .articles-container{
 
         padding:
-            65px
-            20px
+            55px
+            16px
             70px;
 
     }
 
+    .articles-page .articles-search-area{
 
-    /* SECTION HEADER */
+        margin:
+            -170px
+            10px
+            55px;
+
+    }
 
     .articles-page .articles-heading{
 
-        display:block;
+        align-items:flex-start;
+
+        flex-direction:column;
+
+        gap:6px;
 
     }
 
     .articles-page .articles-heading h2{
 
-        font-size:28px;
-
-    }
-
-    .articles-page .articles-heading p{
-
-        margin-top:8px;
-
-    }
-
-
-    /* FEATURED */
-
-    .articles-page .featured-card{
-
-        grid-template-columns:1fr;
-
-        border-radius:22px;
-
-    }
-
-    .articles-page .featured-image{
-
-        aspect-ratio:16 / 10;
+        font-size:30px;
 
     }
 
     .articles-page .featured-content{
 
-        padding:
-            28px
-            24px
-            30px;
+        padding:32px 25px 35px;
 
     }
 
     .articles-page .featured-title{
 
-        font-size:27px;
+        font-size:29px;
 
     }
-
-
-    /* ARTICLE GRID */
 
     .articles-page .articles-grid{
 
         grid-template-columns:1fr;
 
-        gap:22px;
+        gap:25px;
 
     }
-
-
-    /* ARTICLE CARD */
-
-    .articles-page .article-content{
-
-        padding:
-            20px
-            20px
-            23px;
-
-    }
-
-    .articles-page .article-title{
-
-        font-size:19px;
-
-    }
-
-    .articles-page .article-description{
-
-        font-size:13px;
-
-    }
-
-
-    /* PAGINATION */
 
     .articles-page .articles-pagination{
 
-        gap:6px;
+        gap:7px;
 
         margin-top:40px;
 
@@ -1354,210 +1329,52 @@
 
         height:40px;
 
-        padding:0 10px;
+        padding:0 11px;
+
+        font-size:13px;
 
     }
 
-
-    /* CTA */
-
     .articles-page .articles-cta{
 
-        margin-top:60px;
+        margin-top:65px;
 
-        padding:
-            35px
-            25px;
-
-        border-radius:24px;
+        padding:38px 25px;
 
     }
 
     .articles-page .articles-cta h2{
 
-        font-size:27px;
+        font-size:28px;
 
     }
 
 }
 
 
-/* =========================================================
-   TABLET
-   1050px and below
-========================================================= */
-
-@media(max-width:1050px){
-
-    /* =====================================================
-       HERO
-    ===================================================== */
-
-    .articles-page .articles-hero{
-
-        grid-template-columns:1fr;
-
-        min-height:auto;
-
-        padding:
-            120px
-            20px
-            150px;
-
-        gap:45px;
-
-    }
+@media(max-width:430px){
 
     .articles-page .articles-hero h1{
 
-        font-size:52px;
-
-        letter-spacing:-1.5px;
+        font-size:36px;
 
     }
 
-    .articles-page .articles-hero-text{
+    .articles-page .articles-badge{
 
-        font-size:17px;
-
-        line-height:1.7;
-
-    }
-
-    .articles-page .articles-hero-right{
-
-        max-width:600px;
-
-        width:100%;
-
-        margin:auto;
-
-    }
-
-    .articles-page .articles-hero-right img{
-
-        max-width:100%;
-
-    }
-
-
-    /* =====================================================
-       MAIN CONTAINER
-    ===================================================== */
-
-    .articles-page .articles-container{
-
-        padding:
-            80px
-            20px
-            80px;
-
-    }
-
-
-    /* =====================================================
-       SEARCH
-    ===================================================== */
-
-    .articles-page .articles-search-area{
-
-        max-width:650px;
-
-        margin:
-            -150px
-            auto
-            60px;
-
-    }
-
-
-    /* =====================================================
-       SECTION HEADER
-    ===================================================== */
-
-    .articles-page .articles-heading h2{
-
-        font-size:32px;
-
-    }
-
-
-    /* =====================================================
-       FEATURED ARTICLE
-    ===================================================== */
-
-    .articles-page .featured-card{
-
-        grid-template-columns:1fr;
-
-    }
-
-    .articles-page .featured-image{
-
-        aspect-ratio:3 / 2;
+        font-size:12px;
 
     }
 
     .articles-page .featured-content{
 
-        padding:40px;
-
-    }
-
-    .articles-page .featured-title{
-
-        font-size:34px;
-
-    }
-
-
-    /* =====================================================
-       ARTICLE GRID
-    ===================================================== */
-
-    .articles-page .articles-grid{
-
-        grid-template-columns:
-            repeat(2,1fr);
-
-        gap:25px;
-
-    }
-
-
-    /* =====================================================
-       ARTICLE CARD
-    ===================================================== */
-
-    .articles-page .article-content{
-
-        padding:
-            22px
-            22px
-            25px;
-
-    }
-
-    .articles-page .article-title{
-
-        font-size:20px;
-
-    }
-
-
-    /* =====================================================
-       CTA
-    ===================================================== */
-
-    .articles-page .articles-cta{
-
-        margin-top:70px;
-
-        padding:45px;
+        padding:28px 20px 30px;
 
     }
 
 }
+
+
 
 /* =========================================================
    REDUCED MOTION
