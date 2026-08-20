@@ -1134,9 +1134,9 @@
     background:
         radial-gradient(
             circle at top left,
-            #2563eb 0,
-            #4f46e5 45%,
-            #7c3aed 100%
+            #4f46e5 0,
+            #2563eb 45%,
+            #4f46e5 100%
         );
 
     box-shadow:
