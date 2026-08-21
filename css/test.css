@@ -98,7 +98,7 @@ nav{
 
     display:flex;
 
-    gap:35px;
+    gap:25px;
 
 }
 
@@ -240,7 +240,7 @@ footer a:hover {
 
 header{
 
-    padding:18px 5%;
+    padding:18px 1%;
 
 }
 
