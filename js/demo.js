@@ -27,11 +27,11 @@ const blogLinks = [
 
     "https://electrolix.github.io/finolex-wires-for-lighting-guide.html",
 
-    "https://electrolix.github.io/finolex-0-75-mm-wire-complete-guide.html"
+    "https://electrolix.github.io/finolex-0-75-mm-wire-complete-guide.html",
 
-    "https://electrolix.github.io/understanding-finolex-wires-power-sockets.html"
+    "https://electrolix.github.io/understanding-finolex-wires-power-sockets.html",
 
-    "https://electrolix.github.io/finolex-industrial-cables-types-sizes-guide.html"     
+    "https://electrolix.github.io/finolex-industrial-cables-types-sizes-guide.html",     
 
 ];
 
