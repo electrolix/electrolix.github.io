@@ -7,6 +7,8 @@ const blogLinks = [
 
    "https://electrolix.github.io/finolex-0-75-mm-wire-complete-guide.html",
 
+    "https://electrolix.github.io/finolex-copper-wires-guide.html",
+
    "https://electrolix.github.io/finolex-90-mtr-wires-buying-guide.html",
 
     "https://electrolix.github.io/finolex-frlsh-wires-explained.html",
@@ -29,7 +31,6 @@ const blogLinks = [
 
     "https://electrolix.github.io/finolex-industrial-cables-types-sizes-guide.html",   
 
-    "https://electrolix.github.io/finolex-copper-wires-guide.html",
 
 ];
 
