@@ -34,487 +34,7 @@ const blogLinks = [
 ];
 
 
-/* =========================================================
-   PAGINATION SETTINGS
-========================================================= */
-
-const ARTICLES_PER_PAGE = 6;
-
-
-/* =========================================================
-   DATA
-========================================================= */
-
-let allArticles = [];
-
-let currentPage = 1;
-
-
-/* =========================================================
-   META
-========================================================= */
-
-function getMeta(doc, selector){
-
-    const element =
-        doc.querySelector(selector);
-
-    if(element){
-
-        return (
-            element.getAttribute("content")
-            || ""
-        );
-
-    }
-
-    return "";
-
-}
-
-
-/* =========================================================
-   DATE
-========================================================= */
-
-function getDate(doc){
-
-    const scripts =
-        doc.querySelectorAll(
-            'script[type="application/ld+json"]'
-        );
-
-    for(const script of scripts){
-
-        try{
-
-            const data =
-                JSON.parse(
-                    script.textContent
-                );
-
-            const items =
-                data["@graph"]
-                    ? data["@graph"]
-                    : [data];
-
-            for(const item of items){
-
-                if(item.datePublished){
-
-                    return item.datePublished;
-
-                }
-
-            }
-
-        }
-
-        catch(error){
-
-            // Ignore invalid JSON
-
-        }
-
-    }
-
-    return "";
-
-}
-
-
-/* =========================================================
-   IMAGE
-========================================================= */
-
-function getHeroImage(doc){
-
-    const image =
-        doc.querySelector(
-            ".hero-right img"
-        );
-
-    if(!image){
-
-        return "";
-
-    }
-
-    const src =
-        image.getAttribute("src");
-
-    if(!src){
-
-        return "";
-
-    }
-
-    try{
-
-        return new URL(
-            src,
-            doc.baseURI
-        ).href;
-
-    }
-
-    catch(error){
-
-        return src;
-
-    }
-
-}
-
-
-/* =========================================================
-   REAL ARTICLE DESCRIPTION
-========================================================= */
-
-function getArticleDescription(doc){
-
-    let description =
-        getMeta(
-            doc,
-            'meta[property="og:description"]'
-        );
-
-    if(description){
-
-        return cleanText(description);
-
-    }
-
-
-    description =
-        getMeta(
-            doc,
-            'meta[name="description"]'
-        );
-
-    if(description){
-
-        return cleanText(description);
-
-    }
-
-
-    const selectors = [
-
-        ".article-excerpt",
-
-        ".article-description",
-
-        ".post-excerpt",
-
-        ".post-description",
-
-        ".excerpt",
-
-        ".hero-description",
-
-        ".hero p",
-
-        "article p"
-
-    ];
-
-
-    for(const selector of selectors){
-
-        const element =
-            doc.querySelector(selector);
-
-        if(element){
-
-            const text =
-                cleanText(
-                    element.textContent
-                );
-
-            if(text.length > 40){
-
-                return shortenText(text);
-
-            }
-
-        }
-
-    }
-
-
-    const paragraphs =
-        doc.querySelectorAll("p");
-
-    for(const paragraph of paragraphs){
-
-        const text =
-            cleanText(
-                paragraph.textContent
-            );
-
-        if(text.length > 60){
-
-            return shortenText(text);
-
-        }
-
-    }
-
-
-    return "";
-
-}
-
-
-/* =========================================================
-   CLEAN TEXT
-========================================================= */
-
-function cleanText(text){
-
-    return String(text || "")
-        .replace(/\s+/g," ")
-        .trim();
-
-}
-
-
-/* =========================================================
-   SHORTEN REAL TEXT
-========================================================= */
-
-function shortenText(text){
-
-    if(text.length <= 180){
-
-        return text;
-
-    }
-
-    return (
-        text
-            .substring(0,180)
-            .replace(/\s+\S*$/,"")
-            .trim()
-        + "..."
-    );
-
-}
-
-
-/* =========================================================
-   FORMAT DATE
-========================================================= */
-
-function formatDate(date){
-
-    if(!date){
-
-        return "";
-
-    }
-
-    const parsed =
-        new Date(date);
-
-    if(isNaN(parsed)){
-
-        return "";
-
-    }
-
-    return parsed.toLocaleDateString(
-        "en-IN",
-        {
-            day:"numeric",
-            month:"short",
-            year:"numeric"
-        }
-    );
-
-}
-
-
-/* =========================================================
-   FETCH ARTICLE
-========================================================= */
-
-async function fetchArticle(url){
-
-    try{
-
-        const response =
-            await fetch(url);
-
-        if(!response.ok){
-
-            throw new Error(
-                "Article could not be loaded"
-            );
-
-        }
-
-        const html =
-            await response.text();
-
-        const parser =
-            new DOMParser();
-
-        const doc =
-            parser.parseFromString(
-                html,
-                "text/html"
-            );
-
-
-        const title =
-
-            getMeta(
-                doc,
-                'meta[property="og:title"]'
-            )
-
-            ||
-
-            doc.querySelector("h1")
-                ?.textContent
-
-            ||
-
-            doc.querySelector("title")
-                ?.textContent
-
-            ||
-
-            "Electrolix Article";
-
-
-        const description =
-            getArticleDescription(doc);
-
-
-        const image =
-            getHeroImage(doc);
-
-
-        return {
-
-            title:
-                cleanText(title),
-
-            description:
-                description,
-
-            image:
-                image,
-
-            date:
-                getDate(doc),
-
-            url:
-                url
-
-        };
-
-    }
-
-    catch(error){
-
-        console.error(
-            "Failed:",
-            url,
-            error
-        );
-
-        return null;
-
-    }
-
-}
-
-
-/* =========================================================
-   LOAD ALL
-========================================================= */
-
-async function loadArticles(){
-
-    const requests =
-        blogLinks.map(
-            url =>
-                fetchArticle(url)
-        );
-
-
-    const results =
-        await Promise.all(
-            requests
-        );
-
-
-    allArticles =
-        results.filter(
-            article =>
-                article !== null
-        );
-
-
-    document.getElementById(
-        "articleCount"
-    ).textContent =
-        allArticles.length
-        +
-        (
-            allArticles.length === 1
-                ? " Article"
-                : " Articles"
-        );
-
-
-    /* Set hero image from first article */
-
-    if(allArticles[0]?.image){
-
-        document.getElementById(
-            "heroArticleImage"
-        ).src =
-            allArticles[0].image;
-
-    }
-
-    else{
-
-        document.getElementById(
-            "heroArticleImage"
-        ).style.display =
-            "none";
-
-    }
-
-
-    currentPage = 1;
-
-    renderArticles();
-
-}
-
-
-/* =========================================================
-   FEATURED
-========================================================= */
-
-function renderFeatured(article){
-
-    const container =
-        document.getElementById(
-            "featuredArticle"
-        );
-
-
-    if(!article){
-
-        container.innerHTML = `
+const ARTICLES_PER_PAGE=6;let allArticles=[],currentPage=1;function getMeta(e,t){let r=e.querySelector(t);return r&&r.getAttribute("content")||""}function getDate(e){let t=e.querySelectorAll('script[type="application/ld+json"]');for(let r of t)try{let a=JSON.parse(r.textContent),l=a["@graph"]?a["@graph"]:[a];for(let i of l)if(i.datePublished)return i.datePublished}catch(n){}return""}function getHeroImage(e){let t=e.querySelector(".hero-right img");if(!t)return"";let r=t.getAttribute("src");if(!r)return"";try{return new URL(r,e.baseURI).href}catch(a){return r}}function getArticleDescription(e){let t=getMeta(e,'meta[property="og:description"]');if(t||(t=getMeta(e,'meta[name="description"]')))return cleanText(t);for(let r of[".article-excerpt",".article-description",".post-excerpt",".post-description",".excerpt",".hero-description",".hero p","article p"]){let a=e.querySelector(r);if(a){let l=cleanText(a.textContent);if(l.length>40)return shortenText(l)}}let i=e.querySelectorAll("p");for(let n of i){let c=cleanText(n.textContent);if(c.length>60)return shortenText(c)}return""}function cleanText(e){return String(e||"").replace(/\s+/g," ").trim()}function shortenText(e){return e.length<=180?e:e.substring(0,180).replace(/\s+\S*$/,"").trim()+"..."}function formatDate(e){if(!e)return"";let t=new Date(e);return isNaN(t)?"":t.toLocaleDateString("en-IN",{day:"numeric",month:"short",year:"numeric"})}async function fetchArticle(e){try{let t=await fetch(e);if(!t.ok)throw Error("Article could not be loaded");let r=await t.text(),a=new DOMParser,l=a.parseFromString(r,"text/html"),i=getMeta(l,'meta[property="og:title"]')||l.querySelector("h1")?.textContent||l.querySelector("title")?.textContent||"Electrolix Article",n=getArticleDescription(l),c=getHeroImage(l);return{title:cleanText(i),description:n,image:c,date:getDate(l),url:e}}catch(s){return console.error("Failed:",e,s),null}}async function loadArticles(){let e=blogLinks.map(e=>fetchArticle(e)),t=await Promise.all(e);allArticles=t.filter(e=>null!==e),document.getElementById("articleCount").textContent=allArticles.length+(1===allArticles.length?" Article":" Articles"),allArticles[0]?.image?document.getElementById("heroArticleImage").src=allArticles[0].image:document.getElementById("heroArticleImage").style.display="none",currentPage=1,renderArticles()}function renderFeatured(e){let t=document.getElementById("featuredArticle");if(!e){t.innerHTML=`
 
             <div class="message">
 
@@ -524,42 +44,24 @@ function renderFeatured(article){
 
             </div>
 
-        `;
-
-        return;
-
-    }
-
-
-    container.innerHTML = `
+        `;return}t.innerHTML=`
 
         <a
-            href="${escapeHtml(article.url)}"
+            href="${escapeHtml(e.url)}"
             class="featured-image"
         >
 
-            ${
-                article.image
-
-                ?
-
-                `
+            ${e.image?`
                 <img
-                    src="${escapeHtml(article.image)}"
-                    alt="${escapeHtml(article.title)}"
+                    src="${escapeHtml(e.image)}"
+                    alt="${escapeHtml(e.title)}"
                     loading="eager"
                 >
-                `
-
-                :
-
-                `
+                `:`
                 <div class="message">
                     No image available
                 </div>
-                `
-
-            }
+                `}
 
         </a>
 
@@ -571,55 +73,31 @@ function renderFeatured(article){
             </div>
 
 
-            ${
-                article.date
-
-                ?
-
-                `
+            ${e.date?`
                 <div class="article-date">
-                    ${formatDate(article.date)}
+                    ${formatDate(e.date)}
                 </div>
-                `
-
-                :
-
-                ""
-
-            }
+                `:""}
 
 
             <h2 class="featured-title">
 
-                ${escapeHtml(article.title)}
+                ${escapeHtml(e.title)}
 
             </h2>
 
 
-            ${
-                article.description
-
-                ?
-
-                `
+            ${e.description?`
                 <p class="featured-description">
 
-                    ${escapeHtml(
-                        article.description
-                    )}
+                    ${escapeHtml(e.description)}
 
                 </p>
-                `
-
-                :
-
-                ""
-
-            }
+                `:""}
 
 
             <a
-                href="${escapeHtml(article.url)}"
+                href="${escapeHtml(e.url)}"
                 class="read-button"
             >
 
@@ -631,264 +109,42 @@ function renderFeatured(article){
 
         </div>
 
-    `;
-
-}
-
-
-/* =========================================================
-   PAGINATION
-========================================================= */
-
-function renderPagination(totalArticles){
-
-    const pagination =
-        document.getElementById(
-            "articlesPagination"
-        );
-
-
-    const totalPages =
-        Math.ceil(
-            totalArticles /
-            ARTICLES_PER_PAGE
-        );
-
-
-    if(totalPages <= 1){
-
-        pagination.innerHTML = "";
-
-        return;
-
-    }
-
-
-    let html = "";
-
-
-    /* PREVIOUS */
-
-    html += `
+    `}function renderPagination(e){let t=document.getElementById("articlesPagination"),r=Math.ceil(e/6);if(r<=1){t.innerHTML="";return}let a="";a+=`
 
         <button
-            class="pagination-button pagination-arrow ${
-                currentPage === 1
-                    ? "disabled"
-                    : ""
-            }"
-            data-page="${currentPage - 1}"
+            class="pagination-button pagination-arrow ${1===currentPage?"disabled":""}"
+            data-page="${currentPage-1}"
             aria-label="Previous page"
-            ${
-                currentPage === 1
-                    ? "disabled"
-                    : ""
-            }
+            ${1===currentPage?"disabled":""}
         >
             ←
         </button>
 
-    `;
-
-
-    /* PAGE NUMBERS */
-
-    for(
-        let page = 1;
-        page <= totalPages;
-        page++
-    ){
-
-        html += `
+    `;for(let l=1;l<=r;l++)a+=`
 
             <button
-                class="pagination-button ${
-                    page === currentPage
-                        ? "active"
-                        : ""
-                }"
-                data-page="${page}"
-                aria-label="Page ${page}"
-                ${
-                    page === currentPage
-                        ? 'aria-current="page"'
-                        : ""
-                }
+                class="pagination-button ${l===currentPage?"active":""}"
+                data-page="${l}"
+                aria-label="Page ${l}"
+                ${l===currentPage?'aria-current="page"':""}
             >
 
-                ${page}
+                ${l}
 
             </button>
 
-        `;
-
-    }
-
-
-    /* NEXT */
-
-    html += `
+        `;a+=`
 
         <button
-            class="pagination-button pagination-arrow ${
-                currentPage === totalPages
-                    ? "disabled"
-                    : ""
-            }"
-            data-page="${currentPage + 1}"
+            class="pagination-button pagination-arrow ${currentPage===r?"disabled":""}"
+            data-page="${currentPage+1}"
             aria-label="Next page"
-            ${
-                currentPage === totalPages
-                    ? "disabled"
-                    : ""
-            }
+            ${currentPage===r?"disabled":""}
         >
             →
         </button>
 
-    `;
-
-
-    pagination.innerHTML = html;
-
-
-    /* PAGE CLICK EVENTS */
-
-    pagination
-        .querySelectorAll(
-            ".pagination-button:not(.disabled)"
-        )
-        .forEach(button => {
-
-            button.addEventListener(
-                "click",
-                function(){
-
-                    const page =
-                        Number(
-                            this.dataset.page
-                        );
-
-
-                    if(
-                        !page ||
-                        page === currentPage
-                    ){
-
-                        return;
-
-                    }
-
-
-                    currentPage = page;
-
-
-                    renderArticles();
-
-
-                    document
-                        .getElementById(
-                            "articlesGrid"
-                        )
-                        .scrollIntoView({
-                            behavior:"smooth",
-                            block:"start"
-                        });
-
-                }
-            );
-
-        });
-
-}
-
-
-/* =========================================================
-   RENDER CARDS
-========================================================= */
-
-function renderArticles(){
-
-    const grid =
-        document.getElementById(
-            "articlesGrid"
-        );
-
-
-    const search =
-        document.getElementById(
-            "articleSearch"
-        )
-        .value
-        .toLowerCase()
-        .trim();
-
-
-    const filtered =
-        allArticles.filter(
-            article => {
-
-                return (
-
-                    article.title
-                        .toLowerCase()
-                        .includes(search)
-
-                    ||
-
-                    article.description
-                        .toLowerCase()
-                        .includes(search)
-
-                );
-
-            }
-        );
-
-
-    document.getElementById(
-        "resultsText"
-    ).textContent =
-        filtered.length
-        +
-        (
-            filtered.length === 1
-                ? " article found"
-                : " articles found"
-        );
-
-
-    /* FEATURED */
-
-    if(!search){
-
-        renderFeatured(
-            allArticles[0]
-        );
-
-
-        document.getElementById(
-            "featuredArticle"
-        ).style.display =
-            "grid";
-
-    }
-
-    else{
-
-        document.getElementById(
-            "featuredArticle"
-        ).style.display =
-            "none";
-
-    }
-
-
-    /* NO RESULTS */
-
-    if(filtered.length === 0){
-
-        grid.innerHTML = `
+    `,t.innerHTML=a,t.querySelectorAll(".pagination-button:not(.disabled)").forEach(e=>{e.addEventListener("click",function(){let e=Number(this.dataset.page);e&&e!==currentPage&&(currentPage=e,renderArticles(),document.getElementById("articlesGrid").scrollIntoView({behavior:"smooth",block:"start"}))})})}function renderArticles(){let e=document.getElementById("articlesGrid"),t=document.getElementById("articleSearch").value.toLowerCase().trim(),r=allArticles.filter(e=>e.title.toLowerCase().includes(t)||e.description.toLowerCase().includes(t));if(document.getElementById("resultsText").textContent=r.length+(1===r.length?" article found":" articles found"),t?document.getElementById("featuredArticle").style.display="none":(renderFeatured(allArticles[0]),document.getElementById("featuredArticle").style.display="grid"),0===r.length){e.innerHTML=`
 
             <div class="message">
 
@@ -902,110 +158,27 @@ function renderArticles(){
 
             </div>
 
-        `;
-
-
-        document.getElementById(
-            "articlesPagination"
-        ).innerHTML = "";
-
-        return;
-
-    }
-
-
-    /* REMOVE FEATURED FROM NORMAL LIST */
-
-    const articles =
-        search
-            ? filtered
-            : filtered.slice(1);
-
-
-    /* TOTAL PAGES */
-
-    const totalPages =
-        Math.max(
-            1,
-            Math.ceil(
-                articles.length /
-                ARTICLES_PER_PAGE
-            )
-        );
-
-
-    if(currentPage > totalPages){
-
-        currentPage = totalPages;
-
-    }
-
-
-    /* CURRENT PAGE */
-
-    const startIndex =
-        (
-            currentPage - 1
-        ) *
-        ARTICLES_PER_PAGE;
-
-
-    const endIndex =
-        startIndex +
-        ARTICLES_PER_PAGE;
-
-
-    const pageArticles =
-        articles.slice(
-            startIndex,
-            endIndex
-        );
-
-
-    /* RENDER ARTICLE CARDS */
-
-    if(pageArticles.length === 0){
-
-        grid.innerHTML = "";
-
-    }
-
-    else{
-
-        grid.innerHTML =
-            pageArticles.map(
-                article => `
+        `,document.getElementById("articlesPagination").innerHTML="";return}let a=t?r:r.slice(1),l=Math.max(1,Math.ceil(a.length/6));currentPage>l&&(currentPage=l);let i=(currentPage-1)*6,n=a.slice(i,i+6);0===n.length?e.innerHTML="":e.innerHTML=n.map(e=>`
 
                 <article class="article-card">
 
 
                     <a
-                        href="${escapeHtml(article.url)}"
+                        href="${escapeHtml(e.url)}"
                         class="article-image"
                     >
 
-                        ${
-                            article.image
-
-                            ?
-
-                            `
+                        ${e.image?`
                             <img
-                                src="${escapeHtml(article.image)}"
-                                alt="${escapeHtml(article.title)}"
+                                src="${escapeHtml(e.image)}"
+                                alt="${escapeHtml(e.title)}"
                                 loading="lazy"
                             >
-                            `
-
-                            :
-
-                            `
+                            `:`
                             <div class="message">
                                 No image
                             </div>
-                            `
-
-                        }
+                            `}
 
                     </a>
 
@@ -1015,11 +188,7 @@ function renderArticles(){
 
                         <div class="article-meta">
 
-                            ${
-                                article.date
-                                    ? formatDate(article.date)
-                                    : "Electrolix Guide"
-                            }
+                            ${e.date?formatDate(e.date):"Electrolix Guide"}
 
                         </div>
 
@@ -1027,42 +196,27 @@ function renderArticles(){
                         <h2 class="article-title">
 
                             <a
-                                href="${escapeHtml(article.url)}"
+                                href="${escapeHtml(e.url)}"
                             >
 
-                                ${escapeHtml(
-                                    article.title
-                                )}
+                                ${escapeHtml(e.title)}
 
                             </a>
 
                         </h2>
 
 
-                        ${
-                            article.description
-
-                            ?
-
-                            `
+                        ${e.description?`
                             <p class="article-description">
 
-                                ${escapeHtml(
-                                    article.description
-                                )}
+                                ${escapeHtml(e.description)}
 
                             </p>
-                            `
-
-                            :
-
-                            ""
-
-                        }
+                            `:""}
 
 
                         <a
-                            href="${escapeHtml(article.url)}"
+                            href="${escapeHtml(e.url)}"
                             class="article-read"
                         >
 
@@ -1078,61 +232,5 @@ function renderArticles(){
 
                 </article>
 
-            `
-            ).join("");
-
-    }
-
-
-    /* RENDER PAGINATION */
-
-    renderPagination(
-        articles.length
-    );
-
-}
-
-
-/* =========================================================
-   SECURITY
-========================================================= */
-
-function escapeHtml(text){
-
-    const div =
-        document.createElement("div");
-
-    div.textContent =
-        text || "";
-
-    return div.innerHTML;
-
-}
-
-
-/* =========================================================
-   SEARCH
-========================================================= */
-
-document
-    .getElementById(
-        "articleSearch"
-    )
-    .addEventListener(
-        "input",
-        function(){
-
-            currentPage = 1;
-
-            renderArticles();
-
-        }
-    );
-
-
-/* =========================================================
-   START
-========================================================= */
-
-loadArticles();
+            `).join(""),renderPagination(a.length)}function escapeHtml(e){let t=document.createElement("div");return t.textContent=e||"",t.innerHTML}document.getElementById("articleSearch").addEventListener("input",function(){currentPage=1,renderArticles()}),loadArticles();
 
