@@ -33,6 +33,8 @@ const blogLinks = [
 
     "https://electrolix.github.io/finolex-house-wiring-domestic-commercial-cables.html", 
 
+    "https://electrolix.github.io/finolex-wires-and-cables-overview.html", 
+
 
 ];
 
