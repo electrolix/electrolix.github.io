@@ -37,6 +37,8 @@ const blogLinks = [
 
     "https://electrolix.github.io/finolex-silver-wire-selection-guide.html",
 
+    "https://electrolix.github.io/finolex-gold-wire-selection-guide.html",
+
 
 ];
 
