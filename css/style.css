@@ -496,27 +496,28 @@ outline-offset:2px;
 ==========================================*/
 
 
+/* DESKTOP ONLY - LINE AFTER CONTENT */
+@media screen and (min-width: 1025px) {
 
-/* DESKTOP ONLY */
-@media screen and (min-width: 769px) {
     main {
         position: relative;
     }
 
-    main::after {
+    main::before {
         content: "";
         position: absolute;
         top: 80px;
-        left: calc(50% + 500px); 
+        left: calc(10% + 920px);
         width: 1px;
-        bottom: 80px;
+        height: calc(100% - 160px);
         background: #dbe2ea;
     }
 }
 
 /* MOBILE + PHABLETS + TABLETS - completely disable the line */
 @media screen and (max-width: 1024px) {
-    main::after {
+
+    main::before {
         content: none !important;
         display: none !important;
     }
