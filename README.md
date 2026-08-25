@@ -6,6 +6,8 @@ Expert electrical guides, product comparisons and buying advice for switches, so
 
 Electrolix is an electrical information and resource website designed to help homeowners, electricians, contractors, businesses and electrical-product buyers make better-informed decisions.
 
+We provide practical electrical guides, product insights, specifications, comparisons and buying advice across a wide range of electrical products and applications.
+
 ## What We Cover
 
 - Electrical wires and cables
@@ -14,27 +16,59 @@ Electrolix is an electrical information and resource website designed to help ho
 - LED lights and lighting products
 - Fans and electrical appliances
 - Electrical product specifications
+- Electrical product comparisons
 - Buying guides
-- Product comparisons
+- Wire size and selection guides
+- Home and commercial wiring
 - Electrical tips and resources
 
-## Featured Guides
+## Featured Topics
 
-Explore our practical guides covering electrical products, wire sizes, applications, specifications and buying considerations.
+Our website includes practical guides covering:
+
+- Finolex wires and cables
+- Wire sizes and applications
+- House wiring
+- Industrial cables
+- FR, FRLS and FRLSH wires
+- Copper wires
+- Electrical switches and sockets
+- MCBs and protection devices
+- Lighting products
+- Fans and electrical appliances
+- Electrical product buying guides
 
 ## Website
 
-Visit the live website:
+Visit the Electrolix website:
 
 https://electrolix.github.io/
 
+## Electrical Products & Solutions
+
+For electrical products, brands, pricing and purchasing solutions, visit Eleczo:
+
+https://www.eleczo.com/
+
 ## Purpose
 
-Our goal is to make electrical product information easier to understand through practical guides, comparisons and useful resources.
+The goal of Electrolix is to make electrical product information easier to understand.
 
-## Disclaimer
+Our content focuses on practical information that can help readers understand product features, applications, specifications and important considerations before making an electrical product purchase.
 
-The information provided on Electrolix is for general educational and informational purposes. Always consult a qualified electrical professional for electrical installation, repair and safety-related work.
+## Who Is Electrolix For?
+
+Electrolix provides useful information for:
+
+- Homeowners
+- Electricians
+- Electrical contractors
+- Engineers
+- Builders
+- Businesses
+- Electrical product buyers
+- Students and learners
+- Anyone researching electrical products
 
 ## Technology
 
@@ -45,6 +79,21 @@ This website is built using:
 - JavaScript
 - GitHub Pages
 
-## License
+## Repository Structure
 
-Content and website materials are owned by Electrolix unless otherwise stated.
+```text
+electrolix.github.io/
+│
+├── components/
+├── css/
+├── image/
+├── images/
+├── js/
+│
+├── index.html
+├── electrical-products.html
+├── electrical-products-resource-library.html
+├── contact-us.html
+├── privacy-policy.html
+│
+└── electrical product guides
