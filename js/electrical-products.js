@@ -44,6 +44,9 @@ const blogLinks = [
     "https://electrolix.github.io/polycab-green-wire-complete-guide.html", 
    
     "https://electrolix.github.io/polycab-industrial-cables-selection.html",
+
+    "https://electrolix.github.io/polycab-etira-fr-wire-complete-information.html",
+   
  
 
 ];
