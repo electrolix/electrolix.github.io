@@ -41,8 +41,10 @@ const blogLinks = [
 
     "https://electrolix.github.io/finolex-wire-suppliers-in-bangalore.html",
 
-    "https://electrolix.github.io/polycab-green-wire-complete-guide.html",   
-
+    "https://electrolix.github.io/polycab-green-wire-complete-guide.html", 
+   
+    "https://electrolix.github.io/polycab-industrial-cables-selection.html",
+ 
 
 ];
 
