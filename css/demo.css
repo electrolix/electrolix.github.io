@@ -5,7 +5,7 @@
 
    IMPORTANT:
    - Existing font is NOT changed
-   - Category images use rounded image design
+   - Images are NOT cropped
    - No horizontal overflow
    - Responsive spacing and typography
 ========================================================= */
@@ -52,7 +52,8 @@
 
     --container: 1440px;
 
-    --side-padding: clamp(18px, 7vw, 110px);
+    --side-padding:
+        clamp(18px, 7vw, 110px);
 
     --section-space:
         clamp(70px, 8vw, 125px);
@@ -200,6 +201,7 @@ a {
 .hero {
 
     width: 100%;
+
     max-width: none;
 
     min-height:
@@ -301,10 +303,13 @@ a {
 .hero-right {
 
     position: relative;
+
     z-index: 2;
 }
 
+
 .hero-left {
+
     max-width: 800px;
 }
 
@@ -380,6 +385,7 @@ a {
 .hero p strong {
 
     color: #fff;
+
     font-weight: 800;
 }
 
@@ -414,6 +420,7 @@ a {
 .hero .primary-btn:hover {
 
     color: var(--primary-dark);
+
     background: #f8fafc;
 }
 
@@ -445,6 +452,8 @@ a {
 
 /* =========================================================
    HERO IMAGE
+   FULL IMAGE VISIBLE
+   NO CROPPING
 ========================================================= */
 
 .hero-right {
@@ -746,6 +755,7 @@ a {
 /* IMAGE — NEVER CROPPED */
 
 .about-image {
+
     width: 100%;
 }
 
@@ -965,17 +975,23 @@ a {
 }
 
 
-/* WHY IMAGE */
+/* =========================================================
+   WHY IMAGE
+   FULL IMAGE VISIBLE
+   NO CROPPING
+========================================================= */
 
 .why-card img {
 
     width: 100%;
 
-    height: auto;
-
     max-width: 100%;
 
+    height: auto;
+
     object-fit: contain;
+
+    object-position: center;
 
     display: block;
 
@@ -1072,9 +1088,10 @@ a {
 }
 
 
-/* PLATFORM IMAGE */
+/* PLATFORM IMAGE — FULL */
 
 .platform-image {
+
     width: 100%;
 }
 
@@ -1182,6 +1199,10 @@ a {
 }
 
 
+/* =========================================================
+   CATEGORY GRID
+========================================================= */
+
 .category-grid {
 
     width:
@@ -1195,9 +1216,14 @@ a {
     grid-template-columns:
         repeat(4, minmax(0, 1fr));
 
-    gap: 24px;
+    gap:
+        24px;
 }
 
+
+/* =========================================================
+   CATEGORY CARD
+========================================================= */
 
 .category-card {
 
@@ -1215,7 +1241,7 @@ a {
         #fff;
 
     box-shadow:
-        0 18px 50px rgba(15,23,42,.08);
+        0 18px 50px rgba(15, 23, 42, .08);
 
     transition:
         transform .35s ease,
@@ -1229,55 +1255,49 @@ a {
         translateY(-10px);
 
     box-shadow:
-        0 25px 65px rgba(15,23,42,.12);
+        var(--shadow-md);
 }
 
 
 /* =========================================================
-   CATEGORY IMAGE DESIGN
-   ROUNDED + FULL CARD WIDTH
+   CATEGORY IMAGE
+   FULL IMAGE VISIBLE
+   NO CROPPING
+   NO FIXED HEIGHT
 ========================================================= */
 
 .category-card img {
 
+    display: block;
+
     width: 100%;
 
-    height: 400px;
+    max-width: 100%;
 
-    object-fit: cover;
+    height: auto;
+
+    object-fit: contain;
 
     object-position: center;
 
-    display: block;
+    padding: 0;
 
     margin: 0;
 
-    padding: 0;
-
     background: #fff;
 
-    border-radius:
-        26px 26px 0 0;
-
-    transition:
-        transform .4s ease;
+    border-radius: 0;
 }
 
 
-/* IMAGE HOVER */
-
-.category-card:hover img {
-
-    transform:
-        scale(1.03);
-}
-
-
-/* CATEGORY CONTENT */
+/* =========================================================
+   CATEGORY CONTENT
+========================================================= */
 
 .category-content {
 
-    padding: 24px;
+    padding:
+        24px;
 }
 
 
@@ -1289,9 +1309,11 @@ a {
     color:
         var(--dark);
 
-    font-size: 21px;
+    font-size:
+        21px;
 
-    line-height: 1.4;
+    line-height:
+        1.4;
 }
 
 
@@ -1303,9 +1325,11 @@ a {
     color:
         var(--muted);
 
-    font-size: 15px;
+    font-size:
+        15px;
 
-    line-height: 1.7;
+    line-height:
+        1.7;
 }
 
 
@@ -1314,9 +1338,11 @@ a {
     color:
         var(--primary);
 
-    font-size: 14px;
+    font-size:
+        14px;
 
-    font-weight: 700;
+    font-weight:
+        700;
 }
 
 
@@ -1927,12 +1953,16 @@ a {
     }
 
 
+    /* WHY = 2 COLUMNS */
+
     .why-grid {
 
         grid-template-columns:
             repeat(2, minmax(0, 1fr));
     }
 
+
+    /* CATEGORY = 3 COLUMNS AT 1200 */
 
     .category-grid {
 
@@ -1953,12 +1983,17 @@ a {
         grid-template-columns:
             repeat(4, minmax(0, 1fr));
     }
+
 }
 
 
 /* =========================================================
    TABLET
    992px
+
+   IMPORTANT:
+   CATEGORY = 2 COLUMNS
+   WHY = 2 COLUMNS
 ========================================================= */
 
 @media (max-width: 992px) {
@@ -1988,6 +2023,7 @@ a {
     .hero p {
 
         margin-left: auto;
+
         margin-right: auto;
     }
 
@@ -2003,6 +2039,7 @@ a {
         max-width: 700px;
 
         margin-left: auto;
+
         margin-right: auto;
     }
 
@@ -2055,24 +2092,50 @@ a {
     }
 
 
-    /* TABLET CATEGORY = 2 COLUMNS */
+    /* =====================================================
+       WHY GRID — TABLET = 2
+    ===================================================== */
 
-    .category-grid {
+    .why-grid {
 
         grid-template-columns:
             repeat(2, minmax(0, 1fr));
     }
 
 
-    /* TABLET CATEGORY IMAGE */
+    /* =====================================================
+       CATEGORY GRID — TABLET = 2
+    ===================================================== */
+
+    .category-grid {
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap:
+            24px;
+    }
+
+
+    /* =====================================================
+       CATEGORY IMAGE — FULL IMAGE
+    ===================================================== */
 
     .category-card img {
 
-        height: 340px;
+        width: 100%;
 
-        border-radius:
-            26px 26px 0 0;
+        max-width: 100%;
+
+        height: auto;
+
+        object-fit: contain;
+
+        object-position: center;
+
+        padding: 0;
     }
+
 }
 
 
@@ -2115,6 +2178,7 @@ a {
             min(100%, 400px);
 
         margin-left: auto;
+
         margin-right: auto;
     }
 
@@ -2133,6 +2197,7 @@ a {
             min(100%, 400px);
 
         margin-left: auto;
+
         margin-right: auto;
     }
 
@@ -2150,7 +2215,9 @@ a {
     }
 
 
-    /* TRUST */
+    /* =====================================================
+       TRUST
+    ===================================================== */
 
     .trust {
 
@@ -2164,37 +2231,39 @@ a {
     }
 
 
-    /* WHY */
+    /* =====================================================
+       WHY
+       KEEP 2 COLUMNS
+    ===================================================== */
 
     .why-grid {
 
         grid-template-columns:
             repeat(2, minmax(0, 1fr));
+
+        gap:
+            20px;
     }
 
 
-    /* CATEGORIES */
+    /* =====================================================
+       CATEGORIES
+       KEEP 2 COLUMNS
+    ===================================================== */
 
     .category-grid {
 
         grid-template-columns:
             repeat(2, minmax(0, 1fr));
+
+        gap:
+            20px;
     }
 
 
-    /* CATEGORY IMAGE */
-
-    .category-card img {
-
-        height:
-            300px;
-
-        border-radius:
-            22px 22px 0 0;
-    }
-
-
-    /* NUMBERS */
+    /* =====================================================
+       NUMBERS
+    ===================================================== */
 
     .numbers {
 
@@ -2206,7 +2275,9 @@ a {
     }
 
 
-    /* BRAND */
+    /* =====================================================
+       BRAND
+    ===================================================== */
 
     .brand-grid {
 
@@ -2215,7 +2286,9 @@ a {
     }
 
 
-    /* SECTION HEADINGS */
+    /* =====================================================
+       SECTION HEADINGS
+    ===================================================== */
 
     .section-heading {
 
@@ -2233,7 +2306,9 @@ a {
     }
 
 
-    /* WHY */
+    /* =====================================================
+       WHY CARD
+    ===================================================== */
 
     .why-card {
 
@@ -2247,14 +2322,52 @@ a {
 
         max-width: 360px;
 
+        height: auto;
+
         margin-left: auto;
+
         margin-right: auto;
 
         object-fit: contain;
     }
 
 
-    /* CATEGORY CONTENT */
+    /* =====================================================
+       CATEGORY CARD
+    ===================================================== */
+
+    .category-card {
+
+        border-radius:
+            22px;
+    }
+
+
+    /* =====================================================
+       CATEGORY IMAGE
+       NO FIXED HEIGHT
+       NO CROPPING
+    ===================================================== */
+
+    .category-card img {
+
+        width: 100%;
+
+        max-width: 100%;
+
+        height: auto;
+
+        min-height: 0;
+
+        max-height: none;
+
+        padding: 0;
+
+        object-fit: contain;
+
+        object-position: center;
+    }
+
 
     .category-content {
 
@@ -2263,7 +2376,9 @@ a {
     }
 
 
-    /* SHOPPING */
+    /* =====================================================
+       SHOPPING
+    ===================================================== */
 
     .shopping-features {
 
@@ -2299,7 +2414,9 @@ a {
     }
 
 
-    /* CTA */
+    /* =====================================================
+       CTA
+    ===================================================== */
 
     .final-cta {
 
@@ -2319,6 +2436,7 @@ a {
         font-size:
             clamp(32px, 8vw, 42px);
     }
+
 }
 
 
@@ -2380,7 +2498,9 @@ a {
     }
 
 
-    /* TRUST */
+    /* =====================================================
+       TRUST
+    ===================================================== */
 
     .trust {
 
@@ -2402,7 +2522,9 @@ a {
     }
 
 
-    /* SECTIONS */
+    /* =====================================================
+       SECTIONS
+    ===================================================== */
 
     .about-section,
     .platform,
@@ -2431,7 +2553,9 @@ a {
     }
 
 
-    /* FEATURES */
+    /* =====================================================
+       FEATURES
+    ===================================================== */
 
     .feature {
 
@@ -2470,7 +2594,9 @@ a {
     }
 
 
-    /* PLATFORM */
+    /* =====================================================
+       PLATFORM
+    ===================================================== */
 
     .platform-item {
 
@@ -2492,7 +2618,10 @@ a {
     }
 
 
-    /* WHY */
+    /* =====================================================
+       WHY
+       MOBILE = 1 COLUMN
+    ===================================================== */
 
     .why-grid {
 
@@ -2501,7 +2630,10 @@ a {
     }
 
 
-    /* CATEGORY */
+    /* =====================================================
+       CATEGORY
+       MOBILE = 1 COLUMN
+    ===================================================== */
 
     .category-grid {
 
@@ -2510,15 +2642,37 @@ a {
     }
 
 
-    /* CATEGORY IMAGE */
+    .category-card {
+
+        border-radius:
+            20px;
+    }
+
+
+    /* =====================================================
+       CATEGORY IMAGE
+       FULL IMAGE — NO CROPPING
+    ===================================================== */
 
     .category-card img {
 
-        height:
-            280px;
+        width:
+            100%;
 
-        border-radius:
-            20px 20px 0 0;
+        height:
+            auto;
+
+        min-height:
+            0;
+
+        max-height:
+            none;
+
+        padding:
+            0;
+
+        object-fit:
+            contain;
     }
 
 
@@ -2529,7 +2683,9 @@ a {
     }
 
 
-    /* NUMBERS */
+    /* =====================================================
+       NUMBERS
+    ===================================================== */
 
     .numbers {
 
@@ -2548,7 +2704,9 @@ a {
     }
 
 
-    /* BRANDS */
+    /* =====================================================
+       BRANDS
+    ===================================================== */
 
     .brand-grid {
 
@@ -2557,7 +2715,9 @@ a {
     }
 
 
-    /* CTA */
+    /* =====================================================
+       CTA
+    ===================================================== */
 
     .final-cta {
 
@@ -2590,6 +2750,7 @@ a {
         font-size:
             14px;
     }
+
 }
 
 
@@ -2647,15 +2808,27 @@ a {
     }
 
 
-    /* CATEGORY IMAGE */
+    /* =====================================================
+       CATEGORY IMAGE
+       NO HEIGHT RESTRICTION
+    ===================================================== */
 
     .category-card img {
 
         height:
-            240px;
+            auto;
 
-        border-radius:
-            18px 18px 0 0;
+        min-height:
+            0;
+
+        max-height:
+            none;
+
+        padding:
+            0;
+
+        object-fit:
+            contain;
     }
 
 
@@ -2671,6 +2844,7 @@ a {
         font-size:
             30px;
     }
+
 }
 
 
@@ -2701,6 +2875,7 @@ a {
 
 /* =========================================================
    FINAL IMAGE SAFETY RULE
+   Prevents accidental cropping
 ========================================================= */
 
 .category-card img,
@@ -2718,6 +2893,7 @@ a {
 
 /* =========================================================
    MOBILE IMAGE SAFETY
+   FULL IMAGE — NO CROPPING
 ========================================================= */
 
 @media (max-width: 768px) {
@@ -2731,21 +2907,11 @@ a {
 
         max-width: 100%;
 
+        width: 100%;
+
+        height: auto;
+
         object-fit: contain;
     }
 
-    /* Keep category image design */
-
-    .category-card img {
-
-        object-fit: cover;
-
-        width: 100%;
-
-        max-width: 100%;
-
-        padding: 0;
-
-        display: block;
-    }
 }
