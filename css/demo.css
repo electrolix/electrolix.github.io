@@ -3,16 +3,15 @@
    ADVANCED RESPONSIVE CSS
    Desktop + Laptop + Tablet + Mobile
 
-   CARD SYSTEM
-   Desktop  : 4 cards
-   Tablet   : 2 cards
-   Mobile   : 1 card
-
-   IMPORTANT
-   - Existing font is NOT changed
-   - Images are NOT cropped
+   FIXED:
+   - Tablet cards = 2 columns
+   - Mobile cards = 1 column
+   - Why Electrolix = 2 columns tablet
+   - Categories = 2 columns tablet
+   - Brands / categorie = premium redesign
    - No horizontal overflow
-   - Consistent card design
+   - Images are NOT cropped
+   - Existing font is NOT changed
 ========================================================= */
 
 
@@ -75,28 +74,38 @@
     box-sizing: border-box;
 }
 
+
 html {
     scroll-behavior: smooth;
     overflow-x: hidden;
 }
 
+
 body {
     margin: 0;
     padding: 0;
+
     overflow-x: hidden;
+
     color: var(--dark);
+
     line-height: 1.65;
 }
 
+
 img {
     display: block;
+
     max-width: 100%;
+
     height: auto;
 }
+
 
 a {
     text-decoration: none;
 }
+
 
 button,
 a {
@@ -166,9 +175,11 @@ a {
         0 12px 30px rgba(37, 99, 235, .22);
 }
 
+
 .primary-btn:hover {
 
-    transform: translateY(-3px);
+    transform:
+        translateY(-3px);
 
     box-shadow:
         0 18px 40px rgba(37, 99, 235, .30);
@@ -187,6 +198,7 @@ a {
         1px solid rgba(37, 99, 235, .18);
 }
 
+
 .secondary-btn:hover {
 
     color: #fff;
@@ -195,7 +207,8 @@ a {
 
     border-color: var(--primary);
 
-    transform: translateY(-3px);
+    transform:
+        translateY(-3px);
 }
 
 
@@ -256,10 +269,6 @@ a {
 }
 
 
-/* =========================================================
-   HERO DECORATION
-========================================================= */
-
 .hero::before {
 
     content: "";
@@ -279,6 +288,7 @@ a {
 
     pointer-events: none;
 }
+
 
 .hero::after {
 
@@ -313,9 +323,11 @@ a {
     z-index: 2;
 }
 
+
 .hero-left {
     max-width: 800px;
 }
+
 
 .hero-badge {
 
@@ -348,6 +360,7 @@ a {
     letter-spacing: .08em;
 }
 
+
 .hero h1 {
 
     margin:
@@ -367,6 +380,7 @@ a {
     font-weight: 800;
 }
 
+
 .hero p {
 
     max-width: 700px;
@@ -381,6 +395,7 @@ a {
 
     line-height: 1.8;
 }
+
 
 .hero p strong {
 
@@ -405,6 +420,7 @@ a {
     margin-top: 34px;
 }
 
+
 .hero .primary-btn {
 
     color: var(--primary);
@@ -415,12 +431,14 @@ a {
         0 14px 35px rgba(0,0,0,.15);
 }
 
+
 .hero .primary-btn:hover {
 
     color: var(--primary-dark);
 
     background: #f8fafc;
 }
+
 
 .hero .secondary-btn {
 
@@ -435,6 +453,7 @@ a {
     backdrop-filter:
         blur(10px);
 }
+
 
 .hero .secondary-btn:hover {
 
@@ -460,6 +479,7 @@ a {
 
     width: 100%;
 }
+
 
 .hero-right img {
 
@@ -502,6 +522,7 @@ a {
     margin-top: 42px;
 }
 
+
 .hero-stats div {
 
     min-width: 0;
@@ -520,6 +541,7 @@ a {
         blur(14px);
 }
 
+
 .hero-stats h2 {
 
     margin:
@@ -531,6 +553,7 @@ a {
 
     line-height: 1.2;
 }
+
 
 .hero-stats span {
 
@@ -567,6 +590,7 @@ a {
     gap: 20px;
 }
 
+
 .trust-box {
 
     min-width: 0;
@@ -589,6 +613,7 @@ a {
         box-shadow .3s ease;
 }
 
+
 .trust-box:hover {
 
     transform:
@@ -597,6 +622,7 @@ a {
     box-shadow:
         var(--shadow-lg);
 }
+
 
 .trust-box h3 {
 
@@ -610,6 +636,7 @@ a {
 
     line-height: 1.4;
 }
+
 
 .trust-box p {
 
@@ -661,6 +688,7 @@ a {
     text-align: center;
 }
 
+
 .section-heading > span {
 
     display: inline-block;
@@ -677,6 +705,7 @@ a {
     text-transform: uppercase;
 }
 
+
 .section-heading h2 {
 
     margin:
@@ -692,6 +721,7 @@ a {
 
     letter-spacing: -.025em;
 }
+
 
 .section-heading p {
 
@@ -734,9 +764,11 @@ a {
         clamp(40px, 7vw, 100px);
 }
 
+
 .about-image {
     width: 100%;
 }
+
 
 .about-image img {
 
@@ -753,6 +785,7 @@ a {
         var(--shadow-lg);
 }
 
+
 .about-content h2 {
 
     margin:
@@ -768,6 +801,7 @@ a {
 
     letter-spacing: -.025em;
 }
+
 
 .about-content > p {
 
@@ -797,6 +831,7 @@ a {
         36px 0;
 }
 
+
 .feature {
 
     display: grid;
@@ -808,6 +843,7 @@ a {
 
     align-items: start;
 }
+
 
 .icon {
 
@@ -835,6 +871,7 @@ a {
         0 10px 25px rgba(37,99,235,.20);
 }
 
+
 .feature h4 {
 
     margin:
@@ -848,6 +885,7 @@ a {
     line-height: 1.4;
 }
 
+
 .feature p {
 
     margin: 0;
@@ -859,6 +897,7 @@ a {
 
     line-height: 1.7;
 }
+
 
 .about-buttons {
 
@@ -890,6 +929,7 @@ a {
         );
 }
 
+
 .why-grid {
 
     width:
@@ -907,21 +947,13 @@ a {
 }
 
 
-/* =========================================================
-   COMMON CARD DESIGN
-   WHY / CATEGORY / NUMBER / BRAND
-========================================================= */
-
-.why-card,
-.category-card,
-.number-card,
-.brand-item {
+.why-card {
 
     min-width: 0;
 
-    width: 100%;
+    padding: 24px;
 
-    box-sizing: border-box;
+    text-align: left;
 
     border:
         1px solid var(--border);
@@ -940,10 +972,8 @@ a {
         box-shadow .3s ease;
 }
 
-.why-card:hover,
-.category-card:hover,
-.number-card:hover,
-.brand-item:hover {
+
+.why-card:hover {
 
     transform:
         translateY(-8px);
@@ -953,34 +983,24 @@ a {
 }
 
 
-/* =========================================================
-   WHY CARD
-========================================================= */
-
-.why-card {
-
-    padding: 24px;
-
-    text-align: left;
-}
-
 .why-card img {
-
-    display: block;
 
     width: 100%;
 
-    max-width: 100%;
-
     height: auto;
 
+    max-width: 100%;
+
     object-fit: contain;
+
+    display: block;
 
     margin:
         0 auto 22px;
 
     border-radius: 17px;
 }
+
 
 .why-card h3 {
 
@@ -994,6 +1014,7 @@ a {
 
     line-height: 1.4;
 }
+
 
 .why-card p {
 
@@ -1035,6 +1056,7 @@ a {
         clamp(45px, 7vw, 100px);
 }
 
+
 .platform-content h2 {
 
     margin:
@@ -1051,6 +1073,7 @@ a {
     letter-spacing: -.025em;
 }
 
+
 .platform-content > p {
 
     margin:
@@ -1064,9 +1087,11 @@ a {
     line-height: 1.8;
 }
 
+
 .platform-image {
     width: 100%;
 }
+
 
 .platform-image img {
 
@@ -1097,6 +1122,7 @@ a {
     margin-bottom: 35px;
 }
 
+
 .platform-item {
 
     display: grid;
@@ -1108,6 +1134,7 @@ a {
 
     align-items: start;
 }
+
 
 .tick {
 
@@ -1128,6 +1155,7 @@ a {
     flex-shrink: 0;
 }
 
+
 .platform-item h4 {
 
     margin:
@@ -1138,6 +1166,7 @@ a {
 
     font-size: 18px;
 }
+
 
 .platform-item p {
 
@@ -1166,6 +1195,7 @@ a {
         #f8fbff;
 }
 
+
 .category-grid {
 
     width:
@@ -1183,24 +1213,45 @@ a {
 }
 
 
-/* =========================================================
-   CATEGORY CARD
-========================================================= */
-
 .category-card {
 
+    min-width: 0;
+
     overflow: hidden;
+
+    border:
+        1px solid var(--border);
+
+    border-radius:
+        var(--radius-lg);
+
+    background:
+        #fff;
+
+    box-shadow:
+        var(--shadow-sm);
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease;
 }
 
-.category-card img {
 
-    display: block;
+.category-card:hover {
+
+    transform:
+        translateY(-8px);
+
+    box-shadow:
+        var(--shadow-md);
+}
+
+
+.category-card img {
 
     width: 100%;
 
     height: 280px;
-
-    max-width: 100%;
 
     object-fit: contain;
 
@@ -1208,12 +1259,19 @@ a {
 
     padding: 15px;
 
+    display: block;
+
     background: #fff;
+
+    border-radius: 0;
 }
 
+
 .category-content {
+
     padding: 24px;
 }
+
 
 .category-content h3 {
 
@@ -1228,6 +1286,7 @@ a {
     line-height: 1.4;
 }
 
+
 .category-content p {
 
     margin:
@@ -1240,6 +1299,7 @@ a {
 
     line-height: 1.7;
 }
+
 
 .category-content a {
 
@@ -1275,13 +1335,41 @@ a {
     gap: 20px;
 }
 
+
 .number-card {
 
     padding:
         38px 20px;
 
     text-align: center;
+
+    border:
+        1px solid var(--border);
+
+    border-radius:
+        22px;
+
+    background:
+        #fff;
+
+    box-shadow:
+        var(--shadow-sm);
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease;
 }
+
+
+.number-card:hover {
+
+    transform:
+        translateY(-6px);
+
+    box-shadow:
+        var(--shadow-md);
+}
+
 
 .number-card h2 {
 
@@ -1296,6 +1384,7 @@ a {
 
     line-height: 1;
 }
+
 
 .number-card p {
 
@@ -1335,12 +1424,14 @@ a {
     align-items: center;
 }
 
+
 .shopping-image {
 
     position: relative;
 
     width: 100%;
 }
+
 
 .shopping-image img {
 
@@ -1384,11 +1475,13 @@ a {
         transform .25s ease;
 }
 
+
 .floating-card:hover {
 
     transform:
         translateY(-5px);
 }
+
 
 .card-one {
 
@@ -1397,12 +1490,14 @@ a {
     left: -25px;
 }
 
+
 .card-two {
 
     right: -25px;
 
     bottom: 25px;
 }
+
 
 .floating-card h3 {
 
@@ -1416,6 +1511,7 @@ a {
 
     line-height: 1.2;
 }
+
 
 .floating-card span {
 
@@ -1444,6 +1540,7 @@ a {
     line-height: 1.15;
 }
 
+
 .shopping-content p {
 
     color:
@@ -1453,6 +1550,7 @@ a {
 
     line-height: 1.8;
 }
+
 
 .shopping-features {
 
@@ -1466,6 +1564,7 @@ a {
     margin:
         30px 0;
 }
+
 
 .shopping-features div {
 
@@ -1492,6 +1591,7 @@ a {
         var(--shadow-sm);
 }
 
+
 .shopping-buttons {
 
     display: flex;
@@ -1503,59 +1603,661 @@ a {
 
 
 /* =========================================================
-   BRANDS
+   PREMIUM BRANDS / CATEGORIE
 ========================================================= */
 
-.brands {
+#brands.categorie,
+#brands.brands {
+
+    position: relative;
 
     width: 100%;
 
     padding:
-        var(--section-space)
+        clamp(80px, 9vw, 140px)
         var(--side-padding);
 
+    overflow: hidden;
+
+    isolation: isolate;
+
     background:
-        #f8fbff;
+        linear-gradient(
+            180deg,
+            #ffffff 0%,
+            #f8fbff 48%,
+            #f1f6ff 100%
+        );
 }
 
-.brand-grid {
 
-    width:
-        min(100%, 1100px);
+/* =========================================================
+   BRANDS BACKGROUND EFFECTS
+========================================================= */
+
+#brands.categorie::before,
+#brands.brands::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 650px;
+    height: 650px;
+
+    top: -340px;
+    right: -220px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(37,99,235,.12) 0%,
+            rgba(37,99,235,.05) 35%,
+            transparent 70%
+        );
+
+    pointer-events: none;
+
+    z-index: -1;
+}
+
+
+#brands.categorie::after,
+#brands.brands::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 520px;
+    height: 520px;
+
+    left: -300px;
+    bottom: -300px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(79,70,229,.10) 0%,
+            rgba(79,70,229,.04) 38%,
+            transparent 70%
+        );
+
+    pointer-events: none;
+
+    z-index: -1;
+}
+
+
+/* =========================================================
+   BRANDS HEADING
+========================================================= */
+
+#brands.categorie .section-heading,
+#brands.brands .section-heading {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
+
+    max-width: 850px;
 
     margin:
-        40px auto 0;
+        0 auto 60px;
+
+    text-align: center;
+}
+
+
+#brands.categorie .section-tag,
+#brands.brands .section-tag {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding:
+        8px 15px;
+
+    margin-bottom: 16px;
+
+    border:
+        1px solid rgba(37,99,235,.13);
+
+    border-radius: 999px;
+
+    background:
+        rgba(37,99,235,.06);
+
+    color:
+        var(--primary);
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: .12em;
+
+    text-transform: uppercase;
+}
+
+
+#brands.categorie .section-heading h2,
+#brands.brands .section-heading h2 {
+
+    margin:
+        0 0 17px;
+
+    color:
+        var(--dark);
+
+    font-size:
+        clamp(34px, 4.3vw, 58px);
+
+    line-height: 1.08;
+
+    letter-spacing: -.035em;
+
+    font-weight: 800;
+}
+
+
+#brands.categorie .section-heading h2 strong,
+#brands.brands .section-heading h2 strong {
+
+    color:
+        var(--primary);
+
+    font-weight: 800;
+}
+
+
+#brands.categorie .section-heading p,
+#brands.brands .section-heading p {
+
+    max-width: 730px;
+
+    margin:
+        0 auto;
+
+    color:
+        var(--muted);
+
+    font-size:
+        clamp(15px, 1.15vw, 18px);
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   BRAND GRID
+========================================================= */
+
+#brands.categorie .brand-grid,
+#brands.brands .brand-grid {
+
+    position: relative;
+
+    z-index: 2;
+
+    width:
+        min(100%, 1220px);
+
+    margin:
+        0 auto;
 
     display: grid;
 
     grid-template-columns:
         repeat(4, minmax(0, 1fr));
 
-    gap: 15px;
+    gap: 22px;
+
+    align-items: stretch;
 }
 
-.brand-item {
+
+/* =========================================================
+   BRAND CARD
+========================================================= */
+
+#brands.categorie .brand-item,
+#brands.brands .brand-item {
+
+    position: relative;
+
+    min-width: 0;
+
+    min-height: 315px;
+
+    width: 100%;
 
     padding:
-        22px;
+        29px;
 
-    text-align: center;
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    overflow: hidden;
+
+    border:
+        1px solid rgba(226,232,240,.95);
+
+    border-radius:
+        27px;
+
+    background:
+        rgba(255,255,255,.96);
+
+    box-shadow:
+        0 10px 35px rgba(15,23,42,.055);
+
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease,
+        border-color .35s ease;
+}
+
+
+/* =========================================================
+   BRAND CARD TOP GLOW
+========================================================= */
+
+#brands.categorie .brand-item::before,
+#brands.brands .brand-item::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 210px;
+    height: 210px;
+
+    top: -115px;
+    right: -115px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(37,99,235,.12),
+            transparent 68%
+        );
+
+    transition:
+        transform .45s ease;
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   BRAND CARD BOTTOM ACCENT
+========================================================= */
+
+#brands.categorie .brand-item::after,
+#brands.brands .brand-item::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 29px;
+    right: 29px;
+    bottom: 0;
+
+    height: 3px;
+
+    border-radius:
+        8px 8px 0 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--primary),
+            var(--secondary),
+            var(--accent)
+        );
+
+    transform:
+        scaleX(0);
+
+    transform-origin:
+        left center;
+
+    transition:
+        transform .35s ease;
+}
+
+
+/* =========================================================
+   BRAND HOVER
+========================================================= */
+
+#brands.categorie .brand-item:hover,
+#brands.brands .brand-item:hover {
+
+    transform:
+        translateY(-10px);
+
+    border-color:
+        rgba(37,99,235,.20);
+
+    box-shadow:
+        0 28px 70px rgba(15,23,42,.13);
+}
+
+
+#brands.categorie .brand-item:hover::before,
+#brands.brands .brand-item:hover::before {
+
+    transform:
+        scale(1.8);
+}
+
+
+#brands.categorie .brand-item:hover::after,
+#brands.brands .brand-item:hover::after {
+
+    transform:
+        scaleX(1);
+}
+
+
+/* =========================================================
+   BRAND ICON / NUMBER
+========================================================= */
+
+#brands.categorie .brand-icon,
+#brands.brands .brand-icon {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: 59px;
+    height: 59px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin-bottom: 27px;
+
+    border-radius: 18px;
+
+    color: #fff;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--primary),
+            var(--secondary)
+        );
+
+    box-shadow:
+        0 13px 30px rgba(37,99,235,.23);
+
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease;
+}
+
+
+#brands.categorie .brand-item:hover .brand-icon,
+#brands.brands .brand-item:hover .brand-icon {
+
+    transform:
+        translateY(-3px)
+        rotate(-4deg)
+        scale(1.05);
+
+    box-shadow:
+        0 17px 36px rgba(37,99,235,.28);
+}
+
+
+#brands.categorie .brand-icon span,
+#brands.brands .brand-icon span {
+
+    font-size: 13px;
+
+    font-weight: 800;
+
+    letter-spacing: .05em;
+}
+
+
+/* =========================================================
+   BRAND CONTENT
+========================================================= */
+
+#brands.categorie .brand-info,
+#brands.brands .brand-info {
+
+    position: relative;
+
+    z-index: 2;
+
+    flex: 1;
+
+    min-width: 0;
+}
+
+
+#brands.categorie .brand-label,
+#brands.brands .brand-label {
+
+    display: block;
+
+    margin-bottom: 7px;
+
+    color:
+        var(--primary);
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: .12em;
+
+    text-transform: uppercase;
+}
+
+
+#brands.categorie .brand-info h3,
+#brands.brands .brand-info h3 {
+
+    margin:
+        0 0 11px;
 
     color:
         var(--dark);
 
-    font-size: 16px;
+    font-size: 22px;
 
-    font-weight: 700;
+    line-height: 1.3;
+
+    font-weight: 800;
 }
 
-.brand-item:hover {
+
+#brands.categorie .brand-info p,
+#brands.brands .brand-info p {
+
+    margin: 0;
+
+    color:
+        var(--muted);
+
+    font-size: 14px;
+
+    line-height: 1.75;
+}
+
+
+/* =========================================================
+   BRAND ARROW
+========================================================= */
+
+#brands.categorie .brand-arrow,
+#brands.brands .brand-arrow {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: 43px;
+    height: 43px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin-top: 24px;
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 50%;
+
+    color:
+        var(--primary);
+
+    background:
+        #fff;
+
+    font-size: 18px;
+
+    transition:
+        transform .3s ease,
+        color .3s ease,
+        background .3s ease,
+        border-color .3s ease;
+}
+
+
+#brands.categorie .brand-item:hover .brand-arrow,
+#brands.brands .brand-item:hover .brand-arrow {
+
+    transform:
+        translateX(6px);
 
     color:
         #fff;
 
     background:
         var(--primary);
+
+    border-color:
+        var(--primary);
+}
+
+
+/* =========================================================
+   BRANDS BOTTOM LINE
+========================================================= */
+
+#brands.categorie .brands-bottom,
+#brands.brands .brands-bottom {
+
+    position: relative;
+
+    z-index: 2;
+
+    width:
+        min(100%, 920px);
+
+    margin:
+        57px auto 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 20px;
+
+    color:
+        var(--muted);
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: .09em;
+
+    text-align: center;
+
+    text-transform: uppercase;
+}
+
+
+#brands.categorie .brands-bottom-line,
+#brands.brands .brands-bottom-line {
+
+    flex: 1;
+
+    height: 1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            var(--border)
+        );
+}
+
+
+#brands.categorie .brands-bottom-line:last-child,
+#brands.brands .brands-bottom-line:last-child {
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--border),
+            transparent
+        );
+}
+
+
+/* =========================================================
+   FINAL BRANDS SAFETY
+========================================================= */
+
+#brands.categorie .brand-grid > *,
+#brands.brands .brand-grid > * {
+
+    min-width: 0 !important;
+
+    max-width: 100% !important;
+}
+
+
+#brands.categorie .brand-item *,
+#brands.brands .brand-item * {
+
+    max-width: 100%;
+
+    box-sizing: border-box;
 }
 
 
@@ -1611,10 +2313,6 @@ a {
 }
 
 
-/* =========================================================
-   CTA LEFT
-========================================================= */
-
 .cta-left span {
 
     display: inline-block;
@@ -1631,6 +2329,7 @@ a {
     letter-spacing: .1em;
 }
 
+
 .cta-left h2 {
 
     margin:
@@ -1646,6 +2345,7 @@ a {
     letter-spacing: -.03em;
 }
 
+
 .cta-left p {
 
     margin: 0;
@@ -1659,16 +2359,13 @@ a {
 }
 
 
-/* =========================================================
-   CTA RIGHT
-========================================================= */
-
 .cta-right {
 
     display: grid;
 
     gap: 13px;
 }
+
 
 .cta-box {
 
@@ -1688,6 +2385,7 @@ a {
         blur(12px);
 }
 
+
 .cta-box h3 {
 
     margin:
@@ -1697,6 +2395,7 @@ a {
 
     font-size: 18px;
 }
+
 
 .cta-box p {
 
@@ -1709,6 +2408,7 @@ a {
 
     line-height: 1.7;
 }
+
 
 .cta-button {
 
@@ -1726,6 +2426,7 @@ a {
         1px solid transparent;
 }
 
+
 .cta-button:hover {
 
     color:
@@ -1738,6 +2439,7 @@ a {
         translateY(-3px);
 }
 
+
 .cta-button.secondary {
 
     color:
@@ -1749,6 +2451,7 @@ a {
     border:
         1px solid rgba(255,255,255,.35);
 }
+
 
 .cta-button.secondary:hover {
 
@@ -1764,8 +2467,8 @@ a {
 
 
 /* =========================================================
-   LARGE TABLET / SMALL LAPTOP
-   1200px
+   LARGE LAPTOP
+   <= 1200px
 ========================================================= */
 
 @media (max-width: 1200px) {
@@ -1779,14 +2482,13 @@ a {
         gap: 45px;
     }
 
+
     .hero h1 {
 
         font-size:
             clamp(42px, 5vw, 62px);
     }
 
-
-    /* TRUST */
 
     .trust {
 
@@ -1795,36 +2497,53 @@ a {
     }
 
 
-    /*
-       ALL MAIN CARD GRIDS
-       2 COLUMNS
-    */
-
-    .why-grid,
-    .category-grid,
-    .numbers,
-    .brand-grid {
+    .why-grid {
 
         grid-template-columns:
-            repeat(2, minmax(0, 1fr)) !important;
+            repeat(2, minmax(0, 1fr));
     }
 
 
-    .category-card img {
+    .category-grid {
 
-        height: 250px;
+        grid-template-columns:
+            repeat(3, minmax(0, 1fr));
+    }
+
+
+    .numbers {
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+
+    /* BRANDS TABLET/LAPTOP */
+
+    #brands.categorie .brand-grid,
+    #brands.brands .brand-grid {
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr)) !important;
+
+        gap: 20px;
+    }
+
+
+    #brands.categorie .brand-item,
+    #brands.brands .brand-item {
+
+        min-height: 300px;
     }
 }
 
 
 /* =========================================================
    TABLET
-   992px
+   <= 992px
 ========================================================= */
 
 @media (max-width: 992px) {
-
-    /* HERO */
 
     .hero {
 
@@ -1837,6 +2556,7 @@ a {
         padding-top: 125px;
     }
 
+
     .hero-left {
 
         max-width: 850px;
@@ -1845,25 +2565,31 @@ a {
             0 auto;
     }
 
+
     .hero h1,
     .hero p {
 
         margin-left: auto;
+
         margin-right: auto;
     }
+
 
     .hero-buttons {
 
         justify-content: center;
     }
 
+
     .hero-stats {
 
         max-width: 700px;
 
         margin-left: auto;
+
         margin-right: auto;
     }
+
 
     .hero-right {
 
@@ -1875,14 +2601,13 @@ a {
     }
 
 
-    /* ABOUT / PLATFORM / SHOPPING */
-
     .about-section,
     .platform,
     .shopping-section {
 
         grid-template-columns: 1fr;
     }
+
 
     .about-image,
     .platform-image,
@@ -1894,6 +2619,7 @@ a {
 
         margin: 0 auto;
     }
+
 
     .about-content,
     .platform-content,
@@ -1907,64 +2633,91 @@ a {
     }
 
 
-    /* CTA */
-
     .final-cta {
 
         grid-template-columns: 1fr;
     }
 
 
-    /*
-       FORCE 2 CARD TABLET LAYOUT
+    /* =====================================================
+       WHY ELECTROLIX — TABLET
+    ===================================================== */
 
-       This is the important fix.
-    */
-
-    .why-electrolix .why-grid,
-    .categories .category-grid,
-    .numbers,
-    .brands .brand-grid {
-
-        display: grid !important;
+    .why-grid {
 
         grid-template-columns:
             repeat(2, minmax(0, 1fr)) !important;
 
         gap: 20px;
+    }
+
+
+    /* =====================================================
+       CATEGORIES — TABLET
+    ===================================================== */
+
+    .category-grid {
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr)) !important;
+
+        gap: 20px;
+    }
+
+
+    /* =====================================================
+       BRANDS — TABLET
+    ===================================================== */
+
+    #brands.categorie,
+    #brands.brands {
+
+        padding:
+            85px 30px;
+    }
+
+
+    #brands.categorie .section-heading,
+    #brands.brands .section-heading {
+
+        margin-bottom: 48px;
+    }
+
+
+    #brands.categorie .brand-grid,
+    #brands.brands .brand-grid {
 
         width: 100%;
 
-        max-width: var(--container);
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr)) !important;
 
+        gap: 18px;
     }
 
 
-    /* PREVENT CHILD OVERFLOW */
+    #brands.categorie .brand-item,
+    #brands.brands .brand-item {
 
-    .why-grid > *,
-    .category-grid > *,
-    .numbers > *,
-    .brand-grid > * {
+        min-height: 285px;
 
-        min-width: 0;
+        padding: 25px;
 
-        max-width: 100%;
+        border-radius: 23px;
     }
 
 
-    /* CATEGORY IMAGE */
+    #brands.categorie .brand-info h3,
+    #brands.brands .brand-info h3 {
 
-    .category-card img {
-
-        height: 240px;
+        font-size: 20px;
     }
 }
 
 
 /* =========================================================
-   PHABLET / LARGE MOBILE
-   768px
+   LARGE MOBILE / PHABLET
+   <= 768px
 ========================================================= */
 
 @media (max-width: 768px) {
@@ -1975,6 +2728,7 @@ a {
             110px 18px 65px;
     }
 
+
     .hero h1 {
 
         font-size:
@@ -1983,12 +2737,14 @@ a {
         line-height: 1.08;
     }
 
+
     .hero p {
 
         font-size: 15px;
 
         line-height: 1.75;
     }
+
 
     .hero-buttons {
 
@@ -1998,13 +2754,16 @@ a {
             min(100%, 400px);
 
         margin-left: auto;
+
         margin-right: auto;
     }
+
 
     .hero-buttons a {
 
         width: 100%;
     }
+
 
     .hero-stats {
 
@@ -2014,13 +2773,16 @@ a {
             min(100%, 400px);
 
         margin-left: auto;
+
         margin-right: auto;
     }
+
 
     .hero-stats div {
 
         text-align: center;
     }
+
 
     .hero-right img {
 
@@ -2039,23 +2801,38 @@ a {
         margin-top:
             -30px;
 
-        grid-template-columns: 1fr;
+        grid-template-columns:
+            1fr;
     }
 
 
-    /*
-       KEEP 2 CARDS ON LARGE MOBILE
-    */
+    /* WHY */
 
-    .why-grid,
-    .category-grid,
-    .numbers,
-    .brand-grid {
+    .why-grid {
 
         grid-template-columns:
             repeat(2, minmax(0, 1fr)) !important;
+    }
 
-        gap: 16px;
+
+    /* CATEGORIES */
+
+    .category-grid {
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr)) !important;
+    }
+
+
+    /* NUMBERS */
+
+    .numbers {
+
+        width:
+            calc(100% - 28px);
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
     }
 
 
@@ -2065,6 +2842,7 @@ a {
 
         margin-bottom: 40px;
     }
+
 
     .section-heading h2,
     .about-content h2,
@@ -2076,14 +2854,13 @@ a {
     }
 
 
-    /* WHY CARD */
+    /* WHY */
 
     .why-card {
 
-        padding: 20px;
-
         text-align: center;
     }
+
 
     .why-card img {
 
@@ -2092,6 +2869,7 @@ a {
         max-width: 360px;
 
         margin-left: auto;
+
         margin-right: auto;
 
         object-fit: contain;
@@ -2102,30 +2880,18 @@ a {
 
     .category-card img {
 
-        height: 240px;
+        height:
+            240px;
 
-        padding: 12px;
+        padding:
+            12px;
     }
+
 
     .category-content {
 
-        padding: 20px;
-    }
-
-
-    /* NUMBER */
-
-    .number-card {
-
-        padding: 30px 18px;
-    }
-
-
-    /* BRAND */
-
-    .brand-item {
-
-        padding: 20px;
+        padding:
+            21px;
     }
 
 
@@ -2137,12 +2903,11 @@ a {
     }
 
 
-    /* FLOATING CARDS */
-
     .shopping-image {
 
         text-align: center;
     }
+
 
     .floating-card {
 
@@ -2153,6 +2918,7 @@ a {
         margin-top: 12px;
     }
 
+
     .card-one,
     .card-two {
 
@@ -2160,31 +2926,111 @@ a {
     }
 
 
-    /* CTA */
+    /* =====================================================
+       BRANDS — LARGE MOBILE
+    ===================================================== */
 
-    .final-cta {
-
-        width:
-            calc(100% - 28px);
+    #brands.categorie,
+    #brands.brands {
 
         padding:
-            40px 25px;
-
-        border-radius:
-            26px;
+            72px 20px;
     }
 
-    .cta-left h2 {
+
+    #brands.categorie .section-heading,
+    #brands.brands .section-heading {
+
+        margin-bottom:
+            42px;
+    }
+
+
+    #brands.categorie .section-heading h2,
+    #brands.brands .section-heading h2 {
 
         font-size:
-            clamp(32px, 8vw, 42px);
+            clamp(31px, 7vw, 43px);
+    }
+
+
+    #brands.categorie .brand-grid,
+    #brands.brands .brand-grid {
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr)) !important;
+
+        gap: 16px;
+    }
+
+
+    #brands.categorie .brand-item,
+    #brands.brands .brand-item {
+
+        min-height: 270px;
+
+        padding:
+            22px;
+
+        border-radius:
+            21px;
+    }
+
+
+    #brands.categorie .brand-icon,
+    #brands.brands .brand-icon {
+
+        width: 52px;
+        height: 52px;
+
+        margin-bottom: 22px;
+
+        border-radius: 16px;
+    }
+
+
+    #brands.categorie .brand-info h3,
+    #brands.brands .brand-info h3 {
+
+        font-size: 19px;
+    }
+
+
+    #brands.categorie .brand-info p,
+    #brands.brands .brand-info p {
+
+        font-size: 13.5px;
+    }
+
+
+    #brands.categorie .brand-arrow,
+    #brands.brands .brand-arrow {
+
+        width: 39px;
+        height: 39px;
+
+        margin-top: 19px;
+    }
+
+
+    #brands.categorie .brands-bottom,
+    #brands.brands .brands-bottom {
+
+        margin-top:
+            42px;
+
+        gap:
+            13px;
+
+        font-size:
+            9px;
     }
 }
 
 
 /* =========================================================
    MOBILE
-   576px
+   <= 576px
 ========================================================= */
 
 @media (max-width: 576px) {
@@ -2194,6 +3040,7 @@ a {
         padding:
             100px 14px 60px;
     }
+
 
     .hero-badge {
 
@@ -2211,6 +3058,7 @@ a {
             8px 12px;
     }
 
+
     .hero h1 {
 
         font-size:
@@ -2220,6 +3068,7 @@ a {
             1.08;
     }
 
+
     .hero p {
 
         font-size:
@@ -2228,6 +3077,7 @@ a {
         line-height:
             1.75;
     }
+
 
     .hero-right img {
 
@@ -2246,6 +3096,7 @@ a {
         gap:
             14px;
     }
+
 
     .trust-box {
 
@@ -2273,9 +3124,9 @@ a {
             65px;
     }
 
+
     .why-electrolix,
-    .categories,
-    .brands {
+    .categories {
 
         padding-top:
             65px;
@@ -2296,6 +3147,7 @@ a {
             12px;
     }
 
+
     .icon {
 
         width:
@@ -2308,11 +3160,13 @@ a {
             12px;
     }
 
+
     .feature h4 {
 
         font-size:
             17px;
     }
+
 
     .feature p {
 
@@ -2332,6 +3186,7 @@ a {
             12px;
     }
 
+
     .tick {
 
         width:
@@ -2342,36 +3197,32 @@ a {
     }
 
 
-    /*
-       MOBILE = 1 CARD
-    */
+    /* =====================================================
+       WHY — MOBILE
+    ===================================================== */
 
-    .why-grid,
-    .category-grid,
-    .numbers,
-    .brand-grid {
+    .why-grid {
 
         grid-template-columns:
             1fr !important;
-
-        gap: 16px;
     }
 
 
-    /* WHY */
+    /* =====================================================
+       CATEGORIES — MOBILE
+    ===================================================== */
 
-    .why-card {
+    .category-grid {
 
-        padding:
-            19px;
+        grid-template-columns:
+            1fr !important;
     }
 
-
-    /* CATEGORY */
 
     .category-card img {
 
-        height: auto;
+        height:
+            auto;
 
         min-height:
             220px;
@@ -2383,11 +3234,6 @@ a {
             15px;
     }
 
-    .category-content {
-
-        padding:
-            21px;
-    }
 
     .category-content h3 {
 
@@ -2396,7 +3242,17 @@ a {
     }
 
 
-    /* NUMBER */
+    /* NUMBERS */
+
+    .numbers {
+
+        width:
+            calc(100% - 24px);
+
+        grid-template-columns:
+            1fr;
+    }
+
 
     .number-card {
 
@@ -2405,52 +3261,139 @@ a {
     }
 
 
-    /* BRAND */
+    /* =====================================================
+       BRANDS — MOBILE
+    ===================================================== */
 
-    .brand-item {
+    #brands.categorie,
+    #brands.brands {
 
         padding:
+            65px 14px;
+    }
+
+
+    #brands.categorie .section-heading,
+    #brands.brands .section-heading {
+
+        margin-bottom:
+            38px;
+    }
+
+
+    #brands.categorie .section-tag,
+    #brands.brands .section-tag {
+
+        font-size:
+            10px;
+
+        padding:
+            7px 12px;
+    }
+
+
+    #brands.categorie .section-heading h2,
+    #brands.brands .section-heading h2 {
+
+        font-size:
+            31px;
+
+        line-height:
+            1.12;
+    }
+
+
+    #brands.categorie .section-heading p,
+    #brands.brands .section-heading p {
+
+        font-size:
+            14px;
+
+        line-height:
+            1.7;
+    }
+
+
+    /*
+       MOBILE = ONE CARD
+    */
+
+    #brands.categorie .brand-grid,
+    #brands.brands .brand-grid {
+
+        grid-template-columns:
+            1fr !important;
+
+        gap:
+            15px;
+    }
+
+
+    #brands.categorie .brand-item,
+    #brands.brands .brand-item {
+
+        min-height:
+            0;
+
+        padding:
+            22px;
+
+        border-radius:
             20px;
     }
 
 
-    /* CTA */
-
-    .final-cta {
+    #brands.categorie .brand-icon,
+    #brands.brands .brand-icon {
 
         width:
-            calc(100% - 24px);
+            50px;
 
-        margin-top:
-            55px;
+        height:
+            50px;
 
         margin-bottom:
-            55px;
-
-        padding:
-            30px 20px;
-
-        border-radius:
-            23px;
+            20px;
     }
 
-    .cta-left h2 {
+
+    #brands.categorie .brand-info h3,
+    #brands.brands .brand-info h3 {
 
         font-size:
-            33px;
+            20px;
     }
 
-    .cta-left p {
+
+    #brands.categorie .brand-info p,
+    #brands.brands .brand-info p {
 
         font-size:
             14px;
+    }
+
+
+    #brands.categorie .brands-bottom,
+    #brands.brands .brands-bottom {
+
+        margin-top:
+            38px;
+
+        gap:
+            10px;
+
+        font-size:
+            8px;
+
+        letter-spacing:
+            .04em;
     }
 }
 
 
 /* =========================================================
    VERY SMALL PHONES
-   400px
+   <= 400px
 ========================================================= */
 
 @media (max-width: 400px) {
@@ -2461,11 +3404,13 @@ a {
             30px;
     }
 
+
     .hero p {
 
         font-size:
             13.5px;
     }
+
 
     .section-heading h2,
     .about-content h2,
@@ -2476,11 +3421,13 @@ a {
             28px;
     }
 
+
     .hero-stats div {
 
         padding:
             16px;
     }
+
 
     .hero-stats h2 {
 
@@ -2488,15 +3435,15 @@ a {
             27px;
     }
 
+
     .trust-box,
     .category-content,
-    .why-card,
-    .number-card,
-    .brand-item {
+    .why-card {
 
         padding:
             19px;
     }
+
 
     .category-card img {
 
@@ -2504,11 +3451,65 @@ a {
             190px;
     }
 
+
+    /* =====================================================
+       BRANDS — VERY SMALL
+    ===================================================== */
+
+    #brands.categorie,
+    #brands.brands {
+
+        padding:
+            60px 12px;
+    }
+
+
+    #brands.categorie .section-heading h2,
+    #brands.brands .section-heading h2 {
+
+        font-size:
+            28px;
+    }
+
+
+    #brands.categorie .brand-item,
+    #brands.brands .brand-item {
+
+        padding:
+            19px;
+    }
+
+
+    #brands.categorie .brand-info h3,
+    #brands.brands .brand-info h3 {
+
+        font-size:
+            18px;
+    }
+
+
+    #brands.categorie .brand-info p,
+    #brands.brands .brand-info p {
+
+        font-size:
+            13px;
+    }
+
+
+    #brands.categorie .brands-bottom-line,
+    #brands.brands .brands-bottom-line {
+
+        display:
+            none;
+    }
+
+
     .final-cta {
 
         padding:
             27px 18px;
     }
+
 
     .cta-left h2 {
 
@@ -2520,7 +3521,6 @@ a {
 
 /* =========================================================
    IMAGE SAFETY
-   NO CROPPING
 ========================================================= */
 
 .category-card img,
@@ -2530,15 +3530,13 @@ a {
 .hero-right img,
 .shopping-image img {
 
-    max-width: 100%;
+    max-width:
+        100%;
 
-    box-sizing: border-box;
+    box-sizing:
+        border-box;
 }
 
-
-/* =========================================================
-   MOBILE IMAGE SAFETY
-========================================================= */
 
 @media (max-width: 768px) {
 
@@ -2549,73 +3547,49 @@ a {
     .hero-right img,
     .shopping-image img {
 
-        max-width: 100%;
+        max-width:
+            100%;
 
-        height: auto;
+        height:
+            auto;
 
-        object-fit: contain;
+        object-fit:
+            contain;
     }
 }
 
 
 /* =========================================================
-   FINAL CARD GRID OVERRIDE
-   KEEP THIS AT THE VERY END
-
-   This protects against theme/page-builder CSS
+   GLOBAL RESPONSIVE SAFETY
 ========================================================= */
 
-@media (min-width: 993px) {
+.hero *,
+.trust *,
+.about-section *,
+.why-electrolix *,
+.platform *,
+.categories *,
+.numbers *,
+.shopping-section *,
+#brands *,
+.final-cta * {
 
-    .why-electrolix .why-grid,
-    .categories .category-grid,
-    .numbers,
-    .brands .brand-grid {
-
-        grid-template-columns:
-            repeat(4, minmax(0, 1fr)) !important;
-    }
+    max-width: 100%;
 }
 
 
-@media (min-width: 577px) and (max-width: 992px) {
+.hero,
+.trust,
+.about-section,
+.why-electrolix,
+.platform,
+.categories,
+.numbers,
+.shopping-section,
+#brands,
+.final-cta {
 
-    .why-electrolix .why-grid,
-    .categories .category-grid,
-    .numbers,
-    .brands .brand-grid {
-
-        grid-template-columns:
-            repeat(2, minmax(0, 1fr)) !important;
-    }
-}
-
-
-@media (max-width: 576px) {
-
-    .why-electrolix .why-grid,
-    .categories .category-grid,
-    .numbers,
-    .brands .brand-grid {
-
-        grid-template-columns:
-            1fr !important;
-    }
-}
-
-
-/* =========================================================
-   FINAL CARD CHILD SAFETY
-========================================================= */
-
-.why-grid > *,
-.category-grid > *,
-.numbers > *,
-.brand-grid > * {
-
-    min-width: 0 !important;
-
-    max-width: 100% !important;
+    max-width: 100%;
 }
 
 
