@@ -5,7 +5,7 @@
 
    IMPORTANT:
    - Existing font is NOT changed
-   - Images are NOT cropped
+   - Category images use rounded image design
    - No horizontal overflow
    - Responsive spacing and typography
 ========================================================= */
@@ -77,19 +77,14 @@ html {
 body {
     margin: 0;
     padding: 0;
-
     overflow-x: hidden;
-
     color: var(--dark);
-
     line-height: 1.65;
 }
 
 img {
     display: block;
-
     max-width: 100%;
-
     height: auto;
 }
 
@@ -195,7 +190,6 @@ a {
     border-color: var(--primary);
 
     transform: translateY(-3px);
-
 }
 
 
@@ -307,13 +301,10 @@ a {
 .hero-right {
 
     position: relative;
-
     z-index: 2;
 }
 
-
 .hero-left {
-
     max-width: 800px;
 }
 
@@ -389,7 +380,6 @@ a {
 .hero p strong {
 
     color: #fff;
-
     font-weight: 800;
 }
 
@@ -424,7 +414,6 @@ a {
 .hero .primary-btn:hover {
 
     color: var(--primary-dark);
-
     background: #f8fafc;
 }
 
@@ -456,8 +445,6 @@ a {
 
 /* =========================================================
    HERO IMAGE
-   FULL IMAGE VISIBLE
-   NO CROPPING
 ========================================================= */
 
 .hero-right {
@@ -759,7 +746,6 @@ a {
 /* IMAGE — NEVER CROPPED */
 
 .about-image {
-
     width: 100%;
 }
 
@@ -979,10 +965,7 @@ a {
 }
 
 
-/*
-   IMAGE FULLY VISIBLE
-   No object-fit: cover
-*/
+/* WHY IMAGE */
 
 .why-card img {
 
@@ -1089,10 +1072,9 @@ a {
 }
 
 
-/* PLATFORM IMAGE — FULL */
+/* PLATFORM IMAGE */
 
 .platform-image {
-
     width: 100%;
 }
 
@@ -1227,53 +1209,67 @@ a {
         1px solid var(--border);
 
     border-radius:
-        var(--radius-lg);
+        26px;
 
     background:
         #fff;
 
     box-shadow:
-        var(--shadow-sm);
+        0 18px 50px rgba(15,23,42,.08);
 
     transition:
-        transform .3s ease,
-        box-shadow .3s ease;
+        transform .35s ease,
+        box-shadow .35s ease;
 }
 
 
 .category-card:hover {
 
     transform:
-        translateY(-8px);
+        translateY(-10px);
 
     box-shadow:
-        var(--shadow-md);
+        0 25px 65px rgba(15,23,42,.12);
 }
 
 
 /* =========================================================
-   CATEGORY IMAGE
-   FULL IMAGE — NO CROPPING
-   ROUNDED IMAGE
+   CATEGORY IMAGE DESIGN
+   ROUNDED + FULL CARD WIDTH
 ========================================================= */
 
 .category-card img {
 
     width: 100%;
 
-    height: 280px;
+    height: 400px;
 
-    object-fit: contain;
+    object-fit: cover;
 
     object-position: center;
 
-    padding: 15px;
-
     display: block;
+
+    margin: 0;
+
+    padding: 0;
 
     background: #fff;
 
-    border-radius: 18px;
+    border-radius:
+        26px 26px 0 0;
+
+    transition:
+        transform .4s ease;
+}
+
+
+/* IMAGE HOVER */
+
+.category-card:hover img {
+
+    transform:
+        scale(1.03);
 }
 
 
@@ -2059,15 +2055,23 @@ a {
     }
 
 
-    /* =====================================================
-       TABLET CATEGORY GRID
-       2 COLUMNS
-    ===================================================== */
+    /* TABLET CATEGORY = 2 COLUMNS */
 
     .category-grid {
 
         grid-template-columns:
             repeat(2, minmax(0, 1fr));
+    }
+
+
+    /* TABLET CATEGORY IMAGE */
+
+    .category-card img {
+
+        height: 340px;
+
+        border-radius:
+            26px 26px 0 0;
     }
 }
 
@@ -2178,6 +2182,18 @@ a {
     }
 
 
+    /* CATEGORY IMAGE */
+
+    .category-card img {
+
+        height:
+            300px;
+
+        border-radius:
+            22px 22px 0 0;
+    }
+
+
     /* NUMBERS */
 
     .numbers {
@@ -2238,20 +2254,7 @@ a {
     }
 
 
-    /* CATEGORY */
-
-    .category-card img {
-
-        height:
-            240px;
-
-        padding:
-            12px;
-
-        border-radius:
-            18px;
-    }
-
+    /* CATEGORY CONTENT */
 
     .category-content {
 
@@ -2507,22 +2510,15 @@ a {
     }
 
 
+    /* CATEGORY IMAGE */
+
     .category-card img {
 
         height:
-            auto;
-
-        min-height:
-            220px;
-
-        max-height:
-            330px;
-
-        padding:
-            15px;
+            280px;
 
         border-radius:
-            18px;
+            20px 20px 0 0;
     }
 
 
@@ -2651,13 +2647,15 @@ a {
     }
 
 
+    /* CATEGORY IMAGE */
+
     .category-card img {
 
-        min-height:
-            190px;
+        height:
+            240px;
 
         border-radius:
-            18px;
+            18px 18px 0 0;
     }
 
 
@@ -2703,8 +2701,6 @@ a {
 
 /* =========================================================
    FINAL IMAGE SAFETY RULE
-   Prevents accidental cropping if another CSS rule
-   from your website tries to override the images.
 ========================================================= */
 
 .category-card img,
@@ -2735,8 +2731,21 @@ a {
 
         max-width: 100%;
 
-        height: auto;
-
         object-fit: contain;
+    }
+
+    /* Keep category image design */
+
+    .category-card img {
+
+        object-fit: cover;
+
+        width: 100%;
+
+        max-width: 100%;
+
+        padding: 0;
+
+        display: block;
     }
 }
