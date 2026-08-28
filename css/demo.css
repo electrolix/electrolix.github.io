@@ -1254,6 +1254,7 @@ a {
 /* =========================================================
    CATEGORY IMAGE
    FULL IMAGE — NO CROPPING
+   ROUNDED IMAGE
 ========================================================= */
 
 .category-card img {
@@ -1272,8 +1273,7 @@ a {
 
     background: #fff;
 
-    border-radius:
-        0;
+    border-radius: 18px;
 }
 
 
@@ -2061,7 +2061,7 @@ a {
 
     /* =====================================================
        TABLET CATEGORY GRID
-       CHANGED FROM 3 COLUMNS TO 2 COLUMNS
+       2 COLUMNS
     ===================================================== */
 
     .category-grid {
@@ -2247,6 +2247,9 @@ a {
 
         padding:
             12px;
+
+        border-radius:
+            18px;
     }
 
 
@@ -2517,6 +2520,9 @@ a {
 
         padding:
             15px;
+
+        border-radius:
+            18px;
     }
 
 
@@ -2649,6 +2655,9 @@ a {
 
         min-height:
             190px;
+
+        border-radius:
+            18px;
     }
 
 
