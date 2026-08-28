@@ -1,13 +1,18 @@
 /* =========================================================
    ELECTROLIX
    ADVANCED RESPONSIVE CSS
-   Desktop + Laptop + Tablet + Phablet + Mobile
+   Desktop + Laptop + Tablet + Mobile
 
-   IMPORTANT:
+   CARD SYSTEM
+   Desktop  : 4 cards
+   Tablet   : 2 cards
+   Mobile   : 1 card
+
+   IMPORTANT
    - Existing font is NOT changed
    - Images are NOT cropped
    - No horizontal overflow
-   - Responsive spacing and typography
+   - Consistent card design
 ========================================================= */
 
 
@@ -52,7 +57,8 @@
 
     --container: 1440px;
 
-    --side-padding: clamp(18px, 7vw, 110px);
+    --side-padding:
+        clamp(18px, 7vw, 110px);
 
     --section-space:
         clamp(70px, 8vw, 125px);
@@ -77,19 +83,14 @@ html {
 body {
     margin: 0;
     padding: 0;
-
     overflow-x: hidden;
-
     color: var(--dark);
-
     line-height: 1.65;
 }
 
 img {
     display: block;
-
     max-width: 100%;
-
     height: auto;
 }
 
@@ -195,7 +196,6 @@ a {
     border-color: var(--primary);
 
     transform: translateY(-3px);
-
 }
 
 
@@ -256,7 +256,9 @@ a {
 }
 
 
-/* HERO DECORATION */
+/* =========================================================
+   HERO DECORATION
+========================================================= */
 
 .hero::before {
 
@@ -311,12 +313,9 @@ a {
     z-index: 2;
 }
 
-
 .hero-left {
-
     max-width: 800px;
 }
-
 
 .hero-badge {
 
@@ -349,7 +348,6 @@ a {
     letter-spacing: .08em;
 }
 
-
 .hero h1 {
 
     margin:
@@ -369,7 +367,6 @@ a {
     font-weight: 800;
 }
 
-
 .hero p {
 
     max-width: 700px;
@@ -384,7 +381,6 @@ a {
 
     line-height: 1.8;
 }
-
 
 .hero p strong {
 
@@ -409,7 +405,6 @@ a {
     margin-top: 34px;
 }
 
-
 .hero .primary-btn {
 
     color: var(--primary);
@@ -420,14 +415,12 @@ a {
         0 14px 35px rgba(0,0,0,.15);
 }
 
-
 .hero .primary-btn:hover {
 
     color: var(--primary-dark);
 
     background: #f8fafc;
 }
-
 
 .hero .secondary-btn {
 
@@ -443,7 +436,6 @@ a {
         blur(10px);
 }
 
-
 .hero .secondary-btn:hover {
 
     color: var(--primary);
@@ -456,8 +448,6 @@ a {
 
 /* =========================================================
    HERO IMAGE
-   FULL IMAGE VISIBLE
-   NO CROPPING
 ========================================================= */
 
 .hero-right {
@@ -470,7 +460,6 @@ a {
 
     width: 100%;
 }
-
 
 .hero-right img {
 
@@ -513,7 +502,6 @@ a {
     margin-top: 42px;
 }
 
-
 .hero-stats div {
 
     min-width: 0;
@@ -532,7 +520,6 @@ a {
         blur(14px);
 }
 
-
 .hero-stats h2 {
 
     margin:
@@ -544,7 +531,6 @@ a {
 
     line-height: 1.2;
 }
-
 
 .hero-stats span {
 
@@ -581,7 +567,6 @@ a {
     gap: 20px;
 }
 
-
 .trust-box {
 
     min-width: 0;
@@ -604,7 +589,6 @@ a {
         box-shadow .3s ease;
 }
 
-
 .trust-box:hover {
 
     transform:
@@ -613,7 +597,6 @@ a {
     box-shadow:
         var(--shadow-lg);
 }
-
 
 .trust-box h3 {
 
@@ -627,7 +610,6 @@ a {
 
     line-height: 1.4;
 }
-
 
 .trust-box p {
 
@@ -679,7 +661,6 @@ a {
     text-align: center;
 }
 
-
 .section-heading > span {
 
     display: inline-block;
@@ -696,7 +677,6 @@ a {
     text-transform: uppercase;
 }
 
-
 .section-heading h2 {
 
     margin:
@@ -712,7 +692,6 @@ a {
 
     letter-spacing: -.025em;
 }
-
 
 .section-heading p {
 
@@ -755,14 +734,9 @@ a {
         clamp(40px, 7vw, 100px);
 }
 
-
-/* IMAGE — NEVER CROPPED */
-
 .about-image {
-
     width: 100%;
 }
-
 
 .about-image img {
 
@@ -779,9 +753,6 @@ a {
         var(--shadow-lg);
 }
 
-
-/* CONTENT */
-
 .about-content h2 {
 
     margin:
@@ -797,7 +768,6 @@ a {
 
     letter-spacing: -.025em;
 }
-
 
 .about-content > p {
 
@@ -827,7 +797,6 @@ a {
         36px 0;
 }
 
-
 .feature {
 
     display: grid;
@@ -839,7 +808,6 @@ a {
 
     align-items: start;
 }
-
 
 .icon {
 
@@ -867,7 +835,6 @@ a {
         0 10px 25px rgba(37,99,235,.20);
 }
 
-
 .feature h4 {
 
     margin:
@@ -881,7 +848,6 @@ a {
     line-height: 1.4;
 }
 
-
 .feature p {
 
     margin: 0;
@@ -893,7 +859,6 @@ a {
 
     line-height: 1.7;
 }
-
 
 .about-buttons {
 
@@ -925,7 +890,6 @@ a {
         );
 }
 
-
 .why-grid {
 
     width:
@@ -943,13 +907,21 @@ a {
 }
 
 
-.why-card {
+/* =========================================================
+   COMMON CARD DESIGN
+   WHY / CATEGORY / NUMBER / BRAND
+========================================================= */
+
+.why-card,
+.category-card,
+.number-card,
+.brand-item {
 
     min-width: 0;
 
-    padding: 24px;
+    width: 100%;
 
-    text-align: left;
+    box-sizing: border-box;
 
     border:
         1px solid var(--border);
@@ -968,8 +940,10 @@ a {
         box-shadow .3s ease;
 }
 
-
-.why-card:hover {
+.why-card:hover,
+.category-card:hover,
+.number-card:hover,
+.brand-item:hover {
 
     transform:
         translateY(-8px);
@@ -979,29 +953,34 @@ a {
 }
 
 
-/*
-   IMAGE FULLY VISIBLE
-   No object-fit: cover
-*/
+/* =========================================================
+   WHY CARD
+========================================================= */
+
+.why-card {
+
+    padding: 24px;
+
+    text-align: left;
+}
 
 .why-card img {
 
-    width: 100%;
+    display: block;
 
-    height: auto;
+    width: 100%;
 
     max-width: 100%;
 
-    object-fit: contain;
+    height: auto;
 
-    display: block;
+    object-fit: contain;
 
     margin:
         0 auto 22px;
 
     border-radius: 17px;
 }
-
 
 .why-card h3 {
 
@@ -1015,7 +994,6 @@ a {
 
     line-height: 1.4;
 }
-
 
 .why-card p {
 
@@ -1057,7 +1035,6 @@ a {
         clamp(45px, 7vw, 100px);
 }
 
-
 .platform-content h2 {
 
     margin:
@@ -1074,7 +1051,6 @@ a {
     letter-spacing: -.025em;
 }
 
-
 .platform-content > p {
 
     margin:
@@ -1088,14 +1064,9 @@ a {
     line-height: 1.8;
 }
 
-
-/* PLATFORM IMAGE — FULL */
-
 .platform-image {
-
     width: 100%;
 }
-
 
 .platform-image img {
 
@@ -1126,7 +1097,6 @@ a {
     margin-bottom: 35px;
 }
 
-
 .platform-item {
 
     display: grid;
@@ -1138,7 +1108,6 @@ a {
 
     align-items: start;
 }
-
 
 .tick {
 
@@ -1159,7 +1128,6 @@ a {
     flex-shrink: 0;
 }
 
-
 .platform-item h4 {
 
     margin:
@@ -1170,7 +1138,6 @@ a {
 
     font-size: 18px;
 }
-
 
 .platform-item p {
 
@@ -1199,7 +1166,6 @@ a {
         #f8fbff;
 }
 
-
 .category-grid {
 
     width:
@@ -1217,50 +1183,24 @@ a {
 }
 
 
-.category-card {
-
-    min-width: 0;
-
-    overflow: hidden;
-
-    border:
-        1px solid var(--border);
-
-    border-radius:
-        var(--radius-lg);
-
-    background:
-        #fff;
-
-    box-shadow:
-        var(--shadow-sm);
-
-    transition:
-        transform .3s ease,
-        box-shadow .3s ease;
-}
-
-
-.category-card:hover {
-
-    transform:
-        translateY(-8px);
-
-    box-shadow:
-        var(--shadow-md);
-}
-
-
 /* =========================================================
-   CATEGORY IMAGE
-   FULL IMAGE — NO CROPPING
+   CATEGORY CARD
 ========================================================= */
 
+.category-card {
+
+    overflow: hidden;
+}
+
 .category-card img {
+
+    display: block;
 
     width: 100%;
 
     height: 280px;
+
+    max-width: 100%;
 
     object-fit: contain;
 
@@ -1268,22 +1208,12 @@ a {
 
     padding: 15px;
 
-    display: block;
-
     background: #fff;
-
-    border-radius:
-        0;
 }
-
-
-/* CATEGORY CONTENT */
 
 .category-content {
-
     padding: 24px;
 }
-
 
 .category-content h3 {
 
@@ -1298,7 +1228,6 @@ a {
     line-height: 1.4;
 }
 
-
 .category-content p {
 
     margin:
@@ -1311,7 +1240,6 @@ a {
 
     line-height: 1.7;
 }
-
 
 .category-content a {
 
@@ -1347,41 +1275,13 @@ a {
     gap: 20px;
 }
 
-
 .number-card {
 
     padding:
         38px 20px;
 
     text-align: center;
-
-    border:
-        1px solid var(--border);
-
-    border-radius:
-        22px;
-
-    background:
-        #fff;
-
-    box-shadow:
-        var(--shadow-sm);
-
-    transition:
-        transform .3s ease,
-        box-shadow .3s ease;
 }
-
-
-.number-card:hover {
-
-    transform:
-        translateY(-6px);
-
-    box-shadow:
-        var(--shadow-md);
-}
-
 
 .number-card h2 {
 
@@ -1396,7 +1296,6 @@ a {
 
     line-height: 1;
 }
-
 
 .number-card p {
 
@@ -1436,14 +1335,12 @@ a {
     align-items: center;
 }
 
-
 .shopping-image {
 
     position: relative;
 
     width: 100%;
 }
-
 
 .shopping-image img {
 
@@ -1487,13 +1384,11 @@ a {
         transform .25s ease;
 }
 
-
 .floating-card:hover {
 
     transform:
         translateY(-5px);
 }
-
 
 .card-one {
 
@@ -1502,14 +1397,12 @@ a {
     left: -25px;
 }
 
-
 .card-two {
 
     right: -25px;
 
     bottom: 25px;
 }
-
 
 .floating-card h3 {
 
@@ -1523,7 +1416,6 @@ a {
 
     line-height: 1.2;
 }
-
 
 .floating-card span {
 
@@ -1552,7 +1444,6 @@ a {
     line-height: 1.15;
 }
 
-
 .shopping-content p {
 
     color:
@@ -1562,7 +1453,6 @@ a {
 
     line-height: 1.8;
 }
-
 
 .shopping-features {
 
@@ -1576,7 +1466,6 @@ a {
     margin:
         30px 0;
 }
-
 
 .shopping-features div {
 
@@ -1602,7 +1491,6 @@ a {
     box-shadow:
         var(--shadow-sm);
 }
-
 
 .shopping-buttons {
 
@@ -1630,7 +1518,6 @@ a {
         #f8fbff;
 }
 
-
 .brand-grid {
 
     width:
@@ -1647,7 +1534,6 @@ a {
     gap: 15px;
 }
 
-
 .brand-item {
 
     padding:
@@ -1655,28 +1541,13 @@ a {
 
     text-align: center;
 
-    border:
-        1px solid var(--border);
-
-    border-radius:
-        16px;
-
-    background:
-        #fff;
-
     color:
         var(--dark);
 
     font-size: 16px;
 
     font-weight: 700;
-
-    transition:
-        transform .25s ease,
-        background .25s ease,
-        color .25s ease;
 }
-
 
 .brand-item:hover {
 
@@ -1685,9 +1556,6 @@ a {
 
     background:
         var(--primary);
-
-    transform:
-        translateY(-4px);
 }
 
 
@@ -1743,7 +1611,9 @@ a {
 }
 
 
-/* CTA LEFT */
+/* =========================================================
+   CTA LEFT
+========================================================= */
 
 .cta-left span {
 
@@ -1761,7 +1631,6 @@ a {
     letter-spacing: .1em;
 }
 
-
 .cta-left h2 {
 
     margin:
@@ -1777,7 +1646,6 @@ a {
     letter-spacing: -.03em;
 }
 
-
 .cta-left p {
 
     margin: 0;
@@ -1791,7 +1659,9 @@ a {
 }
 
 
-/* CTA RIGHT */
+/* =========================================================
+   CTA RIGHT
+========================================================= */
 
 .cta-right {
 
@@ -1799,7 +1669,6 @@ a {
 
     gap: 13px;
 }
-
 
 .cta-box {
 
@@ -1819,7 +1688,6 @@ a {
         blur(12px);
 }
 
-
 .cta-box h3 {
 
     margin:
@@ -1829,7 +1697,6 @@ a {
 
     font-size: 18px;
 }
-
 
 .cta-box p {
 
@@ -1842,7 +1709,6 @@ a {
 
     line-height: 1.7;
 }
-
 
 .cta-button {
 
@@ -1860,7 +1726,6 @@ a {
         1px solid transparent;
 }
 
-
 .cta-button:hover {
 
     color:
@@ -1873,7 +1738,6 @@ a {
         translateY(-3px);
 }
 
-
 .cta-button.secondary {
 
     color:
@@ -1885,7 +1749,6 @@ a {
     border:
         1px solid rgba(255,255,255,.35);
 }
-
 
 .cta-button.secondary:hover {
 
@@ -1916,13 +1779,14 @@ a {
         gap: 45px;
     }
 
-
     .hero h1 {
 
         font-size:
             clamp(42px, 5vw, 62px);
     }
 
+
+    /* TRUST */
 
     .trust {
 
@@ -1931,31 +1795,24 @@ a {
     }
 
 
-    .why-grid {
+    /*
+       ALL MAIN CARD GRIDS
+       2 COLUMNS
+    */
 
-        grid-template-columns:
-            repeat(2, minmax(0, 1fr));
-    }
-
-
-    .category-grid {
-
-        grid-template-columns:
-            repeat(3, minmax(0, 1fr));
-    }
-
-
-    .numbers {
-
-        grid-template-columns:
-            repeat(2, minmax(0, 1fr));
-    }
-
-
+    .why-grid,
+    .category-grid,
+    .numbers,
     .brand-grid {
 
         grid-template-columns:
-            repeat(4, minmax(0, 1fr));
+            repeat(2, minmax(0, 1fr)) !important;
+    }
+
+
+    .category-card img {
+
+        height: 250px;
     }
 }
 
@@ -1966,6 +1823,8 @@ a {
 ========================================================= */
 
 @media (max-width: 992px) {
+
+    /* HERO */
 
     .hero {
 
@@ -1978,7 +1837,6 @@ a {
         padding-top: 125px;
     }
 
-
     .hero-left {
 
         max-width: 850px;
@@ -1987,7 +1845,6 @@ a {
             0 auto;
     }
 
-
     .hero h1,
     .hero p {
 
@@ -1995,12 +1852,10 @@ a {
         margin-right: auto;
     }
 
-
     .hero-buttons {
 
         justify-content: center;
     }
-
 
     .hero-stats {
 
@@ -2009,7 +1864,6 @@ a {
         margin-left: auto;
         margin-right: auto;
     }
-
 
     .hero-right {
 
@@ -2021,13 +1875,14 @@ a {
     }
 
 
+    /* ABOUT / PLATFORM / SHOPPING */
+
     .about-section,
     .platform,
     .shopping-section {
 
         grid-template-columns: 1fr;
     }
-
 
     .about-image,
     .platform-image,
@@ -2039,7 +1894,6 @@ a {
 
         margin: 0 auto;
     }
-
 
     .about-content,
     .platform-content,
@@ -2053,9 +1907,57 @@ a {
     }
 
 
+    /* CTA */
+
     .final-cta {
 
         grid-template-columns: 1fr;
+    }
+
+
+    /*
+       FORCE 2 CARD TABLET LAYOUT
+
+       This is the important fix.
+    */
+
+    .why-electrolix .why-grid,
+    .categories .category-grid,
+    .numbers,
+    .brands .brand-grid {
+
+        display: grid !important;
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr)) !important;
+
+        gap: 20px;
+
+        width: 100%;
+
+        max-width: var(--container);
+
+    }
+
+
+    /* PREVENT CHILD OVERFLOW */
+
+    .why-grid > *,
+    .category-grid > *,
+    .numbers > *,
+    .brand-grid > * {
+
+        min-width: 0;
+
+        max-width: 100%;
+    }
+
+
+    /* CATEGORY IMAGE */
+
+    .category-card img {
+
+        height: 240px;
     }
 }
 
@@ -2073,7 +1975,6 @@ a {
             110px 18px 65px;
     }
 
-
     .hero h1 {
 
         font-size:
@@ -2082,14 +1983,12 @@ a {
         line-height: 1.08;
     }
 
-
     .hero p {
 
         font-size: 15px;
 
         line-height: 1.75;
     }
-
 
     .hero-buttons {
 
@@ -2102,12 +2001,10 @@ a {
         margin-right: auto;
     }
 
-
     .hero-buttons a {
 
         width: 100%;
     }
-
 
     .hero-stats {
 
@@ -2120,12 +2017,10 @@ a {
         margin-right: auto;
     }
 
-
     .hero-stats div {
 
         text-align: center;
     }
-
 
     .hero-right img {
 
@@ -2148,42 +2043,19 @@ a {
     }
 
 
-    /* WHY */
+    /*
+       KEEP 2 CARDS ON LARGE MOBILE
+    */
 
-    .why-grid {
-
-        grid-template-columns:
-            repeat(2, minmax(0, 1fr));
-    }
-
-
-    /* CATEGORIES */
-
-    .category-grid {
-
-        grid-template-columns:
-            repeat(2, minmax(0, 1fr));
-    }
-
-
-    /* NUMBERS */
-
-    .numbers {
-
-        width:
-            calc(100% - 28px);
-
-        grid-template-columns:
-            repeat(2, minmax(0, 1fr));
-    }
-
-
-    /* BRAND */
-
+    .why-grid,
+    .category-grid,
+    .numbers,
     .brand-grid {
 
         grid-template-columns:
-            repeat(2, minmax(0, 1fr));
+            repeat(2, minmax(0, 1fr)) !important;
+
+        gap: 16px;
     }
 
 
@@ -2193,7 +2065,6 @@ a {
 
         margin-bottom: 40px;
     }
-
 
     .section-heading h2,
     .about-content h2,
@@ -2205,13 +2076,14 @@ a {
     }
 
 
-    /* WHY */
+    /* WHY CARD */
 
     .why-card {
 
+        padding: 20px;
+
         text-align: center;
     }
-
 
     .why-card img {
 
@@ -2230,18 +2102,30 @@ a {
 
     .category-card img {
 
-        height:
-            240px;
+        height: 240px;
 
-        padding:
-            12px;
+        padding: 12px;
     }
-
 
     .category-content {
 
-        padding:
-            21px;
+        padding: 20px;
+    }
+
+
+    /* NUMBER */
+
+    .number-card {
+
+        padding: 30px 18px;
+    }
+
+
+    /* BRAND */
+
+    .brand-item {
+
+        padding: 20px;
     }
 
 
@@ -2253,16 +2137,12 @@ a {
     }
 
 
-    /*
-       Floating cards become normal blocks.
-       This prevents overflow on mobile.
-    */
+    /* FLOATING CARDS */
 
     .shopping-image {
 
         text-align: center;
     }
-
 
     .floating-card {
 
@@ -2272,7 +2152,6 @@ a {
 
         margin-top: 12px;
     }
-
 
     .card-one,
     .card-two {
@@ -2295,7 +2174,6 @@ a {
             26px;
     }
 
-
     .cta-left h2 {
 
         font-size:
@@ -2317,7 +2195,6 @@ a {
             100px 14px 60px;
     }
 
-
     .hero-badge {
 
         max-width: 100%;
@@ -2334,7 +2211,6 @@ a {
             8px 12px;
     }
 
-
     .hero h1 {
 
         font-size:
@@ -2344,7 +2220,6 @@ a {
             1.08;
     }
 
-
     .hero p {
 
         font-size:
@@ -2353,7 +2228,6 @@ a {
         line-height:
             1.75;
     }
-
 
     .hero-right img {
 
@@ -2372,7 +2246,6 @@ a {
         gap:
             14px;
     }
-
 
     .trust-box {
 
@@ -2400,7 +2273,6 @@ a {
             65px;
     }
 
-
     .why-electrolix,
     .categories,
     .brands {
@@ -2424,7 +2296,6 @@ a {
             12px;
     }
 
-
     .icon {
 
         width:
@@ -2437,13 +2308,11 @@ a {
             12px;
     }
 
-
     .feature h4 {
 
         font-size:
             17px;
     }
-
 
     .feature p {
 
@@ -2463,7 +2332,6 @@ a {
             12px;
     }
 
-
     .tick {
 
         width:
@@ -2474,28 +2342,36 @@ a {
     }
 
 
-    /* WHY */
+    /*
+       MOBILE = 1 CARD
+    */
 
-    .why-grid {
+    .why-grid,
+    .category-grid,
+    .numbers,
+    .brand-grid {
 
         grid-template-columns:
-            1fr;
+            1fr !important;
+
+        gap: 16px;
+    }
+
+
+    /* WHY */
+
+    .why-card {
+
+        padding:
+            19px;
     }
 
 
     /* CATEGORY */
 
-    .category-grid {
-
-        grid-template-columns:
-            1fr;
-    }
-
-
     .category-card img {
 
-        height:
-            auto;
+        height: auto;
 
         min-height:
             220px;
@@ -2507,6 +2383,11 @@ a {
             15px;
     }
 
+    .category-content {
+
+        padding:
+            21px;
+    }
 
     .category-content h3 {
 
@@ -2515,17 +2396,7 @@ a {
     }
 
 
-    /* NUMBERS */
-
-    .numbers {
-
-        width:
-            calc(100% - 24px);
-
-        grid-template-columns:
-            1fr;
-    }
-
+    /* NUMBER */
 
     .number-card {
 
@@ -2534,12 +2405,12 @@ a {
     }
 
 
-    /* BRANDS */
+    /* BRAND */
 
-    .brand-grid {
+    .brand-item {
 
-        grid-template-columns:
-            1fr;
+        padding:
+            20px;
     }
 
 
@@ -2563,13 +2434,11 @@ a {
             23px;
     }
 
-
     .cta-left h2 {
 
         font-size:
             33px;
     }
-
 
     .cta-left p {
 
@@ -2592,13 +2461,11 @@ a {
             30px;
     }
 
-
     .hero p {
 
         font-size:
             13.5px;
     }
-
 
     .section-heading h2,
     .about-content h2,
@@ -2609,13 +2476,11 @@ a {
             28px;
     }
 
-
     .hero-stats div {
 
         padding:
             16px;
     }
-
 
     .hero-stats h2 {
 
@@ -2623,15 +2488,15 @@ a {
             27px;
     }
 
-
     .trust-box,
     .category-content,
-    .why-card {
+    .why-card,
+    .number-card,
+    .brand-item {
 
         padding:
             19px;
     }
-
 
     .category-card img {
 
@@ -2639,13 +2504,11 @@ a {
             190px;
     }
 
-
     .final-cta {
 
         padding:
             27px 18px;
     }
-
 
     .cta-left h2 {
 
@@ -2656,34 +2519,8 @@ a {
 
 
 /* =========================================================
-   ACCESSIBILITY
-========================================================= */
-
-@media (prefers-reduced-motion: reduce) {
-
-    *,
-    *::before,
-    *::after {
-
-        scroll-behavior:
-            auto !important;
-
-        transition-duration:
-            .01ms !important;
-
-        animation-duration:
-            .01ms !important;
-
-        animation-iteration-count:
-            1 !important;
-    }
-}
-
-
-/* =========================================================
-   FINAL IMAGE SAFETY RULE
-   Prevents accidental cropping if another CSS rule
-   from your website tries to override the images.
+   IMAGE SAFETY
+   NO CROPPING
 ========================================================= */
 
 .category-card img,
@@ -2717,5 +2554,91 @@ a {
         height: auto;
 
         object-fit: contain;
+    }
+}
+
+
+/* =========================================================
+   FINAL CARD GRID OVERRIDE
+   KEEP THIS AT THE VERY END
+
+   This protects against theme/page-builder CSS
+========================================================= */
+
+@media (min-width: 993px) {
+
+    .why-electrolix .why-grid,
+    .categories .category-grid,
+    .numbers,
+    .brands .brand-grid {
+
+        grid-template-columns:
+            repeat(4, minmax(0, 1fr)) !important;
+    }
+}
+
+
+@media (min-width: 577px) and (max-width: 992px) {
+
+    .why-electrolix .why-grid,
+    .categories .category-grid,
+    .numbers,
+    .brands .brand-grid {
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr)) !important;
+    }
+}
+
+
+@media (max-width: 576px) {
+
+    .why-electrolix .why-grid,
+    .categories .category-grid,
+    .numbers,
+    .brands .brand-grid {
+
+        grid-template-columns:
+            1fr !important;
+    }
+}
+
+
+/* =========================================================
+   FINAL CARD CHILD SAFETY
+========================================================= */
+
+.why-grid > *,
+.category-grid > *,
+.numbers > *,
+.brand-grid > * {
+
+    min-width: 0 !important;
+
+    max-width: 100% !important;
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+
+        scroll-behavior:
+            auto !important;
+
+        transition-duration:
+            .01ms !important;
+
+        animation-duration:
+            .01ms !important;
+
+        animation-iteration-count:
+            1 !important;
     }
 }
