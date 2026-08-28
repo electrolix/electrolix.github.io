@@ -46,6 +46,8 @@ const blogLinks = [
     "https://electrolix.github.io/polycab-industrial-cables-selection.html",
 
     "https://electrolix.github.io/polycab-etira-fr-wire-complete-information.html",
+
+    "https://electrolix.github.io/polycab-house-wire-domestic-commercial-wiring.html",
    
  
 
