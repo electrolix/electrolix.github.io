@@ -1247,23 +1247,18 @@ a {
 }
 
 
+/* =========================================================
+   CATEGORY CARD IMAGE
+   ONLY IMAGE DESIGN CHANGED
+========================================================= */
+
 .category-card img {
 
     width: 100%;
 
-    height: 280px;
+    height: 400px;
 
-    object-fit: contain;
-
-    object-position: center;
-
-    padding: 15px;
-
-    display: block;
-
-    background: #fff;
-
-    border-radius: 0;
+    object-fit: cover;
 }
 
 
@@ -2880,11 +2875,9 @@ a {
 
     .category-card img {
 
-        height:
-            240px;
+        height: 400px;
 
-        padding:
-            12px;
+        object-fit: cover;
     }
 
 
@@ -3222,16 +3215,10 @@ a {
     .category-card img {
 
         height:
-            auto;
+            400px;
 
-        min-height:
-            220px;
-
-        max-height:
-            330px;
-
-        padding:
-            15px;
+        object-fit:
+            cover;
     }
 
 
@@ -3447,14 +3434,13 @@ a {
 
     .category-card img {
 
-        min-height:
-            190px;
+        height:
+            400px;
+
+        object-fit:
+            cover;
     }
 
-
-    /* =====================================================
-       BRANDS — VERY SMALL
-    ===================================================== */
 
     #brands.categorie,
     #brands.brands {
