@@ -1,17 +1,15 @@
+```css
 /* =========================================================
    ELECTROLIX
    ADVANCED RESPONSIVE CSS
    Desktop + Laptop + Tablet + Mobile
 
-   FIXED:
-   - Tablet cards = 2 columns
-   - Mobile cards = 1 column
-   - Why Electrolix = 2 columns tablet
-   - Categories = 2 columns tablet
-   - Brands / categorie = premium redesign
-   - No horizontal overflow
-   - Images are NOT cropped
-   - Existing font is NOT changed
+   IMAGE FIX:
+   - Category images are NEVER cropped
+   - Original image ratio is preserved
+   - No fixed image height
+   - No object-fit: cover
+   - Works consistently on desktop/tablet/mobile
 ========================================================= */
 
 
@@ -1248,22 +1246,25 @@ a {
 
 
 /* =========================================================
-   CATEGORY CARD IMAGE
-   ONLY IMAGE DESIGN CHANGED
-   FULL IMAGE VISIBLE - NO CROPPING
+   CATEGORY IMAGE — FIXED
+   NEVER CROPS ON ANY DEVICE
 ========================================================= */
 
 .category-card img {
 
-    width: 100%;
-
-    height: 280px;
-
     display: block;
 
-    object-fit: contain;
+    width: 100%;
 
-    object-position: center;
+    height: auto !important;
+
+    min-height: 0 !important;
+
+    max-height: none !important;
+
+    object-fit: contain !important;
+
+    object-position: center center;
 
     padding: 15px;
 
@@ -1271,9 +1272,12 @@ a {
 
     border-radius: 0;
 
-    box-sizing: border-box;
 }
 
+
+/* =========================================================
+   CATEGORY CONTENT
+========================================================= */
 
 .category-content {
 
@@ -2526,8 +2530,6 @@ a {
     }
 
 
-    /* BRANDS TABLET/LAPTOP */
-
     #brands.categorie .brand-grid,
     #brands.brands .brand-grid {
 
@@ -2647,10 +2649,6 @@ a {
     }
 
 
-    /* =====================================================
-       WHY ELECTROLIX — TABLET
-    ===================================================== */
-
     .why-grid {
 
         grid-template-columns:
@@ -2660,10 +2658,6 @@ a {
     }
 
 
-    /* =====================================================
-       CATEGORIES — TABLET
-    ===================================================== */
-
     .category-grid {
 
         grid-template-columns:
@@ -2672,29 +2666,6 @@ a {
         gap: 20px;
     }
 
-
-    /* =====================================================
-       CATEGORY IMAGE — TABLET
-       FULL IMAGE / NO CROPPING
-    ===================================================== */
-
-    .category-card img {
-
-        width: 100%;
-
-        height: 260px;
-
-        object-fit: contain;
-
-        object-position: center;
-
-        padding: 14px;
-    }
-
-
-    /* =====================================================
-       BRANDS — TABLET
-    ===================================================== */
 
     #brands.categorie,
     #brands.brands {
@@ -2818,8 +2789,6 @@ a {
     }
 
 
-    /* TRUST */
-
     .trust {
 
         width:
@@ -2833,8 +2802,6 @@ a {
     }
 
 
-    /* WHY */
-
     .why-grid {
 
         grid-template-columns:
@@ -2842,37 +2809,12 @@ a {
     }
 
 
-    /* CATEGORIES */
-
     .category-grid {
 
         grid-template-columns:
             repeat(2, minmax(0, 1fr)) !important;
     }
 
-
-    /* =====================================================
-       CATEGORY IMAGE — LARGE MOBILE
-       FULL IMAGE / NO CROPPING
-    ===================================================== */
-
-    .category-card img {
-
-        width: 100%;
-
-        height: auto;
-
-        max-height: 330px;
-
-        object-fit: contain;
-
-        object-position: center;
-
-        padding: 15px;
-    }
-
-
-    /* NUMBERS */
 
     .numbers {
 
@@ -2883,8 +2825,6 @@ a {
             repeat(2, minmax(0, 1fr));
     }
 
-
-    /* SECTION HEADINGS */
 
     .section-heading {
 
@@ -2901,8 +2841,6 @@ a {
             clamp(30px, 7vw, 40px);
     }
 
-
-    /* WHY */
 
     .why-card {
 
@@ -2924,27 +2862,28 @@ a {
     }
 
 
-    /* CATEGORY */
+    /* =====================================================
+       CATEGORY IMAGE
+       NEVER CROP
+    ===================================================== */
 
     .category-card img {
 
-        height:
-            auto;
+        width: 100%;
 
-        min-height:
-            220px;
+        height: auto !important;
 
-        max-height:
-            330px;
+        min-height: 0 !important;
 
-        padding:
-            15px;
+        max-height: none !important;
 
-        object-fit:
-            contain;
+        object-fit: contain !important;
 
-        object-position:
-            center;
+        object-position: center center;
+
+        padding: 12px;
+
+        background: #fff;
     }
 
 
@@ -2954,8 +2893,6 @@ a {
             21px;
     }
 
-
-    /* SHOPPING */
 
     .shopping-features {
 
@@ -2985,10 +2922,6 @@ a {
         position: static;
     }
 
-
-    /* =====================================================
-       BRANDS — LARGE MOBILE
-    ===================================================== */
 
     #brands.categorie,
     #brands.brands {
@@ -3146,8 +3079,6 @@ a {
     }
 
 
-    /* TRUST */
-
     .trust {
 
         width:
@@ -3167,8 +3098,6 @@ a {
             18px;
     }
 
-
-    /* SECTIONS */
 
     .about-section,
     .platform,
@@ -3195,8 +3124,6 @@ a {
             65px;
     }
 
-
-    /* FEATURES */
 
     .feature {
 
@@ -3235,8 +3162,6 @@ a {
     }
 
 
-    /* PLATFORM */
-
     .platform-item {
 
         grid-template-columns:
@@ -3257,20 +3182,12 @@ a {
     }
 
 
-    /* =====================================================
-       WHY — MOBILE
-    ===================================================== */
-
     .why-grid {
 
         grid-template-columns:
             1fr !important;
     }
 
-
-    /* =====================================================
-       CATEGORIES — MOBILE
-    ===================================================== */
 
     .category-grid {
 
@@ -3281,24 +3198,27 @@ a {
 
     /* =====================================================
        CATEGORY IMAGE — MOBILE
-       FULL IMAGE / NO CROPPING
+       NO FIXED HEIGHT
+       NO CROPPING
     ===================================================== */
 
     .category-card img {
 
         width: 100%;
 
-        height: auto;
+        height: auto !important;
 
-        min-height: 220px;
+        min-height: 0 !important;
 
-        max-height: 330px;
+        max-height: none !important;
+
+        object-fit: contain !important;
+
+        object-position: center center;
 
         padding: 15px;
 
-        object-fit: contain;
-
-        object-position: center;
+        background: #fff;
     }
 
 
@@ -3308,8 +3228,6 @@ a {
             20px;
     }
 
-
-    /* NUMBERS */
 
     .numbers {
 
@@ -3327,10 +3245,6 @@ a {
             30px 20px;
     }
 
-
-    /* =====================================================
-       BRANDS — MOBILE
-    ===================================================== */
 
     #brands.categorie,
     #brands.brands {
@@ -3380,10 +3294,6 @@ a {
             1.7;
     }
 
-
-    /*
-       MOBILE = ONE CARD
-    */
 
     #brands.categorie .brand-grid,
     #brands.brands .brand-grid {
@@ -3513,36 +3423,29 @@ a {
 
 
     /* =====================================================
-       CATEGORY IMAGE — VERY SMALL
-       FULL IMAGE / NO CROPPING
+       CATEGORY IMAGE — VERY SMALL PHONES
+       STILL NO CROPPING
     ===================================================== */
 
     .category-card img {
 
         width: 100%;
 
-        height: auto;
+        height: auto !important;
 
-        min-height:
-            190px;
+        min-height: 0 !important;
 
-        max-height:
-            300px;
+        max-height: none !important;
 
-        padding:
-            12px;
+        object-fit: contain !important;
 
-        object-fit:
-            contain;
+        object-position: center center;
 
-        object-position:
-            center;
+        padding: 15px;
+
+        background: #fff;
     }
 
-
-    /* =====================================================
-       BRANDS — VERY SMALL
-    ===================================================== */
 
     #brands.categorie,
     #brands.brands {
@@ -3626,6 +3529,35 @@ a {
 }
 
 
+/* =========================================================
+   CATEGORY IMAGE FINAL OVERRIDE
+   This guarantees the category image can never be forced
+   into a cropped fixed-height box by previous rules.
+========================================================= */
+
+.category-card img {
+
+    width: 100% !important;
+
+    height: auto !important;
+
+    min-height: 0 !important;
+
+    max-height: none !important;
+
+    object-fit: contain !important;
+
+    object-position: center center !important;
+
+    display: block;
+
+}
+
+
+/* =========================================================
+   RESPONSIVE IMAGE SAFETY
+========================================================= */
+
 @media (max-width: 768px) {
 
     .category-card img,
@@ -3643,6 +3575,25 @@ a {
 
         object-fit:
             contain;
+    }
+
+
+    .category-card img {
+
+        width:
+            100% !important;
+
+        height:
+            auto !important;
+
+        min-height:
+            0 !important;
+
+        max-height:
+            none !important;
+
+        object-fit:
+            contain !important;
     }
 }
 
@@ -3704,3 +3655,4 @@ a {
             1 !important;
     }
 }
+```
