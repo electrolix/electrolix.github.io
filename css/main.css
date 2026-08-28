@@ -1518,3 +1518,45 @@ section{
     }
 
 }
+
+
+
+
+
+/*==========================================
+        ABOUT + PLATFORM
+        TABLET IMAGE FIRST
+==========================================*/
+
+@media (min-width: 769px) and (max-width: 1024px) {
+
+    /* ABOUT */
+
+    .about-section {
+        grid-template-columns: 1fr;
+    }
+
+    .about-image {
+        order: 1;
+    }
+
+    .about-content {
+        order: 2;
+    }
+
+
+    /* PLATFORM */
+
+    .platform {
+        grid-template-columns: 1fr;
+    }
+
+    .platform-image {
+        order: 1;
+    }
+
+    .platform-content {
+        order: 2;
+    }
+
+}
