@@ -1250,15 +1250,28 @@ a {
 /* =========================================================
    CATEGORY CARD IMAGE
    ONLY IMAGE DESIGN CHANGED
+   FULL IMAGE VISIBLE - NO CROPPING
 ========================================================= */
 
 .category-card img {
 
     width: 100%;
 
-    height: 400px;
+    height: 280px;
 
-    object-fit: cover;
+    display: block;
+
+    object-fit: contain;
+
+    object-position: center;
+
+    padding: 15px;
+
+    background: #fff;
+
+    border-radius: 0;
+
+    box-sizing: border-box;
 }
 
 
@@ -2661,6 +2674,25 @@ a {
 
 
     /* =====================================================
+       CATEGORY IMAGE — TABLET
+       FULL IMAGE / NO CROPPING
+    ===================================================== */
+
+    .category-card img {
+
+        width: 100%;
+
+        height: 260px;
+
+        object-fit: contain;
+
+        object-position: center;
+
+        padding: 14px;
+    }
+
+
+    /* =====================================================
        BRANDS — TABLET
     ===================================================== */
 
@@ -2819,6 +2851,27 @@ a {
     }
 
 
+    /* =====================================================
+       CATEGORY IMAGE — LARGE MOBILE
+       FULL IMAGE / NO CROPPING
+    ===================================================== */
+
+    .category-card img {
+
+        width: 100%;
+
+        height: auto;
+
+        max-height: 330px;
+
+        object-fit: contain;
+
+        object-position: center;
+
+        padding: 15px;
+    }
+
+
     /* NUMBERS */
 
     .numbers {
@@ -2875,9 +2928,23 @@ a {
 
     .category-card img {
 
-        height: 400px;
+        height:
+            auto;
 
-        object-fit: cover;
+        min-height:
+            220px;
+
+        max-height:
+            330px;
+
+        padding:
+            15px;
+
+        object-fit:
+            contain;
+
+        object-position:
+            center;
     }
 
 
@@ -3212,13 +3279,26 @@ a {
     }
 
 
+    /* =====================================================
+       CATEGORY IMAGE — MOBILE
+       FULL IMAGE / NO CROPPING
+    ===================================================== */
+
     .category-card img {
 
-        height:
-            400px;
+        width: 100%;
 
-        object-fit:
-            cover;
+        height: auto;
+
+        min-height: 220px;
+
+        max-height: 330px;
+
+        padding: 15px;
+
+        object-fit: contain;
+
+        object-position: center;
     }
 
 
@@ -3432,15 +3512,37 @@ a {
     }
 
 
+    /* =====================================================
+       CATEGORY IMAGE — VERY SMALL
+       FULL IMAGE / NO CROPPING
+    ===================================================== */
+
     .category-card img {
 
-        height:
-            400px;
+        width: 100%;
+
+        height: auto;
+
+        min-height:
+            190px;
+
+        max-height:
+            300px;
+
+        padding:
+            12px;
 
         object-fit:
-            cover;
+            contain;
+
+        object-position:
+            center;
     }
 
+
+    /* =====================================================
+       BRANDS — VERY SMALL
+    ===================================================== */
 
     #brands.categorie,
     #brands.brands {
