@@ -48,6 +48,9 @@ const blogLinks = [
     "https://electrolix.github.io/polycab-etira-fr-wire-complete-information.html",
 
     "https://electrolix.github.io/polycab-house-wire-domestic-commercial-wiring.html",
+
+    "https://electrolix.github.io/finolex-vs-polycab-wires.html",   
+
    
  
 
