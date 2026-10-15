@@ -223,7 +223,7 @@ The Electrolix website uses standard web technologies and is hosted through GitH
 
 The repository contains website pages, reusable components, stylesheets, JavaScript files, image assets, and electrical product guides.
 
-```text
+
 electrolix.github.io/
 ├── components/                                # Reusable website components
 ├── css/                                       # Stylesheets
@@ -235,13 +235,12 @@ electrolix.github.io/
 ├── electrical-products-resource-library.html  # Resource library
 ├── contact-us.html                            # Contact page
 ├── privacy-policy.html                        # Privacy policy
-├── testing.html                               # Testing page
 ├── finolex-*.html                             # Finolex-related guides
 ├── polycab-*.html                             # Polycab-related guides
 ├── understanding-finolex-*.html                # Finolex educational guides
 ├── google2fbd8b18839738df.html                # Google verification file
 └── README.md                                  # Project documentation
-```
+
 
 *Note: Wildcard patterns represent groups of related article pages, not literal filenames. Consult the repository for the complete list of files.*
 
