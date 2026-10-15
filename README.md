@@ -235,7 +235,6 @@ electrolix.github.io/
 ├── electrical-products-resource-library.html  # Resource library
 ├── contact-us.html                            # Contact page
 ├── privacy-policy.html                        # Privacy policy
-├── testing.html                               # Testing page
 ├── finolex-*.html                             # Finolex-related guides
 ├── polycab-*.html                             # Polycab-related guides
 ├── understanding-finolex-*.html                # Finolex educational guides
