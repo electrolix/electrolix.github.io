@@ -5,6 +5,8 @@
 
 const blogLinks = [
 
+    "https://electrolix.github.io/4-module-cover-plate-buying-guide.html",
+
    "https://electrolix.github.io/finolex-0-75-mm-wire-complete-guide.html",
 
    "https://electrolix.github.io/finolex-90-mtr-wires-buying-guide.html",
