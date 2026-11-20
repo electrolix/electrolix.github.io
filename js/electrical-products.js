@@ -5,6 +5,8 @@
 
 const blogLinks = [
 
+    "https://electrolix.github.io/siemens-ccb-controllable-circuit-breaker-guide.html",
+
     "https://electrolix.github.io/ac-servo-motor-and-drive.html",
 
     "https://electrolix.github.io/4-module-cover-plate-buying-guide.html",
