@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AC Servo Motor & Drive: Working, Components, Applications and Selection Guide | Electrolix</title>
+<meta name="description" content="Understand how AC servo motors and drives work, their key components, closed-loop control, industrial applications, and the factors to consider when selecting a servo system.">
+<meta name="keywords" content="AC servo motor, AC servo drive, servo motor working principle, servo drive working, closed-loop motion control, encoder feedback, industrial automation, servo motor applications, servo motor selection">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="author" content="Electrolix">
+<meta name="theme-color" content="#0F172A">
+<link rel="canonical" href="https://electrolix.github.io/ac-servo-motor-and-drive.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Electrolix">
+<meta property="og:locale" content="en_IN">
+<meta property="og:title" content="AC Servo Motor & Drive: Working, Components, Applications and Selection Guide">
+<meta property="og:description" content="A practical introduction to AC servo motors and drives, feedback control, industrial uses and selection considerations.">
+<meta property="og:url" content="https://electrolix.github.io/ac-servo-motor-and-drive.html">
+<meta property="og:image" content="https://electrolix.github.io/images/electrolixs.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="AC Servo Motor & Drive: Working, Components, Applications and Selection Guide">
+<meta name="twitter:description" content="Learn how AC servo motor and drive systems deliver accurate position, speed and torque control.">
+<meta name="twitter:image" content="https://electrolix.github.io/images/electrolixs.png">
+<link rel="icon" href="https://electrolix.github.io/images/favicon.ico" sizes="any">
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/back-to-top.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "AC Servo Motor & Drive: Working, Components, Applications and Selection Guide",
+  "description": "A practical guide to AC servo motors and drives, their working principle, feedback control, applications and selection considerations.",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://electrolix.github.io/ac-servo-motor-and-drive.html"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Electrolix",
+    "url": "https://electrolix.github.io/"
+  },
+  "datePublished": "2026-11-20",
+  "dateModified": "2026-11-20",
+  "inLanguage": "en-IN"
+}
+</script>
+<style>
+:root{--ink:#172033;--muted:#5b6474;--line:#e5e9f0;--blue:#1769aa;--pale:#f3f7fb}
+.article-wrap{max-width:1080px;margin:0 auto;padding:48px 22px 76px;color:var(--ink);font-family:Inter,Arial,sans-serif}
+.article-breadcrumb{font-size:14px;color:var(--muted);margin-bottom:24px}
+.article-breadcrumb a,.article-body a{color:var(--blue);text-decoration:none}
+.article-breadcrumb a:hover,.article-body a:hover{text-decoration:underline}
+.article-hero{padding:42px 38px;border-radius:18px;background:linear-gradient(135deg,#eef5fb,#f7f9fc);margin-bottom:38px}
+.article-kicker{font-size:12px;letter-spacing:1.4px;font-weight:800;color:var(--blue);text-transform:uppercase}
+.article-hero h1{font-size:clamp(32px,5vw,48px);line-height:1.14;margin:14px 0;color:#101a2d}
+.article-hero p{font-size:18px;line-height:1.75;color:#4b5668;max-width:820px;margin:0}
+.article-meta{margin-top:20px;color:#667085;font-size:13px}
+.article-layout{display:grid;grid-template-columns:minmax(0,1fr) 260px;gap:42px;align-items:start}
+.article-body{font-size:16px;line-height:1.85;color:#354052}
+.article-body h2{font-size:27px;line-height:1.3;color:#152238;margin:38px 0 14px}
+.article-body h3{font-size:20px;line-height:1.4;color:#1c2b43;margin:25px 0 8px}
+.article-body p{margin:0 0 18px}
+.article-body ul,.article-body ol{padding-left:24px;margin:0 0 22px}
+.article-body li{padding-left:4px;margin:7px 0}
+.article-note{background:var(--pale);border-left:4px solid var(--blue);padding:18px 20px;margin:24px 0;border-radius:8px}
+.article-aside{position:sticky;top:24px;border:1px solid var(--line);border-radius:14px;padding:22px;background:#fff}
+.article-aside h2{font-size:17px;margin:0 0 14px;color:#172033}
+.article-aside a{display:block;color:#465368;text-decoration:none;font-size:14px;padding:8px 0;border-bottom:1px solid var(--line)}
+.article-aside a:last-child{border:0}
+.article-cta{margin-top:42px;padding:28px;border-radius:14px;background:#10233d;color:white}
+.article-cta h2{font-size:24px;margin:0 0 8px}
+.article-cta p{color:#d8e2ee;margin:0 0 18px}
+.article-cta a{display:inline-block;background:#fff;color:#10233d;padding:11px 18px;border-radius:7px;font-weight:700;text-decoration:none}
+.article-sources{font-size:14px;color:var(--muted);border-top:1px solid var(--line);margin-top:34px;padding-top:20px}
+.article-sources li{margin:8px 0}
+@media(max-width:800px){.article-layout{grid-template-columns:1fr}.article-aside{position:static;order:-1}.article-hero{padding:30px 24px}.article-body h2{font-size:24px}}
+</style>
+</head>
+<body>
+<div id="header"></div>
+<main class="article-wrap">
+<nav class="article-breadcrumb" aria-label="Breadcrumb"><a href="https://electrolix.github.io/">Home</a> / <a href="https://electrolix.github.io/electrical-products.html">Articles</a> / AC Servo Motor &amp; Drive</nav>
+<header class="article-hero">
+<div class="article-kicker">Electrolix Technical Guide</div>
+<h1>AC Servo Motor &amp; Drive: Working, Components, Applications and Selection Guide</h1>
+<p>AC servo systems are used when a machine needs controlled movement rather than simply continuous rotation. By combining a motor, feedback device and servo drive, they provide accurate control of position, speed and torque in automated equipment.</p>
+<div class="article-meta">Published: 20 November 2026 &nbsp;·&nbsp; Electrolix</div>
+</header>
+<div class="article-layout">
+<article class="article-body">
+<p>In industrial automation, the quality of movement can be just as important as the power used to produce it. A packaging machine must stop at the right point, a CNC axis must follow its programmed path, and a robot joint must move smoothly while carrying a load. These tasks call for a motion-control system that can monitor movement and correct it continuously. This is where an <strong>AC servo motor and drive</strong> system is useful.</p>
+
+<h2 id="what-is">What Is an AC Servo Motor and Drive?</h2>
+<p>An AC servo motor is an electric motor designed to operate as part of a closed-loop motion-control system. It is commonly paired with a servo drive (also called a servo amplifier) and a feedback device such as an encoder or resolver. The drive supplies controlled electrical power to the motor, while the feedback device reports the motor's position and speed.</p>
+<p>The machine controller sends a target command to the drive. The drive compares the requested movement with the feedback from the motor and adjusts its output to reduce the difference. Depending on the application, the system can control position, speed, torque, or a combination of these variables.</p>
+
+<h2 id="components">Main Components of an AC Servo System</h2>
+<h3>1. AC servo motor</h3>
+<p>The motor converts electrical energy into rotary motion. Many industrial AC servo motors use a permanent-magnet synchronous design, with a wound stator and a permanent-magnet rotor. Their construction and low-inertia options support quick acceleration and controlled movement.</p>
+<h3>2. Servo drive or amplifier</h3>
+<p>The servo drive receives commands from a PLC, CNC or motion controller. It converts the incoming power into controlled current for the motor and manages the control loops. It also monitors feedback, operating status, alarms and protective conditions.</p>
+<h3>3. Encoder or resolver</h3>
+<p>The feedback device measures rotor position and provides information used to determine speed and direction. Incremental encoders report movement relative to a reference, while absolute encoders can identify a position value directly. The suitable feedback type depends on the machine's accuracy, homing and operating requirements.</p>
+<h3>4. Motion controller and mechanical transmission</h3>
+<p>A PLC, CNC or dedicated motion controller coordinates the movement command. Couplings, gearboxes, belts, ball screws and other mechanical elements transfer motor torque to the load. Their inertia, friction, backlash and efficiency affect the final motion performance.</p>
+
+<h2 id="working">How Does an AC Servo Motor and Drive Work?</h2>
+<p>The system works through continuous feedback. A simplified operating sequence is:</p>
+<ol>
+<li><strong>Command:</strong> The controller sends a target position, speed or torque reference to the servo drive.</li>
+<li><strong>Power conversion:</strong> The drive regulates the electrical power supplied to the motor, controlling the current in its windings.</li>
+<li><strong>Motor movement:</strong> The motor produces torque and moves the connected mechanism.</li>
+<li><strong>Feedback:</strong> The encoder or resolver reports the motor's actual position and speed to the drive.</li>
+<li><strong>Correction:</strong> The drive compares actual feedback with the command and adjusts motor current to reduce the error.</li>
+</ol>
+<p>Many servo systems use nested control loops. The current loop controls motor torque, the speed loop regulates rotational speed, and the position loop manages the target position. The exact arrangement and which loops are active depend on the drive and application.</p>
+<div class="article-note"><strong>In simple terms:</strong> the controller requests a movement, the drive powers the motor, and the feedback device tells the drive what actually happened. The drive keeps correcting the motor's operation to follow the command.</div>
+
+<h2 id="benefits">Why Use an AC Servo System?</h2>
+<ul>
+<li><strong>Accurate positioning:</strong> Feedback helps the system reach and maintain commanded positions.</li>
+<li><strong>Responsive movement:</strong> Servo systems can accelerate, decelerate and change direction quickly when correctly sized.</li>
+<li><strong>Controlled speed and torque:</strong> The drive adjusts motor output to suit changing machine requirements.</li>
+<li><strong>Repeatable operation:</strong> Consistent motion supports repeatable production cycles and product quality.</li>
+<li><strong>Flexible automation:</strong> Servo systems can coordinate multiple axes and support complex motion profiles.</li>
+</ul>
+<p>These benefits depend on correct motor sizing, drive configuration, mechanical design, tuning and installation. A servo system does not automatically eliminate mechanical errors such as backlash or poor alignment.</p>
+
+<h2 id="applications">Common Applications of AC Servo Motors</h2>
+<p>AC servo motors are used in equipment where controlled movement, repeatability or fast response is important. Typical applications include:</p>
+<ul>
+<li><strong>CNC machines:</strong> Controlling feed axes, tables and tool movement along programmed paths.</li>
+<li><strong>Robotics:</strong> Operating robot joints and positioning mechanisms with coordinated motion.</li>
+<li><strong>Packaging machinery:</strong> Synchronising conveyors, cutters, sealing units and product-feeding mechanisms.</li>
+<li><strong>Printing and converting:</strong> Maintaining registration and coordinating rollers or web-handling axes.</li>
+<li><strong>Pick-and-place systems:</strong> Moving components between defined positions at repeatable cycle times.</li>
+<li><strong>Automated assembly:</strong> Controlling insertion, fastening, indexing and other machine movements.</li>
+</ul>
+
+<h2 id="servo-vs-vfd">AC Servo Drive vs. Standard VFD</h2>
+<p>A standard variable frequency drive (VFD) is commonly selected to regulate the speed of an AC motor, for example in pumps, fans and general-purpose conveyors. A servo drive is designed for more demanding motion tasks where feedback-based control of position, speed or torque is required.</p>
+<p>The distinction is not absolute: some advanced VFD systems support encoder feedback and positioning functions. The right choice depends on the required accuracy, dynamic response, coordination between axes, load characteristics and overall system cost.</p>
+
+<h2 id="selection">How to Select the Right AC Servo Motor and Drive</h2>
+<p>Start with the machine's movement requirements rather than choosing a motor only by its rated power. Review the following points before selecting a motor-drive combination:</p>
+<ol>
+<li><strong>Load and motion profile:</strong> Define the moving mass or inertia, travel distance, required speed, acceleration, deceleration, dwell time and cycle frequency.</li>
+<li><strong>Torque requirements:</strong> Check continuous or RMS torque for the full duty cycle, as well as peak torque during acceleration, deceleration or short-duration overloads.</li>
+<li><strong>Speed range:</strong> Confirm that the motor can meet the required operating and maximum speeds under the expected load.</li>
+<li><strong>Inertia matching:</strong> Consider the load inertia reflected to the motor shaft, including gearboxes, couplings and transmission components.</li>
+<li><strong>Supply and drive compatibility:</strong> Match the motor and drive ratings, voltage class, phase supply, current capacity and approved combinations.</li>
+<li><strong>Feedback and control interface:</strong> Check encoder or resolver requirements, command signals, communication protocols and compatibility with the PLC or motion controller.</li>
+<li><strong>Mechanical and environmental conditions:</strong> Review shaft and mounting dimensions, holding-brake needs, protection rating, ambient temperature, cooling and cable routing.</li>
+<li><strong>Safety and commissioning:</strong> Confirm the required safety functions, protective devices, parameter setup, tuning and commissioning procedure.</li>
+</ol>
+<div class="article-note"><strong>Selection tip:</strong> A motor with a higher power rating is not automatically the best choice. The motor, drive and mechanical transmission should be assessed together against the actual motion cycle and load.</div>
+
+<h2 id="installation">Installation and Maintenance Considerations</h2>
+<p>Follow the manufacturer's wiring diagrams and installation manual for the exact motor and drive combination. Use the specified power and feedback cables, maintain proper grounding and shielding practices, and keep encoder wiring separated from sources of electrical interference where instructed. Check the motor mounting, coupling alignment, cable strain relief and cooling arrangements before operation.</p>
+<p>During commissioning, verify motor-drive compatibility, configure the feedback and control parameters, and test the axis at a controlled speed before running the full machine cycle. Investigate alarms, unusual noise, vibration, overheating or position errors rather than repeatedly resetting the drive. Work on servo drives and their power circuits should be performed by qualified personnel after following the manufacturer's isolation and discharge procedures; DC bus capacitors can retain hazardous voltage after the supply is switched off.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+<p>An AC servo motor and drive form a coordinated motion-control system for applications that need accurate, responsive and repeatable movement. The motor generates motion, the drive regulates power, and the feedback device helps the system track its command. Understanding these components and the machine's real load profile makes it easier to choose a suitable servo solution for CNC equipment, robotics, packaging lines and other automated processes.</p>
+<p>For reliable operation, treat the motor, drive, feedback, controller and mechanical transmission as one system. Always confirm final sizing, wiring, parameter settings and safety requirements against the selected manufacturer's documentation.</p>
+
+<div class="article-sources">
+<strong>Further technical reading</strong>
+<ul>
+<li><a href="https://www.ia.omron.com/support/guide/14/introduction.html" target="_blank" rel="noopener noreferrer">OMRON – Servomotors / Servo Drivers: Introduction, features and principles</a></li>
+<li><a href="https://www.yaskawa-global.com/wp-content/uploads/2025/02/investors_guide02_en_2502.pdf" target="_blank" rel="noopener noreferrer">Yaskawa – Product Basics: AC servo drive system overview (PDF)</a></li>
+<li><a href="https://www.keyence.com/products/controls/motor/" target="_blank" rel="noopener noreferrer">KEYENCE – Servo Motors and Servo Systems</a></li>
+</ul>
+</div>
+
+<section class="article-cta">
+<h2>Learn more before choosing electrical products</h2>
+<p>Explore practical electrical guides and product information on Electrolix, then browse available electrical products through Eleczo.</p>
+<a href="https://www.eleczo.com/" target="_blank" rel="noopener noreferrer">Explore Eleczo</a>
+</section>
+</article>
+<aside class="article-aside" aria-label="Article contents">
+<h2>In this guide</h2>
+<a href="#what-is">What is an AC servo motor?</a>
+<a href="#components">Main components</a>
+<a href="#working">How it works</a>
+<a href="#benefits">Key benefits</a>
+<a href="#applications">Applications</a>
+<a href="#servo-vs-vfd">Servo drive vs. VFD</a>
+<a href="#selection">Selection guide</a>
+<a href="#installation">Installation &amp; maintenance</a>
+<a href="#conclusion">Conclusion</a>
+</aside>
+</div>
+</main>
+<div id="footer"></div>
+<script src="js/script.js"></script>
+<script src="js/back-to-top.js"></script>
+</body>
+</html>
